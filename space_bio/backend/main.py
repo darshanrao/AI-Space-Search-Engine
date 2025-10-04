@@ -1,6 +1,6 @@
 """
-FastAPI application for Space Bio Search Engine backend.
-Provides async API endpoints for chat, search, and research functionality.
+RAG-powered Space Bio Search Engine API.
+Clean, simple FastAPI application designed for your RAG pipeline.
 """
 
 from fastapi import FastAPI
@@ -9,12 +9,12 @@ from fastapi.responses import ORJSONResponse
 import uvicorn
 
 from settings import settings
-from routers import chat, misc
+from routers import chat
 
-# Create FastAPI app with ORJSONResponse as default
+# Create FastAPI app
 app = FastAPI(
-    title="Space Bio Search Engine API",
-    description="AI-powered search engine for space biology research",
+    title="RAG Space Bio Search Engine API",
+    description="AI-powered search engine for space biology research with RAG pipeline integration",
     version="1.0.0",
     default_response_class=ORJSONResponse,
     docs_url="/docs",
@@ -32,27 +32,21 @@ app.add_middleware(
 
 # Include routers
 app.include_router(chat.router, prefix="/api", tags=["chat"])
-app.include_router(misc.router, prefix="/api", tags=["misc"])
 
 
 @app.get("/")
 async def root():
     """Root endpoint with API information."""
     return {
-        "message": "Space Bio Search Engine API",
+        "message": "RAG Space Bio Search Engine API",
         "version": "1.0.0",
         "docs": "/docs",
-        "health": "/api/health"
-    }
-
-
-@app.get("/api/health")
-async def health_check():
-    """Health check endpoint."""
-    return {
-        "status": "healthy",
-        "service": "space-bio-api",
-        "version": "1.0.0"
+        "health": "/api/health",
+        "endpoints": {
+            "chat": "/api/chat",
+            "session": "/api/session/{session_id}",
+            "sessions": "/api/sessions"
+        }
     }
 
 

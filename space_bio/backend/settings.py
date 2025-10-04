@@ -1,6 +1,5 @@
 """
-Application settings using PydanticSettings for configuration management.
-Handles environment variables and default values.
+Application settings for RAG-powered Space Bio Search Engine.
 """
 
 from typing import List
@@ -15,12 +14,6 @@ class Settings(BaseSettings):
     GEMINI_API_KEY: str = Field(
         ...,
         description="Google Gemini API key for LLM functionality"
-    )
-    
-    # Database configuration
-    DATABASE_URL: str = Field(
-        default="postgresql://postgres.mosdmbhepyzmzqygiixz:Sai_Parvathi16@db.mosdmbhepyzmzqygiixz.supabase.co:5432/postgres",
-        description="PostgreSQL database URL with psycopg2 driver"
     )
     
     # CORS configuration
@@ -46,11 +39,6 @@ class Settings(BaseSettings):
         description="Enable debug mode"
     )
     
-    LOG_LEVEL: str = Field(
-        default="INFO",
-        description="Logging level"
-    )
-    
     # API settings
     MAX_MESSAGE_LENGTH: int = Field(
         default=4000,
@@ -60,12 +48,6 @@ class Settings(BaseSettings):
     MAX_RESPONSE_TOKENS: int = Field(
         default=800,
         description="Maximum tokens for AI responses"
-    )
-    
-    # RAG settings
-    MAX_CONTEXT_DOCS: int = Field(
-        default=8,
-        description="Maximum number of context documents to retrieve"
     )
     
     class Config:

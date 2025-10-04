@@ -1,98 +1,70 @@
 """
-Database models for the Space Bio Search Engine.
-Defines Thread and Message models with JSONB fields for flexible data storage.
+Pydantic models for RAG Chat API.
+Matches your RAG pipeline response format exactly.
 """
 
-import uuid
-from datetime import datetime
-from typing import Optional, Dict, Any, List
-from sqlalchemy import String, DateTime, Text, JSON, ForeignKey, Index
-from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy.dialects.postgresql import JSONB
-
-from db import Base
+from typing import List, Optional, Dict, Any
+from pydantic import BaseModel
 
 
-class Thread(Base):
-    """Thread model representing a conversation session."""
-    
-    __tablename__ = "threads"
-    
-    # Primary key - UUID4 string
-    id: Mapped[str] = mapped_column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
-    
-    # Timestamp with timezone, default now
-    created_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), 
-        default=datetime.utcnow,
-        nullable=False
-    )
-    
-    # Updated timestamp
-    updated_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), 
-        default=datetime.utcnow,
-        onupdate=datetime.utcnow,
-        nullable=False
-    )
-    
-    # Optional title
-    title: Mapped[Optional[str]] = mapped_column(String, nullable=True)
-    
-    # Context as JSONB with default empty dict
-    context: Mapped[Dict[str, Any]] = mapped_column(
-        JSONB, 
-        default=dict,
-        nullable=False
-    )
-    
-    # Relationships
-    messages: Mapped[List["Message"]] = relationship(
-        "Message", 
-        back_populates="thread",
-        cascade="all, delete-orphan",
-        order_by="Message.created_at"
-    )
+class Citation(BaseModel):
+    """Citation model matching your RAG pipeline format."""
+    id: str
+    url: str
+    why_relevant: str
 
 
-class Message(Base):
-    """Message model representing individual chat messages."""
-    
-    __tablename__ = "messages"
-    
-    # Primary key
-    id: Mapped[str] = mapped_column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
-    
-    # Foreign key to thread
-    thread_id: Mapped[str] = mapped_column(
-        String, 
-        ForeignKey("threads.id", ondelete="CASCADE"),
-        nullable=False
-    )
-    
-    # Message role
-    role: Mapped[str] = mapped_column(String, nullable=False)
-    
-    # Message content
-    content: Mapped[str] = mapped_column(Text, nullable=False)
-    
-    # Timestamp with timezone, default now
-    created_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), 
-        default=datetime.utcnow,
-        nullable=False
-    )
-    
-    # Meta as JSONB with default empty dict
-    meta: Mapped[Dict[str, Any]] = mapped_column(
-        JSONB, 
-        default=dict,
-        nullable=False
-    )
-    
-    # Relationships
-    thread: Mapped["Thread"] = relationship("Thread", back_populates="messages")
+class ImageCitation(BaseModel):
+    """Image citation model."""
+    id: str
+    url: str
+    why_relevant: str
 
 
-# Index on Message(thread_id, created_at) for efficient querying
-Index('ix_messages_thread_id_created_at', Message.thread_id, Message.created_at)
+class RAGResponse(BaseModel):
+    """RAG response model matching your pipeline output exactly."""
+    answer_markdown: str
+    citations: List[Citation]
+    image_citations: List[ImageCitation]
+    used_context_ids: List[str]
+    confident: bool
+
+
+class ChatMessage(BaseModel):
+    """Individual chat message."""
+    role: str  # "user" or "assistant"
+    content: str
+    rag_response: Optional[RAGResponse] = None
+    timestamp: str
+
+
+class ChatRequest(BaseModel):
+    """Request model for chat endpoint."""
+    message: str
+    session_id: Optional[str] = None
+    context: Dict[str, Any] = {}
+
+
+class ChatResponse(BaseModel):
+    """Response model for chat endpoint."""
+    session_id: str
+    message: str
+    rag_response: Optional[RAGResponse] = None
+    context: Dict[str, Any]
+    timestamp: str
+
+
+class SessionResponse(BaseModel):
+    """Response model for session history."""
+    session_id: str
+    messages: List[ChatMessage]
+    context: Dict[str, Any]
+    created_at: str
+
+
+class HealthResponse(BaseModel):
+    """Health check response."""
+    status: str
+    service: str
+    version: str
+    timestamp: str

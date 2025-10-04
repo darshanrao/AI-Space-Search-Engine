@@ -1,234 +1,134 @@
 """
-Chat API endpoints for thread management and message handling.
-Provides endpoints for creating threads, managing context, and generating answers.
+RAG Chat API endpoints.
+Clean, simple API designed specifically for your RAG pipeline.
 """
 
-import uuid
+from fastapi import APIRouter, HTTPException
+from models import ChatRequest, ChatResponse, SessionResponse, HealthResponse
+from rag_service import rag_service
+from session_manager import session_manager
 from datetime import datetime
-from typing import List, Dict, Any
-from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy.orm import Session
-from sqlalchemy import select
-
-from db import DatabaseSession, SessionLocal
-from models import Thread, Message
-from schemas import (
-    ThreadCreate, 
-    ThreadDTO, 
-    ThreadContextUpdate,
-    AnswerRequest,
-    AnswerResponse
-)
-from chat_chain import run_chat_turn
-from settings import settings
 
 router = APIRouter()
 
 
-@router.post("/thread", response_model=ThreadDTO)
-def create_thread(
-    request: ThreadCreate,
-    session: Session = DatabaseSession
-) -> ThreadDTO:
-    """
-    Create a new conversation thread.
-    
-    Args:
-        request: Thread creation request with optional seed context
-        session: Database session
-        
-    Returns:
-        Created thread information
-    """
-    # Generate unique thread ID
-    thread_id = str(uuid.uuid4())
-    
-    # Create thread in database
-    thread = Thread(
-        id=thread_id,
-        title=None,
-        context=request.seed_context or {}
-    )
-    
-    session.add(thread)
-    session.commit()
-    session.refresh(thread)
-    
-    return ThreadDTO(
-        thread_id=thread_id,
-        messages=[],
-        context=thread.context
+@router.get("/health", response_model=HealthResponse)
+async def health_check() -> HealthResponse:
+    """Health check endpoint."""
+    return HealthResponse(
+        status="healthy",
+        service="rag-space-bio-api",
+        version="1.0.0",
+        timestamp=datetime.utcnow().isoformat()
     )
 
 
-@router.get("/thread/{thread_id}", response_model=ThreadDTO)
-def get_thread(
-    thread_id: str,
-    session: Session = DatabaseSession
-) -> ThreadDTO:
+@router.post("/chat", response_model=ChatResponse)
+async def chat_endpoint(request: ChatRequest) -> ChatResponse:
     """
-    Get thread information and message history.
+    Main chat endpoint - handles everything in one call.
     
-    Args:
-        thread_id: Thread identifier
-        session: Database session
-        
-    Returns:
-        Thread information with messages
+    This is the primary endpoint your frontend will use.
+    It handles session management, RAG processing, and response generation.
     """
-    # Query thread with messages
-    stmt = select(Thread).where(Thread.id == thread_id)
-    result = session.execute(stmt)
-    thread = result.scalar_one_or_none()
-    
-    if not thread:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Thread not found"
-        )
-    
-    # Format messages for response
-    messages = []
-    for msg in thread.messages:
-        message_data = {
-            "role": msg.role,
-            "text": msg.content if msg.role == "user" else None,
-            "answer": msg.content if msg.role == "assistant" else None
-        }
-        messages.append(message_data)
-    
-    return ThreadDTO(
-        thread_id=thread_id,
-        messages=messages,
-        context=thread.context
-    )
-
-
-@router.put("/thread/{thread_id}/context", response_model=ThreadDTO)
-def update_thread_context(
-    thread_id: str,
-    request: ThreadContextUpdate,
-    session: Session = DatabaseSession
-) -> ThreadDTO:
-    """
-    Update thread context (organism, conditions, etc.).
-    
-    Args:
-        thread_id: Thread identifier
-        request: Context update request
-        session: Database session
-        
-    Returns:
-        Updated thread information
-    """
-    # Query thread
-    stmt = select(Thread).where(Thread.id == thread_id)
-    result = session.execute(stmt)
-    thread = result.scalar_one_or_none()
-    
-    if not thread:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Thread not found"
-        )
-    
-    # Update context
-    if thread.context is None:
-        thread.context = {}
-    
-    # Merge the new context with existing context
-    thread.context.update(request.context)
-    
-    # Update timestamp
-    thread.updated_at = datetime.utcnow()
-    
-    session.commit()
-    session.refresh(thread)
-    
-    return ThreadDTO(
-        thread_id=thread_id,
-        context=thread.context
-    )
-
-
-@router.post("/answer", response_model=AnswerResponse)
-def generate_answer(
-    request: AnswerRequest,
-    session: Session = DatabaseSession
-) -> AnswerResponse:
-    """
-    Generate AI answer for a user question with RAG context.
-    
-    Args:
-        request: Answer generation request
-        session: Database session
-        
-    Returns:
-        Generated answer with blocks, citations, and metadata
-    """
-    # Verify thread exists
-    thread_stmt = select(Thread).where(Thread.id == request.thread_id)
-    thread_result = session.execute(thread_stmt)
-    thread = thread_result.scalar_one_or_none()
-    
-    if not thread:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Thread not found"
-        )
-    
-    # Store user message in database
-    user_message = Message(
-        id=str(uuid.uuid4()),
-        thread_id=request.thread_id,
-        role="user",
-        content=request.q,
-        meta={}
-    )
-    session.add(user_message)
-    
-    # Generate AI response using chat chain
     try:
-        # Generate answer using the new chat_chain function
-        assistant_text = run_chat_turn(
-            question=request.q,
-            thread_id=request.thread_id,
-            context=thread.context,
-            settings=settings,
-            session=session
+        # Get or create session
+        if request.session_id and session_manager.get_session(request.session_id):
+            session_id = request.session_id
+        else:
+            session_id = session_manager.create_session(request.context)
+        
+        # Get conversation history
+        conversation_history = session_manager.get_conversation_history(session_id)
+        
+        # Add user message to session
+        session_manager.add_message(session_id, "user", request.message)
+        
+        # Generate RAG response
+        rag_response = rag_service.generate_answer(
+            question=request.message,
+            context=session_manager.get_session(session_id)["context"],
+            conversation_history=conversation_history
         )
         
-        # Store assistant message in database
-        assistant_message = Message(
-            id=str(uuid.uuid4()),
-            thread_id=request.thread_id,
-            role="assistant",
-            content=assistant_text,
-            meta={}
+        # Add assistant response to session
+        session_manager.add_message(
+            session_id, 
+            "assistant", 
+            rag_response.answer_markdown, 
+            rag_response
         )
-        session.add(assistant_message)
         
-        # Commit both messages
-        session.commit()
-        
-        # Return response in the new format
-        return AnswerResponse(
-            answer_id=assistant_message.id,
-            thread_id=request.thread_id,
-            question=request.q,
-            answer=assistant_text,  # Include the actual AI response
-            created_at=assistant_message.created_at.isoformat(),
-            evidence_badges=None,
-            blocks=[],
-            citations=[],
-            graph=None,
-            debug_topic=None
+        return ChatResponse(
+            session_id=session_id,
+            message=rag_response.answer_markdown,
+            rag_response=rag_response,
+            context=session_manager.get_session(session_id)["context"],
+            timestamp=datetime.utcnow().isoformat()
         )
         
     except Exception as e:
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to generate answer: {str(e)}"
+            status_code=500,
+            detail=f"Chat failed: {str(e)}"
         )
 
 
+@router.get("/session/{session_id}", response_model=SessionResponse)
+async def get_session(session_id: str) -> SessionResponse:
+    """Get session history and context."""
+    session = session_manager.get_session(session_id)
+    if not session:
+        raise HTTPException(
+            status_code=404,
+            detail="Session not found"
+        )
+    
+    return SessionResponse(
+        session_id=session_id,
+        messages=session["messages"],
+        context=session["context"],
+        created_at=session["created_at"]
+    )
+
+
+@router.post("/session/{session_id}/context")
+async def update_context(session_id: str, context: dict) -> dict:
+    """Update session context."""
+    try:
+        session_manager.update_context(session_id, context)
+        return {
+            "session_id": session_id,
+            "context": session_manager.get_session(session_id)["context"],
+            "updated_at": datetime.utcnow().isoformat()
+        }
+    except ValueError as e:
+        raise HTTPException(
+            status_code=404,
+            detail=str(e)
+        )
+
+
+@router.delete("/session/{session_id}")
+async def delete_session(session_id: str) -> dict:
+    """Delete a session."""
+    if session_manager.delete_session(session_id):
+        return {
+            "message": "Session deleted",
+            "session_id": session_id
+        }
+    else:
+        raise HTTPException(
+            status_code=404,
+            detail="Session not found"
+        )
+
+
+@router.get("/sessions")
+async def list_sessions() -> dict:
+    """List all active sessions."""
+    return {
+        "sessions": session_manager.list_sessions(),
+        "count": session_manager.get_session_count(),
+        "timestamp": datetime.utcnow().isoformat()
+    }

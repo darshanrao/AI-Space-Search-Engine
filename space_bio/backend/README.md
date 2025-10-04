@@ -1,143 +1,228 @@
-# Space Bio Search Engine Backend
+# RAG Space Bio Search Engine Backend
 
-A FastAPI backend for the Space Bio Search Engine, providing AI-powered chat functionality with Google Gemini and PostgreSQL.
+A clean, streamlined FastAPI backend designed specifically for your RAG pipeline integration.
 
-## Features
-
-- **Async FastAPI** with ORJSONResponse for high performance
-- **Google Gemini Integration** via LangChain for AI chat
-- **PostgreSQL Database** with async SQLAlchemy and Alembic migrations
-- **Session-aware Chat** with conversation history
-- **RAG (Retrieval-Augmented Generation)** for context-aware responses
-- **CORS Support** for frontend integration
-- **Comprehensive API** with health checks and paper search
-
-## Quick Start
+## 🚀 Quick Start
 
 ### 1. Install Dependencies
-
 ```bash
+cd backend
 pip install -r requirements.txt
 ```
 
-### 2. Environment Setup
-
+### 2. Configure Environment
 ```bash
-# Copy environment template
-cp .env.example .env
+# Copy the example environment file
+cp env_example.txt .env
 
-# Edit .env with your configuration
-# - Add your GEMINI_API_KEY
-# - Configure DATABASE_URL
-# - Set ALLOW_ORIGINS for CORS
+# Edit .env with your actual values
+# At minimum, set your GEMINI_API_KEY
 ```
 
-### 3. Database Setup
-
+### 3. Run the Server
 ```bash
-# Create database (PostgreSQL)
-createdb space_bio
-
-# Run migrations (when Alembic is configured)
-alembic upgrade head
-```
-
-### 4. Run the Server
-
-```bash
-# Development mode
 python main.py
-
-# Or with uvicorn directly
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-## API Endpoints
+The API will be available at:
+- **API**: http://localhost:8000
+- **Docs**: http://localhost:8000/docs
+- **ReDoc**: http://localhost:8000/redoc
 
-### Chat Endpoints
-- `POST /api/thread` - Create new conversation thread
-- `GET /api/thread/{id}` - Get thread with message history
-- `PUT /api/thread/{id}/context` - Update thread context
-- `POST /api/answer` - Generate AI answer with RAG
-- `GET /api/thread/{id}/messages` - Get paginated messages
+## 📋 API Endpoints
 
-### Search Endpoints
-- `POST /api/search` - Search research papers
-- `GET /api/papers` - List available papers
-- `GET /api/papers/{id}` - Get paper details
-- `GET /api/papers/{id}/snippets` - Get paper snippets
+### Main Chat Endpoint
+```http
+POST /api/chat
+```
 
-### Utility Endpoints
-- `GET /api/health` - Health check
-- `GET /api/stats` - Service statistics
+**Request:**
+```json
+{
+  "message": "What genes are implicated in bisphosphonate-mediated muscle improvements?",
+  "session_id": "optional-existing-session-id",
+  "context": {
+    "organism": "C. elegans",
+    "focus": "muscle health"
+  }
+}
+```
 
-## Project Structure
+**Response:**
+```json
+{
+  "session_id": "uuid-session-id",
+  "message": "Genes implicated in bisphosphonate-mediated muscle improvements include...",
+  "rag_response": {
+    "answer_markdown": "Genes implicated in bisphosphonate-mediated muscle improvements include farnesyl diphosphate synthetase (fdps-1/FDPS)...",
+    "citations": [
+      {
+        "id": "PMC10751425:discussion:7b0f4426",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+        "why_relevant": "Identifies bisphosphonates' role in muscle health..."
+      }
+    ],
+    "image_citations": [],
+    "used_context_ids": ["925cb1d1-e4ee-54a3-ab19-1a0e09abdd9f"],
+    "confident": true
+  },
+  "context": {"organism": "C. elegans"},
+  "timestamp": "2025-10-04T22:53:00.000000"
+}
+```
+
+### Session Management
+```http
+GET /api/session/{session_id}     # Get conversation history
+POST /api/session/{session_id}/context  # Update context
+DELETE /api/session/{session_id}  # Delete session
+GET /api/sessions                 # List all sessions
+```
+
+### Health Check
+```http
+GET /api/health
+```
+
+## 🔧 RAG Pipeline Integration
+
+### Connect Your RAG Pipeline
+
+Edit `rag_service.py` and replace the `generate_answer` method:
+
+```python
+def generate_answer(self, question: str, context: Dict[str, Any], conversation_history: List[Tuple[str, str]] = None) -> RAGResponse:
+    """
+    Generate RAG-powered answer.
+    Replace this with your actual RAG pipeline call.
+    """
+    # Call your RAG pipeline
+    rag_result = your_rag_pipeline.generate_answer(question, context, conversation_history)
+    
+    # Convert to RAGResponse format
+    return RAGResponse(
+        answer_markdown=rag_result["answer_markdown"],
+        citations=[
+            Citation(
+                id=citation["id"],
+                url=citation["url"],
+                why_relevant=citation["why_relevant"]
+            ) for citation in rag_result["citations"]
+        ],
+        image_citations=[
+            ImageCitation(
+                id=img["id"],
+                url=img["url"],
+                why_relevant=img["why_relevant"]
+            ) for img in rag_result.get("image_citations", [])
+        ],
+        used_context_ids=rag_result["used_context_ids"],
+        confident=rag_result["confident"]
+    )
+```
+
+## 🧪 Testing
+
+Run the test script:
+```bash
+python test_api.py
+```
+
+## 🎯 Key Features
+
+- ✅ **Single API Call**: One endpoint for complete chat functionality
+- ✅ **Session Management**: Automatic session handling with conversation history
+- ✅ **RAG Integration**: Ready for your RAG pipeline integration
+- ✅ **Citation Support**: Full support for citations and context IDs
+- ✅ **Fallback System**: Falls back to basic Gemini if RAG fails
+- ✅ **CORS Enabled**: Ready for frontend integration
+- ✅ **No Database**: Uses in-memory storage (can be upgraded later)
+
+## 📁 Project Structure
 
 ```
 backend/
-├── main.py              # FastAPI application entry point
-├── settings.py          # PydanticSettings configuration
-├── db.py               # Database setup and session management
-├── models.py           # SQLAlchemy database models
-├── schemas.py          # Pydantic request/response schemas
-├── chat_chain.py       # LangChain + Gemini integration
-├── rag_hook.py         # RAG context retrieval (placeholder)
+├── main.py                 # FastAPI application
+├── settings.py             # Configuration settings
+├── models.py               # Pydantic models
+├── rag_service.py          # RAG pipeline interface
+├── session_manager.py      # Session management
 ├── routers/
-│   ├── chat.py         # Chat and thread endpoints
-│   └── misc.py         # Health, search, and utility endpoints
-├── requirements.txt    # Python dependencies
-├── .env.example       # Environment configuration template
-└── README.md          # This file
+│   ├── __init__.py
+│   └── chat.py            # Chat API endpoints
+├── requirements.txt        # Dependencies
+├── test_api.py            # Test script
+├── env_example.txt        # Environment configuration example
+└── README.md              # This file
 ```
 
-## Configuration
+## 🔄 Frontend Integration
 
-### Required Environment Variables
+### Simple Usage
+```javascript
+// Send a message
+const response = await fetch('http://localhost:8000/api/chat', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    message: "What genes are implicated in bisphosphonate-mediated muscle improvements?",
+    context: { organism: "C. elegans" }
+  })
+});
 
-- `GEMINI_API_KEY` - Google Gemini API key
-- `DATABASE_URL` - PostgreSQL connection string
+const data = await response.json();
+console.log(data.message); // AI response
+console.log(data.rag_response.citations); // Citations array
+```
 
-### Optional Environment Variables
+### React Component Example
+```jsx
+function RAGChatComponent() {
+  const [messages, setMessages] = useState([]);
+  const [sessionId, setSessionId] = useState(null);
 
-- `ALLOW_ORIGINS` - CORS allowed origins (default: localhost)
-- `MODEL_NAME` - Gemini model name (default: gemini-1.5-flash)
-- `DEBUG` - Debug mode (default: false)
-- `MAX_RESPONSE_TOKENS` - Max AI response tokens (default: 800)
+  const sendMessage = async (message) => {
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message,
+        session_id: sessionId,
+        context: { organism: "C. elegans" }
+      })
+    });
 
-## Development
+    const data = await response.json();
+    setSessionId(data.session_id);
+    
+    setMessages(prev => [...prev, {
+      role: 'assistant',
+      content: data.message,
+      citations: data.rag_response?.citations || []
+    }]);
+  };
 
-### Database Models
+  return (
+    <div>
+      {messages.map((msg, i) => (
+        <div key={i}>
+          <p>{msg.content}</p>
+          {msg.citations.map((citation, j) => (
+            <a key={j} href={citation.url}>{citation.id}</a>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+```
 
-- **Thread**: Conversation sessions with context and metadata
-- **Message**: Individual chat messages with role and content
+## 🚀 Next Steps
 
-### Key Components
+1. **Set up your environment**: Copy `env_example.txt` to `.env` and add your Gemini API key
+2. **Connect your RAG pipeline**: Edit `rag_service.py` to integrate with your actual RAG system
+3. **Test the API**: Run `python test_api.py` to verify everything works
+4. **Update your frontend**: Use the new `/api/chat` endpoint instead of the old complex flow
+5. **Deploy and enjoy**: Your RAG-powered chatbot is ready!
 
-- **ChatChain**: LangChain integration with conversation history
-- **RAG Hook**: Context document retrieval (currently placeholder)
-- **Async Session**: Database session management with dependency injection
-
-### Adding New Endpoints
-
-1. Create schema in `schemas.py`
-2. Add route in appropriate router file
-3. Implement business logic
-4. Add tests (recommended)
-
-## Production Deployment
-
-1. Set `DEBUG=false` in environment
-2. Configure production database
-3. Set up proper CORS origins
-4. Use production ASGI server (e.g., Gunicorn with Uvicorn workers)
-5. Set up monitoring and logging
-
-## API Documentation
-
-Once running, visit:
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
-
-## License
-
-MIT License - see LICENSE file for details.
+This backend is designed to be simple, reliable, and perfectly matched to your RAG pipeline format. No more complex multi-endpoint flows - just one clean API call for everything! 🎉

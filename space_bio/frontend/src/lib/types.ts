@@ -32,12 +32,8 @@ export type Block = ParagraphBlock | FigureBlock | TableBlock;
 
 export interface Citation {
   id: string;
-  title: string;
-  authors: string[];
-  year: number;
-  venue?: string;
-  url?: string;
-  doi?: string;
+  url: string;
+  why_relevant: string;
 }
 
 export interface EvidenceBadges {
@@ -49,9 +45,11 @@ export interface EvidenceBadges {
 
 export interface AnswerPayload {
   answer: string;
-  blocks: Block[];
   citations: Citation[];
-  evidence_badges: EvidenceBadges;
+  context_ids?: string[];
+  confident?: boolean;
+  blocks?: Block[];
+  evidence_badges?: EvidenceBadges;
   confidence_score?: number;
 }
 

@@ -169,11 +169,17 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
             {answer.citations.slice(0, 3).map((citation, index) => (
               <div key={index} className="p-2 bg-surface/30 rounded border border-surface/20">
                 <h5 className="text-xs font-medium text-text-primary line-clamp-1 mb-1">
-                  {citation.title}
+                  <a 
+                    href={citation.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline"
+                  >
+                    {citation.id}
+                  </a>
                 </h5>
                 <p className="text-xs text-text-secondary">
-                  {citation.authors.slice(0, 2).join(', ')}
-                  {citation.authors.length > 2 && ' et al.'} ({citation.year})
+                  {citation.why_relevant}
                 </p>
               </div>
             ))}
@@ -186,19 +192,14 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
         </div>
       )}
 
-      {/* Confidence Score */}
-      {answer.confidence_score && (
+      {/* Confidence Indicator */}
+      {answer.confident !== undefined && (
         <div className="flex items-center space-x-2 text-xs">
           <span className="text-text-secondary">Confidence:</span>
           <div className="flex items-center space-x-1">
-            <div className="w-16 h-1.5 bg-surface rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-primary transition-all duration-300"
-                style={{ width: `${answer.confidence_score * 100}%` }}
-              />
-            </div>
+            <div className={`w-2 h-2 rounded-full ${answer.confident ? 'bg-green-500' : 'bg-yellow-500'}`} />
             <span className="text-text-secondary">
-              {Math.round(answer.confidence_score * 100)}%
+              {answer.confident ? 'High' : 'Low'}
             </span>
           </div>
         </div>

@@ -48,23 +48,49 @@ export default function Home() {
     }
   }, [threadId]);
 
-  // Function to load messages from a thread
-  const loadThreadMessages = async (threadId: string) => {
+  // Function to load messages from a session
+  const loadThreadMessages = async (sessionId: string) => {
     try {
-      const response = await getJSON<ThreadResponse>(`/api/thread/${threadId}`);
+      const response = await getJSON<{
+        session_id: string;
+        messages: Array<{
+          role: string;
+          content: string;
+          rag_response?: {
+            answer_markdown: string;
+            citations: Array<{
+              id: string;
+              url: string;
+              why_relevant: string;
+            }>;
+            image_citations: Array<any>;
+            used_context_ids: string[];
+            confident: boolean;
+          };
+          timestamp: string;
+        }>;
+        context: any;
+        created_at: string;
+      }>(`/api/session/${sessionId}`);
+      
       if (response.messages) {
-        const chatMessages: ChatMessage[] = response.messages.map((msg: any) => ({
-          id: msg.id || Date.now().toString(),
+        const chatMessages: ChatMessage[] = response.messages.map((msg: any, index: number) => ({
+          id: `${sessionId}-${index}`,
           type: msg.role === 'user' ? 'user' : 'assistant',
-          content: msg.role === 'user' ? msg.text : msg.answer,
-          timestamp: new Date(msg.created_at || Date.now()),
-          answer: msg.role === 'assistant' ? msg.answer : undefined
+          content: msg.content,
+          timestamp: new Date(msg.timestamp),
+          answer: msg.role === 'assistant' && msg.rag_response ? {
+            answer: msg.rag_response.answer_markdown,
+            citations: msg.rag_response.citations,
+            context_ids: msg.rag_response.used_context_ids,
+            confident: msg.rag_response.confident
+          } : undefined
         }));
         setMessages(chatMessages);
       }
     } catch (error) {
-      console.error('Failed to load thread messages:', error);
-      // If thread doesn't exist, clear the threadId
+      console.error('Failed to load session messages:', error);
+      // If session doesn't exist, clear the sessionId
       localStorage.removeItem('space_bio_thread_id');
       setThreadId(null);
     }
@@ -85,54 +111,57 @@ export default function Home() {
     setMessages(prev => [...prev, userMessage]);
 
     try {
-      let currentThreadId = threadId;
+      // Single API call to new RAG chat endpoint
+      const chatPayload = {
+        message: query,
+        session_id: threadId, // Use existing threadId if available
+        context: {
+          organism: "C. elegans", // Default context
+          focus: "space biology"
+        }
+      };
+      
+      console.log('POST /api/chat payload:', chatPayload);
+      
+      const chatResponse = await postJSON<{
+        session_id: string;
+        message: string;
+        rag_response: {
+          answer_markdown: string;
+          citations: Array<{
+            id: string;
+            url: string;
+            why_relevant: string;
+          }>;
+          image_citations: Array<any>;
+          used_context_ids: string[];
+          confident: boolean;
+        };
+        context: any;
+        timestamp: string;
+      }>('/api/chat', chatPayload);
+      
+      console.log('Chat response:', chatResponse);
 
-      // Step 1: Create thread if it doesn't exist
-      if (!currentThreadId) {
-        console.log('Creating new thread...');
-        const threadPayload = { seed_context: {} };
-        console.log('POST /api/thread payload:', threadPayload);
-        
-            const threadResponse = await postJSON<{ thread_id: string }>('/api/thread', threadPayload);
-            currentThreadId = threadResponse.thread_id;
-            setThreadId(currentThreadId);
-            // Save threadId to localStorage for persistence
-            localStorage.setItem('space_bio_thread_id', currentThreadId);
-            console.log('Thread created:', currentThreadId);
+      // Update threadId if this is a new session
+      if (!threadId) {
+        setThreadId(chatResponse.session_id);
+        localStorage.setItem('space_bio_thread_id', chatResponse.session_id);
+        console.log('New session created:', chatResponse.session_id);
       }
 
-      // Step 2: POST to /api/search
-      const searchPayload = {
-        q: query,
-        filters: {},
-        limit: 10,
-        offset: 0,
-        thread_id: currentThreadId
-      };
-      console.log('POST /api/search payload:', searchPayload);
-      
-      const searchResponse = await postJSON<SearchResponse>('/api/search', searchPayload);
-      console.log('Search response:', searchResponse);
-
-      // Step 3: POST to /api/answer
-      const answerPayload = {
-        q: query,
-        thread_id: currentThreadId,
-        k: 8,
-        max_tokens: 800
-      };
-      console.log('POST /api/answer payload:', answerPayload);
-      
-      const answerResponse = await postJSON<AnswerPayload>('/api/answer', answerPayload);
-      console.log('Answer response:', answerResponse);
-
-      // Add assistant message
+      // Add assistant message with RAG response
       const assistantMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: answerResponse.answer,
+        content: chatResponse.message,
         timestamp: new Date(),
-        answer: answerResponse
+        answer: {
+          answer: chatResponse.message,
+          citations: chatResponse.rag_response?.citations || [],
+          context_ids: chatResponse.rag_response?.used_context_ids || [],
+          confident: chatResponse.rag_response?.confident || false
+        }
       };
       setMessages(prev => [...prev, assistantMessage]);
 
