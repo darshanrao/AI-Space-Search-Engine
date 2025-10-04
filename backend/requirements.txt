@@ -1,0 +1,19 @@
+requests
+beautifulsoup4
+readability-lxml
+trafilatura
+unicodedata2
+ftfy
+click
+lxml
+
+# Ingestion deps
+qdrant-client[fastembed]>=1.14.2
+sentence-transformers
+transformers
+torch
+scipy
+numpy
+tqdm
+ujson
+python-dotenv
