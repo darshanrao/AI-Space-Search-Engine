@@ -4,23 +4,23 @@ uvicorn[standard]==0.24.0
 python-multipart==0.0.6
 
 # Database dependencies
-sqlalchemy[asyncio]==2.0.23
-asyncpg==0.29.0
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
 alembic==1.12.1
 
 # Pydantic for data validation
-pydantic==2.5.0
-pydantic-settings==2.1.0
+pydantic>=2.7.4
+pydantic-settings>=2.1.0
 
 # JSON handling
-orjson==3.9.10
+orjson>=3.9.14
 
 # CORS middleware (built into FastAPI)
 
 # LangChain and LLM dependencies
-langchain==0.2.16
-langchain-google-genai==1.0.6
-google-generativeai==0.5.4
+langchain>=0.2.16
+langchain-google-genai>=1.0.6
+google-generativeai>=0.5.4
 
 # Environment and configuration
 python-dotenv==1.0.0
