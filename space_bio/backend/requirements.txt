@@ -1,0 +1,37 @@
+# FastAPI and web framework dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database dependencies
+sqlalchemy[asyncio]==2.0.23
+asyncpg==0.29.0
+alembic==1.12.1
+
+# Pydantic for data validation
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# JSON handling
+orjson==3.9.10
+
+# CORS middleware (built into FastAPI)
+
+# LangChain and LLM dependencies
+langchain==0.2.16
+langchain-google-genai==1.0.6
+google-generativeai==0.5.4
+
+# Environment and configuration
+python-dotenv==1.0.0
+
+# Development dependencies
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# Optional: For better async performance
+aiosqlite==0.19.0
+
+# Optional: For logging and monitoring
+structlog==23.2.0
