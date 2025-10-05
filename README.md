@@ -151,11 +151,14 @@ AI-Space-Search-Engine/
 │   ├── session_manager.py         # Session/conversation management
 │   ├── image_search_service.py    # Scientific image retrieval
 │   ├── routers/
-│   │   └── chat.py                # Chat API endpoints
+│   │   ├── chat.py                # Chat API endpoints
+│   │   └── scholar.py             # Google Scholar search endpoints
 │   ├── generation/
 │   │   ├── agent_service.py       # LangChain ReAct agent
 │   │   ├── rag_pipeline.py        # RAG orchestration
 │   │   ├── rag_tool.py            # RAG tool for agent
+│   │   ├── scholar_tool.py        # Google Scholar search tool
+│   │   ├── query_generator.py     # LLM-based query generator for Scholar
 │   │   ├── retrieval_client.py    # Qdrant hybrid search client
 │   │   ├── gemini_client.py       # Google Gemini API client
 │   │   ├── api.py                 # Standalone RAG API functions
@@ -173,6 +176,7 @@ AI-Space-Search-Engine/
 │   │   │   ├── AnswerCard.tsx     # Individual answer card
 │   │   │   ├── SearchBar.tsx      # Query input
 │   │   │   ├── SourcesViewer.tsx  # Retrieved chunks viewer
+│   │   │   ├── SourcesDrawer.tsx  # Tabbed paper viewer drawer
 │   │   │   ├── SessionsSidebar.tsx # Conversation history
 │   │   │   ├── ImageSidebar.tsx   # Image citations
 │   │   │   ├── ContextChips.tsx   # Active filters display
@@ -278,6 +282,51 @@ Retrieves scientific figures from papers using SerpAPI.
 - PMC-specific image retrieval
 - Result filtering and ranking
 
+#### 7. Scholar Search Tool (`generation/scholar_tool.py`)
+
+LangChain tool for searching Google Scholar academic papers.
+
+**Features:**
+- SerpAPI integration for Google Scholar search
+- Configurable result limit (1-20 papers)
+- Context-aware search using LLM-generated queries
+- Formatted results with titles and links
+
+**Usage:**
+```python
+# Direct search
+results = scholar_search_tool._run("microgravity muscle atrophy", num_results=5)
+
+# Context-aware search
+query, results = scholar_search_tool.search_with_context(
+    conversation_context="User asked about muscle loss in space",
+    user_query="recent papers",
+    num_results=5
+)
+```
+
+#### 8. Query Generator (`generation/query_generator.py`)
+
+LLM-powered service for generating optimized Google Scholar queries.
+
+**Process:**
+1. Analyzes conversation context and user intent
+2. Uses Gemini to generate focused academic search query
+3. Extracts key terms (organisms, processes, conditions)
+4. Fallback to rule-based extraction if LLM fails
+
+**Example:**
+- Input: "What are the effects of space on muscles?"
+- Output: "microgravity muscle atrophy space biology"
+
+#### 9. Scholar Router (`routers/scholar.py`)
+
+FastAPI router for Google Scholar search endpoints.
+
+**Endpoints:**
+- `POST /api/scholar/search`: Search academic papers
+- `GET /api/scholar/health`: Service health check
+
 ### Frontend Components
 
 #### 1. Chat Interface (`app/page.tsx`)
@@ -310,7 +359,18 @@ Expandable panel showing all retrieved chunks.
 - Full text content
 - Citation IDs
 
-#### 4. Sessions Sidebar (`components/SessionsSidebar.tsx`)
+#### 4. Sources Drawer (`components/SourcesDrawer.tsx`)
+
+Tabbed drawer for viewing paper sources in an iframe.
+
+**Features:**
+- Opens papers in sidebar tabs from citation clicks
+- Multiple tab support with tab management
+- Embedded paper viewer using iframes
+- Fallback to external links if iframe fails
+- Toggle button with active tab count
+
+#### 5. Sessions Sidebar (`components/SessionsSidebar.tsx`)
 
 Navigation for conversation history.
 
@@ -511,6 +571,43 @@ Update session context filters.
 }
 ```
 
+### POST /api/scholar/search
+
+Search Google Scholar for academic papers.
+
+**Request:**
+```json
+{
+  "query": "microgravity muscle atrophy",
+  "context": "User asked about muscle loss in space",
+  "num_results": 5
+}
+```
+
+**Response:**
+```json
+{
+  "query": "microgravity muscle atrophy space biology",
+  "results": "🔍 Google Scholar Results for: 'microgravity muscle atrophy space biology'\n\n📄 Paper #1\nTitle: Effects of microgravity on muscle development\n🔗 Link: https://scholar.google.com/...\n\n...",
+  "num_results": 5,
+  "timestamp": "2025-10-05T10:00:00.000000"
+}
+```
+
+### GET /api/scholar/health
+
+Health check for Google Scholar service.
+
+**Response:**
+```json
+{
+  "status": "healthy",
+  "service": "google-scholar-api",
+  "timestamp": "2025-10-05T10:00:00.000000",
+  "api_configured": true
+}
+```
+
 ## Evaluation & Testing
 
 The system was rigorously evaluated on 181 test cases across 42 research articles to measure performance across different question types and difficulty levels.
@@ -637,7 +734,7 @@ MODEL_NAME=gemini-1.5-flash-latest
 MAX_RESPONSE_TOKENS=2048
 COLLECTION_NAME=nasa_corpus_v1
 TOP_K=15
-SERPAPI_KEY=your-serpapi-key  # For image search
+SERPAPI_API_KEY=your-serpapi-key  # For Google Scholar search and image search
 ```
 
 ### Settings File (`backend/settings.py`)
