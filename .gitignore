@@ -5,5 +5,16 @@ backend/.env
 __pycache__/
 *.pyc
 .DS_Store
-space_bio/
-evaluation/data/outputs_sentence_robust/*
+
+evaluation/data
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+frontend/.env*.local
+
+# Backend
+backend/__pycache__/
+backend/*.pyc
+backend/.env
