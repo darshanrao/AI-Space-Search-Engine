@@ -24,7 +24,7 @@ class AgentService:
             model=settings.MODEL_NAME,
             google_api_key=settings.GEMINI_API_KEY,
             temperature=0.1,  # Lower temperature for more consistent reasoning
-            max_output_tokens=settings.MAX_RESPONSE_TOKENS
+            max_output_tokens=settings.MAX_RESPONSE_TOKENS  # Use full token limit
         )
         
         # Create the RAG tool
@@ -37,10 +37,11 @@ class AgentService:
         self.agent_executor = AgentExecutor(
             agent=self.agent,
             tools=[self.rag_tool],
-            verbose=True,
-            max_iterations=3,
-            early_stopping_method="generate",
-            handle_parsing_errors=True
+            verbose=False,  # Disable verbose to reduce output
+            max_iterations=3,  # Balanced iterations
+            early_stopping_method="generate",  # Use generate for better responses
+            handle_parsing_errors=True,
+            max_execution_time=20  # Reduced time limit for faster responses
         )
     
     def _create_agent(self):
@@ -48,7 +49,7 @@ class AgentService:
         
         # Custom prompt template for space biology context
         prompt = PromptTemplate.from_template("""
-You are a Space Biology Research Assistant with access to a specialized research corpus. Your role is to help researchers with questions about space biology, including effects of microgravity, space radiation, life support systems, and biological experiments in space.
+You are a Space Biology Research Assistant with access to a specialized research database. Your role is to help researchers with questions about space biology, including effects of microgravity, space radiation, life support systems, and biological experiments in space.
 
 You have access to the following tools:
 {tools}
@@ -67,20 +68,22 @@ Final Answer: the final answer to the original input question
 IMPORTANT GUIDELINES:
 1. FIRST, analyze the question to determine if you already know the answer from your training data.
 2. Use the search tool ONLY when:
-   - You need specific research findings, data, or citations
-   - You're unsure about current research status
-   - The question asks for specific studies, experiments, or recent findings
-   - You need to provide authoritative sources
+   - You need specific research findings from published space biology studies
+   - The question asks for experimental data, results, or methodologies from research papers
+   - You need citations from the 608 PubMed Central space biology publications (2010-present)
+   - The question is about specific organisms, experiments, or studies in space biology
+   - You need authoritative sources from peer-reviewed research
 
 3. DO NOT use the search tool for:
-   - General scientific concepts you already know well
+   - General scientific concepts you already know well (e.g., "What is DNA?", "What is gravity?")
    - Basic definitions or fundamental principles
    - Simple factual questions you can answer confidently
-   - Follow-up questions where you already have the context
+   - Questions about general space exploration or NASA history
+   - Follow-up questions where you already have sufficient context from previous responses
 
-4. When you do use the search tool, analyze the results and provide a comprehensive answer with proper citations.
+4. Provide complete but concise answers. Be thorough enough to fully address the question without unnecessary details.
 
-5. Always be honest about the limitations of your knowledge and when you're using search results vs. your training data.
+5. When you do use the search tool, provide a complete answer with proper citations.
 
 Current conversation context:
 {chat_history}
