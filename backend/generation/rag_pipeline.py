@@ -15,7 +15,7 @@ class RAGPipeline:
     def __init__(
         self, 
         collection_name: str = "nasa_corpus_v1",
-        top_k: int = 15,  # Fixed to 15 chunks
+        top_k: int = 10,  # Fixed to 15 chunks
         max_tokens: int = 1000
     ):
         """

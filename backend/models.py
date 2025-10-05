@@ -22,6 +22,7 @@ class RAGResponse(BaseModel):
     answer_markdown: str
     citations: List[str]  # Now just a list of URLs
     image_citations: List[ImageCitation]
+    image_urls: List[str] = []  # URLs from image search
     confidence_score: int
 
 

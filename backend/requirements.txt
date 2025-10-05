@@ -39,3 +39,6 @@ requests
 # Development dependencies
 pytest==7.4.3
 httpx==0.25.2
+
+# SerpApi for image search
+google-search-results==2.4.2

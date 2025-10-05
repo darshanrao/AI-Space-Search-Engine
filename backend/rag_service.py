@@ -56,6 +56,7 @@ class RAGService:
                 answer_markdown=rag_result.get("answer_markdown", ""),
                 citations=citations,
                 image_citations=image_citations,
+                image_urls=rag_result.get("image_urls", []),
                 confidence_score=rag_result.get("confidence_score", 0)
             )
             
@@ -93,6 +94,7 @@ class RAGService:
                 answer_markdown=answer_text,
                 citations=[],
                 image_citations=[],
+                image_urls=[],
                 confidence_score=0
             )
             
@@ -102,6 +104,7 @@ class RAGService:
                 answer_markdown=f"I apologize, but I'm having trouble generating a response right now. Please try again later. Error: {str(e)}",
                 citations=[],
                 image_citations=[],
+                image_urls=[],
                 confidence_score=0
             )
 

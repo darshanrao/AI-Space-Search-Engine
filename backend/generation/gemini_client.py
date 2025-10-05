@@ -102,11 +102,12 @@ Rules:
 6) For regular citations, NEVER invent sources or URLs. Use ONLY the URLs from the "URL" field in the context.
 7) DO NOT extract URLs from the content text for regular citations (like DOIs, PubMed links, etc.).
 8) If a chunk has no "URL" field, use "N/A" as the URL value.
-9) Collect ALL unique URLs from the context chunks you used and list them in order in "citations".
+9) Don't cite on duplicate links - citations should be linkwise not chunkwise, so don't use [1], [2], [3], [4] for the same link.
 10) Only include URLs that were actually used to support your answer.
 11) Prefer concise, direct answers; add a brief "Why this is correct" note if helpful.
 12) No hidden reasoning or chain-of-thought in the output. Produce ONLY the required fields.
 13) Provide a confidence score from 0-100 based on how confident you are in the answer quality.
+14) Include relevant keywords that could be used to search for related images (e.g., scientific concepts, organisms, equipment, processes mentioned in your answer).
 
  Output format (JSON):
  {{
@@ -118,6 +119,11 @@ Rules:
    "image_citations": [
      {{"id":"ctx-id", "url":"https://...", "caption_or_alt":"short description"}}
    ],
+   "image_keywords": [
+     "C. elegans muscle",
+     "microgravity effects",
+     "space biology"
+   ],
    "confidence_score": 85
  }}
 
@@ -126,6 +132,7 @@ Validation:
 - Every [img n] must have a matching entry in "image_citations" (order should align).
 - URLs must come from CONTEXT exactly (no rewriting).
 - Citations array should contain only unique URLs in the order they first appear in your answer.
+- Each unique URL gets only ONE citation number, regardless of how many chunks from that URL you use.
 - Output MUST be valid JSON only - no additional text outside the JSON structure.
 - Do not include any text after the JSON closing brace."""
         

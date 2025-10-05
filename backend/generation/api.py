@@ -93,6 +93,14 @@ class RAGAPI:
                                     seen_urls.add(url)
                         json_response["citations"] = unique_citations
                 
+                # Search for images using keywords if available
+                if "image_keywords" in json_response and json_response["image_keywords"]:
+                    from image_search_service import image_search_service
+                    image_urls = image_search_service.search_images_for_keywords(json_response["image_keywords"])
+                    json_response["image_urls"] = image_urls
+                else:
+                    json_response["image_urls"] = []
+                
                 return json_response
             except json.JSONDecodeError as e:
                 # Fallback if JSON parsing fails

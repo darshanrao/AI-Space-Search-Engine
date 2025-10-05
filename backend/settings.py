@@ -16,6 +16,12 @@ class Settings(BaseSettings):
         description="Google Gemini API key for LLM functionality"
     )
     
+    # SerpApi configuration
+    SERPAPI_API_KEY: str = Field(
+        default="",
+        description="SerpApi API key for image search functionality"
+    )
+    
     # CORS configuration
     ALLOW_ORIGINS: str = Field(
         default="http://localhost:3000,http://localhost:8000",
