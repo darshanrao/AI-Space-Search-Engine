@@ -94,7 +94,7 @@ QUESTION: {query}
 
 Rules:
 1) Cite every non-trivial claim with inline numeric citations like [1], [2], [3].
-2) Each citation number must correspond to the ORDER in the "citations" URL array (first URL = [1], second URL = [2], etc.).
+2) Each citation number must correspond to the ORDER in the "citations" array (first URL = [1], second URL = [2], etc.).
 3) Use separate brackets for each citation: [1], [2], [3] NOT [1,2,3].
 4) If you used any chunks of kind "caption" (e.g., charts, screenshots, figures) to support the answer, extract JPG URLs from the chunk text content (URLs ending with .jpg) and include them in "image_citations".
 5) For regular citations, NEVER invent sources or URLs. Use ONLY the EXACT URLs from the "URL" field in the context. Do NOT modify, truncate, or add sections to these URLs.
@@ -107,6 +107,7 @@ Rules:
 12) Use double line breaks (\\n\\n) between paragraphs to create clear, readable sections. Each major topic or concept should be in its own paragraph.
 13) No hidden reasoning or chain-of-thought in the output. Produce ONLY the required fields.
 14) Provide a confidence score from 0-100 based on how confident you are in the answer quality.
+15) CRITICAL: The "citations" field must be a simple array of URL strings, NOT objects with id/url/why_relevant fields.
  Output format (JSON):
  {{
    "answer_markdown": "Clear answer with proper paragraph spacing using \\n\\n between sections. Include relevant explanations with inline [1], [2], [3] citations.",
@@ -119,6 +120,8 @@ Rules:
    ],
    "confidence_score": 85
  }}
+
+IMPORTANT: The "citations" field must contain ONLY URL strings, not objects. Each URL should correspond to the numeric citation order in your answer_markdown.
 
 Validation:
 - Every [n] in answer_markdown must have a matching URL in "citations" array at position n-1.

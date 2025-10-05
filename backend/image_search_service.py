@@ -1,6 +1,7 @@
 """
-Image Search Service using SerpApi Google Images Light API.
+Image Search Service using SerpApi Google Images API.
 Fetches relevant images based on keywords from RAG responses.
+Now runs in parallel with answer generation for optimal performance.
 """
 
 import os
@@ -39,11 +40,13 @@ class ImageSearchService:
         search_query = " ".join(keywords[:3])  # Use first 3 keywords to avoid overly long queries
         
         try:
-            # Search parameters for Google Images Light API
+            # Search parameters for Google Images API
             params = {
                 "q": search_query,
-                "engine": "google_images_light",
+                "engine": "google_images",
                 "api_key": self.api_key,
+                "num": max_images,
+                "safe": "active",  # Safe search for scientific content
                 "gl": "us",  # Country
                 "hl": "en"   # Language
             }
@@ -52,11 +55,11 @@ class ImageSearchService:
             search = GoogleSearch(params)
             results = search.get_dict()
             
-            # Extract image URLs from Google Images Light API response
+            # Extract image URLs from Google Images API response
             image_urls = []
             if "images_results" in results:
                 for result in results["images_results"][:max_images]:
-                    # Google Images Light API provides 'original' field for full resolution images
+                    # Google Images API provides 'original' field for full resolution images
                     if "original" in result:
                         image_urls.append(result["original"])
                     # Fallback to thumbnail if original is not available
