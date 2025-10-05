@@ -178,9 +178,6 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
       {/* Images */}
       {((answer.image_citations && answer.image_citations.length > 0) || (answer.image_urls && answer.image_urls.length > 0)) && (
         <div className="border-t border-gray-800/20 pt-3">
-          <h4 className="text-xs font-medium text-gray-400 mb-3">
-            Images ({((answer.image_citations?.length || 0) + (answer.image_urls?.length || 0))})
-          </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {/* Display image_citations (from RAG pipeline) */}
             {answer.image_citations?.map((image, index) => (
@@ -267,33 +264,6 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
         </div>
       )}
 
-      {/* Sources */}
-      {answer.citations && answer.citations.length > 0 && (
-        <div className="border-t border-gray-800/20 pt-3">
-          <h4 className="text-xs font-medium text-gray-400 mb-3">
-            Sources ({answer.citations.length})
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {answer.citations.map((citation, index) => {
-              // Handle both string URLs and citation objects
-              const citationUrl = typeof citation === 'string' ? citation : citation.url;
-              
-              return (
-                <div key={index} className="flex items-center gap-2">
-                  <a
-                    href={citationUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-blue-400 hover:text-blue-400/80 underline font-medium"
-                  >
-                    Source {index + 1}
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
 
       {/* Confidence Indicator */}
       <div style={{

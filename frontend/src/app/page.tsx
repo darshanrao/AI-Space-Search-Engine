@@ -37,7 +37,8 @@ export default function Home() {
   const [threadId, setThreadId] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
 
@@ -94,6 +95,7 @@ export default function Home() {
   // Initialize client-side state
   useEffect(() => {
     setIsClient(true);
+    setIsMounted(true);
     // Restore threadId from localStorage on page load
     const savedThreadId = localStorage.getItem('space_bio_thread_id');
     if (savedThreadId) {
@@ -286,37 +288,47 @@ export default function Home() {
     setMessages([]);
     setContext({ organism: undefined, conditions: [] });
     setError(null);
-    setIsSidebarOpen(false);
   };
 
   // Handle session selection
   const handleSessionSelect = (sessionId: string) => {
     setThreadId(sessionId);
     localStorage.setItem('space_bio_thread_id', sessionId);
-    setIsSidebarOpen(false);
     // Messages will be loaded by the useEffect that watches threadId
   };
 
-  // Handle sidebar toggle
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
 
 
   return (
     <div style={{
-      display: 'flex',
-      flexDirection: 'column',
       height: '100vh',
-      maxWidth: '1200px',
-      width: '100%',
-      margin: '0 auto',
       color: 'var(--color-text-primary)',
-      position: 'relative',
-      padding: '0 16px',
-      paddingLeft: 'max(16px, env(safe-area-inset-left))',
-      paddingRight: 'max(16px, env(safe-area-inset-right))'
+      position: 'relative'
     }}>
+      {/* Sessions Sidebar */}
+      {isMounted && (
+        <SessionsSidebar
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
+          currentSessionId={threadId}
+          onSessionSelect={handleSessionSelect}
+          onNewSession={handleNewChat}
+        />
+      )}
+
+      {/* Main Content Area */}
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        width: (isMounted && isSidebarOpen) ? 'calc(100vw - 320px)' : '100vw',
+        height: '100vh',
+        marginLeft: (isMounted && isSidebarOpen) ? '320px' : '0',
+        padding: '0 16px',
+        paddingLeft: 'max(16px, env(safe-area-inset-left))',
+        paddingRight: 'max(16px, env(safe-area-inset-right))',
+        transition: 'width 0.3s ease, margin-left 0.3s ease',
+        minWidth: 0
+      }}>
       {/* Chat Header */}
       <div style={{
         flexShrink: 0,
@@ -334,43 +346,32 @@ export default function Home() {
                 alignItems: 'center',
                 gap: '12px'
               }}>
-                {/* Sidebar Toggle Button */}
-                <button
-                  onClick={toggleSidebar}
-                  style={{
-                    padding: '8px',
-                    backgroundColor: 'rgba(30, 33, 51, 0.3)',
-                    border: '1px solid rgba(30, 33, 51, 0.2)',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s ease',
-                    flexShrink: 0
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.5)'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.3)'}
-                >
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
+                {/* Sidebar Open Button - only show when sidebar is closed */}
+                {isMounted && !isSidebarOpen && (
+                  <button
+                    onClick={() => setIsSidebarOpen(true)}
+                    style={{
+                      padding: '8px',
+                      backgroundColor: 'rgba(30, 33, 51, 0.3)',
+                      border: '1px solid rgba(30, 33, 51, 0.2)',
+                      borderRadius: '8px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease',
+                      flexShrink: 0
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.5)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.3)'}
+                    title="Open sidebar"
+                  >
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                )}
                 
-                <div style={{
-                  width: '32px',
-                  height: '32px',
-                  background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  animation: 'pulse 2s infinite'
-                }}>
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: 'white'}}>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                </div>
                 <div>
                   <h1 style={{
                     fontSize: '18px',
@@ -755,14 +756,7 @@ export default function Home() {
         />
       </div>
 
-      {/* Sessions Sidebar */}
-      <SessionsSidebar
-        isOpen={isSidebarOpen}
-        onClose={() => setIsSidebarOpen(false)}
-        currentSessionId={threadId}
-        onSessionSelect={handleSessionSelect}
-        onNewSession={handleNewChat}
-      />
+      </div>
     </div>
   );
 }

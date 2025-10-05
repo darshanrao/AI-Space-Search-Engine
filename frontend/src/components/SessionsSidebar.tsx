@@ -125,19 +125,80 @@ export default function SessionsSidebar({
     };
   }, [sessions]);
 
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-40 flex">
-      {/* Sidebar */}
-      <div className="w-80 bg-gray-900 border-r border-gray-700 flex flex-col">
+    <>
+      {/* Mobile backdrop when sidebar is open */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40 md:hidden"
+          onClick={onClose}
+        />
+      )}
+      
+      <div className="w-80 sessions-sidebar flex flex-col h-full transition-all duration-300" style={{
+        position: 'absolute',
+        left: isOpen ? '0' : '-320px',
+        top: 0,
+        zIndex: 30,
+        backgroundColor: 'var(--color-surface)',
+        borderRight: '1px solid rgba(30, 33, 51, 0.2)',
+        backdropFilter: 'blur(20px)'
+      }}>
         {/* Header */}
-        <div className="p-4 border-b border-gray-700">
+        <div style={{
+          padding: '16px',
+          borderBottom: '1px solid rgba(30, 33, 51, 0.2)',
+          backgroundColor: 'rgba(30, 33, 51, 0.8)',
+          backdropFilter: 'blur(15px)'
+        }}>
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-white">Chat Sessions</h2>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px'
+            }}>
+              {/* Space Bio Assistant Logo */}
+              <div style={{
+                width: '32px',
+                height: '32px',
+                background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                animation: 'pulse 2s infinite'
+              }}>
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: 'white'}}>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <h2 style={{
+                fontSize: '18px',
+                fontWeight: '600',
+                color: 'var(--color-text-primary)',
+                margin: 0
+              }}>Chat Sessions</h2>
+            </div>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
+              style={{
+                color: 'var(--color-text-secondary)',
+                padding: '4px',
+                borderRadius: '4px',
+                border: 'none',
+                backgroundColor: 'transparent',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = 'var(--color-text-primary)';
+                e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = 'var(--color-text-secondary)';
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+              title="Close sidebar"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -148,7 +209,25 @@ export default function SessionsSidebar({
           {/* New Chat Button */}
           <button
             onClick={onNewSession}
-            className="w-full mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center justify-center gap-2"
+            style={{
+              width: '100%',
+              marginTop: '16px',
+              padding: '8px 16px',
+              backgroundColor: 'var(--color-primary)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '8px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px',
+              fontSize: '14px',
+              fontWeight: '500',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(62, 142, 222, 0.9)'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-primary)'}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -158,38 +237,94 @@ export default function SessionsSidebar({
         </div>
 
         {/* Sessions List */}
-        <div className="flex-1 overflow-y-auto">
+        <div style={{
+          flex: 1,
+          overflowY: 'auto',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none'
+        }}>
           {sessions.length === 0 ? (
-            <div className="p-4 text-center text-gray-400">
-              <svg className="w-12 h-12 mx-auto mb-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div style={{
+              padding: '32px 16px',
+              textAlign: 'center',
+              color: 'var(--color-text-secondary)'
+            }}>
+              <svg className="w-12 h-12 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: 'var(--color-text-secondary)'}}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
-              <p className="text-sm">No chat sessions yet</p>
-              <p className="text-xs mt-1">Start a new conversation to see it here</p>
+              <p style={{fontSize: '14px', margin: 0}}>No chat sessions yet</p>
+              <p style={{fontSize: '12px', margin: '4px 0 0 0', opacity: 0.8}}>Start a new conversation to see it here</p>
             </div>
           ) : (
-            <div className="p-2">
+            <div style={{padding: '8px'}}>
               {sessions.map((session) => (
                 <div
                   key={session.id}
-                  className={`group relative p-3 rounded-lg cursor-pointer transition-colors mb-2 ${
-                    session.id === currentSessionId
-                      ? 'bg-blue-600/20 border border-blue-500/30'
-                      : 'hover:bg-gray-800/50'
-                  }`}
+                  style={{
+                    position: 'relative',
+                    padding: '12px',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    marginBottom: '8px',
+                    backgroundColor: session.id === currentSessionId 
+                      ? 'rgba(62, 142, 222, 0.2)' 
+                      : 'transparent',
+                    border: session.id === currentSessionId 
+                      ? '1px solid rgba(62, 142, 222, 0.3)' 
+                      : '1px solid transparent'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (session.id !== currentSessionId) {
+                      e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.3)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (session.id !== currentSessionId) {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }
+                  }}
                   onClick={() => onSessionSelect(session.id)}
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-sm font-medium text-white truncate">
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    justifyContent: 'space-between'
+                  }}>
+                    <div style={{
+                      flex: 1,
+                      minWidth: 0
+                    }}>
+                      <h3 style={{
+                        fontSize: '14px',
+                        fontWeight: '500',
+                        color: 'var(--color-text-primary)',
+                        margin: 0,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap'
+                      }}>
                         {session.title}
                       </h3>
                       {session.lastMessage && (
-                        <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                        <p style={{
+                          fontSize: '12px',
+                          color: 'var(--color-text-secondary)',
+                          margin: '4px 0 0 0',
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden'
+                        }}>
                           {session.lastMessage}
                         </p>
                       )}
-                      <p className="text-xs text-gray-500 mt-1">
+                      <p style={{
+                        fontSize: '11px',
+                        color: 'var(--color-text-secondary)',
+                        margin: '4px 0 0 0',
+                        opacity: 0.7
+                      }}>
                         {session.timestamp.toLocaleDateString()} at {session.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </p>
                     </div>
@@ -200,7 +335,27 @@ export default function SessionsSidebar({
                         e.stopPropagation();
                         deleteSession(session.id);
                       }}
-                      className="opacity-0 group-hover:opacity-100 ml-2 p-1 text-gray-400 hover:text-red-400 transition-all"
+                      style={{
+                        opacity: 0,
+                        marginLeft: '8px',
+                        padding: '4px',
+                        color: 'var(--color-text-secondary)',
+                        backgroundColor: 'transparent',
+                        border: 'none',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        transition: 'all 0.2s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.opacity = '1';
+                        e.currentTarget.style.color = '#EF4444';
+                        e.currentTarget.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.opacity = '0';
+                        e.currentTarget.style.color = 'var(--color-text-secondary)';
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                      }}
                       title="Delete session"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -215,18 +370,38 @@ export default function SessionsSidebar({
         </div>
 
         {/* Footer */}
-        <div className="p-4 border-t border-gray-700">
-          <div className="text-xs text-gray-500 text-center">
+        <div style={{
+          padding: '16px',
+          borderTop: '1px solid rgba(30, 33, 51, 0.2)',
+          backgroundColor: 'rgba(30, 33, 51, 0.8)',
+          backdropFilter: 'blur(15px)'
+        }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px',
+            fontSize: '12px',
+            color: 'var(--color-text-secondary)',
+            opacity: 0.8
+          }}>
+            <div style={{
+              width: '16px',
+              height: '16px',
+              background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <svg width="8" height="8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: 'white'}}>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
             Space Bio Assistant
           </div>
         </div>
       </div>
-      
-      {/* Backdrop */}
-      <div 
-        className="flex-1 bg-black bg-opacity-50 backdrop-blur-sm"
-        onClick={onClose}
-      />
-    </div>
+    </>
   );
 }

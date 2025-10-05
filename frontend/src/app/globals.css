@@ -259,8 +259,9 @@ a {
   transition: transform 0.2s ease;
 }
 
-/* Hide scrollbar for chat messages */
-.chat-messages::-webkit-scrollbar {
+/* Hide scrollbar for chat messages and sidebar */
+.chat-messages::-webkit-scrollbar,
+.sessions-sidebar::-webkit-scrollbar {
   display: none;
 }
 
@@ -371,6 +372,26 @@ a {
   
   .search-input {
     font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+  
+  /* Mobile sidebar behavior */
+  .sessions-sidebar {
+    position: fixed !important;
+    z-index: 50 !important;
+  }
+}
+
+/* Tablet responsive design */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .chat-container {
+    max-width: calc(100vw - 320px) !important;
+  }
+}
+
+/* Desktop responsive design */
+@media (min-width: 1025px) {
+  .sessions-sidebar {
+    position: absolute !important;
   }
 }
 
