@@ -397,6 +397,7 @@ export default function Home() {
     setMessages([]);
     setContext({ organism: undefined, conditions: [] });
     setError(null);
+    setIsLoading(false); // IMPORTANT: Clear loading state to prevent cross-context generation
   };
 
   // Handle session selection
@@ -405,6 +406,8 @@ export default function Home() {
     if (typeof window !== 'undefined') {
       localStorage.setItem('space_bio_thread_id', sessionId);
     }
+    setIsLoading(false); // Clear loading state when switching sessions
+    setError(null); // Clear any errors when switching sessions
     // Messages will be loaded by the useEffect that watches threadId
   };
 
@@ -612,7 +615,7 @@ export default function Home() {
                 color: 'var(--color-text-secondary)',
                 maxWidth: '320px'
               }}>
-                Search experiments, analyze findings and generate scientific insights from NASA's bioscience archives
+                Search experiments, analyze findings and generate scientific insights from NASA&apos;s bioscience archives
               </p>
             </div>
           </div>
