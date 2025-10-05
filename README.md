@@ -1,7 +1,7 @@
 # 🧠🚀 AstroBio Explorer
 
-AstroBio Explorer is our AI-powered research assistant built for the **NASA Space Apps Challenge 2025**.
-It helps anyone explore NASA’s space biology research in a simple, conversational, and interactive way.
+AstroBio Explorer is our AI-powered research assistant built for the **NASA Space Apps Challenge 2025(Build a Space Biology Knowledge Engine)**.
+It helps anyone explore NASA’s space biology research in a simple, conversational and interactive way.
 
 ---
 
@@ -24,7 +24,7 @@ AstroBio Explorer turns complex scientific literature into a friendly research c
 * 🖼 **View relevant images** tied to your question in a sidebar
 * 💬 **Keep multiple research threads open** using multi-session chat
 
-It doesn’t just give you a block of text. It brings together papers, citations, images, and related work so you can truly explore a topic.
+It doesn’t just give you a block of text. It brings together papers, citations, images and related work so you can truly explore a topic.
 
 ---
 
@@ -44,8 +44,8 @@ We structured AstroBio Explorer into three main parts working together.
 * Built with **Next.js** and **Tailwind CSS**
 * Clean chat interface with **SCSS and Haml animations** for a smooth space-themed feel
 * Citations appear inline inside chat bubbles
-* Images are shown in a sidebar for visual context
-* Includes a “Google Scholar” button to fetch related papers
+* Images are shown in a sidebar for visual context using **Image Fetch API**(Serp API)
+* Includes a **Google Scholar** button to fetch related papers(Serp API)
 * Supports multiple chat sessions so users can explore different topics simultaneously
 
 ### 🧱 Data Layer
@@ -65,14 +65,14 @@ We structured AstroBio Explorer into three main parts working together.
 
 * Finding the **right chunk size** to keep answers precise without slowing the system
 * Placing **inline citations** at exactly the right spots in the generated text
-* Coordinating **Gemini**, **Qdrant**, and **SerpAPI** in a single pipeline
-* Designing a **UI** that could handle citations, media, and multiple threads without feeling cluttered
+* Coordinating **Gemini**, **Qdrant** and **SerpAPI** in a single pipeline
+* Designing a **UI** that could handle citations, media and multiple threads without feeling cluttered
 
 ---
 
 ## 🏆 Accomplishments We're Proud Of
 
-* Built a working research assistant that connects **NASA data**, **Google Scholar**, and **images** in one conversational interface
+* Built a working research assistant that connects **NASA data**, **Google Scholar** and **images** in one conversational interface
 * Added **inline citations** that link directly to real papers
 * Enabled **multi-session research chats** for parallel exploration
 * Designed a **modular backend** that can easily be extended with more tools later
@@ -84,7 +84,7 @@ We structured AstroBio Explorer into three main parts working together.
 * How to combine different AI components into a smooth, useful experience
 * The importance of **chunking and retrieval** when working with real scientific literature
 * How to shape LLM outputs into structured answers that are actually useful for research
-* How to design frontend components that gracefully handle citations, references, and visual content
+* How to design frontend components that gracefully handle citations, references and visual content
 
 ---
 
@@ -107,17 +107,17 @@ We structured AstroBio Explorer into three main parts working together.
 * Gemini 2.5 Flash
 * Qdrant
 * Supabase
-* SerpAPI (Google Scholar + Images)
+* SerpAPI (Google Scholar + Image Fetch)
 
 ---
 
 ## 🧪 Evaluation Overview
 
-We tested AstroBio Explorer on **real NASA space biology literature** to measure how well it retrieves, cites, and answers scientific questions.
+We tested AstroBio Explorer on **real NASA space biology literature** to measure how well it retrieves, cites and answers scientific questions.
 
 * **181 questions**
 * **42 research papers**
-* Evaluation measured **retrieval**, **answer quality**, and **citation accuracy**
+* Evaluation measured **retrieval**, **answer quality** and **citation accuracy**
 
 ### Results
 
@@ -157,28 +157,134 @@ AstroBio Explorer excels at **targeted scientific questions**, which is where re
 
 ---
 
+## 🔐 Environment Setup
+
+Create a `.env` file for the backend and a `.env.local` for the frontend.
+Do not commit these files to Git. If you ever push them by mistake, rotate the keys immediately.
+
+### Backend `.env` (create in `backend/.env`)
+
+```ini
+# LLM
+GEMINI_API_KEY=your_gemini_api_key
+MODEL_NAME=gemini-2.5-flash
+
+# Vector DB
+QDRANT_URL=https://your-qdrant-host:6333
+QDRANT_API_KEY=your_qdrant_api_key
+QDRANT_COLLECTION=space_bio_chunks
+
+# Database for sessions and threads (Supabase Postgres URL or any Postgres)
+DATABASE_URL=postgresql+asyncpg://user:password@host:6543/dbname?sslmode=require
+
+# External search
+SERPAPI_API_KEY=your_serpapi_key
+
+# CORS
+ALLOW_ORIGINS=http://localhost:3000
+```
+
+### Frontend `.env.local` (create in `frontend/.env.local`)
+
+```ini
+# Your API base for local dev
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
+
+```
+
+### Git ignore tip
+
+Make sure your root `.gitignore` includes:
+
+```
+.env
+.env.local
+**/.env
+**/.env.local
+```
+
+---
+
 ## 🧭 How to Run the Project
 
-### Backend
+### 1. Backend: create virtual environment
 
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
+
+### 2. Backend: activate virtual environment
+
+macOS or Linux:
+
+```bash
+source venv/bin/activate
+```
+
+Windows PowerShell:
+
+```powershell
+venv\Scripts\Activate.ps1
+```
+
+### 3. Backend: install dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+### 4. Backend: set environment variables from `.env`
+
+Make sure `backend/.env` exists with your keys. If you use a process manager it will load automatically. For local shells, you can also export manually if needed.
+
+macOS or Linux:
+
+```bash
+export $(grep -v '^#' .env | xargs)
+```
+
+Windows PowerShell:
+
+```powershell
+Get-Content .env | ForEach-Object {
+  if ($_ -and $_ -notmatch '^\s*#') {
+    $name, $value = $_.Split('=',2)
+    [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim())
+  }
+}
+```
+
+### 5. Backend: run the API
+
+```bash
 python main.py
 ```
 
-### Frontend
+The backend will be available at:
+
+```
+http://localhost:8000
+```
+
+### 6. Frontend: install dependencies
 
 ```bash
-cd frontend
+cd ../frontend
 npm install
+```
+
+### 7. Frontend: run the dev server
+
+```bash
 npm run dev
 ```
 
-* Backend runs on `http://localhost:8000`
-* Frontend runs on `http://localhost:3000`
+The frontend will be available at:
+
+```
+http://localhost:3000
+```
 
 ---
 
@@ -188,7 +294,7 @@ npm run dev
 .
 ├── backend        # FastAPI + LangChain + Gemini chatbot + RAG pipeline
 ├── frontend       # Next.js + Tailwind CSS UI
-├── evaluation     # Evaluation scripts, metrics, and results
+├── evaluation     # Evaluation scripts, metrics and results
 ```
 
 ---
@@ -196,5 +302,6 @@ npm run dev
 ## 👨‍🚀 Meet AstroBio Explorer
 
 AstroBio Explorer is more than a chatbot. It’s a research companion designed to make space bioscience accessible and explorable.
-Whether you’re a scientist, a student, or just curious about how life thrives beyond Earth, AstroBio Explorer lets you **ask real questions and get meaningful, research-backed answers**.
+Whether you’re a scientist, a student or just curious about how life thrives beyond Earth, AstroBio Explorer lets you **ask real questions and get meaningful, research-backed answers**.
+
 
