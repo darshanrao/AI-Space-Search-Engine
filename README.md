@@ -1,7 +1,7 @@
 # 🌌 AstroBio Explorer
 
 Welcome to **AstroBio Explorer**, our submission for the **2025 NASA Space Apps Challenge** (Build a Space Biology Knowledge Engine).
-Our project is designed to help scientists, researchers, and space enthusiasts explore decades of NASA’s bioscience research through a smart, conversational interface.
+Our project is designed to help scientists, researchers and space enthusiasts explore decades of NASA’s bioscience research through a smart, conversational interface.
 
 ---
 
@@ -9,9 +9,9 @@ Our project is designed to help scientists, researchers, and space enthusiasts e
 
 Space biology research is full of valuable knowledge, but it’s scattered across hundreds of dense publications. Finding the right information or making sense of it quickly can be overwhelming.
 
-We wanted to build something that feels like **talking to a knowledgeable research assistant**. You ask a question, and instead of giving you a vague summary, the assistant provides context-rich answers with proper citations, relevant images, and links to papers.
+We wanted to build something that feels like **talking to a knowledgeable research assistant**. You ask a question and instead of giving you a vague summary, the assistant provides context-rich answers with proper citations, relevant images and links to papers.
 
-The goal was simple: make space bioscience literature **easier to explore, understand, and build upon**.
+The goal was simple: make space bioscience literature **easier to explore, understand and build upon**.
 
 ---
 
@@ -20,7 +20,7 @@ The goal was simple: make space bioscience literature **easier to explore, under
 AstroBio Explorer is a **conversational research assistant** for space biology.
 
 * You ask scientific questions in natural language.
-* It finds relevant NASA bioscience papers, retrieves key information using a RAG pipeline, and generates detailed, citation-backed answers.
+* It finds relevant NASA bioscience papers, retrieves key information using a RAG pipeline and generates detailed, citation-backed answers.
 * Each answer includes inline citations with clickable links so you can jump straight to the source.
 * Related images are fetched dynamically and displayed in a sidebar.
 * You can open **multiple chat sessions**, save context, and explore follow-up questions just like you would with a human expert.
@@ -52,7 +52,9 @@ We designed a clear pipeline to keep things modular and efficient.
 4. **Enrichment** → Google Scholar API fetches similar papers, SERP image API fetches relevant visuals
 5. **Frontend Display** → answer + citations inline, related images in a sidebar, scholar links in a separate tab
 
-![Pipeline Diagram](./pipeline.png)  <!-- Replace with actual image path -->
+ <!-- Replace with actual image path -->
+ <img width="520" height="422" alt="nasa" src="https://github.com/user-attachments/assets/599bf7a1-f250-438e-9bbf-e350a0f7e21b" />
+
 
 ---
 
