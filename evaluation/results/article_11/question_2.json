@@ -1,0 +1,21 @@
+{
+  "article_number": 11,
+  "test_case_id": "PMC3040128_Q2",
+  "question": "How do the pollen phenotypes of AtrabD2b/2c double mutants compare to those of AtrabD2b or AtrabD2c single mutants?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.5714
+  },
+  "answer": {
+    "semantic_similarity": 0.9657,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.752
+}

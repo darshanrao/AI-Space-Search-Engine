@@ -1,0 +1,21 @@
+{
+  "article_number": 424,
+  "test_case_id": "PMC4349987_Q2",
+  "question": "Compare the heat stress sensitivities of wild-type Arabidopsis seedlings with the ann1-2, ann2, and ann1-2/ann2 double mutants.",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.0,
+    "soft_recall_at_k": 0.0
+  },
+  "answer": {
+    "semantic_similarity": 0.7841,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.4681
+}

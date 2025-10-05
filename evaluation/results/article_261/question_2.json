@@ -1,0 +1,21 @@
+{
+  "article_number": 261,
+  "test_case_id": "PMC5821596_Q2",
+  "question": "What were the key differences in experimental setup and sample processing among the BRIC-16-Cyt, BRIC-16-Reg, and BRIC-16-DNA investigative teams?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.4286
+  },
+  "answer": {
+    "semantic_similarity": 0.8279,
+    "key_facts_coverage": 0.8
+  },
+  "citations": {
+    "precision": 0.4286,
+    "recall": 0.6,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.664
+}

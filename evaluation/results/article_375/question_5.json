@@ -1,0 +1,21 @@
+{
+  "article_number": 375,
+  "test_case_id": "PMC3350920_Q5",
+  "question": "Provide a comprehensive overview of the main cellular and molecular mechanisms by which 14-3-3 proteins, particularly isoforms \u03bc and \u03c5, regulate root growth and chloroplast development in Arabidopsis, highlighting their interaction with the photosensory system.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.6,
+    "soft_recall_at_k": 0.4483
+  },
+  "answer": {
+    "semantic_similarity": 0.9002,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.5833,
+    "recall": 0.3182,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7377
+}

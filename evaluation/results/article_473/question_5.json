@@ -1,0 +1,21 @@
+{
+  "article_number": 473,
+  "test_case_id": "PMC5288125_Q5",
+  "question": "Provide a comprehensive overview of the experimental methods and the main findings regarding leptin's differential effects on bone formation and energy metabolism in ob/ob mice.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.2857,
+    "soft_recall_at_k": 0.3571
+  },
+  "answer": {
+    "semantic_similarity": 0.8975,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.5714,
+    "recall": 0.4444,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6738
+}

@@ -1,0 +1,21 @@
+{
+  "article_number": 426,
+  "test_case_id": "PMC6130020_Q2",
+  "question": "How do the primary root growth and root cap development differ between ANN1/ANN2 knockout mutants and wild-type Arabidopsis seedlings when grown without exogenous Suc?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.8704,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.9542
+}

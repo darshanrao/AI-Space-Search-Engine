@@ -1,0 +1,203 @@
+{
+  "total_test_cases": 181,
+  "overall": {
+    "avg_retrieval_score": 0.5859,
+    "avg_answer_score": 0.8295,
+    "avg_citation_score": 0.6978,
+    "avg_overall_score": 0.7179
+  },
+  "by_question_type": {
+    "factual": {
+      "avg_score": 0.7305,
+      "count": 37
+    },
+    "comparative": {
+      "avg_score": 0.7712,
+      "count": 36
+    },
+    "complex": {
+      "avg_score": 0.6945,
+      "count": 35
+    },
+    "specific": {
+      "avg_score": 0.7866,
+      "count": 37
+    },
+    "broad": {
+      "avg_score": 0.6038,
+      "count": 36
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "avg_score": 0.7305,
+      "count": 37
+    },
+    "medium": {
+      "avg_score": 0.779,
+      "count": 73
+    },
+    "hard": {
+      "avg_score": 0.6485,
+      "count": 71
+    }
+  },
+  "by_article": {
+    "106": {
+      "avg_score": 0.7094,
+      "count": 5
+    },
+    "10": {
+      "avg_score": 0.7666,
+      "count": 5
+    },
+    "112": {
+      "avg_score": 0.787,
+      "count": 5
+    },
+    "117": {
+      "avg_score": 0.7094,
+      "count": 4
+    },
+    "11": {
+      "avg_score": 0.7133,
+      "count": 5
+    },
+    "120": {
+      "avg_score": 0.6996,
+      "count": 5
+    },
+    "128": {
+      "avg_score": 0.4672,
+      "count": 5
+    },
+    "140": {
+      "avg_score": 0.6911,
+      "count": 4
+    },
+    "148": {
+      "avg_score": 0.8815,
+      "count": 4
+    },
+    "151": {
+      "avg_score": 0.8598,
+      "count": 5
+    },
+    "195": {
+      "avg_score": 0.697,
+      "count": 5
+    },
+    "198": {
+      "avg_score": 0.5752,
+      "count": 5
+    },
+    "207": {
+      "avg_score": 0.8897,
+      "count": 5
+    },
+    "208": {
+      "avg_score": 0.5561,
+      "count": 5
+    },
+    "21": {
+      "avg_score": 0.8801,
+      "count": 4
+    },
+    "25": {
+      "avg_score": 0.7113,
+      "count": 5
+    },
+    "261": {
+      "avg_score": 0.5769,
+      "count": 5
+    },
+    "274": {
+      "avg_score": 0.7717,
+      "count": 5
+    },
+    "284": {
+      "avg_score": 0.6558,
+      "count": 5
+    },
+    "287": {
+      "avg_score": 0.6054,
+      "count": 5
+    },
+    "301": {
+      "avg_score": 0.7157,
+      "count": 4
+    },
+    "310": {
+      "avg_score": 0.6755,
+      "count": 4
+    },
+    "327": {
+      "avg_score": 0.7399,
+      "count": 5
+    },
+    "328": {
+      "avg_score": 0.7275,
+      "count": 5
+    },
+    "359": {
+      "avg_score": 0.8573,
+      "count": 3
+    },
+    "375": {
+      "avg_score": 0.7527,
+      "count": 5
+    },
+    "403": {
+      "avg_score": 0.6979,
+      "count": 5
+    },
+    "407": {
+      "avg_score": 0.7673,
+      "count": 5
+    },
+    "419": {
+      "avg_score": 0.7324,
+      "count": 4
+    },
+    "424": {
+      "avg_score": 0.6841,
+      "count": 5
+    },
+    "426": {
+      "avg_score": 0.7598,
+      "count": 5
+    },
+    "436": {
+      "avg_score": 0.8221,
+      "count": 4
+    },
+    "459": {
+      "avg_score": 0.8209,
+      "count": 4
+    },
+    "473": {
+      "avg_score": 0.6882,
+      "count": 5
+    },
+    "490": {
+      "avg_score": 0.731,
+      "count": 3
+    },
+    "499": {
+      "avg_score": 0.6892,
+      "count": 4
+    },
+    "50": {
+      "avg_score": 0.5526,
+      "count": 5
+    },
+    "536": {
+      "avg_score": 0.6754,
+      "count": 5
+    },
+    "56": {
+      "avg_score": 0.853,
+      "count": 5
+    }
+  }
+}

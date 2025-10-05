@@ -1,0 +1,21 @@
+{
+  "article_number": 198,
+  "test_case_id": "PMC7000411_Q3",
+  "question": "Based on the study's findings, what evidence suggests that the increased lethality of spaceflight-exposed Serratia marcescens is primarily due to changes in the pathogen itself, rather than alterations in the host's immune response?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.25,
+    "soft_recall_at_k": 0.125
+  },
+  "answer": {
+    "semantic_similarity": 0.8623,
+    "key_facts_coverage": 0.5
+  },
+  "citations": {
+    "precision": 0.25,
+    "recall": 0.125,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.4638
+}

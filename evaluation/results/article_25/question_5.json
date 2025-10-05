@@ -1,0 +1,21 @@
+{
+  "article_number": 25,
+  "test_case_id": "PMC9267413_Q5",
+  "question": "What are the primary space-environmental factors affecting astronaut health, and how do they specifically impact the female reproductive system and overall cancer risk, according to the review?",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.2143,
+    "soft_recall_at_k": 0.2381
+  },
+  "answer": {
+    "semantic_similarity": 0.8839,
+    "key_facts_coverage": 0.8889
+  },
+  "citations": {
+    "precision": 0.4545,
+    "recall": 0.2632,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5926
+}

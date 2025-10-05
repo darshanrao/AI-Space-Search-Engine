@@ -1,0 +1,21 @@
+{
+  "article_number": 499,
+  "test_case_id": "PMC10751425_Q5",
+  "question": "Provide a comprehensive summary of this study's investigation into bisphosphonates as an anti-sarcopenic therapy in *Caenorhabditis elegans*, including the rationale for using *C. elegans*, the key experimental findings on lifespan, healthspan, and cellular structures, and the identified molecular mechanisms, as well as the overall implications for sarcopenia treatment.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.1667,
+    "soft_recall_at_k": 0.3182
+  },
+  "answer": {
+    "semantic_similarity": 0.9169,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.3182,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6707
+}

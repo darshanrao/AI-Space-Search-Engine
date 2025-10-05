@@ -1,0 +1,21 @@
+{
+  "article_number": 140,
+  "test_case_id": "PMC10813126_Q4",
+  "question": "What analytical technique was used to identify metabolites in the secretome samples, and how were these metabolites identified?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.8647,
+    "key_facts_coverage": 0.75
+  },
+  "citations": {
+    "precision": 0.25,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8633
+}

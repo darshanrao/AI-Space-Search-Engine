@@ -1,0 +1,21 @@
+{
+  "article_number": 128,
+  "test_case_id": "PMC6165321_Q5",
+  "question": "Provide a comprehensive overview of this study, including its primary objective, experimental design, main findings regarding microgravity effects and artificial gravity mitigation, and the overall conclusions.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.2,
+    "soft_recall_at_k": 0.1333
+  },
+  "answer": {
+    "semantic_similarity": 0.88,
+    "key_facts_coverage": 0.7778
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.1429,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5409
+}

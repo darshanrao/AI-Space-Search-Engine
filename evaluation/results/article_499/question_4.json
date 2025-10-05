@@ -1,0 +1,21 @@
+{
+  "article_number": 499,
+  "test_case_id": "PMC10751425_Q4",
+  "question": "Which *Caenorhabditis elegans* genes were identified as dispensable for zoledronic acid (ZA)-induced healthspan extension?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.75,
+    "soft_recall_at_k": 0.75
+  },
+  "answer": {
+    "semantic_similarity": 0.9589,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.6667,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8477
+}

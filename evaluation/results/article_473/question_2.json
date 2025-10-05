@@ -1,0 +1,21 @@
+{
+  "article_number": 473,
+  "test_case_id": "PMC5288125_Q2",
+  "question": "Compare the EC50 infusion rates of leptin required to stimulate bone formation parameters versus those needed to impact energy metabolism indices in ob/ob mice.",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.4286
+  },
+  "answer": {
+    "semantic_similarity": 0.8586,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.25,
+    "recall": 0.25,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6807
+}

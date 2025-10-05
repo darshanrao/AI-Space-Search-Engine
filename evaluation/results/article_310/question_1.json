@@ -1,0 +1,21 @@
+{
+  "article_number": 310,
+  "test_case_id": "PMC11166981_Q1",
+  "question": "Which mouse organ exhibited the highest number of differentially expressed genes (DEGs) after 37 days of spaceflight?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 0.0,
+    "soft_recall_at_k": 0.0
+  },
+  "answer": {
+    "semantic_similarity": 0.7151,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.3776
+}

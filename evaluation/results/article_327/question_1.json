@@ -1,0 +1,21 @@
+{
+  "article_number": 327,
+  "test_case_id": "PMC6213004_Q1",
+  "question": "What cell line was used in this study to investigate Epstein-Barr virus reactivation, and what was its origin?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.5
+  },
+  "answer": {
+    "semantic_similarity": 0.9348,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6575
+}

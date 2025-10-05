@@ -1,0 +1,21 @@
+{
+  "article_number": 459,
+  "test_case_id": "PMC4309301_Q4",
+  "question": "What storage conditions were tested for RNA later solution to preserve RNA integrity in mouse testicular tissue?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.5
+  },
+  "answer": {
+    "semantic_similarity": 0.9422,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7342
+}

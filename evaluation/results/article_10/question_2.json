@@ -1,0 +1,21 @@
+{
+  "article_number": 10,
+  "test_case_id": "PMC4095884_Q2",
+  "question": "Compare the calcium dependence of p70S6K and ERK1/2 phosphorylation in \u03b3-SG -/- muscles.",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.6
+  },
+  "answer": {
+    "semantic_similarity": 0.935,
+    "key_facts_coverage": 0.8
+  },
+  "citations": {
+    "precision": 0.6,
+    "recall": 0.75,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.827
+}

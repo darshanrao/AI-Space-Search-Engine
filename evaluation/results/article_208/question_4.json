@@ -1,0 +1,21 @@
+{
+  "article_number": 208,
+  "test_case_id": "PMC11833055_Q4",
+  "question": "Which specific serum metabolites were significantly downregulated in the CS group compared to the SB group?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.5
+  },
+  "answer": {
+    "semantic_similarity": 0.7384,
+    "key_facts_coverage": 0.2857
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6929
+}

@@ -1,0 +1,21 @@
+{
+  "article_number": 56,
+  "test_case_id": "PMC4653813_Q1",
+  "question": "What was the average muscle fiber cross-sectional area for mice exposed to spaceflight compared to ground controls?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9885,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.9974
+}

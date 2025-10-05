@@ -1,0 +1,21 @@
+{
+  "article_number": 198,
+  "test_case_id": "PMC7000411_Q4",
+  "question": "Besides Attacin-A, what other specific genes were identified as significantly differentially expressed in wild-type D. melanogaster after infection with spaceflight-exposed Serratia marcescens compared to ground control bacteria?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.7577,
+    "key_facts_coverage": 0.5
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7996
+}

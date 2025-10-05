@@ -1,0 +1,21 @@
+{
+  "article_number": 151,
+  "test_case_id": "PMC7264257_Q4",
+  "question": "What was the time-normalized edible fresh weight production rate for Mizuna in the EDEN ISS greenhouse?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9963,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.9658
+}

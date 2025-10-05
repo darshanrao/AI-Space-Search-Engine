@@ -1,0 +1,21 @@
+{
+  "article_number": 328,
+  "test_case_id": "PMC7171750_Q2",
+  "question": "How did alpha diversity and beta diversity of the salivary microbiome respond to spaceflight, and were these changes observed at the population or individual level?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.6667,
+    "soft_recall_at_k": 0.7143
+  },
+  "answer": {
+    "semantic_similarity": 0.9169,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.4286,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8015
+}

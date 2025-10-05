@@ -1,0 +1,21 @@
+{
+  "article_number": 261,
+  "test_case_id": "PMC5821596_Q3",
+  "question": "How do microgravity-induced changes in convection and water status contribute to the observed morphological and gene expression alterations in spaceflight-grown plants, particularly concerning hypoxia and cell wall structure?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.1111,
+    "soft_recall_at_k": 0.0833
+  },
+  "answer": {
+    "semantic_similarity": 0.8423,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.1111,
+    "recall": 0.0769,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.4527
+}

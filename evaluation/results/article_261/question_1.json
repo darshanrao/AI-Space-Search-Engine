@@ -1,0 +1,21 @@
+{
+  "article_number": 261,
+  "test_case_id": "PMC5821596_Q1",
+  "question": "How many transcripts were upregulated in the BRIC-16-Cyt microarray using the PLIER normalization method with a fold-change of at least 5?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 0.0,
+    "soft_recall_at_k": 0.5
+  },
+  "answer": {
+    "semantic_similarity": 0.9866,
+    "key_facts_coverage": 0.0
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.4428
+}

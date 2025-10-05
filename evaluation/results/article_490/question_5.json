@@ -1,0 +1,21 @@
+{
+  "article_number": 490,
+  "test_case_id": "PMC6876156_Q5",
+  "question": "What are the main systemic health benefits observed in *C. elegans* after long-term swim exercise, encompassing neuromuscular, metabolic, intestinal, and neuronal functions?",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.2941
+  },
+  "answer": {
+    "semantic_similarity": 0.8404,
+    "key_facts_coverage": 0.5556
+  },
+  "citations": {
+    "precision": 0.7143,
+    "recall": 0.2941,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.587
+}

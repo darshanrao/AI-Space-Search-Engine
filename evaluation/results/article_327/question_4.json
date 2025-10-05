@@ -1,0 +1,21 @@
+{
+  "article_number": 327,
+  "test_case_id": "PMC6213004_Q4",
+  "question": "Which two key Epstein-Barr virus (EBV) lytic genes were examined to identify increases in transcription following radiation treatment, and what do they code for?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.5
+  },
+  "answer": {
+    "semantic_similarity": 0.8715,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7628
+}

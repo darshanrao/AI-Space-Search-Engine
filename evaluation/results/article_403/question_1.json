@@ -1,0 +1,21 @@
+{
+  "article_number": 403,
+  "test_case_id": "PMC8539686_Q1",
+  "question": "What are the three main patterns of expression identified for the 101 genes responsive to fractional gravity levels?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.6667
+  },
+  "answer": {
+    "semantic_similarity": 0.9695,
+    "key_facts_coverage": 0.3333
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7403
+}

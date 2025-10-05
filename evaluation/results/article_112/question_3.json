@@ -1,0 +1,21 @@
+{
+  "article_number": 112,
+  "test_case_id": "PMC11053165_Q3",
+  "question": "What are the major physiological systems and key biological processes identified as being affected by altered gravitational conditions in both mouse and human studies, and what challenges limit direct cross-species comparisons of these effects?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.75,
+    "soft_recall_at_k": 0.25
+  },
+  "answer": {
+    "semantic_similarity": 0.6738,
+    "key_facts_coverage": 0.75
+  },
+  "citations": {
+    "precision": 0.375,
+    "recall": 0.2727,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6052
+}

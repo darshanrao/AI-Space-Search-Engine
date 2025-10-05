@@ -1,0 +1,21 @@
+{
+  "article_number": 424,
+  "test_case_id": "PMC4349987_Q4",
+  "question": "What specific CyDye fluor minimal labeling kit was used for the 2D-DIGE analysis, and how were the control and heat-treated microsomal protein samples differentially labeled?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9706,
+    "key_facts_coverage": 0.75
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8927
+}

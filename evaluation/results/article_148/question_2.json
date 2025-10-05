@@ -1,0 +1,21 @@
+{
+  "article_number": 148,
+  "test_case_id": "PMC6201722_Q2",
+  "question": "Compare the early stress detection times for Arabidopsis thaliana under salinity stress and Eruca sativa under ammonium nitrate treatment using the SI-NDVI system.",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.5
+  },
+  "answer": {
+    "semantic_similarity": 0.9343,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.4,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7494
+}

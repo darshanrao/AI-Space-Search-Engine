@@ -1,0 +1,21 @@
+{
+  "article_number": 11,
+  "test_case_id": "PMC3040128_Q5",
+  "question": "Describe the overall functional roles of AtRabD2b and AtRabD2c in Arabidopsis, including their general function as Rab GTPases, their specific roles in plant development, and evidence for their functional redundancy.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.25,
+    "soft_recall_at_k": 0.2917
+  },
+  "answer": {
+    "semantic_similarity": 0.9206,
+    "key_facts_coverage": 0.7143
+  },
+  "citations": {
+    "precision": 0.8571,
+    "recall": 0.2727,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6047
+}

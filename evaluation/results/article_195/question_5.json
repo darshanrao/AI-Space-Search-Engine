@@ -1,0 +1,21 @@
+{
+  "article_number": 195,
+  "test_case_id": "PMC5659752_Q5",
+  "question": "Describe the overall composition and key characteristics of Leptopilina heterotoma (Lh) VLPs, including their classification, protein categories, and what they are distinguished from.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.0833,
+    "soft_recall_at_k": 0.0769
+  },
+  "answer": {
+    "semantic_similarity": 0.7747,
+    "key_facts_coverage": 0.25
+  },
+  "citations": {
+    "precision": 0.2,
+    "recall": 0.0769,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.3437
+}

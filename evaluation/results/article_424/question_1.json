@@ -1,0 +1,21 @@
+{
+  "article_number": 424,
+  "test_case_id": "PMC4349987_Q1",
+  "question": "How many unique microsomal proteins were identified as having altered expression levels within 5 minutes of heat treatment in Arabidopsis seedlings?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.7351,
+    "key_facts_coverage": 0.3333
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7571
+}

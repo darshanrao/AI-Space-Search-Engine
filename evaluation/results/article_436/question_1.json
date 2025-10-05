@@ -1,0 +1,21 @@
+{
+  "article_number": 436,
+  "test_case_id": "PMC9856674_Q1",
+  "question": "What *C. elegans* strain was used in this study, and where was it obtained from?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 0.0,
+    "soft_recall_at_k": 0.5
+  },
+  "answer": {
+    "semantic_similarity": 0.9683,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.2,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6437
+}

@@ -1,0 +1,21 @@
+{
+  "article_number": 128,
+  "test_case_id": "PMC6165321_Q3",
+  "question": "Based on the study's findings, what are the proposed cellular and molecular mechanisms by which spaceflight might lead to retinal damage and potential visual impairment in astronauts?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.1667,
+    "soft_recall_at_k": 0.125
+  },
+  "answer": {
+    "semantic_similarity": 0.8816,
+    "key_facts_coverage": 0.5556
+  },
+  "citations": {
+    "precision": 0.1667,
+    "recall": 0.1429,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.4617
+}

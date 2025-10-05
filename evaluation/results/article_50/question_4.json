@@ -1,0 +1,21 @@
+{
+  "article_number": 50,
+  "test_case_id": "PMC11127935_Q4",
+  "question": "Which specific SAHS proteins from *Ramazzottius varieornatus* and *Hypsibius exemplaris* were successfully expressed and purified for detailed characterization in this study?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.6667
+  },
+  "answer": {
+    "semantic_similarity": 0.8149,
+    "key_facts_coverage": 0.375
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6052
+}

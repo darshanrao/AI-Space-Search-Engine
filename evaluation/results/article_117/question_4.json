@@ -1,0 +1,21 @@
+{
+  "article_number": 117,
+  "test_case_id": "PMC3502426_Q4",
+  "question": "Which specific inhibitors were used in the study to assess the roles of nitric oxide synthase (NOS) and cyclooxygenase (COX) signaling pathways in PNA vasodilation?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.3333
+  },
+  "answer": {
+    "semantic_similarity": 0.9767,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.1667,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7476
+}

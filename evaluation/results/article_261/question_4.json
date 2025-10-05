@@ -1,0 +1,21 @@
+{
+  "article_number": 261,
+  "test_case_id": "PMC5821596_Q4",
+  "question": "Which specific xylan and pectic backbone epitopes were found to be reduced in abundance in spaceflight-grown Arabidopsis shoots compared to ground controls in the BRIC-16-Cyt glycomics study?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.6667
+  },
+  "answer": {
+    "semantic_similarity": 0.9796,
+    "key_facts_coverage": 0.75
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8475
+}

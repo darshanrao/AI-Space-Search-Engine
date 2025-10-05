@@ -1,0 +1,21 @@
+{
+  "article_number": 536,
+  "test_case_id": "PMC7561690_Q1",
+  "question": "What are the GC contents for *K. aerogenes*, *K. pneumoniae*, and *K. quasipneumoniae* strains isolated from the ISS?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 0.0,
+    "soft_recall_at_k": 0.6667
+  },
+  "answer": {
+    "semantic_similarity": 0.7941,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.587
+}

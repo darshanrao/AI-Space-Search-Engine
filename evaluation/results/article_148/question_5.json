@@ -1,0 +1,21 @@
+{
+  "article_number": 148,
+  "test_case_id": "PMC6201722_Q5",
+  "question": "What are the primary advantages and potential applications of the SI-NDVI imaging system for plant health monitoring, as highlighted in the paper?",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.6667
+  },
+  "answer": {
+    "semantic_similarity": 0.9705,
+    "key_facts_coverage": 0.8333
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.6667,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8753
+}

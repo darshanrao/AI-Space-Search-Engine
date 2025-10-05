@@ -1,0 +1,21 @@
+{
+  "article_number": 25,
+  "test_case_id": "PMC9267413_Q1",
+  "question": "What are the three main sources of ionizing space radiation?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9615,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8719
+}

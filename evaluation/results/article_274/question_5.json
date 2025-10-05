@@ -1,0 +1,21 @@
+{
+  "article_number": 274,
+  "test_case_id": "PMC9144607_Q5",
+  "question": "Describe the overall purpose and key features of the CAMDLES model, and summarize its main findings regarding the influence of spatial organization and gravity conditions on microbial community growth.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.4,
+    "soft_recall_at_k": 0.2857
+  },
+  "answer": {
+    "semantic_similarity": 0.9256,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.3636,
+    "recall": 0.2857,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6632
+}

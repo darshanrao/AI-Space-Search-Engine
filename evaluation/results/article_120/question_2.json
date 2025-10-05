@@ -1,0 +1,21 @@
+{
+  "article_number": 120,
+  "test_case_id": "PMC4050424_Q2",
+  "question": "Compare the effects of spaceflight on norepinephrine (NE)-evoked vasoconstriction in mesenteric arteries versus mesenteric veins.",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.6,
+    "soft_recall_at_k": 0.5714
+  },
+  "answer": {
+    "semantic_similarity": 0.8958,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.6,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7716
+}

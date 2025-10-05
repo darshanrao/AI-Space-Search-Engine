@@ -1,0 +1,21 @@
+{
+  "article_number": 198,
+  "test_case_id": "PMC7000411_Q2",
+  "question": "How did the virulence of spaceflight-exposed Serratia marcescens compare between the initial samples and those that were subcultured on the ground?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.6667,
+    "soft_recall_at_k": 0.6
+  },
+  "answer": {
+    "semantic_similarity": 0.9126,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.6,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.717
+}

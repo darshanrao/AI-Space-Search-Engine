@@ -1,0 +1,21 @@
+{
+  "article_number": 208,
+  "test_case_id": "PMC11833055_Q2",
+  "question": "How does the 3D clinostat model compare to the hindlimb unloading (HU) model in terms of mimicking spaceflight-induced brain transcriptome changes and shared KEGG pathways?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.6,
+    "soft_recall_at_k": 0.375
+  },
+  "answer": {
+    "semantic_similarity": 0.8205,
+    "key_facts_coverage": 0.5714
+  },
+  "citations": {
+    "precision": 0.4286,
+    "recall": 0.375,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.604
+}

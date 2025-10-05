@@ -1,0 +1,21 @@
+{
+  "article_number": 128,
+  "test_case_id": "PMC6165321_Q4",
+  "question": "Which protein showed the highest fold-change increase in the microgravity (\u03bcg) group compared to habitat controls, and what are its associated functions?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.0,
+    "soft_recall_at_k": 0.0
+  },
+  "answer": {
+    "semantic_similarity": 0.47,
+    "key_facts_coverage": 0.125
+  },
+  "citations": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.2005
+}

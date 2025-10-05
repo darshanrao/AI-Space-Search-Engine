@@ -1,0 +1,3803 @@
+[
+  {
+    "article_number": 106,
+    "test_case_id": "PMC7733874_Q1",
+    "question": "What was the estimated value of an hour of astronaut time in 2019, according to the paper?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9296,
+      "key_facts_coverage": 0.5
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8717
+  },
+  {
+    "article_number": 106,
+    "test_case_id": "PMC7733874_Q2",
+    "question": "Compare the 'ISS terminal frozen return' and 'live animal return' methods for handling rodent samples after spaceflight, highlighting their respective advantages and disadvantages.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8003,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.4,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.915
+  },
+  {
+    "article_number": 106,
+    "test_case_id": "PMC7733874_Q3",
+    "question": "How do the identified technical and biological challenges in space omics experiments, such as hardware design and sample preservation, underscore the necessity for the International Standards for Space Omics Processing (ISSOP) consortium?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.1429,
+      "soft_recall_at_k": 0.1667
+    },
+    "answer": {
+      "semantic_similarity": 0.6354,
+      "key_facts_coverage": 0.4
+    },
+    "citations": {
+      "precision": 0.4,
+      "recall": 0.1538,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.3907
+  },
+  {
+    "article_number": 106,
+    "test_case_id": "PMC7733874_Q4",
+    "question": "What specific issues were identified with the NASA Animal Enclosure Model (AEM) ground controls compared to standard vivarium ground controls?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.8317,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7969
+  },
+  {
+    "article_number": 106,
+    "test_case_id": "PMC7733874_Q5",
+    "question": "Outline the main categories of challenges faced by space biologists when conducting omics experiments and describe how the ISSOP consortium aims to overcome these through its mission and deliverables.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2857,
+      "soft_recall_at_k": 0.1739
+    },
+    "answer": {
+      "semantic_similarity": 0.6687,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5714,
+      "recall": 0.1818,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5727
+  },
+  {
+    "article_number": 10,
+    "test_case_id": "PMC4095884_Q1",
+    "question": "What is the primary structural function of the dystrophin glycoprotein complex (DGC) at the sarcolemma of muscle cells?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.924,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.25,
+      "recall": 1.0,
+      "accuracy": "FAIL"
+    },
+    "overall_score": 0.8662
+  },
+  {
+    "article_number": 10,
+    "test_case_id": "PMC4095884_Q2",
+    "question": "Compare the calcium dependence of p70S6K and ERK1/2 phosphorylation in \u03b3-SG -/- muscles.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6
+    },
+    "answer": {
+      "semantic_similarity": 0.935,
+      "key_facts_coverage": 0.8
+    },
+    "citations": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.827
+  },
+  {
+    "article_number": 10,
+    "test_case_id": "PMC4095884_Q3",
+    "question": "How does the absence of \u03b3-sarcoglycan affect the regulation of p70S6K activation and deactivation in response to mechanical stretch, and what are the proposed molecular mechanisms for this altered regulation?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.75,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9326,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5714,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8319
+  },
+  {
+    "article_number": 10,
+    "test_case_id": "PMC4095884_Q4",
+    "question": "Which specific phosphorylation sites of p70S6K were measured in this study, and which site is considered to correlate most closely with its in vivo activity?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.8742,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6842
+  },
+  {
+    "article_number": 10,
+    "test_case_id": "PMC4095884_Q5",
+    "question": "Provide a comprehensive overview of the study's main findings regarding p70S6K and its regulation by \u03b3-sarcoglycan in response to mechanical perturbation, including the experimental models used and the implications for muscular dystrophies.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.3333,
+      "soft_recall_at_k": 0.3125
+    },
+    "answer": {
+      "semantic_similarity": 0.7962,
+      "key_facts_coverage": 0.9
+    },
+    "citations": {
+      "precision": 0.625,
+      "recall": 0.3125,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6238
+  },
+  {
+    "article_number": 112,
+    "test_case_id": "PMC11053165_Q1",
+    "question": "What specific genes were found to be significantly upregulated in two different human vastus lateralis experiments (OSD-195 and OSD-370) due to altered gravity conditions?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.6863,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8398
+  },
+  {
+    "article_number": 112,
+    "test_case_id": "PMC11053165_Q2",
+    "question": "Compare the observed gene expression correlation coefficients between different human vastus lateralis bedrest experiments (OSD-195, OSD-370, OSD-51) and mouse gastrocnemius and soleus datasets (OSD-21, OSD-227, OSD-111).",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.5714
+    },
+    "answer": {
+      "semantic_similarity": 0.8494,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8314
+  },
+  {
+    "article_number": 112,
+    "test_case_id": "PMC11053165_Q3",
+    "question": "What are the major physiological systems and key biological processes identified as being affected by altered gravitational conditions in both mouse and human studies, and what challenges limit direct cross-species comparisons of these effects?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.75,
+      "soft_recall_at_k": 0.25
+    },
+    "answer": {
+      "semantic_similarity": 0.6738,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 0.375,
+      "recall": 0.2727,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6052
+  },
+  {
+    "article_number": 112,
+    "test_case_id": "PMC11053165_Q4",
+    "question": "Which specific genes were identified as significantly upregulated in four or more mouse musculoskeletal tissues across different microgravity experiments, and what biological processes are consistently associated with their upregulation?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9364,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9273
+  },
+  {
+    "article_number": 112,
+    "test_case_id": "PMC11053165_Q5",
+    "question": "Describe the primary purpose of the NASA GeneLab platform and the general methodology employed in this review to identify and analyze differentially expressed genes in mammalian organisms exposed to altered gravitational conditions.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.75,
+      "soft_recall_at_k": 0.4444
+    },
+    "answer": {
+      "semantic_similarity": 0.8001,
+      "key_facts_coverage": 0.8571
+    },
+    "citations": {
+      "precision": 0.8,
+      "recall": 0.4444,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7315
+  },
+  {
+    "article_number": 117,
+    "test_case_id": "PMC3502426_Q2",
+    "question": "Compare the effects of ovariectomy (OVX) on endothelium-dependent vasodilation and trabecular bone volume (BV/TV) in young (6 mon) versus old (24 mon) female Fischer-344 rats.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9204,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7638
+  },
+  {
+    "article_number": 117,
+    "test_case_id": "PMC3502426_Q3",
+    "question": "How does this study provide evidence for a vascular coupling mechanism between endothelium-dependent vasodilation and bone remodeling, particularly when accounting for the direct effects of estrogen on bone?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.8885,
+      "key_facts_coverage": 0.8
+    },
+    "citations": {
+      "precision": 0.75,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7049
+  },
+  {
+    "article_number": 117,
+    "test_case_id": "PMC3502426_Q4",
+    "question": "Which specific inhibitors were used in the study to assess the roles of nitric oxide synthase (NOS) and cyclooxygenase (COX) signaling pathways in PNA vasodilation?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.9767,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.1667,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7476
+  },
+  {
+    "article_number": 117,
+    "test_case_id": "PMC3502426_Q5",
+    "question": "Summarize the main findings of this study regarding the relationship between estrogen status, endothelium-dependent vasodilation, and trabecular bone volume in both young and old female rats.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6,
+      "soft_recall_at_k": 0.4615
+    },
+    "answer": {
+      "semantic_similarity": 0.8892,
+      "key_facts_coverage": 0.4
+    },
+    "citations": {
+      "precision": 0.625,
+      "recall": 0.5556,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6212
+  },
+  {
+    "article_number": 11,
+    "test_case_id": "PMC3040128_Q1",
+    "question": "What is the Pearson correlation value between the expression patterns of AtRabD2b and AtRabD2c?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9816,
+      "key_facts_coverage": 0.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7375
+  },
+  {
+    "article_number": 11,
+    "test_case_id": "PMC3040128_Q2",
+    "question": "How do the pollen phenotypes of AtrabD2b/2c double mutants compare to those of AtrabD2b or AtrabD2c single mutants?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5714
+    },
+    "answer": {
+      "semantic_similarity": 0.9657,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.752
+  },
+  {
+    "article_number": 11,
+    "test_case_id": "PMC3040128_Q3",
+    "question": "The AtrabD2b/2c double mutant exhibits severe pollen and pollen tube defects, yet single mutants show normal siliques and vegetative growth. Explain the proposed reasons for this difference in severity and the specific vulnerability of pollen to these mutations.",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.75,
+      "soft_recall_at_k": 0.7
+    },
+    "answer": {
+      "semantic_similarity": 0.9338,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.4444,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8185
+  },
+  {
+    "article_number": 11,
+    "test_case_id": "PMC3040128_Q4",
+    "question": "What specific experimental method was used to determine the subcellular localization of AtRabD2b and AtRabD2c proteins?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9361,
+      "key_facts_coverage": 0.6
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6539
+  },
+  {
+    "article_number": 11,
+    "test_case_id": "PMC3040128_Q5",
+    "question": "Describe the overall functional roles of AtRabD2b and AtRabD2c in Arabidopsis, including their general function as Rab GTPases, their specific roles in plant development, and evidence for their functional redundancy.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.25,
+      "soft_recall_at_k": 0.2917
+    },
+    "answer": {
+      "semantic_similarity": 0.9206,
+      "key_facts_coverage": 0.7143
+    },
+    "citations": {
+      "precision": 0.8571,
+      "recall": 0.2727,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6047
+  },
+  {
+    "article_number": 120,
+    "test_case_id": "PMC4050424_Q1",
+    "question": "What was the duration of the STS-131 space shuttle mission for the female C57BL/6 mice?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0
+    },
+    "answer": {
+      "semantic_similarity": 0.871,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4876
+  },
+  {
+    "article_number": 120,
+    "test_case_id": "PMC4050424_Q2",
+    "question": "Compare the effects of spaceflight on norepinephrine (NE)-evoked vasoconstriction in mesenteric arteries versus mesenteric veins.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.6,
+      "soft_recall_at_k": 0.5714
+    },
+    "answer": {
+      "semantic_similarity": 0.8958,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.6,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7716
+  },
+  {
+    "article_number": 120,
+    "test_case_id": "PMC4050424_Q3",
+    "question": "What is the proposed primary cellular mechanism underlying the diminished arterial vasoconstriction observed after spaceflight, and how do the study's findings support this mechanism?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.4,
+      "soft_recall_at_k": 0.2857
+    },
+    "answer": {
+      "semantic_similarity": 0.9516,
+      "key_facts_coverage": 0.6
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6247
+  },
+  {
+    "article_number": 120,
+    "test_case_id": "PMC4050424_Q4",
+    "question": "Which specific ryanodine receptor (RyR) mRNA subtypes were found to have altered expression in mesenteric arteries after spaceflight, and what was the significance of these changes?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.8
+    },
+    "answer": {
+      "semantic_similarity": 0.9577,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9288
+  },
+  {
+    "article_number": 120,
+    "test_case_id": "PMC4050424_Q5",
+    "question": "Provide a comprehensive overview of the main findings of this study regarding the effects of spaceflight on mesenteric artery and vein constrictor properties, including the proposed mechanisms and functional implications for astronauts.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.4545,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.8971,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.4444,
+      "recall": 0.3636,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6852
+  },
+  {
+    "article_number": 128,
+    "test_case_id": "PMC6165321_Q1",
+    "question": "What was the percentage increase in apoptotic cells in the retina of microgravity-exposed mice compared to habitat controls?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9811,
+      "key_facts_coverage": 0.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.3874
+  },
+  {
+    "article_number": 128,
+    "test_case_id": "PMC6165321_Q2",
+    "question": "How did the application of 1g artificial gravity (\u03bcg + 1g) during spaceflight affect retinal apoptosis and the number of significantly differentiating proteins compared to ambient microgravity (\u03bcg) conditions?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.4
+    },
+    "answer": {
+      "semantic_similarity": 0.9423,
+      "key_facts_coverage": 0.8
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7454
+  },
+  {
+    "article_number": 128,
+    "test_case_id": "PMC6165321_Q3",
+    "question": "Based on the study's findings, what are the proposed cellular and molecular mechanisms by which spaceflight might lead to retinal damage and potential visual impairment in astronauts?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.1667,
+      "soft_recall_at_k": 0.125
+    },
+    "answer": {
+      "semantic_similarity": 0.8816,
+      "key_facts_coverage": 0.5556
+    },
+    "citations": {
+      "precision": 0.1667,
+      "recall": 0.1429,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4617
+  },
+  {
+    "article_number": 128,
+    "test_case_id": "PMC6165321_Q4",
+    "question": "Which protein showed the highest fold-change increase in the microgravity (\u03bcg) group compared to habitat controls, and what are its associated functions?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0
+    },
+    "answer": {
+      "semantic_similarity": 0.47,
+      "key_facts_coverage": 0.125
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.2005
+  },
+  {
+    "article_number": 128,
+    "test_case_id": "PMC6165321_Q5",
+    "question": "Provide a comprehensive overview of this study, including its primary objective, experimental design, main findings regarding microgravity effects and artificial gravity mitigation, and the overall conclusions.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2,
+      "soft_recall_at_k": 0.1333
+    },
+    "answer": {
+      "semantic_similarity": 0.88,
+      "key_facts_coverage": 0.7778
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.1429,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5409
+  },
+  {
+    "article_number": 140,
+    "test_case_id": "PMC10813126_Q1",
+    "question": "How many biochemicals were identified with significantly different levels of expression between space-flown and ground control neural stem cell secretomes?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.7371,
+      "key_facts_coverage": 0.3333
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.67
+  },
+  {
+    "article_number": 140,
+    "test_case_id": "PMC10813126_Q2",
+    "question": "How do the levels of nitrogen waste metabolites like creatine and urea in space-flown neural stem cells compare between short-term (3 days) and longer-term (39 days) exposure to microgravity?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.7333,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9067
+  },
+  {
+    "article_number": 140,
+    "test_case_id": "PMC10813126_Q4",
+    "question": "What analytical technique was used to identify metabolites in the secretome samples, and how were these metabolites identified?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8647,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 0.25,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8633
+  },
+  {
+    "article_number": 140,
+    "test_case_id": "PMC10813126_Q5",
+    "question": "Provide a comprehensive overview of the key metabolic and cellular changes observed in human neural stem cells after short-term exposure to space microgravity, as detailed in this study.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0476
+    },
+    "answer": {
+      "semantic_similarity": 0.8232,
+      "key_facts_coverage": 0.2857
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.3245
+  },
+  {
+    "article_number": 148,
+    "test_case_id": "PMC6201722_Q1",
+    "question": "What specific camera model was retrofitted to create the SI-NDVI imager?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9598,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.991
+  },
+  {
+    "article_number": 148,
+    "test_case_id": "PMC6201722_Q2",
+    "question": "Compare the early stress detection times for Arabidopsis thaliana under salinity stress and Eruca sativa under ammonium nitrate treatment using the SI-NDVI system.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9343,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.4,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7494
+  },
+  {
+    "article_number": 148,
+    "test_case_id": "PMC6201722_Q4",
+    "question": "What are the precise wavelength ranges that the NDVI-7 filter allows for light transmission in the SI-NDVI imager?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9593,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9103
+  },
+  {
+    "article_number": 148,
+    "test_case_id": "PMC6201722_Q5",
+    "question": "What are the primary advantages and potential applications of the SI-NDVI imaging system for plant health monitoring, as highlighted in the paper?",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9705,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8753
+  },
+  {
+    "article_number": 151,
+    "test_case_id": "PMC7264257_Q1",
+    "question": "What was the total edible biomass produced by the EDEN ISS greenhouse in 2018?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9609,
+      "key_facts_coverage": 0.5
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8453
+  },
+  {
+    "article_number": 151,
+    "test_case_id": "PMC7264257_Q2",
+    "question": "How did the EDEN ISS greenhouse's yearly production rates for cucumbers, tomatoes, and lettuce compare to FAOSTAT data for the Netherlands in 2017?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.931,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9845
+  },
+  {
+    "article_number": 151,
+    "test_case_id": "PMC7264257_Q3",
+    "question": "Describe the target environmental conditions within the EDEN ISS Future Exploration Greenhouse (FEG) and the specific challenges encountered in maintaining these conditions during the 2018 experiment phase.",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9658,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7798
+  },
+  {
+    "article_number": 151,
+    "test_case_id": "PMC7264257_Q4",
+    "question": "What was the time-normalized edible fresh weight production rate for Mizuna in the EDEN ISS greenhouse?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9963,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9658
+  },
+  {
+    "article_number": 151,
+    "test_case_id": "PMC7264257_Q5",
+    "question": "Provide an overview of the EDEN ISS Mobile Test Facility, including its purpose, location, physical structure, and the main subsystems that enable plant cultivation.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.5556,
+      "soft_recall_at_k": 0.5833
+    },
+    "answer": {
+      "semantic_similarity": 0.9493,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 0.7143,
+      "recall": 0.4167,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7237
+  },
+  {
+    "article_number": 195,
+    "test_case_id": "PMC5659752_Q1",
+    "question": "What is the approximate size of the spiked VLPs introduced by Leptopilina spp. parasitic wasps?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8437,
+      "key_facts_coverage": 0.3333
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7815
+  },
+  {
+    "article_number": 195,
+    "test_case_id": "PMC5659752_Q2",
+    "question": "How do the effects of Leptopilina heterotoma (Lh) and Leptopilina boulardi (Lb) wasp infections differ on Drosophila larval lymph glands, and what are the observed morphological differences in their respective VLPs?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.7965,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8292
+  },
+  {
+    "article_number": 195,
+    "test_case_id": "PMC5659752_Q3",
+    "question": "Based on the proteomic and structural analyses, what is the proposed new classification for Leptopilina heterotoma VLPs, and what evidence supports their \"mixed strategy\" of both eukaryotic microvesicular and bacterial secretion system properties?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2,
+      "soft_recall_at_k": 0.0909
+    },
+    "answer": {
+      "semantic_similarity": 0.8274,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.6667,
+      "recall": 0.1818,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5853
+  },
+  {
+    "article_number": 195,
+    "test_case_id": "PMC5659752_Q4",
+    "question": "What is the known function of the Drosophila melanogaster diedel protein, which is a putative homolog to two diedel-like Lh VLP sequences?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9052,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9453
+  },
+  {
+    "article_number": 195,
+    "test_case_id": "PMC5659752_Q5",
+    "question": "Describe the overall composition and key characteristics of Leptopilina heterotoma (Lh) VLPs, including their classification, protein categories, and what they are distinguished from.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.0833,
+      "soft_recall_at_k": 0.0769
+    },
+    "answer": {
+      "semantic_similarity": 0.7747,
+      "key_facts_coverage": 0.25
+    },
+    "citations": {
+      "precision": 0.2,
+      "recall": 0.0769,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.3437
+  },
+  {
+    "article_number": 198,
+    "test_case_id": "PMC7000411_Q1",
+    "question": "What was the main finding regarding Serratia marcescens virulence after spaceflight exposure?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8544,
+      "key_facts_coverage": 0.5
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.3714
+  },
+  {
+    "article_number": 198,
+    "test_case_id": "PMC7000411_Q2",
+    "question": "How did the virulence of spaceflight-exposed Serratia marcescens compare between the initial samples and those that were subcultured on the ground?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.6
+    },
+    "answer": {
+      "semantic_similarity": 0.9126,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.6,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.717
+  },
+  {
+    "article_number": 198,
+    "test_case_id": "PMC7000411_Q3",
+    "question": "Based on the study's findings, what evidence suggests that the increased lethality of spaceflight-exposed Serratia marcescens is primarily due to changes in the pathogen itself, rather than alterations in the host's immune response?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.25,
+      "soft_recall_at_k": 0.125
+    },
+    "answer": {
+      "semantic_similarity": 0.8623,
+      "key_facts_coverage": 0.5
+    },
+    "citations": {
+      "precision": 0.25,
+      "recall": 0.125,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4638
+  },
+  {
+    "article_number": 198,
+    "test_case_id": "PMC7000411_Q4",
+    "question": "Besides Attacin-A, what other specific genes were identified as significantly differentially expressed in wild-type D. melanogaster after infection with spaceflight-exposed Serratia marcescens compared to ground control bacteria?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.7577,
+      "key_facts_coverage": 0.5
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7996
+  },
+  {
+    "article_number": 198,
+    "test_case_id": "PMC7000411_Q5",
+    "question": "Describe the overall experimental design used to investigate the effects of spaceflight and simulated microgravity on Serratia marcescens virulence, including the host model, bacterial treatments, and key measurements taken.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2,
+      "soft_recall_at_k": 0.25
+    },
+    "answer": {
+      "semantic_similarity": 0.878,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.2857,
+      "recall": 0.1818,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5241
+  },
+  {
+    "article_number": 207,
+    "test_case_id": "PMC12040010_Q1",
+    "question": "What is the reported mortality rate for CNS infections caused by *Cryptococcus albidus*?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9602,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.991
+  },
+  {
+    "article_number": 207,
+    "test_case_id": "PMC12040010_Q2",
+    "question": "How did the patient's brain MRI findings change from before surgery/treatment to after treatment for *Cryptococcus albidus* meningitis?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.8,
+      "soft_recall_at_k": 0.8
+    },
+    "answer": {
+      "semantic_similarity": 0.815,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.875
+  },
+  {
+    "article_number": 207,
+    "test_case_id": "PMC12040010_Q3",
+    "question": "Given the patient's characteristics, what specific considerations were highlighted regarding the dosage of liposomal-AmB, and what was the rationale behind these recommendations?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.8027,
+      "key_facts_coverage": 0.8
+    },
+    "citations": {
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7495
+  },
+  {
+    "article_number": 207,
+    "test_case_id": "PMC12040010_Q4",
+    "question": "What were the minimal inhibitory concentrations (MICs) of amphotericin B, fluconazole, and 5-fluorocytosine specifically for *C. albidus* in the reported case?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9339,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9851
+  },
+  {
+    "article_number": 207,
+    "test_case_id": "PMC12040010_Q5",
+    "question": "Based on the case report and literature review, what are the key characteristics of *Cryptococcus albidus* CNS infections, encompassing its epidemiology, risk factors, clinical presentation, diagnostic methods, and recommended treatment strategies?",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.7273,
+      "soft_recall_at_k": 0.75
+    },
+    "answer": {
+      "semantic_similarity": 0.8764,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.6923,
+      "recall": 0.8182,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8481
+  },
+  {
+    "article_number": 208,
+    "test_case_id": "PMC11833055_Q1",
+    "question": "What specific behavioral changes were observed in mice treated with the 3D clinostat in the open field test?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.9256,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5583
+  },
+  {
+    "article_number": 208,
+    "test_case_id": "PMC11833055_Q2",
+    "question": "How does the 3D clinostat model compare to the hindlimb unloading (HU) model in terms of mimicking spaceflight-induced brain transcriptome changes and shared KEGG pathways?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.6,
+      "soft_recall_at_k": 0.375
+    },
+    "answer": {
+      "semantic_similarity": 0.8205,
+      "key_facts_coverage": 0.5714
+    },
+    "citations": {
+      "precision": 0.4286,
+      "recall": 0.375,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.604
+  },
+  {
+    "article_number": 208,
+    "test_case_id": "PMC11833055_Q3",
+    "question": "Based on the identified KEGG pathways, what are the potential long-term health implications for astronauts related to endocrine, neurological, and reproductive system changes during extended space missions?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.3333,
+      "soft_recall_at_k": 0.25
+    },
+    "answer": {
+      "semantic_similarity": 0.8277,
+      "key_facts_coverage": 0.4
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.25,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4839
+  },
+  {
+    "article_number": 208,
+    "test_case_id": "PMC11833055_Q4",
+    "question": "Which specific serum metabolites were significantly downregulated in the CS group compared to the SB group?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.7384,
+      "key_facts_coverage": 0.2857
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6929
+  },
+  {
+    "article_number": 208,
+    "test_case_id": "PMC11833055_Q5",
+    "question": "What are the major physiological and behavioral impacts observed in mice subjected to 3D clinostat simulated microgravity, as identified by multiomics and behavioral analyses?",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2222,
+      "soft_recall_at_k": 0.25
+    },
+    "answer": {
+      "semantic_similarity": 0.4605,
+      "key_facts_coverage": 0.625
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.2143,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4412
+  },
+  {
+    "article_number": 21,
+    "test_case_id": "PMC6371294_Q1",
+    "question": "What was the average overall FAIRness score for the omics data systems assessed, and what was the range?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9833,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9629
+  },
+  {
+    "article_number": 21,
+    "test_case_id": "PMC6371294_Q2",
+    "question": "How did the assessed omics data systems generally perform across the four main FAIR principles (Findability, Accessibility, Interoperability, and Reusability)?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9588,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9123
+  },
+  {
+    "article_number": 21,
+    "test_case_id": "PMC6371294_Q3",
+    "question": "What are the primary challenges identified in the paper for achieving true semantic interoperability and data reusability in omics data systems, particularly concerning metadata?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.8,
+      "soft_recall_at_k": 0.6
+    },
+    "answer": {
+      "semantic_similarity": 0.9113,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.7143,
+      "recall": 0.5556,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8263
+  },
+  {
+    "article_number": 21,
+    "test_case_id": "PMC6371294_Q4",
+    "question": "What solution does the paper propose for organizations developing open-access systems to address challenges in user credentialing and authentication, particularly for diverse user groups like those targeted by GeneLab?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.8333
+    },
+    "answer": {
+      "semantic_similarity": 0.88,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.75,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8188
+  },
+  {
+    "article_number": 25,
+    "test_case_id": "PMC9267413_Q1",
+    "question": "What are the three main sources of ionizing space radiation?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9615,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8719
+  },
+  {
+    "article_number": 25,
+    "test_case_id": "PMC9267413_Q2",
+    "question": "Compare the characteristics and biological hazards of Galactic Cosmic Radiation (GCR) and Solar Particle Events (SPE) radiation.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0
+    },
+    "answer": {
+      "semantic_similarity": 0.817,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4192
+  },
+  {
+    "article_number": 25,
+    "test_case_id": "PMC9267413_Q3",
+    "question": "How do current medical selection and post-flight screening protocols for female astronauts address the potential risks of gynecological cancers and reproductive health issues identified in spaceflight research?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.8226,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 0.5556,
+      "recall": 0.4167,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7082
+  },
+  {
+    "article_number": 25,
+    "test_case_id": "PMC9267413_Q4",
+    "question": "What specific changes in gene expression and morphology were observed in human cervical carcinoma CaSki cells flown on the \"Shen Zhou IV\" space shuttle mission?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8417,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9644
+  },
+  {
+    "article_number": 25,
+    "test_case_id": "PMC9267413_Q5",
+    "question": "What are the primary space-environmental factors affecting astronaut health, and how do they specifically impact the female reproductive system and overall cancer risk, according to the review?",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2143,
+      "soft_recall_at_k": 0.2381
+    },
+    "answer": {
+      "semantic_similarity": 0.8839,
+      "key_facts_coverage": 0.8889
+    },
+    "citations": {
+      "precision": 0.4545,
+      "recall": 0.2632,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5926
+  },
+  {
+    "article_number": 261,
+    "test_case_id": "PMC5821596_Q1",
+    "question": "How many transcripts were upregulated in the BRIC-16-Cyt microarray using the PLIER normalization method with a fold-change of at least 5?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9866,
+      "key_facts_coverage": 0.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4428
+  },
+  {
+    "article_number": 261,
+    "test_case_id": "PMC5821596_Q2",
+    "question": "What were the key differences in experimental setup and sample processing among the BRIC-16-Cyt, BRIC-16-Reg, and BRIC-16-DNA investigative teams?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.4286
+    },
+    "answer": {
+      "semantic_similarity": 0.8279,
+      "key_facts_coverage": 0.8
+    },
+    "citations": {
+      "precision": 0.4286,
+      "recall": 0.6,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.664
+  },
+  {
+    "article_number": 261,
+    "test_case_id": "PMC5821596_Q3",
+    "question": "How do microgravity-induced changes in convection and water status contribute to the observed morphological and gene expression alterations in spaceflight-grown plants, particularly concerning hypoxia and cell wall structure?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.1111,
+      "soft_recall_at_k": 0.0833
+    },
+    "answer": {
+      "semantic_similarity": 0.8423,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.1111,
+      "recall": 0.0769,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4527
+  },
+  {
+    "article_number": 261,
+    "test_case_id": "PMC5821596_Q4",
+    "question": "Which specific xylan and pectic backbone epitopes were found to be reduced in abundance in spaceflight-grown Arabidopsis shoots compared to ground controls in the BRIC-16-Cyt glycomics study?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9796,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8475
+  },
+  {
+    "article_number": 261,
+    "test_case_id": "PMC5821596_Q5",
+    "question": "What are the primary cellular and molecular responses observed in Arabidopsis seedlings during spaceflight, as identified by the BRIC-16 comparative transcriptomics and glycomics studies?",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.1429,
+      "soft_recall_at_k": 0.1111
+    },
+    "answer": {
+      "semantic_similarity": 0.8671,
+      "key_facts_coverage": 0.6
+    },
+    "citations": {
+      "precision": 0.4,
+      "recall": 0.1429,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4774
+  },
+  {
+    "article_number": 274,
+    "test_case_id": "PMC9144607_Q1",
+    "question": "What is the primary purpose of the CAMDLES computational model?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8413,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9199
+  },
+  {
+    "article_number": 274,
+    "test_case_id": "PMC9144607_Q2",
+    "question": "How do the fluid environments of an idealized Rotating Wall Vessel (RWV) and true microgravity compare, and what disparities are observed in cellular responses between them?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.8352,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.1111,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6551
+  },
+  {
+    "article_number": 274,
+    "test_case_id": "PMC9144607_Q3",
+    "question": "What are the primary limitations of the CAMDLES simulation approach, and how do these limitations affect the ability to draw comprehensive conclusions about long-term microbial community dynamics and the full range of microgravity effects?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.75,
+      "soft_recall_at_k": 0.7143
+    },
+    "answer": {
+      "semantic_similarity": 0.8426,
+      "key_facts_coverage": 0.8
+    },
+    "citations": {
+      "precision": 0.6667,
+      "recall": 0.5714,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.775
+  },
+  {
+    "article_number": 274,
+    "test_case_id": "PMC9144607_Q4",
+    "question": "What specific bacterial strains were used in the CAMDLES simulations, and what are their obligate cross-feeding metabolic dependencies?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9295,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8453
+  },
+  {
+    "article_number": 274,
+    "test_case_id": "PMC9144607_Q5",
+    "question": "Describe the overall purpose and key features of the CAMDLES model, and summarize its main findings regarding the influence of spatial organization and gravity conditions on microbial community growth.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.4,
+      "soft_recall_at_k": 0.2857
+    },
+    "answer": {
+      "semantic_similarity": 0.9256,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3636,
+      "recall": 0.2857,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6632
+  },
+  {
+    "article_number": 284,
+    "test_case_id": "PMC5498037_Q1",
+    "question": "What analytical technique was primarily used to determine GSH:GSSG ratios in the mouse heart samples?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.6891,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4967
+  },
+  {
+    "article_number": 284,
+    "test_case_id": "PMC5498037_Q2",
+    "question": "How did the combined exposure to hindlimb unloading (HU) and low-dose rate \u03b3-irradiation affect GSH:GSSG ratios compared to either treatment alone at the 7-day time point?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.8561,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6982
+  },
+  {
+    "article_number": 284,
+    "test_case_id": "PMC5498037_Q3",
+    "question": "Based on the study's findings, what were the overall conclusions regarding cardiac remodeling in response to simulated microgravity and low-dose rate \u03b3-irradiation, and what potential reasons are given for these observations compared to studies using higher radiation doses?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.7143
+    },
+    "answer": {
+      "semantic_similarity": 0.848,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 0.75,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8095
+  },
+  {
+    "article_number": 284,
+    "test_case_id": "PMC5498037_Q4",
+    "question": "Which specific protein marker was used to assess T-lymphocyte infiltration in cardiac tissue, and what significant change was observed for this marker at the 4-month time point?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.25
+    },
+    "answer": {
+      "semantic_similarity": 0.8901,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6912
+  },
+  {
+    "article_number": 284,
+    "test_case_id": "PMC5498037_Q5",
+    "question": "Provide a comprehensive overview of this study, including the experimental conditions used, the main categories of markers assessed, and the key findings regarding oxidative stress, DNA methylation potential, and cardiac remodeling.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2222,
+      "soft_recall_at_k": 0.3125
+    },
+    "answer": {
+      "semantic_similarity": 0.82,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.2667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5834
+  },
+  {
+    "article_number": 287,
+    "test_case_id": "PMC6746706_Q1",
+    "question": "What was the duration of the spaceflight mission for the C57BL/6 male mice aboard the ISS?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.8784,
+      "key_facts_coverage": 0.3333
+    },
+    "citations": {
+      "precision": 0.2,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.561
+  },
+  {
+    "article_number": 287,
+    "test_case_id": "PMC6746706_Q2",
+    "question": "How many genes were upregulated versus downregulated in the spaceflight group compared to the ground control group, according to the RNA sequencing analysis?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.75
+    },
+    "answer": {
+      "semantic_similarity": 0.824,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 0.375,
+      "recall": 0.75,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8021
+  },
+  {
+    "article_number": 287,
+    "test_case_id": "PMC6746706_Q3",
+    "question": "What is the proposed mechanism by which spaceflight-induced chromatin reorganization could lead to changes in retinal structure and function, and which specific genes were identified as regulators in this process?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.8
+    },
+    "answer": {
+      "semantic_similarity": 0.9243,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8388
+  },
+  {
+    "article_number": 287,
+    "test_case_id": "PMC6746706_Q4",
+    "question": "Which specific genes, identified as differentially expressed during spaceflight, are part of the GO Biological Process category for 'negative regulation of oxidative stress-induced cell death'?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8119,
+      "key_facts_coverage": 0.25
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.3056
+  },
+  {
+    "article_number": 287,
+    "test_case_id": "PMC6746706_Q5",
+    "question": "Provide a comprehensive overview of the key findings regarding the effects of spaceflight on the murine retina, encompassing changes in gene expression, structural integrity, and oxidative stress.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.3636,
+      "soft_recall_at_k": 0.2963
+    },
+    "answer": {
+      "semantic_similarity": 0.8635,
+      "key_facts_coverage": 0.4545
+    },
+    "citations": {
+      "precision": 0.3636,
+      "recall": 0.25,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5196
+  },
+  {
+    "article_number": 301,
+    "test_case_id": "PMC11222149_Q1",
+    "question": "What was the duration of the spaceflight mission and how many individuals participated in the longitudinal study?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9031,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8101
+  },
+  {
+    "article_number": 301,
+    "test_case_id": "PMC11222149_Q2",
+    "question": "How did the observed shifts in the oral microbiome differ from those in the skin microbiome regarding the concordance between metagenomic and metatranscriptomic changes?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9046,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7702
+  },
+  {
+    "article_number": 301,
+    "test_case_id": "PMC11222149_Q3",
+    "question": "Beyond direct spaceflight effects, what potential confounding factors and alternative explanations were considered for the observed microbiome shifts and their relationship to host immune responses?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.375
+    },
+    "answer": {
+      "semantic_similarity": 0.8969,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.2727,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7314
+  },
+  {
+    "article_number": 301,
+    "test_case_id": "PMC11222149_Q5",
+    "question": "Describe the overall experimental design, the types of data collected, and the main categories of microbial shifts observed in this study on short-term spaceflight.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.25,
+      "soft_recall_at_k": 0.1667
+    },
+    "answer": {
+      "semantic_similarity": 0.7973,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.1667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5509
+  },
+  {
+    "article_number": 310,
+    "test_case_id": "PMC11166981_Q1",
+    "question": "Which mouse organ exhibited the highest number of differentially expressed genes (DEGs) after 37 days of spaceflight?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0
+    },
+    "answer": {
+      "semantic_similarity": 0.7151,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.3776
+  },
+  {
+    "article_number": 310,
+    "test_case_id": "PMC11166981_Q3",
+    "question": "Explain the interconnected mechanisms by which spaceflight-induced alterations in insulin and estrogen signaling contribute to hepatic steatosis and mitochondrial dysfunction in mice.",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.8571,
+      "soft_recall_at_k": 0.7778
+    },
+    "answer": {
+      "semantic_similarity": 0.9252,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.625,
+      "recall": 0.7143,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8753
+  },
+  {
+    "article_number": 310,
+    "test_case_id": "PMC11166981_Q4",
+    "question": "Which specific genes related to tissue remodeling, extracellular matrix, wound healing, and collagen synthesis were downregulated in the dorsal skin of male mice during spaceflight?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8575,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8485
+  },
+  {
+    "article_number": 310,
+    "test_case_id": "PMC11166981_Q5",
+    "question": "Provide a comprehensive overview of the main findings regarding the impact of spaceflight on insulin and estrogen signaling in both rodents and humans, including affected tissues, key molecular changes, and potential health implications.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2222,
+      "soft_recall_at_k": 0.2
+    },
+    "answer": {
+      "semantic_similarity": 0.9157,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3,
+      "recall": 0.1364,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6007
+  },
+  {
+    "article_number": 327,
+    "test_case_id": "PMC6213004_Q1",
+    "question": "What cell line was used in this study to investigate Epstein-Barr virus reactivation, and what was its origin?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9348,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6575
+  },
+  {
+    "article_number": 327,
+    "test_case_id": "PMC6213004_Q2",
+    "question": "How do gamma rays compare to protons, carbon ions, and iron ions in terms of their effectiveness and timing of inducing latent Epstein-Barr virus reactivation?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.75,
+      "soft_recall_at_k": 0.6
+    },
+    "answer": {
+      "semantic_similarity": 0.8972,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.6,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8031
+  },
+  {
+    "article_number": 327,
+    "test_case_id": "PMC6213004_Q3",
+    "question": "How do the findings of this study, particularly regarding the effectiveness of different radiation types on EBV reactivation, challenge the common Relative Biological Effectiveness (RBE) concept, and what potential explanation is offered?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.5714,
+      "soft_recall_at_k": 0.625
+    },
+    "answer": {
+      "semantic_similarity": 0.8642,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7955
+  },
+  {
+    "article_number": 327,
+    "test_case_id": "PMC6213004_Q4",
+    "question": "Which two key Epstein-Barr virus (EBV) lytic genes were examined to identify increases in transcription following radiation treatment, and what do they code for?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.8715,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7628
+  },
+  {
+    "article_number": 327,
+    "test_case_id": "PMC6213004_Q5",
+    "question": "Describe the experimental setup used to study Epstein-Barr virus (EBV) reactivation, including the radiation types and doses, and summarize the main conclusions regarding viral reactivation, cell viability, and the RBE concept.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.4,
+      "soft_recall_at_k": 0.3529
+    },
+    "answer": {
+      "semantic_similarity": 0.8152,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.75,
+      "recall": 0.3529,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6804
+  },
+  {
+    "article_number": 328,
+    "test_case_id": "PMC7171750_Q1",
+    "question": "What was the most abundant bacterial organism found in astronaut saliva, and how did its diversity change during spaceflight?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.923,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8577
+  },
+  {
+    "article_number": 328,
+    "test_case_id": "PMC7171750_Q2",
+    "question": "How did alpha diversity and beta diversity of the salivary microbiome respond to spaceflight, and were these changes observed at the population or individual level?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.7143
+    },
+    "answer": {
+      "semantic_similarity": 0.9169,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.4286,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8015
+  },
+  {
+    "article_number": 328,
+    "test_case_id": "PMC7171750_Q3",
+    "question": "Based on the study's findings and discussions, what are the proposed mechanisms by which specific salivary bacterial genera might either promote or protect against Epstein-Barr virus (EBV) reactivation?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.3333,
+      "soft_recall_at_k": 0.25
+    },
+    "answer": {
+      "semantic_similarity": 0.8239,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 0.4,
+      "recall": 0.25,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.585
+  },
+  {
+    "article_number": 328,
+    "test_case_id": "PMC7171750_Q4",
+    "question": "Which specific bacterial genera were found to be absent in more than half of pre-flight saliva samples but then detected during spaceflight, with increased relative abundances in those subjects who already had them?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.75
+    },
+    "answer": {
+      "semantic_similarity": 0.9803,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8546
+  },
+  {
+    "article_number": 328,
+    "test_case_id": "PMC7171750_Q5",
+    "question": "Summarize the key findings of this study regarding the impact of spaceflight on the astronaut salivary microbiome and its observed associations with viral reactivation.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2222,
+      "soft_recall_at_k": 0.2727
+    },
+    "answer": {
+      "semantic_similarity": 0.8689,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.25,
+      "recall": 0.2222,
+      "accuracy": "FAIL"
+    },
+    "overall_score": 0.5386
+  },
+  {
+    "article_number": 359,
+    "test_case_id": "PMC4096993_Q3",
+    "question": "How do changes in epithelial cell polarity and the exposure of extracellular matrix (ECM) proteins facilitate *P. aeruginosa* colonization and infection in damaged mucosal epithelium?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9553,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.8333,
+      "recall": 0.8333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9677
+  },
+  {
+    "article_number": 359,
+    "test_case_id": "PMC4096993_Q4",
+    "question": "What are the specific physical and chemical host factors in the cystic fibrosis (CF) lung environment that contribute to a \"CF-like\" *P. aeruginosa* phenotype, and what are the resulting bacterial characteristics?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.4286
+    },
+    "answer": {
+      "semantic_similarity": 0.8976,
+      "key_facts_coverage": 0.7143
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.75,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7515
+  },
+  {
+    "article_number": 359,
+    "test_case_id": "PMC4096993_Q5",
+    "question": "Provide a comprehensive overview of the host microenvironmental factors (physical, chemical, and cellular) that protect a healthy mucosal epithelium from *P. aeruginosa* infection, and describe how these factors are compromised in disease states like cystic fibrosis or epithelial injury to promote infection.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.8,
+      "soft_recall_at_k": 0.7143
+    },
+    "answer": {
+      "semantic_similarity": 0.8884,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.6923,
+      "recall": 0.75,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8527
+  },
+  {
+    "article_number": 375,
+    "test_case_id": "PMC3350920_Q1",
+    "question": "What was the approximate root length of the 14-3-3\u03bc-1 mutant compared to the wild-type after 8 days of growth under constant light conditions?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9324,
+      "key_facts_coverage": 0.3333
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5223
+  },
+  {
+    "article_number": 375,
+    "test_case_id": "PMC3350920_Q2",
+    "question": "How did different light intensities (dark, low light, full light) affect the root length of 14-3-3\u03bc-1 mutants compared to wild-type Arabidopsis plants?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.75
+    },
+    "answer": {
+      "semantic_similarity": 0.9708,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8455
+  },
+  {
+    "article_number": 375,
+    "test_case_id": "PMC3350920_Q3",
+    "question": "How do 14-3-3 proteins, particularly the \u03bc isoform, regulate both root growth and chloroplast development in Arabidopsis, and what is the role of the photosensory system in these processes?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.8333,
+      "soft_recall_at_k": 0.5833
+    },
+    "answer": {
+      "semantic_similarity": 0.9262,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.24,
+      "recall": 0.3529,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7875
+  },
+  {
+    "article_number": 375,
+    "test_case_id": "PMC3350920_Q4",
+    "question": "What were the specific light wavelengths and intensities used for the constant red and blue light growth conditions in the experiments?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9614,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8705
+  },
+  {
+    "article_number": 375,
+    "test_case_id": "PMC3350920_Q5",
+    "question": "Provide a comprehensive overview of the main cellular and molecular mechanisms by which 14-3-3 proteins, particularly isoforms \u03bc and \u03c5, regulate root growth and chloroplast development in Arabidopsis, highlighting their interaction with the photosensory system.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6,
+      "soft_recall_at_k": 0.4483
+    },
+    "answer": {
+      "semantic_similarity": 0.9002,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5833,
+      "recall": 0.3182,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7377
+  },
+  {
+    "article_number": 403,
+    "test_case_id": "PMC8539686_Q1",
+    "question": "What are the three main patterns of expression identified for the 101 genes responsive to fractional gravity levels?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9695,
+      "key_facts_coverage": 0.3333
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7403
+  },
+  {
+    "article_number": 403,
+    "test_case_id": "PMC8539686_Q2",
+    "question": "Compare and contrast the general expression patterns of cell wall-related genes and heat shock protein (HSP) genes in Arabidopsis roots as fractional gravity increases.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.25,
+      "soft_recall_at_k": 0.4286
+    },
+    "answer": {
+      "semantic_similarity": 0.8717,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.1429,
+      "recall": 0.25,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6328
+  },
+  {
+    "article_number": 403,
+    "test_case_id": "PMC8539686_Q3",
+    "question": "Based on the findings, what is the significance of the observed transcriptional responses of heat shock proteins (HSPs) to fractional and hypergravity, and how do these responses relate to mechanical stimulation?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.75,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9025,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.75,
+      "recall": 0.75,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8426
+  },
+  {
+    "article_number": 403,
+    "test_case_id": "PMC8539686_Q4",
+    "question": "Which specific transcription factors, implicated in root development, showed a linear, dose-dependent increase in expression with increasing gravity levels?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.8787,
+      "key_facts_coverage": 0.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6894
+  },
+  {
+    "article_number": 403,
+    "test_case_id": "PMC8539686_Q5",
+    "question": "Summarize the main categories of genes identified as responsive to fractional gravity in Arabidopsis roots, describing their general expression patterns and biological significance in the context of spaceflight.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.25,
+      "soft_recall_at_k": 0.1818
+    },
+    "answer": {
+      "semantic_similarity": 0.85,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.2222,
+      "recall": 0.1667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5844
+  },
+  {
+    "article_number": 407,
+    "test_case_id": "PMC11324864_Q1",
+    "question": "What is the primary function of Natural Killer (NK) cells in the innate immune system?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9186,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8942
+  },
+  {
+    "article_number": 407,
+    "test_case_id": "PMC11324864_Q2",
+    "question": "How does the impact of simulated microgravity on primary human NK cell cytotoxicity differ when assessed using a traditional assay protocol versus a continuous microgravity assay protocol?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.3333,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.9225,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.125,
+      "recall": 0.1667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6354
+  },
+  {
+    "article_number": 407,
+    "test_case_id": "PMC11324864_Q3",
+    "question": "Based on the RNA-seq analysis, what are the key molecular and cellular pathways potentially altered by simulated microgravity that contribute to the observed impairment of NK cell cytotoxic activity?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.2857
+    },
+    "answer": {
+      "semantic_similarity": 0.8555,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.2857,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6629
+  },
+  {
+    "article_number": 407,
+    "test_case_id": "PMC11324864_Q4",
+    "question": "Which specific transcripts, identified as down-regulated in primary human NK cells by simulated microgravity, are associated with NK activating receptors or tumor killing pathways, and what were their corresponding p-values?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9611,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.969
+  },
+  {
+    "article_number": 407,
+    "test_case_id": "PMC11324864_Q5",
+    "question": "What are the main findings of this study regarding the effect of simulated microgravity on human NK cell function, and what are the implications for astronaut cancer risk during prolonged missions beyond Low Earth Orbit?",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.3333,
+      "soft_recall_at_k": 0.4444
+    },
+    "answer": {
+      "semantic_similarity": 0.8223,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5714,
+      "recall": 0.3636,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6751
+  },
+  {
+    "article_number": 419,
+    "test_case_id": "PMC3509447_Q1",
+    "question": "What was the pup survival rate for hypergravity (HG) exposed dams on Postnatal day 1 (P1) and Postnatal day 3 (P3)?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8888,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9
+  },
+  {
+    "article_number": 419,
+    "test_case_id": "PMC3509447_Q2",
+    "question": "How did hypergravity exposure affect glucose metabolism (oxidation and lipid incorporation) in mammary tissue compared to liver tissue during lactation?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.8,
+      "soft_recall_at_k": 0.8333
+    },
+    "answer": {
+      "semantic_similarity": 0.9381,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.8333,
+      "recall": 0.7143,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8917
+  },
+  {
+    "article_number": 419,
+    "test_case_id": "PMC3509447_Q3",
+    "question": "What is the proposed overarching mechanism by which hypergravity disrupts maternal homeorhetic adaptations to lactation, ultimately leading to decreased pup survival?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.3,
+      "soft_recall_at_k": 0.3125
+    },
+    "answer": {
+      "semantic_similarity": 0.866,
+      "key_facts_coverage": 0.6
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.125,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5787
+  },
+  {
+    "article_number": 419,
+    "test_case_id": "PMC3509447_Q5",
+    "question": "Provide a comprehensive overview of the main cellular, molecular, and behavioral effects of hypergravity exposure on rat dams and their offspring during pregnancy and early lactation.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.1667,
+      "soft_recall_at_k": 0.1622
+    },
+    "answer": {
+      "semantic_similarity": 0.6912,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.625,
+      "recall": 0.1923,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5592
+  },
+  {
+    "article_number": 424,
+    "test_case_id": "PMC4349987_Q1",
+    "question": "How many unique microsomal proteins were identified as having altered expression levels within 5 minutes of heat treatment in Arabidopsis seedlings?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.7351,
+      "key_facts_coverage": 0.3333
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7571
+  },
+  {
+    "article_number": 424,
+    "test_case_id": "PMC4349987_Q2",
+    "question": "Compare the heat stress sensitivities of wild-type Arabidopsis seedlings with the ann1-2, ann2, and ann1-2/ann2 double mutants.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.0
+    },
+    "answer": {
+      "semantic_similarity": 0.7841,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4681
+  },
+  {
+    "article_number": 424,
+    "test_case_id": "PMC4349987_Q3",
+    "question": "Based on the study, what is the proposed mechanism by which AtANN1 contributes to plant heat stress responses, particularly concerning calcium signaling and downstream gene expression?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9556,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7892
+  },
+  {
+    "article_number": 424,
+    "test_case_id": "PMC4349987_Q4",
+    "question": "What specific CyDye fluor minimal labeling kit was used for the 2D-DIGE analysis, and how were the control and heat-treated microsomal protein samples differentially labeled?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9706,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8927
+  },
+  {
+    "article_number": 424,
+    "test_case_id": "PMC4349987_Q5",
+    "question": "Outline the main experimental methods employed in this study to investigate the role of Arabidopsis Annexin 1 in heat stress response, from protein identification to functional characterization.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.25,
+      "soft_recall_at_k": 0.1667
+    },
+    "answer": {
+      "semantic_similarity": 0.9594,
+      "key_facts_coverage": 0.5
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.1818,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5134
+  },
+  {
+    "article_number": 426,
+    "test_case_id": "PMC6130020_Q1",
+    "question": "What is the percentage identity in the primary structure between Arabidopsis annexins ANN1 and ANN2?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9611,
+      "key_facts_coverage": 0.3333
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8412
+  },
+  {
+    "article_number": 426,
+    "test_case_id": "PMC6130020_Q2",
+    "question": "How do the primary root growth and root cap development differ between ANN1/ANN2 knockout mutants and wild-type Arabidopsis seedlings when grown without exogenous Suc?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8704,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9542
+  },
+  {
+    "article_number": 426,
+    "test_case_id": "PMC6130020_Q3",
+    "question": "Explain the proposed mechanism by which impaired post-phloem sugar transport in ANN1/ANN2 knockout mutants leads to the observed up-regulation of photosynthetic genes in cotyledons.",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.4286,
+      "soft_recall_at_k": 0.2727
+    },
+    "answer": {
+      "semantic_similarity": 0.7872,
+      "key_facts_coverage": 0.625
+    },
+    "citations": {
+      "precision": 0.4,
+      "recall": 0.1818,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5459
+  },
+  {
+    "article_number": 426,
+    "test_case_id": "PMC6130020_Q4",
+    "question": "Which four specific photosynthetic genes were significantly up-regulated in the cotyledons of 4-day-old ann1-2 seedlings grown without Suc, as identified by RT-qPCR analysis?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9818,
+      "key_facts_coverage": 0.6
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9059
+  },
+  {
+    "article_number": 426,
+    "test_case_id": "PMC6130020_Q5",
+    "question": "Summarize the main findings regarding the function of ANN1 and ANN2 in Arabidopsis, particularly concerning their role in sugar transport, root growth, and the resulting physiological effects in knockout mutants.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.1,
+      "soft_recall_at_k": 0.1111
+    },
+    "answer": {
+      "semantic_similarity": 0.9377,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 0.6,
+      "recall": 0.1429,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5516
+  },
+  {
+    "article_number": 436,
+    "test_case_id": "PMC9856674_Q1",
+    "question": "What *C. elegans* strain was used in this study, and where was it obtained from?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9683,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.2,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6437
+  },
+  {
+    "article_number": 436,
+    "test_case_id": "PMC9856674_Q2",
+    "question": "How do the gene expression patterns in *C. elegans* differ during exposure to simulated microgravity compared to 12 days after returning to ground conditions?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9502,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9555
+  },
+  {
+    "article_number": 436,
+    "test_case_id": "PMC9856674_Q3",
+    "question": "What is the proposed connection between the downregulation of the sphingolipid signaling pathway, ceramide levels, and potential changes in longevity and telomere length, considering both *C. elegans* and human observations in microgravity?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.8582,
+      "key_facts_coverage": 0.875
+    },
+    "citations": {
+      "precision": 0.6,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7633
+  },
+  {
+    "article_number": 436,
+    "test_case_id": "PMC9856674_Q4",
+    "question": "What specific acyl-chain ceramides showed altered levels under simulated microgravity in *C. elegans*, and what were their fold changes?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.7698,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.926
+  },
+  {
+    "article_number": 459,
+    "test_case_id": "PMC4309301_Q1",
+    "question": "What was the maximum time after euthanasia that mouse testes maintained histological properties comparable to time 0-harvested mice?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9798,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9732
+  },
+  {
+    "article_number": 459,
+    "test_case_id": "PMC4309301_Q2",
+    "question": "Compare the histological stability of mouse ovaries and gerbil ovaries after euthanasia.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9488,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9663
+  },
+  {
+    "article_number": 459,
+    "test_case_id": "PMC4309301_Q3",
+    "question": "How does the study's proposed tissue processing regimen address the logistical challenges of multi-investigator biospecimen sharing programs for spaceflight experiments?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.3,
+      "soft_recall_at_k": 0.4444
+    },
+    "answer": {
+      "semantic_similarity": 0.8873,
+      "key_facts_coverage": 0.6
+    },
+    "citations": {
+      "precision": 0.75,
+      "recall": 0.4286,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6101
+  },
+  {
+    "article_number": 459,
+    "test_case_id": "PMC4309301_Q4",
+    "question": "What storage conditions were tested for RNA later solution to preserve RNA integrity in mouse testicular tissue?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.9422,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7342
+  },
+  {
+    "article_number": 473,
+    "test_case_id": "PMC5288125_Q1",
+    "question": "What leptin infusion rate was observed to increase osteoblast perimeter in ob/ob mice?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.8681,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9259
+  },
+  {
+    "article_number": 473,
+    "test_case_id": "PMC5288125_Q2",
+    "question": "Compare the EC50 infusion rates of leptin required to stimulate bone formation parameters versus those needed to impact energy metabolism indices in ob/ob mice.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.4286
+    },
+    "answer": {
+      "semantic_similarity": 0.8586,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.25,
+      "recall": 0.25,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6807
+  },
+  {
+    "article_number": 473,
+    "test_case_id": "PMC5288125_Q3",
+    "question": "How does this study challenge the previous understanding that leptin primarily regulates bone metabolism through a hypothalamic relay, and what evidence supports a peripheral action?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.4,
+      "soft_recall_at_k": 0.4286
+    },
+    "answer": {
+      "semantic_similarity": 0.9333,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.4,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6955
+  },
+  {
+    "article_number": 473,
+    "test_case_id": "PMC5288125_Q4",
+    "question": "List five genes related to osteoblast and osteoclast differentiation and function that were differentially expressed in the tibia of ob/ob mice treated with 12 ng/h leptin compared to vehicle controls.",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.8391,
+      "key_facts_coverage": 0.1667
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4652
+  },
+  {
+    "article_number": 473,
+    "test_case_id": "PMC5288125_Q5",
+    "question": "Provide a comprehensive overview of the experimental methods and the main findings regarding leptin's differential effects on bone formation and energy metabolism in ob/ob mice.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2857,
+      "soft_recall_at_k": 0.3571
+    },
+    "answer": {
+      "semantic_similarity": 0.8975,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5714,
+      "recall": 0.4444,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6738
+  },
+  {
+    "article_number": 490,
+    "test_case_id": "PMC6876156_Q1",
+    "question": "Which long-term swim exercise regimen induced the most consistent transcriptional upregulation of muscle structural genes in *C. elegans*?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.9193,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7596
+  },
+  {
+    "article_number": 490,
+    "test_case_id": "PMC6876156_Q4",
+    "question": "Which specific muscle structural genes were significantly upregulated by the 3+3+2+2 swim exercise regimen in *C. elegans*?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9469,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8464
+  },
+  {
+    "article_number": 490,
+    "test_case_id": "PMC6876156_Q5",
+    "question": "What are the main systemic health benefits observed in *C. elegans* after long-term swim exercise, encompassing neuromuscular, metabolic, intestinal, and neuronal functions?",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.2941
+    },
+    "answer": {
+      "semantic_similarity": 0.8404,
+      "key_facts_coverage": 0.5556
+    },
+    "citations": {
+      "precision": 0.7143,
+      "recall": 0.2941,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.587
+  },
+  {
+    "article_number": 499,
+    "test_case_id": "PMC10751425_Q1",
+    "question": "What concentrations of zoledronic acid (ZA) were found to significantly increase both lifespan and healthspan in *Caenorhabditis elegans*?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.9489,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6079
+  },
+  {
+    "article_number": 499,
+    "test_case_id": "PMC10751425_Q2",
+    "question": "Compare the effects of 10 \u03bcM zoledronic acid (ZA) versus 1 \u03bcM ZA on the lifespan and healthspan of *Caenorhabditis elegans*.",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.5
+    },
+    "answer": {
+      "semantic_similarity": 0.8726,
+      "key_facts_coverage": 0.8
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6305
+  },
+  {
+    "article_number": 499,
+    "test_case_id": "PMC10751425_Q4",
+    "question": "Which *Caenorhabditis elegans* genes were identified as dispensable for zoledronic acid (ZA)-induced healthspan extension?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.75,
+      "soft_recall_at_k": 0.75
+    },
+    "answer": {
+      "semantic_similarity": 0.9589,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.6667,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8477
+  },
+  {
+    "article_number": 499,
+    "test_case_id": "PMC10751425_Q5",
+    "question": "Provide a comprehensive summary of this study's investigation into bisphosphonates as an anti-sarcopenic therapy in *Caenorhabditis elegans*, including the rationale for using *C. elegans*, the key experimental findings on lifespan, healthspan, and cellular structures, and the identified molecular mechanisms, as well as the overall implications for sarcopenia treatment.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.1667,
+      "soft_recall_at_k": 0.3182
+    },
+    "answer": {
+      "semantic_similarity": 0.9169,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.3182,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6707
+  },
+  {
+    "article_number": 50,
+    "test_case_id": "PMC11127935_Q1",
+    "question": "What specific biological structures were found to be protected by SAHS proteins from desiccation-induced damage?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.8031,
+      "key_facts_coverage": 0.5
+    },
+    "citations": {
+      "precision": 0.1667,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.521
+  },
+  {
+    "article_number": 50,
+    "test_case_id": "PMC11127935_Q2",
+    "question": "Compare the effectiveness of SAHS proteins in protecting liposomes and bacterial cells against desiccation to their effectiveness in protecting the enzyme lactate dehydrogenase (LDH).",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.7143
+    },
+    "answer": {
+      "semantic_similarity": 0.8943,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.4286,
+      "recall": 0.6,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7739
+  },
+  {
+    "article_number": 50,
+    "test_case_id": "PMC11127935_Q3",
+    "question": "Based on the experimental and computational evidence presented, describe the proposed multi-step mechanism by which SAHS proteins protect biological structures during desiccation.",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2,
+      "soft_recall_at_k": 0.2
+    },
+    "answer": {
+      "semantic_similarity": 0.8802,
+      "key_facts_coverage": 0.25
+    },
+    "citations": {
+      "precision": 0.1429,
+      "recall": 0.125,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4088
+  },
+  {
+    "article_number": 50,
+    "test_case_id": "PMC11127935_Q4",
+    "question": "Which specific SAHS proteins from *Ramazzottius varieornatus* and *Hypsibius exemplaris* were successfully expressed and purified for detailed characterization in this study?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.8149,
+      "key_facts_coverage": 0.375
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6052
+  },
+  {
+    "article_number": 50,
+    "test_case_id": "PMC11127935_Q5",
+    "question": "Summarize the main findings regarding the protective capabilities and structural characteristics of tardigrade SAHS proteins, and elaborate on their proposed mechanism of action and potential practical applications.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.2727,
+      "soft_recall_at_k": 0.25
+    },
+    "answer": {
+      "semantic_similarity": 0.8249,
+      "key_facts_coverage": 0.3333
+    },
+    "citations": {
+      "precision": 0.3333,
+      "recall": 0.2,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.4543
+  },
+  {
+    "article_number": 536,
+    "test_case_id": "PMC7561690_Q1",
+    "question": "What are the GC contents for *K. aerogenes*, *K. pneumoniae*, and *K. quasipneumoniae* strains isolated from the ISS?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 0.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.7941,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.587
+  },
+  {
+    "article_number": 536,
+    "test_case_id": "PMC7561690_Q2",
+    "question": "How many strains of each *Klebsiella* species (*K. aerogenes*, *K. pneumoniae*, and *K. quasipneumoniae*) were isolated from the ISS, and what was the highest Average Nucleotide Identity (ANI) percentage recorded for each species compared to its type strain?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.6
+    },
+    "answer": {
+      "semantic_similarity": 0.7522,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.7034
+  },
+  {
+    "article_number": 536,
+    "test_case_id": "PMC7561690_Q3",
+    "question": "Based on the paper, what are the potential health risks posed by *Klebsiella* species to astronauts on the ISS, and how does the whole-genome sequencing project aim to address these concerns?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.8
+    },
+    "answer": {
+      "semantic_similarity": 0.8911,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9071
+  },
+  {
+    "article_number": 536,
+    "test_case_id": "PMC7561690_Q4",
+    "question": "What specific Illumina protocol and flow cell were used for library preparation and paired-end sequencing of the *Klebsiella* genomes, and which software tools were employed for quality assessment, adapter trimming, and assembly?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 0.5,
+      "soft_recall_at_k": 0.3333
+    },
+    "answer": {
+      "semantic_similarity": 0.8455,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 0.3333,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.6791
+  },
+  {
+    "article_number": 536,
+    "test_case_id": "PMC7561690_Q5",
+    "question": "Describe the complete methodology for isolating, identifying, sequencing, and analyzing the *Klebsiella* strains from the ISS, including sample handling, DNA extraction, sequencing technology, and bioinformatics tools, as well as where the final data has been deposited.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.25,
+      "soft_recall_at_k": 0.0909
+    },
+    "answer": {
+      "semantic_similarity": 0.8312,
+      "key_facts_coverage": 0.7143
+    },
+    "citations": {
+      "precision": 0.1429,
+      "recall": 0.25,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.5003
+  },
+  {
+    "article_number": 56,
+    "test_case_id": "PMC4653813_Q1",
+    "question": "What was the average muscle fiber cross-sectional area for mice exposed to spaceflight compared to ground controls?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.9885,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.9974
+  },
+  {
+    "article_number": 56,
+    "test_case_id": "PMC4653813_Q2",
+    "question": "How did spaceflight and hind limb unloading (HLU) affect hind limb areal bone mineral density (aBMD) in mice, and what were the specific values observed?",
+    "question_type": "comparative",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.7897,
+      "key_facts_coverage": 0.6667
+    },
+    "citations": {
+      "precision": 0.25,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8277
+  },
+  {
+    "article_number": 56,
+    "test_case_id": "PMC4653813_Q3",
+    "question": "How does the observed correlation between EIM phase-slope and hind limb aBMD support the potential use of EIM as a diagnostic tool for musculoskeletal health in conditions of disuse?",
+    "question_type": "complex",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 0.6667
+    },
+    "answer": {
+      "semantic_similarity": 0.8783,
+      "key_facts_coverage": 1.0
+    },
+    "citations": {
+      "precision": 0.4286,
+      "recall": 0.6,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8495
+  },
+  {
+    "article_number": 56,
+    "test_case_id": "PMC4653813_Q4",
+    "question": "What specific frequency range was used to calculate the phase-slope parameter in the electrical impedance myography (EIM) data analysis, and how was the phase calculated?",
+    "question_type": "specific",
+    "difficulty": "medium",
+    "retrieval": {
+      "strict_recall_at_k": 1.0,
+      "soft_recall_at_k": 1.0
+    },
+    "answer": {
+      "semantic_similarity": 0.718,
+      "key_facts_coverage": 0.75
+    },
+    "citations": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.8803
+  },
+  {
+    "article_number": 56,
+    "test_case_id": "PMC4653813_Q5",
+    "question": "Summarize the main findings and conclusions regarding the effectiveness of Electrical Impedance Myography (EIM) for assessing muscle and bone changes due to disuse, as presented in this study.",
+    "question_type": "broad",
+    "difficulty": "hard",
+    "retrieval": {
+      "strict_recall_at_k": 0.6667,
+      "soft_recall_at_k": 0.4545
+    },
+    "answer": {
+      "semantic_similarity": 0.8663,
+      "key_facts_coverage": 0.8333
+    },
+    "citations": {
+      "precision": 0.5714,
+      "recall": 0.4,
+      "accuracy": "PASS"
+    },
+    "overall_score": 0.71
+  }
+]

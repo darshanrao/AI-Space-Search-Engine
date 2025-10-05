@@ -1,0 +1,21 @@
+{
+  "article_number": 426,
+  "test_case_id": "PMC6130020_Q4",
+  "question": "Which four specific photosynthetic genes were significantly up-regulated in the cotyledons of 4-day-old ann1-2 seedlings grown without Suc, as identified by RT-qPCR analysis?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9818,
+    "key_facts_coverage": 0.6
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.9059
+}

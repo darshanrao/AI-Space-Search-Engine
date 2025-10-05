@@ -1,0 +1,21 @@
+{
+  "article_number": 25,
+  "test_case_id": "PMC9267413_Q4",
+  "question": "What specific changes in gene expression and morphology were observed in human cervical carcinoma CaSki cells flown on the \"Shen Zhou IV\" space shuttle mission?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.8417,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.9644
+}
