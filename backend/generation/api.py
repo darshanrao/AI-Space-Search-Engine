@@ -30,14 +30,13 @@ class RAGAPI:
             result = self.pipeline.query(question)
             
             if not result["success"]:
-                return {
-                    "answer_markdown": result["answer"],
-                    "citations": [],
-                    "image_citations": [],
-                    "used_context_ids": [],
-                    "confident": False,
-                    "error": result.get("error", "Unknown error")
-                }
+                 return {
+                     "answer_markdown": result["answer"],
+                     "citations": [],
+                     "image_citations": [],
+                     "confidence_score": 0,
+                     "error": result.get("error", "Unknown error")
+                 }
             
             # Parse the JSON response from Gemini
             try:
@@ -55,6 +54,23 @@ class RAGAPI:
                     end = answer_text.find("```", start)
                     if end != -1:
                         answer_text = answer_text[start:end].strip()
+                else:
+                    # No markdown blocks - try to find JSON by looking for first { and last }
+                    first_brace = answer_text.find('{')
+                    last_brace = answer_text.rfind('}')
+                    if first_brace != -1 and last_brace != -1 and last_brace > first_brace:
+                        answer_text = answer_text[first_brace:last_brace + 1]
+                
+                # Additional cleanup - find the first { and last } to ensure clean JSON
+                if not answer_text.strip().startswith('{'):
+                    first_brace = answer_text.find('{')
+                    if first_brace != -1:
+                        answer_text = answer_text[first_brace:]
+                
+                if not answer_text.strip().endswith('}'):
+                    last_brace = answer_text.rfind('}')
+                    if last_brace != -1:
+                        answer_text = answer_text[:last_brace + 1]
                 
                 json_response = json.loads(answer_text)
                 return json_response
@@ -64,8 +80,7 @@ class RAGAPI:
                     "answer_markdown": result["answer"],
                     "citations": [],
                     "image_citations": [],
-                    "used_context_ids": [],
-                    "confident": False,
+                    "confidence_score": 0,
                     "error": f"Failed to parse JSON response: {str(e)}"
                 }
                 
@@ -74,8 +89,7 @@ class RAGAPI:
                 "answer_markdown": f"An error occurred: {str(e)}",
                 "citations": [],
                 "image_citations": [],
-                "used_context_ids": [],
-                "confident": False,
+                "confidence_score": 0,
                 "error": str(e)
             }
     

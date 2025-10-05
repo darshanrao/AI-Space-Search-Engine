@@ -106,19 +106,19 @@ Rules:
 10) DO NOT include titles in citations - only use the "why_relevant" field.
 11) Prefer concise, direct answers; add a brief "Why this is correct" note if helpful.
 12) No hidden reasoning or chain-of-thought in the output. Produce ONLY the required fields.
+13) Provide a confidence score from 0-100 based on how confident you are in the answer quality.
 
-Output format (JSON):
-{{
-  "answer_markdown": "string with inline [1], [2], and [img 1] citations",
-  "citations": [
-    {{"id":"citation-id", "url":"https://...", "why_relevant":"one short phrase"}}
-  ],
-  "image_citations": [
-    {{"id":"ctx-id", "url":"https://...", "caption_or_alt":"short description"}}
-  ],
-  "used_context_ids": ["ctx-id-1", "ctx-id-2", ...],
-  "confident": true
-}}
+ Output format (JSON):
+ {{
+   "answer_markdown": "string with inline [1], [2], and [img 1] citations",
+   "citations": [
+     {{"id":"citation-id", "url":"https://...", "why_relevant":"one short phrase"}}
+   ],
+   "image_citations": [
+     {{"id":"ctx-id", "url":"https://...", "caption_or_alt":"short description"}}
+   ],
+   "confidence_score": 85
+ }}
 
 Validation:
 - Every [n] in answer_markdown must have a matching entry in "citations" (order should align).
