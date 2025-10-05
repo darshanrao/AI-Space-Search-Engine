@@ -187,9 +187,11 @@ export default function Home() {
     setIsClient(true);
     setIsMounted(true);
     // Restore threadId from localStorage on page load
-    const savedThreadId = localStorage.getItem('space_bio_thread_id');
-    if (savedThreadId) {
-      setThreadId(savedThreadId);
+    if (typeof window !== 'undefined') {
+      const savedThreadId = localStorage.getItem('space_bio_thread_id');
+      if (savedThreadId) {
+        setThreadId(savedThreadId);
+      }
     }
   }, []);
 
@@ -204,10 +206,10 @@ export default function Home() {
 
   // Load messages when threadId changes (on page load or new thread)
   useEffect(() => {
-    if (threadId) {
+    if (threadId && isMounted) {
       loadThreadMessages(threadId);
     }
-  }, [threadId]);
+  }, [threadId, isMounted]);
 
   // Function to load messages from a session
   const loadThreadMessages = async (sessionId: string) => {
@@ -221,8 +223,11 @@ export default function Home() {
       });
 
       if (response.status === 404) {
-        // Session doesn't exist, clear it silently
-        localStorage.removeItem('space_bio_thread_id');
+        // Session doesn't exist on backend (probably server was restarted)
+        console.log(`Session ${sessionId} not found on backend, clearing from localStorage`);
+        if (typeof window !== 'undefined') {
+          localStorage.removeItem('space_bio_thread_id');
+        }
         setThreadId(null);
         return;
       }
@@ -253,7 +258,9 @@ export default function Home() {
       }
     } catch (error) {
       console.error('Failed to load session messages:', error);
-      localStorage.removeItem('space_bio_thread_id');
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('space_bio_thread_id');
+      }
       setThreadId(null);
     }
   };
@@ -314,7 +321,9 @@ export default function Home() {
       // Update threadId if this is a new session
       if (!threadId) {
         setThreadId(chatResponse.session_id);
-        localStorage.setItem('space_bio_thread_id', chatResponse.session_id);
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('space_bio_thread_id', chatResponse.session_id);
+        }
         console.log('New session created:', chatResponse.session_id);
         
         // Add new session to sidebar
@@ -373,7 +382,9 @@ export default function Home() {
   // Handle starting a new chat
   const handleNewChat = () => {
     // Clear current session
-    localStorage.removeItem('space_bio_thread_id');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('space_bio_thread_id');
+    }
     setThreadId(null);
     setMessages([]);
     setContext({ organism: undefined, conditions: [] });
@@ -383,7 +394,9 @@ export default function Home() {
   // Handle session selection
   const handleSessionSelect = (sessionId: string) => {
     setThreadId(sessionId);
-    localStorage.setItem('space_bio_thread_id', sessionId);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('space_bio_thread_id', sessionId);
+    }
     // Messages will be loaded by the useEffect that watches threadId
   };
 

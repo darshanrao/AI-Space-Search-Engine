@@ -38,10 +38,20 @@ export default function SessionsSidebar({
 }: SessionsSidebarProps) {
   const [sessions, setSessions] = useState<ChatSession[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Set mounted state
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Load sessions from localStorage
   useEffect(() => {
+    if (!isMounted) return;
+    
     const loadSessions = () => {
+      if (typeof window === 'undefined') return;
+      
       try {
         const savedSessions = localStorage.getItem('space_bio_sessions');
         if (savedSessions) {
@@ -59,10 +69,12 @@ export default function SessionsSidebar({
     };
 
     loadSessions();
-  }, []);
+  }, [isMounted]);
 
   // Save sessions to localStorage
   const saveSessions = (newSessions: ChatSession[]) => {
+    if (typeof window === 'undefined') return;
+    
     try {
       localStorage.setItem('space_bio_sessions', JSON.stringify(newSessions));
     } catch (error) {
@@ -124,6 +136,10 @@ export default function SessionsSidebar({
       generateTitle
     };
   }, [sessions]);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <>

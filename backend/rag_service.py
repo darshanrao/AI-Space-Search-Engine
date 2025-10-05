@@ -12,6 +12,7 @@ from langchain.schema import BaseMessage, HumanMessage, AIMessage, SystemMessage
 from models import RAGResponse, ImageCitation
 from settings import settings
 from generation.api import query_rag_json
+from generation.agent_service import agent_service
 
 
 class RAGService:
@@ -27,7 +28,28 @@ class RAGService:
     
     def generate_answer(self, question: str, context: Dict[str, Any], conversation_history: List[Tuple[str, str]] = None) -> RAGResponse:
         """
-        Generate RAG-powered answer using the actual RAG pipeline.
+        Generate answer using the intelligent agent that decides when to use RAG.
+        
+        Args:
+            question: User's question
+            context: Additional context (organism, focus area, etc.)
+            conversation_history: Previous conversation messages
+            
+        Returns:
+            RAGResponse with answer, citations, and context IDs
+        """
+        try:
+            # Use the agent service that intelligently decides when to use RAG
+            return agent_service.generate_answer(question, context, conversation_history)
+            
+        except Exception as e:
+            # Fallback to direct RAG if agent fails
+            print(f"Agent service failed, falling back to direct RAG: {str(e)}")
+            return self._generate_direct_rag_response(question, context, conversation_history)
+    
+    def _generate_direct_rag_response(self, question: str, context: Dict[str, Any], conversation_history: List[Tuple[str, str]] = None) -> RAGResponse:
+        """
+        Generate answer using direct RAG pipeline (fallback method).
         
         Args:
             question: User's question
@@ -62,7 +84,7 @@ class RAGService:
             
         except Exception as e:
             # Fallback to basic Gemini response if RAG fails
-            print(f"RAG pipeline failed: {str(e)}")
+            print(f"Direct RAG pipeline failed: {str(e)}")
             return self._generate_fallback_response(question, context, conversation_history)
     
     def _generate_fallback_response(self, question: str, context: Dict[str, Any], conversation_history: List[Tuple[str, str]] = None) -> RAGResponse:
