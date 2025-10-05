@@ -46,9 +46,14 @@ export default function Home() {
     // Regular expression to match citation patterns like [1], [2], [1, 2], [1-3], etc.
     const citationRegex = /\[(\d+(?:[-,]\d+)*)\]/g;
     
+    // Debug: Log citations array
+    console.log('Citations array:', citations);
+    console.log('Citations length:', citations.length);
+    console.log('Citations structure:', citations.map((c, i) => ({ index: i, type: typeof c, value: c })));
+    
     const parts = [];
     let lastIndex = 0;
-    let match;
+    let match: RegExpExecArray | null;
 
     while ((match = citationRegex.exec(text)) !== null) {
       // Add text before the citation
@@ -58,28 +63,113 @@ export default function Home() {
 
       // Add the clickable citation
       const citationNumbers = match[1].split(',').map(num => num.trim());
-      const firstNumber = parseInt(citationNumbers[0]);
       
-      // Get the URL for the first citation number
-      const citationIndex = firstNumber - 1; // Convert to 0-based index
-      const citationUrl = citations[citationIndex];
-      const url = typeof citationUrl === 'string' ? citationUrl : citationUrl?.url;
+      // Expand ranges like "1-3" to ["1", "2", "3"]
+      const expandedNumbers = [];
+      for (const num of citationNumbers) {
+        if (num.includes('-')) {
+          const [start, end] = num.split('-').map(n => parseInt(n.trim()));
+          for (let i = start; i <= end; i++) {
+            expandedNumbers.push(i.toString());
+          }
+        } else {
+          expandedNumbers.push(num);
+        }
+      }
       
-      parts.push(
-        <button
-          key={match.index}
-          onClick={() => {
-            if (url) {
-              window.open(url, '_blank', 'noopener,noreferrer');
-            }
-          }}
-          className="inline-block mx-1 px-1 py-0.5 bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 hover:text-blue-300 rounded text-xs font-medium transition-colors cursor-pointer"
-          title={url ? `Open source ${match[1]}` : `Source ${match[1]} not available`}
-          disabled={!url}
-        >
-          [{match[1]}]
-        </button>
-      );
+      // Handle multiple citations by creating individual clickable buttons
+      if (expandedNumbers.length > 1) {
+        // Multiple citations like [1, 2, 3] or [1-3] - create separate buttons
+        expandedNumbers.forEach((num, index) => {
+          const citationNumber = parseInt(num);
+          const citationIndex = citationNumber - 1; // Convert to 0-based index
+          
+          // Safety check: ensure citation index is within bounds
+          if (citationIndex >= 0 && citationIndex < citations.length) {
+            const citationObj = citations[citationIndex];
+            const url = typeof citationObj === 'string' ? citationObj : citationObj?.url;
+            
+            // Debug: Log citation mapping
+            console.log(`Citation ${citationNumber} -> Index ${citationIndex} -> Citation Object:`, citationObj);
+            console.log(`Citation ${citationNumber} -> URL:`, url);
+            
+            parts.push(
+              <button
+                key={`${match!.index}-${index}`}
+                onClick={() => {
+                  if (url) {
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                  }
+                }}
+                className="inline-block mx-0.5 px-1 py-0.5 bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 hover:text-blue-300 rounded text-xs font-medium transition-colors cursor-pointer"
+                title={url ? `Open source ${citationNumber}` : `Source ${citationNumber} not available`}
+                disabled={!url}
+              >
+                [{citationNumber}]
+              </button>
+            );
+          } else {
+            // Debug: Log out of bounds citation
+            console.log(`Citation ${citationNumber} -> Index ${citationIndex} is out of bounds (citations.length: ${citations.length})`);
+            
+            // Still show the citation but make it non-clickable
+            parts.push(
+              <span
+                key={`${match!.index}-${index}`}
+                className="inline-block mx-0.5 px-1 py-0.5 bg-gray-500/20 text-gray-400 rounded text-xs font-medium"
+                title={`Source ${citationNumber} not available`}
+              >
+                [{citationNumber}]
+              </span>
+            );
+          }
+        });
+      } else {
+        // Single citation like [1] or range like [1-3]
+        const citationText = match[1];
+        const firstNumber = parseInt(expandedNumbers[0]);
+        const citationIndex = firstNumber - 1; // Convert to 0-based index
+        
+        // Safety check: ensure citation index is within bounds
+        if (citationIndex >= 0 && citationIndex < citations.length) {
+          const citationObj = citations[citationIndex];
+          const url = typeof citationObj === 'string' ? citationObj : citationObj?.url;
+          
+          // Debug: Log citation mapping
+          console.log(`Citation ${citationText} -> Index ${citationIndex} -> Citation Object:`, citationObj);
+          console.log(`Citation ${citationText} -> URL:`, url);
+          
+          parts.push(
+            <button
+              key={match.index}
+              onClick={() => {
+                if (url) {
+                  window.open(url, '_blank', 'noopener,noreferrer');
+                }
+              }}
+              className="inline-block mx-1 px-1 py-0.5 bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 hover:text-blue-300 rounded text-xs font-medium transition-colors cursor-pointer"
+              title={url ? `Open source ${citationText}` : `Source ${citationText} not available`}
+              disabled={!url}
+            >
+              [{citationText}]
+            </button>
+          );
+        } else {
+          // Debug: Log out of bounds citation
+          console.log(`Citation ${citationText} -> Index ${citationIndex} is out of bounds (citations.length: ${citations.length})`);
+          
+          // Still show the citation but make it non-clickable
+          parts.push(
+            <span
+              key={match.index}
+              className="inline-block mx-1 px-1 py-0.5 bg-gray-500/20 text-gray-400 rounded text-xs font-medium"
+              title={`Source ${citationText} not available`}
+            >
+              [{citationText}]
+            </span>
+          );
+        }
+      }
 
       lastIndex = match.index + match[0].length;
     }
