@@ -19,12 +19,10 @@ class RAGSearchTool(BaseTool):
     
     name: str = "search_space_biology_corpus"
     description: str = (
-        "Search the space biology research corpus for scientific information. "
-        "Use this tool when you need specific scientific facts, research findings, "
-        "or detailed information about space biology topics that you don't already know. "
-        "This tool searches through a curated collection of NASA and space biology research papers. "
-        "Only use this tool when you cannot answer from your existing knowledge or when "
-        "you need to provide specific citations and sources."
+        "Search a curated database of 608 Space Biology publications from PubMed Central (2010-present). "
+        "ONLY use this tool when you need specific research findings, experimental data, or citations from published space biology studies. "
+        "This database contains peer-reviewed research papers on space biology topics like microgravity effects, space radiation, "
+        "biological experiments in space, and related scientific studies. Do NOT use for general scientific concepts or basic definitions."
     )
     args_schema: Type[BaseModel] = RAGSearchInput
     
@@ -42,17 +40,16 @@ class RAGSearchTool(BaseTool):
             citations = result.get("citations", [])
             confidence = result.get("confidence_score", 0)
             
-            # Create a structured response
-            response = f"SEARCH RESULTS:\n{answer}\n\n"
+            # Create a concise structured response
+            response = f"{answer}\n\n"
             
             if citations:
-                response += f"SOURCES ({len(citations)} found):\n"
-                for i, citation in enumerate(citations, 1):
-                    response += f"[{i}] {citation}\n"
+                response += f"Sources: {', '.join([f'[{i+1}]' for i in range(len(citations))])}\n"
+                response += f"URLs: {'; '.join(citations[:3])}"  # Show first 3 URLs only
+                if len(citations) > 3:
+                    response += f" (and {len(citations)-3} more)"
             else:
-                response += "No sources found.\n"
-            
-            response += f"\nConfidence Score: {confidence}%"
+                response += "No sources found."
             
             return response
             

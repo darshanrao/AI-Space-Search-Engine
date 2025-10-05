@@ -4,7 +4,7 @@ Gemini API client for generating answers from retrieved context.
 from __future__ import annotations
 
 import os
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 import google.generativeai as genai
 from dotenv import load_dotenv
 
@@ -94,37 +94,34 @@ QUESTION: {query}
 
 Rules:
 1) Cite every non-trivial claim with inline numeric citations like [1], [2], [3].
-2) Each citation number must correspond to the ORDER in the "citations" URL array (first URL = [1], second URL = [2], etc.).
+2) Each citation number must correspond to the ORDER in the "citations" array (first URL = [1], second URL = [2], etc.).
 3) Use separate brackets for each citation: [1], [2], [3] NOT [1,2,3].
 4) If you used any chunks of kind "caption" (e.g., charts, screenshots, figures) to support the answer, extract JPG URLs from the chunk text content (URLs ending with .jpg) and include them in "image_citations".
-5) For regular citations, NEVER invent sources or URLs. Use ONLY the URLs from the "URL" field in the context.
+5) For regular citations, NEVER invent sources or URLs. Use ONLY the EXACT URLs from the "URL" field in the context. Do NOT modify, truncate, or add sections to these URLs.
 6) DO NOT extract URLs from the content text for regular citations (like DOIs, PubMed links, etc.).
 7) If a chunk has no "URL" field, use "N/A" as the URL value.
 8) Don't cite on duplicate links - citations should be linkwise not chunkwise, so don't use [1], [2], [3], [4] for the same link.
 9) Only include URLs that were actually used to support your answer.
-10) Write a comprehensive and detailed answer to the question. Provide thorough explanations, context, and supporting evidence.
-11) Use double line breaks (\\n\\n) between paragraphs to create clear, readable sections. Each major topic or concept should be in its own paragraph.
-12) No hidden reasoning or chain-of-thought in the output. Produce ONLY the required fields.
-13) Provide a confidence score from 0-100 based on how confident you are in the answer quality.
-14) Include relevant keywords that could be used to search for related images (e.g., scientific concepts, organisms, equipment, processes mentioned in your answer).
-
+10) URL RULE: Copy URLs exactly as they appear in the context "URL" field. Do NOT add section anchors, fragment identifiers, or any modifications to the URLs.
+11) Write a clear and accurate answer to the question. Provide relevant explanations and supporting evidence.
+12) Use double line breaks (\\n\\n) between paragraphs to create clear, readable sections. Each major topic or concept should be in its own paragraph.
+13) No hidden reasoning or chain-of-thought in the output. Produce ONLY the required fields.
+14) Provide a confidence score from 0-100 based on how confident you are in the answer quality.
+15) CRITICAL: The "citations" field must be a simple array of URL strings, NOT objects with id/url/why_relevant fields.
  Output format (JSON):
  {{
-   "answer_markdown": "Comprehensive answer with proper paragraph spacing using \\n\\n between sections. Include detailed explanations with inline [1], [2], [3] citations.",
+   "answer_markdown": "Clear answer with proper paragraph spacing using \\n\\n between sections. Include relevant explanations with inline [1], [2], [3] citations.",
    "citations": [
-     "https://example.com/paper1",
-     "https://example.com/paper2"
+     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/"
    ],
    "image_citations": [
      {{"id":"ctx-id", "url":"https://...", "caption_or_alt":"short description"}}
    ],
-   "image_keywords": [
-     "C. elegans muscle",
-     "microgravity effects",
-     "space biology"
-   ],
    "confidence_score": 85
  }}
+
+IMPORTANT: The "citations" field must contain ONLY URL strings, not objects. Each URL should correspond to the numeric citation order in your answer_markdown.
 
 Validation:
 - Every [n] in answer_markdown must have a matching URL in "citations" array at position n-1.
@@ -136,3 +133,20 @@ Validation:
 - Do not include any text after the JSON closing brace."""
         
         return prompt
+    
+    def generate_query(self, prompt: str) -> str:
+        """
+        Generate a focused search query using Gemini.
+        
+        Args:
+            prompt: The prompt for query generation
+            
+        Returns:
+            Generated search query
+        """
+        try:
+            response = self.model.generate_content(prompt)
+            return response.text.strip()
+        except Exception as e:
+            print(f"Error generating query: {e}")
+            return ""

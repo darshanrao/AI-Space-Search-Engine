@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Space Bio Search Engine",
-  description: "AI-powered search engine for space biology research",
+  title: "AstroBio Explorer",
+  description: "Our AI copilot for Space Biology Research. Search experiments, analyze findings and generate scientific insights from NASA&apos;s bioscience archives",
 };
 
 export default function RootLayout({

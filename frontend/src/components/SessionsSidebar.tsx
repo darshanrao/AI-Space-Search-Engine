@@ -151,22 +151,23 @@ export default function SessionsSidebar({
         />
       )}
       
-      <div className="w-80 sessions-sidebar flex flex-col h-full transition-all duration-300" style={{
-        position: 'absolute',
-        left: isOpen ? '0' : '-320px',
-        top: 0,
-        zIndex: 30,
-        backgroundColor: 'var(--color-surface)',
-        borderRight: '1px solid rgba(30, 33, 51, 0.2)',
-        backdropFilter: 'blur(20px)'
-      }}>
-        {/* Header */}
-        <div style={{
-          padding: '16px',
-          borderBottom: '1px solid rgba(30, 33, 51, 0.2)',
-          backgroundColor: 'rgba(30, 33, 51, 0.8)',
-          backdropFilter: 'blur(15px)'
-        }}>
+       <div className="w-80 sessions-sidebar flex flex-col h-full transition-all duration-300" style={{
+         position: 'absolute',
+         left: isOpen ? '0' : '-320px',
+         top: 0,
+         zIndex: 30,
+         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.1) 100%)',
+         borderRight: '1px solid rgba(255, 255, 255, 0.2)',
+         backdropFilter: 'blur(20px)',
+         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
+       }}>
+         {/* Header */}
+         <div style={{
+           padding: '16px',
+           borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+           backgroundColor: 'rgba(255, 255, 255, 0.05)',
+           backdropFilter: 'blur(20px)'
+         }}>
           <div className="flex items-center justify-between">
             <div style={{
               display: 'flex',
@@ -188,32 +189,32 @@ export default function SessionsSidebar({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </div>
-              <h2 style={{
-                fontSize: '18px',
-                fontWeight: '600',
-                color: 'var(--color-text-primary)',
-                margin: 0
-              }}>Chat Sessions</h2>
+               <h2 style={{
+                 fontSize: '18px',
+                 fontWeight: '600',
+                 color: 'rgba(255, 255, 255, 0.95)',
+                 margin: 0
+               }}>Chat Sessions</h2>
             </div>
             <button
               onClick={onClose}
-              style={{
-                color: 'var(--color-text-secondary)',
-                padding: '4px',
-                borderRadius: '4px',
-                border: 'none',
-                backgroundColor: 'transparent',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = 'var(--color-text-primary)';
-                e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = 'var(--color-text-secondary)';
-                e.currentTarget.style.backgroundColor = 'transparent';
-              }}
+               style={{
+                 color: 'rgba(255, 255, 255, 0.7)',
+                 padding: '4px',
+                 borderRadius: '4px',
+                 border: 'none',
+                 backgroundColor: 'transparent',
+                 cursor: 'pointer',
+                 transition: 'all 0.2s ease'
+               }}
+               onMouseEnter={(e) => {
+                 e.currentTarget.style.color = 'rgba(255, 255, 255, 0.95)';
+                 e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+               }}
+               onMouseLeave={(e) => {
+                 e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)';
+                 e.currentTarget.style.backgroundColor = 'transparent';
+               }}
               title="Close sidebar"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,12 +261,12 @@ export default function SessionsSidebar({
           msOverflowStyle: 'none'
         }}>
           {sessions.length === 0 ? (
-            <div style={{
-              padding: '32px 16px',
-              textAlign: 'center',
-              color: 'var(--color-text-secondary)'
-            }}>
-              <svg className="w-12 h-12 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: 'var(--color-text-secondary)'}}>
+             <div style={{
+               padding: '32px 16px',
+               textAlign: 'center',
+               color: 'rgba(255, 255, 255, 0.7)'
+             }}>
+              <svg className="w-12 h-12 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: 'rgba(255, 255, 255, 0.7)'}}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
               <p style={{fontSize: '14px', margin: 0}}>No chat sessions yet</p>
@@ -292,7 +293,7 @@ export default function SessionsSidebar({
                   }}
                   onMouseEnter={(e) => {
                     if (session.id !== currentSessionId) {
-                      e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.3)';
+                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
                     }
                   }}
                   onMouseLeave={(e) => {
@@ -311,21 +312,21 @@ export default function SessionsSidebar({
                       flex: 1,
                       minWidth: 0
                     }}>
-                      <h3 style={{
-                        fontSize: '14px',
-                        fontWeight: '500',
-                        color: 'var(--color-text-primary)',
-                        margin: 0,
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap'
-                      }}>
+                       <h3 style={{
+                         fontSize: '14px',
+                         fontWeight: '500',
+                         color: 'rgba(255, 255, 255, 0.95)',
+                         margin: 0,
+                         overflow: 'hidden',
+                         textOverflow: 'ellipsis',
+                         whiteSpace: 'nowrap'
+                       }}>
                         {session.title}
                       </h3>
                       {session.lastMessage && (
                         <p style={{
                           fontSize: '12px',
-                          color: 'var(--color-text-secondary)',
+                          color: 'rgba(255, 255, 255, 0.7)',
                           margin: '4px 0 0 0',
                           display: '-webkit-box',
                           WebkitLineClamp: 2,
@@ -337,9 +338,8 @@ export default function SessionsSidebar({
                       )}
                       <p style={{
                         fontSize: '11px',
-                        color: 'var(--color-text-secondary)',
-                        margin: '4px 0 0 0',
-                        opacity: 0.7
+                        color: 'rgba(255, 255, 255, 0.6)',
+                        margin: '4px 0 0 0'
                       }}>
                         {session.timestamp.toLocaleDateString()} at {session.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </p>
@@ -351,17 +351,17 @@ export default function SessionsSidebar({
                         e.stopPropagation();
                         deleteSession(session.id);
                       }}
-                      style={{
-                        opacity: 0,
-                        marginLeft: '8px',
-                        padding: '4px',
-                        color: 'var(--color-text-secondary)',
-                        backgroundColor: 'transparent',
-                        border: 'none',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s ease'
-                      }}
+                       style={{
+                         opacity: 0,
+                         marginLeft: '8px',
+                         padding: '4px',
+                         color: 'rgba(255, 255, 255, 0.7)',
+                         backgroundColor: 'transparent',
+                         border: 'none',
+                         borderRadius: '4px',
+                         cursor: 'pointer',
+                         transition: 'all 0.2s ease'
+                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.opacity = '1';
                         e.currentTarget.style.color = '#EF4444';
@@ -369,7 +369,7 @@ export default function SessionsSidebar({
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.opacity = '0';
-                        e.currentTarget.style.color = 'var(--color-text-secondary)';
+                        e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)';
                         e.currentTarget.style.backgroundColor = 'transparent';
                       }}
                       title="Delete session"
@@ -385,21 +385,20 @@ export default function SessionsSidebar({
           )}
         </div>
 
-        {/* Footer */}
-        <div style={{
-          padding: '16px',
-          borderTop: '1px solid rgba(30, 33, 51, 0.2)',
-          backgroundColor: 'rgba(30, 33, 51, 0.8)',
-          backdropFilter: 'blur(15px)'
-        }}>
+         {/* Footer */}
+         <div style={{
+           padding: '16px',
+           borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+           backgroundColor: 'rgba(255, 255, 255, 0.05)',
+           backdropFilter: 'blur(20px)'
+         }}>
           <div style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '8px',
             fontSize: '12px',
-            color: 'var(--color-text-secondary)',
-            opacity: 0.8
+            color: 'rgba(255, 255, 255, 0.7)'
           }}>
             <div style={{
               width: '16px',
@@ -414,7 +413,7 @@ export default function SessionsSidebar({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
             </div>
-            Space Bio Assistant
+            AstroBio Explorer
           </div>
         </div>
       </div>

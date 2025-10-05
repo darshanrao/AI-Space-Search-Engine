@@ -52,7 +52,7 @@ class Settings(BaseSettings):
     )
     
     MAX_RESPONSE_TOKENS: int = Field(
-        default=800,
+        default=500,  # Balanced for concise but complete responses
         description="Maximum tokens for AI responses"
     )
     

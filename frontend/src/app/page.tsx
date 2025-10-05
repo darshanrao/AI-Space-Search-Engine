@@ -5,7 +5,7 @@ import SearchBar from '@/components/SearchBar';
 import ChatAnswer from '@/components/ChatAnswer';
 import ContextChips from '@/components/ContextChips';
 import SessionsSidebar from '@/components/SessionsSidebar';
-import { postJSON } from '@/lib/api';
+import { postJSON, searchGoogleScholar } from '@/lib/api';
 import { AnswerPayload } from '@/lib/types';
 
 // Extend window interface for sessions sidebar
@@ -22,7 +22,7 @@ declare global {
 
 interface ChatMessage {
   id: string;
-  type: 'user' | 'assistant';
+  type: 'user' | 'assistant' | 'scholar';
   content: string;
   timestamp: Date;
   answer?: AnswerPayload;
@@ -30,6 +30,8 @@ interface ChatMessage {
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
+  const [isScholarLoading, setIsScholarLoading] = useState(false);
+  const [isScholarDisabled, setIsScholarDisabled] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [context, setContext] = useState<{ organism?: string; conditions: string[] }>({
     conditions: []
@@ -41,6 +43,48 @@ export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+
+  const renderScholarResults = (text: string) => {
+    // Split the text into lines and process each line
+    const lines = text.split('\n');
+    const result = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check if this line contains a link
+      if (line.includes('🔗 Link: ')) {
+        const linkUrl = line.replace('🔗 Link: ', '');
+        if (linkUrl.startsWith('http')) {
+          // Create clickable link
+          result.push(
+            <div key={i} style={{ marginBottom: '8px' }}>
+              <a 
+                href={linkUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  color: 'var(--color-primary)',
+                  textDecoration: 'underline',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+              >
+                {linkUrl}
+              </a>
+            </div>
+          );
+        } else {
+          result.push(<div key={i}>{line}</div>);
+        }
+      } else {
+        result.push(<div key={i}>{line}</div>);
+      }
+    }
+    
+    return result;
+  };
 
   const renderAnswerWithCitations = (text: string, citations: (string | {url: string})[] = []) => {
     // Regular expression to match citation patterns like [1], [2], [1, 2], [1-3], etc.
@@ -229,6 +273,14 @@ export default function Home() {
           localStorage.removeItem('space_bio_thread_id');
         }
         setThreadId(null);
+        
+        // Show a brief notification to the user
+        setMessages([{
+          id: 'session-not-found',
+          type: 'assistant',
+          content: 'The previous session was not found (it may have expired). Starting a new conversation.',
+          timestamp: new Date()
+        }]);
         return;
       }
 
@@ -269,6 +321,7 @@ export default function Home() {
   const handleSearch = async (query: string) => {
     setIsLoading(true);
     setError(null);
+    setIsScholarDisabled(false); // Re-enable scholar button after search
 
     // Add user message
     const userMessage: ChatMessage = {
@@ -374,6 +427,77 @@ export default function Home() {
     }
   };
 
+  // Handle Google Scholar search
+  const handleScholarSearch = async (query: string) => {
+    setIsScholarLoading(true);
+    setIsScholarDisabled(true); // Disable scholar button
+    setError(null);
+
+    // Extract context from recent conversation
+    const extractContextFromMessages = () => {
+      const recentMessages = messages.slice(-6); // Get last 6 messages
+      const contextParts = [];
+      
+      for (const msg of recentMessages) {
+        if (msg.type === 'user' && msg.content.trim()) {
+          // Clean up user messages (remove "Scholar Search:" prefix if present)
+          const cleanContent = msg.content.replace(/^🔍 Scholar Search:\s*/, '').trim();
+          if (cleanContent) {
+            contextParts.push(cleanContent);
+          }
+        } else if (msg.type === 'assistant' && msg.content.trim()) {
+          // Extract key terms from assistant responses
+          const cleanContent = msg.content.trim();
+          if (cleanContent) {
+            contextParts.push(cleanContent);
+          }
+        }
+      }
+      
+      return contextParts.join(' ').trim();
+    };
+
+    const contextText = extractContextFromMessages();
+    const searchQuery = query.trim() || contextText || 'space biology research';
+
+    try {
+      const scholarResponse = await searchGoogleScholar({
+        context: searchQuery,
+        num_results: 5
+      });
+
+      // Add user message showing the actual generated query
+      const userMessage: ChatMessage = {
+        id: Date.now().toString(),
+        type: 'user',
+        content: `🔍 Scholar Search: ${scholarResponse.query}`,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, userMessage]);
+
+      // Add scholar results message
+      const scholarMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        type: 'scholar',
+        content: scholarResponse.results,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, scholarMessage]);
+
+    } catch (error) {
+      console.error('Google Scholar search failed:', error);
+      const errorMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        type: 'assistant',
+        content: 'Sorry, I encountered an error while searching Google Scholar. Please try again.',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsScholarLoading(false);
+    }
+  };
+
   // Handle context updates
   const handleContextUpdate = (newContext: { organism?: string; conditions: string[] }) => {
     setContext(newContext);
@@ -389,6 +513,7 @@ export default function Home() {
     setMessages([]);
     setContext({ organism: undefined, conditions: [] });
     setError(null);
+    setIsLoading(false); // IMPORTANT: Clear loading state to prevent cross-context generation
   };
 
   // Handle session selection
@@ -397,6 +522,8 @@ export default function Home() {
     if (typeof window !== 'undefined') {
       localStorage.setItem('space_bio_thread_id', sessionId);
     }
+    setIsLoading(false); // Clear loading state when switching sessions
+    setError(null); // Clear any errors when switching sessions
     // Messages will be loaded by the useEffect that watches threadId
   };
 
@@ -406,8 +533,32 @@ export default function Home() {
     <div style={{
       height: '100vh',
       color: 'var(--color-text-primary)',
-      position: 'relative'
+      position: 'relative',
+      overflow: 'hidden'
     }}>
+      {/* Solar System Animation Background */}
+      <div className="solar-syst" style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: 0,
+        opacity: 0.5
+      }}>
+        <div className="sun"></div>
+        <div className="mercury"></div>
+        <div className="venus"></div>
+        <div className="earth"></div>
+        <div className="mars"></div>
+        <div className="jupiter"></div>
+        <div className="saturn"></div>
+        <div className="uranus"></div>
+        <div className="neptune"></div>
+        <div className="pluto"></div>
+        <div className="asteroids-belt"></div>
+      </div>
       {/* Sessions Sidebar */}
       {isMounted && (
         <SessionsSidebar
@@ -430,7 +581,9 @@ export default function Home() {
         paddingLeft: 'max(16px, env(safe-area-inset-left))',
         paddingRight: 'max(16px, env(safe-area-inset-right))',
         transition: 'width 0.3s ease, margin-left 0.3s ease',
-        minWidth: 0
+        minWidth: 0,
+        position: 'relative',
+        zIndex: 1
       }}>
       {/* Chat Header */}
       <div style={{
@@ -481,7 +634,7 @@ export default function Home() {
                     fontWeight: '600',
                     margin: 0,
                     color: 'var(--color-text-primary)'
-                  }}>Space Bio Assistant</h1>
+                  }}>AstroBio Explorer</h1>
                   <p style={{
                     fontSize: '12px',
                     margin: 0,
@@ -597,15 +750,14 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0,
                 color: 'var(--color-text-primary)'
-              }}>Welcome to Space Bio Assistant</h2>
+              }}>Our AI copilot for Space Biology Research</h2>
               <p style={{
                 fontSize: '14px',
                 margin: '0 auto',
                 color: 'var(--color-text-secondary)',
                 maxWidth: '320px'
               }}>
-                Ask me anything about space biology research. I can help you find papers, 
-                analyze data, and explore scientific insights.
+                Search experiments, analyze findings and generate scientific insights from NASA&apos;s bioscience archives
               </p>
             </div>
           </div>
@@ -627,12 +779,16 @@ export default function Home() {
                 borderRadius: '16px',
                 backgroundColor: message.type === 'user' 
                   ? 'var(--color-primary)' 
+                  : message.type === 'scholar'
+                  ? 'rgba(62, 142, 222, 0.1)'
                   : 'var(--color-surface)',
                 color: message.type === 'user' 
                   ? 'white' 
                   : 'var(--color-text-primary)',
                 border: message.type === 'user' 
                   ? 'none' 
+                  : message.type === 'scholar'
+                  ? '1px solid rgba(62, 142, 222, 0.3)'
                   : '1px solid rgba(30, 33, 51, 0.2)',
                 position: 'relative'
               }}>
@@ -647,6 +803,11 @@ export default function Home() {
                     top: '12px',
                     borderWidth: '8px 0 8px 8px',
                     borderColor: 'transparent transparent transparent var(--color-primary)'
+                  } : message.type === 'scholar' ? {
+                    left: '-8px',
+                    top: '12px',
+                    borderWidth: '8px 8px 8px 0',
+                    borderColor: 'transparent rgba(62, 142, 222, 0.1) transparent transparent'
                   } : {
                     left: '-8px',
                     top: '12px',
@@ -655,11 +816,16 @@ export default function Home() {
                   })
                 }}></div>
                 
-                       <p style={{
+                       <div style={{
                          fontSize: '14px',
                          lineHeight: '1.5',
                          margin: 0
-                       }}>{renderAnswerWithCitations(message.content, message.answer?.citations || [])}</p>
+                       }}>
+                         {message.type === 'scholar' 
+                           ? renderScholarResults(message.content)
+                           : renderAnswerWithCitations(message.content, message.answer?.citations || [])
+                         }
+                       </div>
                 
                 {/* Show answer details for assistant messages */}
                 {message.type === 'assistant' && message.answer && (
@@ -778,7 +944,7 @@ export default function Home() {
                   <span style={{
                     fontSize: '14px',
                     color: 'var(--color-text-secondary)'
-                  }}>Searching space biology literature...</span>
+                  }}>Generating response...</span>
                 </div>
               </div>
             </div>
@@ -854,8 +1020,11 @@ export default function Home() {
       }}>
         <SearchBar 
           onSubmit={handleSearch}
+          onScholarSearch={handleScholarSearch}
           isLoading={isLoading}
-          placeholder="Ask about space biology research..."
+          isScholarLoading={isScholarLoading}
+          isScholarDisabled={isScholarDisabled}
+          placeholder="Ask about space biology experiments and research..."
         />
       </div>
 

@@ -9,7 +9,7 @@ from fastapi.responses import ORJSONResponse
 import uvicorn
 
 from settings import settings
-from routers import chat
+from routers import chat, scholar
 
 # Create FastAPI app
 app = FastAPI(
@@ -32,6 +32,7 @@ app.add_middleware(
 
 # Include routers
 app.include_router(chat.router, prefix="/api", tags=["chat"])
+app.include_router(scholar.router, prefix="/api/scholar", tags=["scholar"])
 
 
 @app.get("/")
@@ -45,7 +46,8 @@ async def root():
         "endpoints": {
             "chat": "/api/chat",
             "session": "/api/session/{session_id}",
-            "sessions": "/api/sessions"
+            "sessions": "/api/sessions",
+            "scholar": "/api/scholar/search"
         }
     }
 

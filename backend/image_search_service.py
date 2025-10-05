@@ -1,6 +1,7 @@
 """
 Image Search Service using SerpApi Google Images API.
 Fetches relevant images based on keywords from RAG responses.
+Now runs in parallel with answer generation for optimal performance.
 """
 
 import os
@@ -18,13 +19,13 @@ class ImageSearchService:
         if not self.api_key:
             print("Warning: SERPAPI_API_KEY not found in settings. Image search will be disabled.")
     
-    def search_images(self, keywords: List[str], max_images: int = 2) -> List[str]:
+    def search_images(self, keywords: List[str], max_images: int = 1) -> List[str]:
         """
         Search for images using the provided keywords.
         
         Args:
             keywords: List of keywords to search for
-            max_images: Maximum number of images to return
+            max_images: Maximum number of images to return (default: 1)
             
         Returns:
             List of image URLs
@@ -39,7 +40,7 @@ class ImageSearchService:
         search_query = " ".join(keywords[:3])  # Use first 3 keywords to avoid overly long queries
         
         try:
-            # Search parameters
+            # Search parameters for Google Images API
             params = {
                 "q": search_query,
                 "engine": "google_images",
@@ -54,12 +55,16 @@ class ImageSearchService:
             search = GoogleSearch(params)
             results = search.get_dict()
             
-            # Extract image URLs
+            # Extract image URLs from Google Images API response
             image_urls = []
             if "images_results" in results:
                 for result in results["images_results"][:max_images]:
+                    # Google Images API provides 'original' field for full resolution images
                     if "original" in result:
                         image_urls.append(result["original"])
+                    # Fallback to thumbnail if original is not available
+                    elif "thumbnail" in result:
+                        image_urls.append(result["thumbnail"])
             
             return image_urls
             
@@ -69,13 +74,13 @@ class ImageSearchService:
     
     def search_images_for_keywords(self, keywords: List[str]) -> List[str]:
         """
-        Search for images for each keyword and combine results.
+        Search for exactly 1 image per keyword, ensuring different URLs.
         
         Args:
             keywords: List of keywords to search for
             
         Returns:
-            List of unique image URLs
+            List of image URLs (1 per keyword, max 2 total)
         """
         if not keywords:
             return []
@@ -83,24 +88,22 @@ class ImageSearchService:
         all_image_urls = []
         seen_urls = set()
         
-        # Search for each keyword (limit to first 2 keywords to avoid rate limits)
+        # Search for each keyword (limit to first 2 keywords for max 2 images)
         for keyword in keywords[:2]:
             try:
-                image_urls = self.search_images([keyword], max_images=2)
+                # Search for exactly 1 image per keyword
+                image_urls = self.search_images([keyword], max_images=1)
                 for url in image_urls:
                     if url not in seen_urls:
                         all_image_urls.append(url)
                         seen_urls.add(url)
-                        
-                        # Stop if we have enough images
-                        if len(all_image_urls) >= 2:
-                            break
+                        break  # Only take the first (and only) image for this keyword
                             
             except Exception as e:
                 print(f"Error searching for keyword '{keyword}': {str(e)}")
                 continue
         
-        return all_image_urls[:2]  # Return max 2 images
+        return all_image_urls  # Return max 2 images (1 per keyword)
 
 
 # Global image search service instance
