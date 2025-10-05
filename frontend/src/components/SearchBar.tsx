@@ -4,7 +4,9 @@ import { useState } from 'react';
 
 interface SearchBarProps {
   onSubmit: (query: string) => void;
+  onScholarSearch?: (query: string) => void;
   isLoading?: boolean;
+  isScholarLoading?: boolean;
   placeholder?: string;
 }
 
@@ -14,7 +16,9 @@ interface SearchBarProps {
  */
 export default function SearchBar({ 
   onSubmit, 
+  onScholarSearch,
   isLoading = false, 
+  isScholarLoading = false,
   placeholder = "Ask about space biology experiments and research..." 
 }: SearchBarProps) {
   const [query, setQuery] = useState('');
@@ -31,6 +35,12 @@ export default function SearchBar({
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSubmit(e);
+    }
+  };
+
+  const handleScholarSearch = () => {
+    if (!isScholarLoading && onScholarSearch) {
+      onScholarSearch(query.trim() || ''); // Allow empty query for context-based search
     }
   };
 
@@ -92,6 +102,72 @@ export default function SearchBar({
             }}
           />
         </div>
+        {/* Google Scholar Button */}
+        {onScholarSearch && (
+          <button
+            type="button"
+            onClick={handleScholarSearch}
+            disabled={isScholarLoading}
+            style={{
+              padding: '0 16px',
+              backgroundColor: 'var(--color-surface)',
+              color: 'var(--color-text-primary)',
+              border: '1px solid rgba(30, 33, 51, 0.2)',
+              borderRadius: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px',
+              fontSize: '14px',
+              fontWeight: '500',
+              cursor: isScholarLoading ? 'not-allowed' : 'pointer',
+              opacity: isScholarLoading ? 0.5 : 1,
+              transition: 'all 0.2s ease',
+              height: '44px',
+              whiteSpace: 'nowrap',
+              boxSizing: 'border-box',
+              flexShrink: 0
+            }}
+            onMouseEnter={(e) => {
+              if (!isScholarLoading) {
+                e.currentTarget.style.backgroundColor = 'rgba(62, 142, 222, 0.1)';
+                e.currentTarget.style.borderColor = 'var(--color-primary)';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (!isScholarLoading) {
+                e.currentTarget.style.backgroundColor = 'var(--color-surface)';
+                e.currentTarget.style.borderColor = 'rgba(30, 33, 51, 0.2)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }
+            }}
+            title="Search Google Scholar for relevant academic papers based on conversation context"
+          >
+            {isScholarLoading ? (
+              <>
+                <div style={{
+                  width: '14px',
+                  height: '14px',
+                  border: '2px solid rgba(62, 142, 222, 0.3)',
+                  borderTop: '2px solid var(--color-primary)',
+                  borderRadius: '50%',
+                  animation: 'spin 1s linear infinite'
+                }} />
+                <span>Scholar...</span>
+              </>
+            ) : (
+              <>
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <span>Scholar</span>
+              </>
+            )}
+          </button>
+        )}
+        
+        {/* Main Search Button */}
         <button
           type="submit"
           disabled={!query.trim() || isLoading}

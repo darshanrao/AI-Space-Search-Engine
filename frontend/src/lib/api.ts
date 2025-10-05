@@ -79,3 +79,26 @@ export async function putJSON<T>(path: string, body: any): Promise<T> {
     throw error;
   }
 }
+
+// Google Scholar Search Types
+export interface ScholarSearchRequest {
+  query?: string;
+  context?: string;
+  num_results?: number;
+}
+
+export interface ScholarSearchResponse {
+  query: string;
+  results: string;
+  num_results: number;
+  timestamp: string;
+}
+
+/**
+ * Search Google Scholar for academic papers
+ * @param request - Search request with query and optional result count
+ * @returns Promise with search results
+ */
+export async function searchGoogleScholar(request: ScholarSearchRequest): Promise<ScholarSearchResponse> {
+  return postJSON<ScholarSearchResponse>('/api/scholar/search', request);
+}

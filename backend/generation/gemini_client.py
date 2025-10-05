@@ -133,3 +133,20 @@ Validation:
 - Do not include any text after the JSON closing brace."""
         
         return prompt
+    
+    def generate_query(self, prompt: str) -> str:
+        """
+        Generate a focused search query using Gemini.
+        
+        Args:
+            prompt: The prompt for query generation
+            
+        Returns:
+            Generated search query
+        """
+        try:
+            response = self.model.generate_content(prompt)
+            return response.text.strip()
+        except Exception as e:
+            print(f"Error generating query: {e}")
+            return ""

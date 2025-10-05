@@ -5,7 +5,7 @@ import SearchBar from '@/components/SearchBar';
 import ChatAnswer from '@/components/ChatAnswer';
 import ContextChips from '@/components/ContextChips';
 import SessionsSidebar from '@/components/SessionsSidebar';
-import { postJSON } from '@/lib/api';
+import { postJSON, searchGoogleScholar } from '@/lib/api';
 import { AnswerPayload } from '@/lib/types';
 
 // Extend window interface for sessions sidebar
@@ -22,7 +22,7 @@ declare global {
 
 interface ChatMessage {
   id: string;
-  type: 'user' | 'assistant';
+  type: 'user' | 'assistant' | 'scholar';
   content: string;
   timestamp: Date;
   answer?: AnswerPayload;
@@ -30,6 +30,7 @@ interface ChatMessage {
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
+  const [isScholarLoading, setIsScholarLoading] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [context, setContext] = useState<{ organism?: string; conditions: string[] }>({
     conditions: []
@@ -382,6 +383,76 @@ export default function Home() {
     }
   };
 
+  // Handle Google Scholar search
+  const handleScholarSearch = async (query: string) => {
+    setIsScholarLoading(true);
+    setError(null);
+
+    // Extract context from recent conversation
+    const extractContextFromMessages = () => {
+      const recentMessages = messages.slice(-6); // Get last 6 messages
+      const contextParts = [];
+      
+      for (const msg of recentMessages) {
+        if (msg.type === 'user' && msg.content.trim()) {
+          // Clean up user messages (remove "Scholar Search:" prefix if present)
+          const cleanContent = msg.content.replace(/^🔍 Scholar Search:\s*/, '').trim();
+          if (cleanContent) {
+            contextParts.push(cleanContent);
+          }
+        } else if (msg.type === 'assistant' && msg.content.trim()) {
+          // Extract key terms from assistant responses
+          const cleanContent = msg.content.trim();
+          if (cleanContent) {
+            contextParts.push(cleanContent);
+          }
+        }
+      }
+      
+      return contextParts.join(' ').trim();
+    };
+
+    const contextText = extractContextFromMessages();
+    const searchQuery = query.trim() || contextText || 'space biology research';
+
+    // Add user message for scholar search
+    const userMessage: ChatMessage = {
+      id: Date.now().toString(),
+      type: 'user',
+      content: `🔍 Scholar Search: ${searchQuery}`,
+      timestamp: new Date()
+    };
+    setMessages(prev => [...prev, userMessage]);
+
+    try {
+      const scholarResponse = await searchGoogleScholar({
+        context: searchQuery,
+        num_results: 5
+      });
+
+      // Add scholar results message
+      const scholarMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        type: 'scholar',
+        content: scholarResponse.results,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, scholarMessage]);
+
+    } catch (error) {
+      console.error('Google Scholar search failed:', error);
+      const errorMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        type: 'assistant',
+        content: 'Sorry, I encountered an error while searching Google Scholar. Please try again.',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsScholarLoading(false);
+    }
+  };
+
   // Handle context updates
   const handleContextUpdate = (newContext: { organism?: string; conditions: string[] }) => {
     setContext(newContext);
@@ -663,12 +734,16 @@ export default function Home() {
                 borderRadius: '16px',
                 backgroundColor: message.type === 'user' 
                   ? 'var(--color-primary)' 
+                  : message.type === 'scholar'
+                  ? 'rgba(62, 142, 222, 0.1)'
                   : 'var(--color-surface)',
                 color: message.type === 'user' 
                   ? 'white' 
                   : 'var(--color-text-primary)',
                 border: message.type === 'user' 
                   ? 'none' 
+                  : message.type === 'scholar'
+                  ? '1px solid rgba(62, 142, 222, 0.3)'
                   : '1px solid rgba(30, 33, 51, 0.2)',
                 position: 'relative'
               }}>
@@ -683,6 +758,11 @@ export default function Home() {
                     top: '12px',
                     borderWidth: '8px 0 8px 8px',
                     borderColor: 'transparent transparent transparent var(--color-primary)'
+                  } : message.type === 'scholar' ? {
+                    left: '-8px',
+                    top: '12px',
+                    borderWidth: '8px 8px 8px 0',
+                    borderColor: 'transparent rgba(62, 142, 222, 0.1) transparent transparent'
                   } : {
                     left: '-8px',
                     top: '12px',
@@ -890,7 +970,9 @@ export default function Home() {
       }}>
         <SearchBar 
           onSubmit={handleSearch}
+          onScholarSearch={handleScholarSearch}
           isLoading={isLoading}
+          isScholarLoading={isScholarLoading}
           placeholder="Ask about space biology experiments and research..."
         />
       </div>
