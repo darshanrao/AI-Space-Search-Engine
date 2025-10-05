@@ -3,6 +3,7 @@ Agent Service - LangChain ReAct Agent for intelligent RAG usage.
 This service decides when to use RAG and when to rely on LLM knowledge.
 """
 
+import concurrent.futures
 from typing import Dict, Any, List, Tuple, Optional
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain.tools import Tool
@@ -102,6 +103,7 @@ Thought: I need to think about whether this question requires searching the spac
     def generate_answer(self, question: str, context: Dict[str, Any], conversation_history: List[Tuple[str, str]] = None) -> RAGResponse:
         """
         Generate an answer using the ReAct agent that decides when to use RAG.
+        Runs image search in parallel with answer generation.
         
         Args:
             question: User's question
@@ -112,29 +114,52 @@ Thought: I need to think about whether this question requires searching the spac
             RAGResponse with answer and metadata
         """
         try:
-            # Format conversation history for the agent
-            chat_history = ""
-            if conversation_history:
-                chat_history_parts = []
-                for role, content in conversation_history[-5:]:  # Last 5 messages for context
-                    if role == "user":
-                        chat_history_parts.append(f"Human: {content}")
-                    elif role == "assistant":
-                        chat_history_parts.append(f"Assistant: {content}")
-                chat_history = "\n".join(chat_history_parts)
+            # Start image search in parallel with agent execution
+            def run_image_search():
+                try:
+                    from image_search_service import image_search_service
+                    # Use the main question for image search
+                    return image_search_service.search_images([question], max_images=2)
+                except Exception as e:
+                    print(f"Image search failed: {str(e)}")
+                    return []
             
-            # Add context information to the question
-            contextualized_question = question
-            if context.get("organism"):
-                contextualized_question = f"[Context: {context['organism']}] {question}"
-            if context.get("focus"):
-                contextualized_question = f"[Focus: {context['focus']}] {contextualized_question}"
+            def run_agent_execution():
+                # Format conversation history for the agent
+                chat_history = ""
+                if conversation_history:
+                    chat_history_parts = []
+                    for role, content in conversation_history[-5:]:  # Last 5 messages for context
+                        if role == "user":
+                            chat_history_parts.append(f"Human: {content}")
+                        elif role == "assistant":
+                            chat_history_parts.append(f"Assistant: {content}")
+                    chat_history = "\n".join(chat_history_parts)
+                
+                # Add context information to the question
+                contextualized_question = question
+                if context.get("organism"):
+                    contextualized_question = f"[Context: {context['organism']}] {question}"
+                if context.get("focus"):
+                    contextualized_question = f"[Focus: {context['focus']}] {contextualized_question}"
+                
+                # Run the agent
+                result = self.agent_executor.invoke({
+                    "input": contextualized_question,
+                    "chat_history": chat_history
+                })
+                
+                return result
             
-            # Run the agent
-            result = self.agent_executor.invoke({
-                "input": contextualized_question,
-                "chat_history": chat_history
-            })
+            # Run both operations in parallel
+            with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+                # Submit both tasks
+                image_future = executor.submit(run_image_search)
+                agent_future = executor.submit(run_agent_execution)
+                
+                # Wait for both to complete
+                image_urls = image_future.result()
+                result = agent_future.result()
             
             # Extract the final answer
             final_answer = result.get("output", "")
@@ -182,7 +207,7 @@ Thought: I need to think about whether this question requires searching the spac
                 answer_markdown=clean_answer,
                 citations=citations,
                 image_citations=image_citations,
-                image_urls=[],  # Agent doesn't handle image search directly
+                image_urls=image_urls,  # Include images from parallel search
                 confidence_score=confidence_score
             )
             

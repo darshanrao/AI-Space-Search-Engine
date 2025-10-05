@@ -5,6 +5,8 @@ Provides clean JSON output for integration and debug file output for development
 from __future__ import annotations
 
 import json
+import asyncio
+import concurrent.futures
 from typing import Dict, Any, Optional
 from .rag_pipeline import RAGPipeline
 
@@ -19,6 +21,7 @@ class RAGAPI:
     def query_json(self, question: str) -> Dict[str, Any]:
         """
         Generate an answer and return clean JSON for integration.
+        Runs image search in parallel with answer generation.
         
         Args:
             question: The user's question
@@ -27,13 +30,35 @@ class RAGAPI:
             Dictionary with the generated answer and metadata
         """
         try:
-            result = self.pipeline.query(question)
+            # Start image search in parallel with RAG generation
+            def run_image_search():
+                try:
+                    from image_search_service import image_search_service
+                    # Use the main question for image search instead of keywords
+                    return image_search_service.search_images([question], max_images=2)
+                except Exception as e:
+                    print(f"Image search failed: {str(e)}")
+                    return []
+            
+            def run_rag_generation():
+                return self.pipeline.query(question)
+            
+            # Run both operations in parallel
+            with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+                # Submit both tasks
+                image_future = executor.submit(run_image_search)
+                rag_future = executor.submit(run_rag_generation)
+                
+                # Wait for both to complete
+                image_urls = image_future.result()
+                result = rag_future.result()
             
             if not result["success"]:
                 return {
                     "answer_markdown": result["answer"],
                     "citations": [],
                     "image_citations": [],
+                    "image_urls": image_urls,  # Include images even if RAG failed
                     "confidence_score": 0,
                     "error": result.get("error", "Unknown error")
                 }
@@ -93,13 +118,8 @@ class RAGAPI:
                                     seen_urls.add(url)
                         json_response["citations"] = unique_citations
                 
-                # Search for images using keywords if available
-                if "image_keywords" in json_response and json_response["image_keywords"]:
-                    from image_search_service import image_search_service
-                    image_urls = image_search_service.search_images_for_keywords(json_response["image_keywords"])
-                    json_response["image_urls"] = image_urls
-                else:
-                    json_response["image_urls"] = []
+                # Add the image URLs from parallel search
+                json_response["image_urls"] = image_urls
                 
                 return json_response
             except json.JSONDecodeError as e:
@@ -108,6 +128,7 @@ class RAGAPI:
                     "answer_markdown": result["answer"],
                     "citations": [],
                     "image_citations": [],
+                    "image_urls": image_urls,  # Include images even if JSON parsing failed
                     "confidence_score": 0,
                     "error": f"Failed to parse JSON response: {str(e)}"
                 }
@@ -117,6 +138,7 @@ class RAGAPI:
                 "answer_markdown": f"An error occurred: {str(e)}",
                 "citations": [],
                 "image_citations": [],
+                "image_urls": [],  # No images if everything fails
                 "confidence_score": 0,
                 "error": str(e)
             }

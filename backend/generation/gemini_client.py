@@ -4,7 +4,7 @@ Gemini API client for generating answers from retrieved context.
 from __future__ import annotations
 
 import os
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 import google.generativeai as genai
 from dotenv import load_dotenv
 
@@ -107,8 +107,6 @@ Rules:
 12) Use double line breaks (\\n\\n) between paragraphs to create clear, readable sections. Each major topic or concept should be in its own paragraph.
 13) No hidden reasoning or chain-of-thought in the output. Produce ONLY the required fields.
 14) Provide a confidence score from 0-100 based on how confident you are in the answer quality.
-15) Include relevant keywords that could be used to search for related images (e.g., scientific concepts, organisms, equipment, processes mentioned in your answer).
-
  Output format (JSON):
  {{
    "answer_markdown": "Clear answer with proper paragraph spacing using \\n\\n between sections. Include relevant explanations with inline [1], [2], [3] citations.",
@@ -118,11 +116,6 @@ Rules:
    ],
    "image_citations": [
      {{"id":"ctx-id", "url":"https://...", "caption_or_alt":"short description"}}
-   ],
-   "image_keywords": [
-     "C. elegans muscle",
-     "microgravity effects",
-     "space biology"
    ],
    "confidence_score": 85
  }}
