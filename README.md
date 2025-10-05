@@ -113,7 +113,6 @@ We structured AstroBio Explorer into three main parts working together.
 * LangChain
 * Gemini 2.5 Flash
 * Qdrant
-* Supabase
 * SerpAPI (Google Scholar + Image Fetch)
 
 ---
@@ -180,9 +179,6 @@ MODEL_NAME=gemini-2.5-flash
 QDRANT_URL=https://your-qdrant-host:6333
 QDRANT_API_KEY=your_qdrant_api_key
 QDRANT_COLLECTION=space_bio_chunks
-
-# Database for sessions and threads (Supabase Postgres URL or any Postgres)
-DATABASE_URL=postgresql+asyncpg://user:password@host:6543/dbname?sslmode=require
 
 # External search
 SERPAPI_API_KEY=your_serpapi_key
