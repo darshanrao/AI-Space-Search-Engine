@@ -15,7 +15,7 @@ interface SearchBarProps {
 export default function SearchBar({ 
   onSubmit, 
   isLoading = false, 
-  placeholder = "Search space biology research..." 
+  placeholder = "Ask about space biology experiments and research..." 
 }: SearchBarProps) {
   const [query, setQuery] = useState('');
 

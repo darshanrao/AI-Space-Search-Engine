@@ -223,12 +223,26 @@ export default function Home() {
       });
 
       if (response.status === 404) {
+<<<<<<< Updated upstream
         // Session doesn't exist on backend (probably server was restarted)
         console.log(`Session ${sessionId} not found on backend, clearing from localStorage`);
         if (typeof window !== 'undefined') {
           localStorage.removeItem('space_bio_thread_id');
         }
+=======
+        // Session doesn't exist, clear it silently and show user-friendly message
+        console.log(`Session ${sessionId} not found on server, clearing from localStorage`);
+        localStorage.removeItem('space_bio_thread_id');
+>>>>>>> Stashed changes
         setThreadId(null);
+        
+        // Show a brief notification to the user
+        setMessages([{
+          id: 'session-not-found',
+          type: 'assistant',
+          content: 'The previous session was not found (it may have expired). Starting a new conversation.',
+          timestamp: new Date()
+        }]);
         return;
       }
 
@@ -481,7 +495,7 @@ export default function Home() {
                     fontWeight: '600',
                     margin: 0,
                     color: 'var(--color-text-primary)'
-                  }}>Space Bio Assistant</h1>
+                  }}>AstroBio Explorer</h1>
                   <p style={{
                     fontSize: '12px',
                     margin: 0,
@@ -597,15 +611,14 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0,
                 color: 'var(--color-text-primary)'
-              }}>Welcome to Space Bio Assistant</h2>
+              }}>Our AI copilot for Space Biology Research</h2>
               <p style={{
                 fontSize: '14px',
                 margin: '0 auto',
                 color: 'var(--color-text-secondary)',
                 maxWidth: '320px'
               }}>
-                Ask me anything about space biology research. I can help you find papers, 
-                analyze data, and explore scientific insights.
+                Search experiments, analyze findings and generate scientific insights from NASA's bioscience archives
               </p>
             </div>
           </div>
@@ -778,7 +791,7 @@ export default function Home() {
                   <span style={{
                     fontSize: '14px',
                     color: 'var(--color-text-secondary)'
-                  }}>Searching space biology literature...</span>
+                  }}>Generating response...</span>
                 </div>
               </div>
             </div>
@@ -855,7 +868,7 @@ export default function Home() {
         <SearchBar 
           onSubmit={handleSearch}
           isLoading={isLoading}
-          placeholder="Ask about space biology research..."
+          placeholder="Ask about space biology experiments and research..."
         />
       </div>
 
