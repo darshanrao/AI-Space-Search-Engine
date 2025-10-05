@@ -1,0 +1,391 @@
+{
+  "paper_id": "PMC6213004",
+  "paper_title": "Reactivation of Latent Epstein-Barr Virus: A Comparison after Exposure to Gamma, Proton, Carbon, and Iron Radiation",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+  "test_cases": [
+    {
+      "id": "PMC6213004_Q1",
+      "question": "What cell line was used in this study to investigate Epstein-Barr virus reactivation, and what was its origin?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6213004:1--introduction:5221183a",
+            "PMC6213004:4--materials-and-methods:ab669c04"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study used the **Akata cell line**, which is an **Epstein-Barr virus (EBV) producer line** established from a **Japanese patient with Burkitt's lymphoma** [PMC6213004:1--introduction:5221183a], [PMC6213004:4--materials-and-methods:ab669c04].",
+          "citations": [
+            {
+              "id": "PMC6213004:1--introduction:5221183a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "This chunk identifies the Akata cell line and its origin from a Japanese patient with Burkitt's lymphoma."
+            },
+            {
+              "id": "PMC6213004:4--materials-and-methods:ab669c04",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "This chunk confirms the use of the Akata cell line, its designation as an EBV producer line, and its origin from a Japanese patient with Burkitt's lymphoma."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6213004:1--introduction:5221183a",
+            "PMC6213004:4--materials-and-methods:ab669c04"
+          ],
+          "key_facts": [
+            "Akata cell line was used.",
+            "It is an EBV-producer line.",
+            "It was established from a Japanese patient with Burkitt's lymphoma."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6213004_Q2",
+      "question": "How do gamma rays compare to protons, carbon ions, and iron ions in terms of their effectiveness and timing of inducing latent Epstein-Barr virus reactivation?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6213004:1--introduction:0a531a81",
+            "PMC6213004:2--results:d8c4dc68",
+            "PMC6213004:3--discussion:e766af48",
+            "PMC6213004:abstract:1197d07d"
+          ],
+          "should_retrieve": [
+            "PMC6213004:2--results:a0311d7e"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "In general, **gamma rays are more effective** than protons, carbon ions, and iron ions in inducing latent Epstein-Barr virus (EBV) reactivation [PMC6213004:1--introduction:0a531a81], [PMC6213004:abstract:1197d07d]. Gamma irradiation typically induced transcription of both immediate early (BZLF1) and late (BLLF1) genes, **peaking at day 4** [PMC6213004:2--results:a0311d7e], [PMC6213004:3--discussion:e766af48]. In contrast, high-energy particles (protons, carbon, and iron ions) also induced initial transcription at day 4, but often resulted in a **second, more sustained peak of transcription at later times**, such as day 12 for carbon and iron, or day 14 and 18 in general for high energy particles [PMC6213004:2--results:d8c4dc68], [PMC6213004:3--discussion:e766af48], [PMC6213004:abstract:1197d07d].",
+          "citations": [
+            {
+              "id": "PMC6213004:1--introduction:0a531a81",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "States that gamma rays are generally more effective than other radiation types in inducing latent virus reactivation."
+            },
+            {
+              "id": "PMC6213004:2--results:d8c4dc68",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Discusses the differing peak expression times for high-energy particles (protons peaking around day 4, carbon and iron around day 12) compared to gamma irradiation."
+            },
+            {
+              "id": "PMC6213004:3--discussion:e766af48",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Compares gamma irradiation's peak at day 4 with high-energy particles showing initial transcription at day 4 but also second peaks at later times (day 14 and 18)."
+            },
+            {
+              "id": "PMC6213004:abstract:1197d07d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Summarizes that gamma rays are generally more effective, but high-energy particles induce more sustained and later reactivation."
+            },
+            {
+              "id": "PMC6213004:2--results:a0311d7e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Provides specific details on gamma radiation inducing BZLF1 and BLLF1 transcription peaking at day 4."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6213004:1--introduction:0a531a81",
+            "PMC6213004:2--results:a0311d7e",
+            "PMC6213004:2--results:d8c4dc68",
+            "PMC6213004:3--discussion:e766af48",
+            "PMC6213004:abstract:1197d07d"
+          ],
+          "key_facts": [
+            "Gamma rays are generally more effective in inducing EBV reactivation.",
+            "Gamma irradiation peaks at day 4 for lytic gene transcription.",
+            "High-energy particles (protons, carbon, iron) show initial transcription at day 4.",
+            "High-energy particles also exhibit sustained or later peaks in transcription (e.g., day 12 for carbon/iron, or days 14/18 generally)."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6213004_Q3",
+      "question": "How do the findings of this study, particularly regarding the effectiveness of different radiation types on EBV reactivation, challenge the common Relative Biological Effectiveness (RBE) concept, and what potential explanation is offered?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6213004:1--introduction:0a531a81",
+            "PMC6213004:1--introduction:f20f4451",
+            "PMC6213004:2--results:585531b8",
+            "PMC6213004:2--results:48b55eb1",
+            "PMC6213004:3--discussion:b14e8713",
+            "PMC6213004:3--discussion:89fe4737",
+            "PMC6213004:abstract:1197d07d"
+          ],
+          "should_retrieve": [
+            "PMC6213004:3--discussion:bdfb921e"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study's findings challenge the common Relative Biological Effectiveness (RBE) concept, which is often used in radiobiology for endpoints like cell survival or chromosome aberrations [PMC6213004:1--introduction:0a531a81], [PMC6213004:3--discussion:bdfb921e], [PMC6213004:abstract:1197d07d]. While protons are typically assigned an RBE of 1.1, suggesting similar biological effects to photons at the same dose [PMC6213004:1--introduction:f20f4451], this study found that **gamma rays were generally more effective** than protons, carbon ions, and iron ions in inducing latent virus reactivation [PMC6213004:1--introduction:0a531a81], [PMC6213004:3--discussion:89fe4737], [PMC6213004:abstract:1197d07d]. This suggests that for viral reactivation, the RBE for protons may be less than 1.1, and potentially even smaller than 1 for carbon and iron ions [PMC6213004:3--discussion:89fe4737]. The paper posits that this difference in viral reactivation may be explained by **differences in the radiation track structure** [PMC6213004:1--introduction:0a531a81], [PMC6213004:2--results:585531b8]. Simulations illustrate that even for the same physical dose, the **energy deposition patterns** (electron tracks for gamma rays vs. densely ionizing core and penumbra for heavy ions) are quite different, which could lead to varying biological effects like viral reactivation [PMC6213004:2--results:48b55eb1], [PMC6213004:3--discussion:b14e8713].",
+          "citations": [
+            {
+              "id": "PMC6213004:1--introduction:0a531a81",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "States that findings challenge the common RBE concept and suggests radiation track structure as an explanation."
+            },
+            {
+              "id": "PMC6213004:1--introduction:f20f4451",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Mentions the RBE of 1.1 for protons based on cell colony formation data, providing context for the challenge."
+            },
+            {
+              "id": "PMC6213004:2--results:585531b8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Notes that viral reactivation is dependent on radiation type and suggests using radiation track structure to understand differences."
+            },
+            {
+              "id": "PMC6213004:2--results:48b55eb1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Describes the simulation of radiation track structures for different types, highlighting the differences in energy distribution for the same dose."
+            },
+            {
+              "id": "PMC6213004:3--discussion:b14e8713",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Explains that differences in viral reactivation from proton and gamma irradiation could be due to damage to DNA/biomolecules dependent on radiation type, and that track structure simulations illustrate different energy deposition patterns."
+            },
+            {
+              "id": "PMC6213004:3--discussion:89fe4737",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Concludes that gamma rays are more effective, challenging the RBE of 1.1 for protons and suggesting RBE may be smaller than 1 for carbon and iron ions."
+            },
+            {
+              "id": "PMC6213004:abstract:1197d07d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Summarizes that findings challenge the common RBE concept."
+            },
+            {
+              "id": "PMC6213004:3--discussion:bdfb921e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Mentions RBE of 1.1 for protons is for other biological endpoints, not virus activation, and that a 1.1 correction factor would be insufficient to explain differences."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6213004:1--introduction:0a531a81",
+            "PMC6213004:1--introduction:f20f4451",
+            "PMC6213004:2--results:585531b8",
+            "PMC6213004:2--results:48b55eb1",
+            "PMC6213004:3--discussion:bdfb921e",
+            "PMC6213004:3--discussion:b14e8713",
+            "PMC6213004:3--discussion:89fe4737",
+            "PMC6213004:abstract:1197d07d"
+          ],
+          "key_facts": [
+            "Gamma rays were more effective in inducing EBV reactivation than protons, carbon, and iron ions.",
+            "This challenges the RBE concept, particularly the RBE of 1.1 for protons, suggesting it may be less than 1.1 for viral reactivation.",
+            "The RBE for carbon and iron ions may also be smaller than 1 for this endpoint.",
+            "The proposed explanation is differences in radiation track structure and energy deposition patterns, which vary significantly between radiation types even at the same physical dose."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6213004_Q4",
+      "question": "Which two key Epstein-Barr virus (EBV) lytic genes were examined to identify increases in transcription following radiation treatment, and what do they code for?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6213004:2--results:a0311d7e",
+            "PMC6213004:4--materials-and-methods:6c04a259"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The two key Epstein-Barr virus (EBV) lytic genes examined were **BZLF1** and **BLLF1** [PMC6213004:2--results:a0311d7e], [PMC6213004:4--materials-and-methods:6c04a259]. **BZLF1** is an immediate early (IE) gene that codes for **ZEBRA or Zta**, a critical trans-activator for reactivation. **BLLF1** is a late (L) gene that codes for the **envelope glycoprotein gp350** [PMC6213004:2--results:a0311d7e].",
+          "citations": [
+            {
+              "id": "PMC6213004:2--results:a0311d7e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Identifies BZLF1 and BLLF1 as the key EBV lytic genes examined and describes what each codes for (ZEBRA/Zta and gp350, respectively)."
+            },
+            {
+              "id": "PMC6213004:4--materials-and-methods:6c04a259",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Confirms the use of BZLF1 and BLLF1 primers/probes for qPCR quantification of cDNAs."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6213004:2--results:a0311d7e",
+            "PMC6213004:4--materials-and-methods:6c04a259"
+          ],
+          "key_facts": [
+            "BZLF1 and BLLF1 were the two key EBV lytic genes examined.",
+            "BZLF1 codes for ZEBRA or Zta, an immediate early gene trans-activator.",
+            "BLLF1 codes for the envelope glycoprotein gp350, a late gene."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6213004_Q5",
+      "question": "Describe the experimental setup used to study Epstein-Barr virus (EBV) reactivation, including the radiation types and doses, and summarize the main conclusions regarding viral reactivation, cell viability, and the RBE concept.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6213004:abstract:ccdbd1e7",
+            "PMC6213004:1--introduction:0a531a81",
+            "PMC6213004:2--results:c6d5bb92",
+            "PMC6213004:2--results:ac55a841",
+            "PMC6213004:2--results:982b7e2f",
+            "PMC6213004:3--discussion:bdfb921e",
+            "PMC6213004:3--discussion:e766af48",
+            "PMC6213004:3--discussion:1841a719",
+            "PMC6213004:3--discussion:89fe4737",
+            "PMC6213004:4--materials-and-methods:c124b38e",
+            "PMC6213004:4--materials-and-methods:d2f1fc6c",
+            "PMC6213004:abstract:1197d07d",
+            "PMC6213004:2--results:d8c4dc68",
+            "PMC6213004:2--results:585531b8",
+            "PMC6213004:3--discussion:b14e8713"
+          ],
+          "should_retrieve": [
+            "PMC6213004:4--materials-and-methods:ab669c04",
+            "PMC6213004:2--results:a0311d7e"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study investigated Epstein-Barr virus (EBV) reactivation in **Akata cells**, an EBV-producer line, by exposing them to **four types of radiation**: 137 Cs gamma rays, 150-MeV protons, 600 MeV/n carbon ions, and 600 MeV/n iron ions [PMC6213004:abstract:ccdbd1e7], [PMC6213004:4--materials-and-methods:ab669c04], [PMC6213004:4--materials-and-methods:c124b38e]. Cells were treated with acute doses of **0.1, 0.5, 1.0, or 2.0 Gy** [PMC6213004:abstract:ccdbd1e7], [PMC6213004:4--materials-and-methods:c124b38e]. Samples were harvested at various time points up to 20 days post-irradiation to assess **lytic gene transcription (BZLF1 and BLLF1), EBV viral load, cell viability, and cell size** [PMC6213004:2--results:a0311d7e], [PMC6213004:2--results:c6d5bb92], [PMC6213004:4--materials-and-methods:d2f1fc6c].\n\nThe **main conclusions** are:\n1.  **Viral Reactivation:** All four types of radiation significantly induced EBV lytic gene transcription and increased median viral loads compared to controls, with effects detected as early as **four days post-exposure** [PMC6213004:abstract:ccdbd1e7], [PMC6213004:2--results:c6d5bb92], [PMC6213004:3--discussion:1841a719]. Gamma radiation generally produced the **highest initial rates of reactivation**, peaking around day 4 [PMC6213004:2--results:ac55a841], [PMC6213004:3--discussion:e766af48]. High-energy particles (protons, carbon, iron) also induced initial transcription at day 4 but often showed **more sustained or later peaks** (e.g., day 12 for carbon and iron) [PMC6213004:2--results:d8c4dc68], [PMC6213004:3--discussion:e766af48]. This reactivation occurred **in vitro without the involvement of the immune system** [PMC6213004:abstract:ccdbd1e7], [PMC6213004:3--discussion:89fe4737].\n2.  **Cell Viability and Size:** Cell viability was highly variable but showed similar trends across radiation types and doses, with significant decreases noted in some cases (e.g., gamma at 0.1 Gy, protons at various doses, iron at 1.0 and 2.0 Gy on day 8), but **carbon ions did not show significant changes** [PMC6213004:abstract:ccdbd1e7], [PMC6213004:2--results:982b7e2f]. Cell size measurements were also highly variable, making it difficult to discern consistent effects, though gamma-irradiated samples generally showed reduced cell size [PMC6213004:2--results:982b7e2f], [PMC6213004:2--results:585531b8].\n3.  **Challenge to RBE Concept:** The finding that gamma rays were generally more effective than protons, carbon, and iron ions in inducing latent virus reactivation **challenges the common RBE concept** (e.g., RBE of 1.1 for protons) [PMC6213004:1--introduction:0a531a81], [PMC6213004:abstract:1197d07d], [PMC6213004:3--discussion:89fe4737]. The authors suggest that differences in **radiation track structure** and energy deposition patterns, rather than just physical dose, may explain these varying biological effects [PMC6213004:1--introduction:0a531a81], [PMC6213004:2--results:585531b8], [PMC6213004:3--discussion:b14e8713].",
+          "citations": [
+            {
+              "id": "PMC6213004:abstract:ccdbd1e7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Provides an overview of the radiation types, doses, and main findings regarding lytic gene transcription, viral loads, cell viability, and the conclusion that reactivation occurs without immune system changes."
+            },
+            {
+              "id": "PMC6213004:1--introduction:0a531a81",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "States that gamma rays are generally more effective and that findings challenge the RBE concept, suggesting track structure as an explanation."
+            },
+            {
+              "id": "PMC6213004:2--results:c6d5bb92",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Details the significant increases in median log viral load for all radiation types and doses, with greatest differences on day 4."
+            },
+            {
+              "id": "PMC6213004:2--results:ac55a841",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Highlights that gamma radiation produced the highest rates of viral reactivation for the first eight days."
+            },
+            {
+              "id": "PMC6213004:2--results:982b7e2f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Describes significant decreases in cell viability for some radiation types and doses, and notes that carbon did not show significant changes."
+            },
+            {
+              "id": "PMC6213004:3--discussion:bdfb921e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Confirms the study of four radiation types, doses, and endpoints (lytic gene transcription, reactivation, cell size, viability) and discusses the RBE concept."
+            },
+            {
+              "id": "PMC6213004:3--discussion:e766af48",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Compares the peak transcription times for gamma irradiation (day 4) versus high-energy particles (initial day 4, second peak later)."
+            },
+            {
+              "id": "PMC6213004:3--discussion:1841a719",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Provides strong evidence that all radiation forms led to productive reactivation at day 4, based on gene transcription and increased viral genomes."
+            },
+            {
+              "id": "PMC6213004:3--discussion:89fe4737",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Concludes that all four radiation types induced EBV reactivation in a latently infected cell line, in the absence of immune system involvement, and that gamma rays were more effective, challenging the RBE value."
+            },
+            {
+              "id": "PMC6213004:4--materials-and-methods:c124b38e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Details the experimental setup, including the assignment of cells to control and four radiation exposure arms, the specific doses (0.1, 0.5, 1.0, 2.0 Gy), and the 20-day observation period."
+            },
+            {
+              "id": "PMC6213004:4--materials-and-methods:d2f1fc6c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Describes the harvesting schedule (every fourth day for 20 days) and the assessments performed (cell size, viability, lytic RNA transcripts, EBV viral load)."
+            },
+            {
+              "id": "PMC6213004:abstract:1197d07d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Reiterates that gamma rays are generally more effective and that findings challenge the RBE concept."
+            },
+            {
+              "id": "PMC6213004:2--results:d8c4dc68",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Mentions that high-energy particle radiation impacts the peak expression of EBV transcription, with protons peaking around day 4 and carbon and iron peaking around day 12."
+            },
+            {
+              "id": "PMC6213004:2--results:585531b8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Notes that cell size was reduced for gamma-irradiated samples and that viral reactivation is dependent on radiation type, suggesting track structure as a factor."
+            },
+            {
+              "id": "PMC6213004:3--discussion:b14e8713",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Explains that radiation track structure simulations illustrate different patterns of energy deposition for the same dose, which could cause differences in viral reactivation."
+            },
+            {
+              "id": "PMC6213004:4--materials-and-methods:ab669c04",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Identifies the Akata cell line as an EBV producer line established from a Japanese patient with Burkitt’s lymphoma."
+            },
+            {
+              "id": "PMC6213004:2--results:a0311d7e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+              "why_relevant": "Specifies BZLF1 and BLLF1 as the key EBV lytic genes examined and their roles."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6213004:abstract:ccdbd1e7",
+            "PMC6213004:1--introduction:0a531a81",
+            "PMC6213004:2--results:c6d5bb92",
+            "PMC6213004:2--results:ac55a841",
+            "PMC6213004:2--results:982b7e2f",
+            "PMC6213004:3--discussion:bdfb921e",
+            "PMC6213004:3--discussion:e766af48",
+            "PMC6213004:3--discussion:1841a719",
+            "PMC6213004:3--discussion:89fe4737",
+            "PMC6213004:4--materials-and-methods:c124b38e",
+            "PMC6213004:4--materials-and-methods:d2f1fc6c",
+            "PMC6213004:abstract:1197d07d",
+            "PMC6213004:2--results:d8c4dc68",
+            "PMC6213004:2--results:585531b8",
+            "PMC6213004:3--discussion:b14e8713",
+            "PMC6213004:4--materials-and-methods:ab669c04",
+            "PMC6213004:2--results:a0311d7e"
+          ],
+          "key_facts": [
+            "Experimental setup involved Akata cells exposed to four radiation types (gamma, proton, carbon, iron) at doses of 0.1, 0.5, 1.0, and 2.0 Gy.",
+            "Measurements included lytic gene transcription (BZLF1, BLLF1), EBV viral load, cell viability, and cell size over 20 days.",
+            "All radiation types induced significant EBV lytic gene transcription and increased viral loads, detected as early as day 4.",
+            "Gamma radiation showed highest initial reactivation rates, while high-energy particles had more sustained or later peaks.",
+            "Reactivation occurred in vitro, independent of the immune system.",
+            "Cell viability was variable; carbon ions showed no significant change, while other types had decreases in some cases.",
+            "Cell size was highly variable, with gamma-irradiated samples showing reduced size.",
+            "The findings challenge the common RBE concept, as gamma rays were more effective than other radiation types, suggesting RBE values may differ for viral reactivation.",
+            "Differences in radiation track structure and energy deposition patterns are proposed as explanations for varying biological effects."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

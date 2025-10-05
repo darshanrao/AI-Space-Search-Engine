@@ -1,0 +1,275 @@
+{
+  "paper_id": "PMC7561690",
+  "paper_title": "Draft Genome Sequences of Klebsiella Species Isolated from the International Space Station — ANNOUNCEMENT",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+  "test_cases": [
+    {
+      "id": "PMC7561690_Q1",
+      "question": "What are the GC contents for *K. aerogenes*, *K. pneumoniae*, and *K. quasipneumoniae* strains isolated from the ISS?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7561690:announcement:83875274"
+          ],
+          "should_retrieve": [
+            "PMC7561690:announcement:1bf124fb",
+            "PMC7561690:body--catchall:67ba91de"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The GC content for *K. aerogenes* is **54.96%**, for *K. pneumoniae* is **57.25%**, and for *K. quasipneumoniae* is **58.11 to 58.13%** [1].",
+          "citations": [
+            {
+              "id": "PMC7561690:announcement:83875274",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk directly states the GC content percentages for all three Klebsiella species."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7561690:announcement:83875274",
+            "PMC7561690:announcement:1bf124fb",
+            "PMC7561690:body--catchall:67ba91de"
+          ],
+          "key_facts": [
+            "K. aerogenes GC content: 54.96%",
+            "K. pneumoniae GC content: 57.25%",
+            "K. quasipneumoniae GC content: 58.11 to 58.13%"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7561690_Q2",
+      "question": "How many strains of each *Klebsiella* species (*K. aerogenes*, *K. pneumoniae*, and *K. quasipneumoniae*) were isolated from the ISS, and what was the highest Average Nucleotide Identity (ANI) percentage recorded for each species compared to its type strain?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7561690:announcement:9db388d4",
+            "PMC7561690:metadata-and-genome-statistics-of-klebsiella-strains-isolated-from-various-iss-environmental-surfaces-during-the-microbial-tracking-1-flight-project---table-1:4b2ffea3"
+          ],
+          "should_retrieve": [
+            "PMC7561690:body--catchall:9d6ba873",
+            "PMC7561690:announcement:ab8d8316",
+            "PMC7561690:announcement:1bf124fb"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "*K. aerogenes* had **1 strain** isolated with an ANI of **98.66%** [1], [2]. *K. pneumoniae* also had **1 strain** isolated with an ANI of **99.01%** [1], [2]. *K. quasipneumoniae* had **8 strains** isolated, with ANI percentages ranging from **96.54% to 96.63%** [1], [2].",
+          "citations": [
+            {
+              "id": "PMC7561690:announcement:9db388d4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk provides the count of isolated strains for each Klebsiella species."
+            },
+            {
+              "id": "PMC7561690:metadata-and-genome-statistics-of-klebsiella-strains-isolated-from-various-iss-environmental-surfaces-during-the-microbial-tracking-1-flight-project---table-1:4b2ffea3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "Table 1 lists the ANI percentages for each individual Klebsiella strain, allowing identification of the highest for each species."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7561690:announcement:9db388d4",
+            "PMC7561690:metadata-and-genome-statistics-of-klebsiella-strains-isolated-from-various-iss-environmental-surfaces-during-the-microbial-tracking-1-flight-project---table-1:4b2ffea3",
+            "PMC7561690:body--catchall:9d6ba873",
+            "PMC7561690:announcement:ab8d8316",
+            "PMC7561690:announcement:1bf124fb"
+          ],
+          "key_facts": [
+            "1 strain of K. aerogenes isolated, highest ANI 98.66%",
+            "1 strain of K. pneumoniae isolated, highest ANI 99.01%",
+            "8 strains of K. quasipneumoniae isolated, highest ANI 96.63%"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7561690_Q3",
+      "question": "Based on the paper, what are the potential health risks posed by *Klebsiella* species to astronauts on the ISS, and how does the whole-genome sequencing project aim to address these concerns?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7561690:announcement:19d9109b",
+            "PMC7561690:announcement:9db388d4",
+            "PMC7561690:abstract:d36b19fa"
+          ],
+          "should_retrieve": [
+            "PMC7561690:body--catchall:1e6928ae",
+            "PMC7561690:body--catchall:d30d5078"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "*Klebsiella* species pose several potential health risks to astronauts on the ISS. They can become **immunogenic** when exposed to space conditions, which is a risk for already immunocompromised astronauts [1], [4]. Microgravity and radiation in space are known to induce **genetic adaptations** in microbes, potentially altering their virulence through structural modifications of the cell membrane [1], [4]. Furthermore, *Klebsiella* species, particularly *K. pneumoniae*, are becoming increasingly **resistant to various antibiotics** like carbapenems, which could complicate treatment in space [2], [5]. The pathogenicity and resistance of these bacteria are a significant concern for astronaut safety [2], [5]. The whole-genome sequencing project aims to address these concerns by providing data for **comparative genomic studies** of ISS *Klebsiella* strains with their Earth counterparts. This comparison is intended to **gain insight into their adaptation to space conditions**, which is crucial for understanding and mitigating the potential health problems they might cause [3], [6].",
+          "citations": [
+            {
+              "id": "PMC7561690:announcement:19d9109b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk describes how Klebsiella species might become immunogenic and alter virulence in space due to microgravity and radiation, posing a risk to astronauts."
+            },
+            {
+              "id": "PMC7561690:announcement:9db388d4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk highlights the increasing antibiotic resistance of Klebsiella pneumoniae and the general pathogenicity and resistance of the genus as a problem for space travel and astronaut safety."
+            },
+            {
+              "id": "PMC7561690:abstract:d36b19fa",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk states the purpose of the whole-genome sequencing: to aid in comparative genomic studies to gain insight into their adaptation to space conditions."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7561690:announcement:19d9109b",
+            "PMC7561690:announcement:9db388d4",
+            "PMC7561690:abstract:d36b19fa",
+            "PMC7561690:body--catchall:1e6928ae",
+            "PMC7561690:body--catchall:d30d5078"
+          ],
+          "key_facts": [
+            "Klebsiella can become immunogenic in space, risking immunocompromised astronauts.",
+            "Microgravity and radiation induce genetic adaptations, altering virulence.",
+            "Increasing antibiotic resistance (e.g., carbapenems) poses treatment challenges.",
+            "Whole-genome sequencing aims for comparative genomic studies.",
+            "Goal is to understand adaptation to space conditions to mitigate health risks."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7561690_Q4",
+      "question": "What specific Illumina protocol and flow cell were used for library preparation and paired-end sequencing of the *Klebsiella* genomes, and which software tools were employed for quality assessment, adapter trimming, and assembly?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7561690:announcement:83875274",
+            "PMC7561690:body--catchall:e90cffd4"
+          ],
+          "should_retrieve": [
+            "PMC7561690:body--catchall:67ba91de"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "For library preparation, the **Illumina Nextera Flex protocol** was used, and a **NovaSeq 6000 S4 flow cell** (paired end, 2 × 150 bp) was employed for paired-end sequencing [1], [2]. The software tools used were: **FastQC (v0.11.7)** for quality assessment, **fastp (v0.20.0)** for adapter trimming and quality filtering, and **SPAdes (v3.11.1)** for sequence assembly [1], [2], [3]. Additionally, **QUAST (v5.0.2)** was used to assess the quality of the final sequences [3].",
+          "citations": [
+            {
+              "id": "PMC7561690:announcement:83875274",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk specifies the Illumina protocol, flow cell, and the software used for quality assessment (FastQC), adapter trimming (fastp), and assembly (SPAdes)."
+            },
+            {
+              "id": "PMC7561690:body--catchall:e90cffd4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk reiterates the Illumina sequencing details and the software tools (FastQC, fastp, SPAdes) used for various bioinformatics steps."
+            },
+            {
+              "id": "PMC7561690:body--catchall:67ba91de",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk confirms the use of SPAdes for assembly and adds QUAST for assessing the quality of final sequences."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7561690:announcement:83875274",
+            "PMC7561690:body--catchall:e90cffd4",
+            "PMC7561690:body--catchall:67ba91de"
+          ],
+          "key_facts": [
+            "Illumina Nextera Flex protocol for library preparation.",
+            "NovaSeq 6000 S4 flow cell (paired end, 2 × 150 bp) for sequencing.",
+            "FastQC (v0.11.7) for quality assessment.",
+            "fastp (v0.20.0) for adapter trimming and quality filtering.",
+            "SPAdes (v3.11.1) for sequence assembly.",
+            "QUAST (v5.0.2) for assessing final sequence quality."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7561690_Q5",
+      "question": "Describe the complete methodology for isolating, identifying, sequencing, and analyzing the *Klebsiella* strains from the ISS, including sample handling, DNA extraction, sequencing technology, and bioinformatics tools, as well as where the final data has been deposited.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7561690:announcement:531e961c",
+            "PMC7561690:announcement:ab8d8316",
+            "PMC7561690:announcement:83875274",
+            "PMC7561690:announcement:1bf124fb"
+          ],
+          "should_retrieve": [
+            "PMC7561690:announcement:9db388d4",
+            "PMC7561690:abstract:d36b19fa",
+            "PMC7561690:body--catchall:9d6ba873",
+            "PMC7561690:body--catchall:e90cffd4",
+            "PMC7561690:body--catchall:67ba91de",
+            "PMC7561690:body--catchall:9e4be3f0",
+            "PMC7561690:body--catchall:7948b315"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The methodology for studying *Klebsiella* strains from the ISS involved several key steps:\n\n1.  **Sample Isolation and Handling**: Ten *Klebsiella* strains were isolated from various environmental surfaces on the ISS during the Microbial Tracking-1 flight project [1], [2]. Environmental samples were collected, brought to Earth, and aseptically handled. Aliquots were spread onto Reasoner’s 2A (R2A) agar (25°C for 7 days) or blood agar (37°C for 2 days) for microorganism isolation. Pure colonies were archived at −80°C until further analyses [2], [7].\n\n2.  **DNA Extraction**: Cultures of the 10 *Klebsiella* strains were grown overnight on tryptic soy agar at 25°C, followed by DNA extraction using the **ZymoBIOMICS DNA Magbead kit** [2], [7].\n\n3.  **Species Identification**: Bacterial species identity was determined by retrieving **16S rRNA gene sequences** from whole-genome sequences and performing BLAST analysis against type strains in the NCBI database. A similarity of **>97.5%** to the 16S rRNA gene sequence of the type strain confirmed identity [3], [8]. Average Nucleotide Identity (ANI) calculations were also performed using the **EZBioCloud ANI calculator** against listed type strains for phylogenic characterization [3], [4], [8], [9].\n\n4.  **Genome Sequencing**: Genomes were sequenced using the **Illumina Nextera Flex protocol** for library preparation and a **NovaSeq 6000 S4 flow cell** (paired end, 2 × 150 bp) for paired-end sequencing [4], [8].\n\n5.  **Bioinformatics Analysis**: Quality assessment was performed with **FastQC (v0.11.7)**. Adapter trimming and quality filtering were carried out with **fastp (v0.20.0)**. Sequences were assembled using **SPAdes (v3.11.1)**. The quality of the final sequences was assessed with **QUAST (v5.0.2)** to check N50 values, number of contigs, and total genome length [4], [5], [8].\n\n6.  **Data Deposition**: The whole-genome sequencing project data has been deposited in **GenBank** (GenBank and raw read accession numbers are in Table 1), with BioProject accession numbers **PRJNA635942, PRJNA640688, and PRJNA640693**. Whole-genome sequencing data has also been deposited in **NASA GeneLab** (accession numbers GLDS-302, GLDS-309, and GLDS-311) [4], [5], [6], [10].",
+          "citations": [
+            {
+              "id": "PMC7561690:announcement:531e961c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk details the initial sample handling, culturing conditions, archiving, and the specific DNA extraction kit used."
+            },
+            {
+              "id": "PMC7561690:announcement:ab8d8316",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk describes the 16S rRNA gene sequencing for species identity, BLAST analysis, and the use of the EZBioCloud ANI calculator for evaluation."
+            },
+            {
+              "id": "PMC7561690:announcement:83875274",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk specifies the Illumina sequencing protocol and flow cell, along with the software used for quality assessment (FastQC), adapter trimming (fastp), and assembly (SPAdes)."
+            },
+            {
+              "id": "PMC7561690:announcement:1bf124fb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+              "why_relevant": "This chunk reiterates ANI calculation, mentions type strains, and provides details about the deposition of whole-genome sequencing data in GenBank and NASA GeneLab, including accession numbers."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7561690:announcement:531e961c",
+            "PMC7561690:announcement:ab8d8316",
+            "PMC7561690:announcement:83875274",
+            "PMC7561690:announcement:1bf124fb",
+            "PMC7561690:announcement:9db388d4",
+            "PMC7561690:abstract:d36b19fa",
+            "PMC7561690:body--catchall:9d6ba873",
+            "PMC7561690:body--catchall:e90cffd4",
+            "PMC7561690:body--catchall:67ba91de",
+            "PMC7561690:body--catchall:9e4be3f0",
+            "PMC7561690:body--catchall:7948b315"
+          ],
+          "key_facts": [
+            "10 Klebsiella strains isolated from ISS environmental surfaces.",
+            "Samples handled aseptically, cultured on R2A or blood agar, archived at -80°C.",
+            "DNA extracted using ZymoBIOMICS DNA Magbead kit.",
+            "Species identified by 16S rRNA gene sequences (>97.5% similarity) and ANI calculation (EZBioCloud).",
+            "Genomes sequenced using Illumina Nextera Flex protocol and NovaSeq 6000 S4 flow cell.",
+            "Bioinformatics tools: FastQC (quality assessment), fastp (trimming/filtering), SPAdes (assembly), QUAST (final sequence quality).",
+            "Data deposited in GenBank (BioProject PRJNA635942, PRJNA640688, PRJNA640693) and NASA GeneLab (GLDS-302, GLDS-309, GLDS-311)."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

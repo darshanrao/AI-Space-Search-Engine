@@ -1,0 +1,302 @@
+{
+  "paper_id": "PMC3869332",
+  "paper_title": "Complete Genome Sequence of Carnobacterium gilichinskyi Strain WN1359 T (DSM 27470 T )",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+  "test_cases": [
+    {
+      "id": "PMC3869332_Q1",
+      "question": "What specific environmental conditions, simulating the Mars atmosphere, can Carnobacterium gilichinskyi strain WN1359 grow under?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3869332:abstract:746c0d8e"
+          ],
+          "should_retrieve": [
+            "PMC3869332:genome-announcement:2813bb3b",
+            "PMC3869332:body--catchall:f31d2233"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "*Carnobacterium gilichinskyi* strain WN1359 is capable of growth under **cold (0°C), anoxic, CO2-dominated, low-pressure (0.7-kPa) conditions** [1]. These specific environmental parameters were chosen to simulate the atmosphere of Mars [1], [2].",
+          "citations": [
+            {
+              "id": "PMC3869332:abstract:746c0d8e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk directly states the specific Mars-like growth conditions (cold, anoxic, CO2-dominated, low-pressure) in the abstract."
+            },
+            {
+              "id": "PMC3869332:genome-announcement:2813bb3b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk reiterates the specific Mars-like growth conditions, confirming the information from the abstract."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3869332:abstract:746c0d8e",
+            "PMC3869332:genome-announcement:2813bb3b"
+          ],
+          "key_facts": [
+            "Growth at 0°C (cold)",
+            "Anoxic conditions",
+            "CO2-dominated atmosphere",
+            "Low-pressure (0.7-kPa)",
+            "Conditions simulate the Mars atmosphere"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3869332_Q2",
+      "question": "Compare the main genomic features of the chromosome and plasmids identified in Carnobacterium gilichinskyi strain WN1359, including their sizes and number.",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3869332:body--catchall:b23eb03e",
+            "PMC3869332:genome-announcement:340093e2"
+          ],
+          "should_retrieve": [
+            "PMC3869332:body--catchall:3a7a8848"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The genome of *Carnobacterium gilichinskyi* strain WN1359 comprises a single circular **chromosome** and **five plasmids** [1], [2]. The chromosome is **2,347,813 bp** in length and has an overall **GC content of 35.26%** [1], [2]. It also contains 2,152 protein-encoding ORFs [3]. The five detected plasmids, along with their respective sizes, are: **pWNCR9 (9,615 bp), pWNCR12 (12,656 bp), pWNCR15 (15,476 bp), pWNCR47 (47,068 bp), and pWNCR64 (64,492 bp)** [1], [2].",
+          "citations": [
+            {
+              "id": "PMC3869332:body--catchall:b23eb03e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk provides the chromosome size, GC content, and lists the five plasmids with their specific base pair lengths."
+            },
+            {
+              "id": "PMC3869332:genome-announcement:340093e2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk duplicates the information on chromosome size, GC content, and the five plasmids with their sizes, reinforcing the details."
+            },
+            {
+              "id": "PMC3869332:body--catchall:3a7a8848",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk specifies the number of protein-encoding ORFs present in the circular chromosome."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3869332:body--catchall:b23eb03e",
+            "PMC3869332:genome-announcement:340093e2",
+            "PMC3869332:body--catchall:3a7a8848"
+          ],
+          "key_facts": [
+            "Chromosome: single, circular, 2,347,813 bp, 35.26% GC content, 2,152 protein-encoding ORFs.",
+            "Plasmids: five detected (pWNCR9, pWNCR12, pWNCR15, pWNCR47, pWNCR64).",
+            "Plasmid sizes: 9,615 bp, 12,656 bp, 15,476 bp, 47,068 bp, 64,492 bp."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3869332_Q3",
+      "question": "Outline the complete genome sequencing and annotation workflow for Carnobacterium gilichinskyi strain WN1359, from initial read generation to final gene identification.",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3869332:body--catchall:012ffb95",
+            "PMC3869332:body--catchall:b23eb03e",
+            "PMC3869332:body--catchall:3a7a8848"
+          ],
+          "should_retrieve": [
+            "PMC3869332:genome-announcement:acf75deb",
+            "PMC3869332:genome-announcement:340093e2"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The genome sequencing of *Carnobacterium gilichinskyi* strain WN1359 was carried out at the University of Florida Interdisciplinary Center for Biotechnology Research (UF-ICBR) using the **PacBio SMRT system** [1], [4]. The comprehensive workflow involved several key stages:\n\n1.  **Read Generation and Error Correction:** Initially, **78,692 PacBio reads** were obtained, with a mean length of 3,850 bp. These raw reads underwent error correction using the **PacBio RS_PreAssembler.1 module**, which yielded 10,736 error-corrected reads with an average length of 6,421 bp [1], [4].\n2.  **Genome Assembly:** A single scaffold was assembled directly from these error-corrected reads utilizing **Celera assembler (CA) version 7.0 software** [1], [4].\n3.  **Assembly Refinement:** The initial genome assembly was further refined using the **PacBio RS_Resequencing.1 module with Quiver consensus calling**. This step was crucial for removing residual sequencing errors and producing the final, high-quality consensus genome sequence [1], [4].\n4.  **ORF Prediction and Annotation:** Open reading frame (ORF) prediction and subsequent annotation were performed through the **Rapid Annotations using Subsystems Technology (RAST) pipeline**, employing **GLIMMER** [2], [5]. This process identified **2,152 protein-encoding ORFs** on the circular chromosome, with 1,697 (79%) assigned to known functions and 455 (21%) to unknown functions [3], [5]. Additionally, 1,841 ORFs (86%) were assigned to Clusters of Orthologous Group (COG) categories using the Batch Web CD-Search tool [3], [5].\n5.  **RNA Identification:** Ribosomal RNAs (rRNAs) and transfer RNAs (tRNAs) were identified using the 'search_for_RNAs' script and tRNAscan-SE, respectively, leading to the detection of **74 tRNAs and 8 rRNA operons** [3], [5].",
+          "citations": [
+            {
+              "id": "PMC3869332:body--catchall:012ffb95",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk details the sequencing technology (PacBio SMRT), initial read counts, error correction parameters, and the assembly software (Celera assembler)."
+            },
+            {
+              "id": "PMC3869332:body--catchall:b23eb03e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk describes the refinement process using PacBio RS_Resequencing.1 module with Quiver consensus calling and introduces the ORF prediction and annotation tools (RAST, GLIMMER)."
+            },
+            {
+              "id": "PMC3869332:body--catchall:3a7a8848",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk provides details on the number of protein-encoding ORFs, their functional assignments, COG categorization, and the identification of rRNAs and tRNAs."
+            },
+            {
+              "id": "PMC3869332:genome-announcement:acf75deb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk reiterates the sequencing method (PacBio SMRT), read processing, error correction, and assembly steps, confirming the information from the body section."
+            },
+            {
+              "id": "PMC3869332:genome-announcement:340093e2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk repeats the information regarding ORF prediction and annotation using RAST and GLIMMER, as well as the assignment of ORFs to COG categories and RNA identification."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3869332:body--catchall:012ffb95",
+            "PMC3869332:body--catchall:b23eb03e",
+            "PMC3869332:body--catchall:3a7a8848",
+            "PMC3869332:genome-announcement:acf75deb",
+            "PMC3869332:genome-announcement:340093e2"
+          ],
+          "key_facts": [
+            "Sequencing system: PacBio SMRT system.",
+            "Initial reads: 78,692, mean 3,850 bp.",
+            "Error correction: PacBio RS_PreAssembler.1 module, yielding 10,736 reads (avg 6,421 bp).",
+            "Assembly software: Celera assembler (CA) version 7.0.",
+            "Refinement: PacBio RS_Resequencing.1 module with Quiver consensus calling.",
+            "ORF prediction/annotation: RAST pipeline using GLIMMER.",
+            "Protein-encoding ORFs: 2,152 (1,697 known, 455 unknown functions).",
+            "COG categories: 1,841 ORFs assigned.",
+            "RNA identification: 'search_for_RNAs' script and tRNAscan-SE.",
+            "Identified RNAs: 74 tRNAs, 8 rRNA operons."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3869332_Q4",
+      "question": "What are the GenBank accession numbers for the chromosome and the five plasmids of Carnobacterium gilichinskyi strain WN1359?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3869332:body--catchall:3a7a8848",
+            "PMC3869332:genome-announcement:4917dc81"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The GenBank accession number for the chromosome of *Carnobacterium gilichinskyi* strain WN1359 is **CP006812** [1], [2]. The accession numbers for the five plasmids are **CP006813, CP006814, CP006815, CP006816, and CP006817** [1], [2].",
+          "citations": [
+            {
+              "id": "PMC3869332:body--catchall:3a7a8848",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk explicitly lists the GenBank accession numbers for both the chromosome and all five plasmids."
+            },
+            {
+              "id": "PMC3869332:genome-announcement:4917dc81",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "This chunk reiterates the GenBank accession numbers for the chromosome and plasmids, confirming the information."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3869332:body--catchall:3a7a8848",
+            "PMC3869332:genome-announcement:4917dc81"
+          ],
+          "key_facts": [
+            "Chromosome accession number: CP006812",
+            "Plasmid accession numbers: CP006813, CP006814, CP006815, CP006816, CP006817"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3869332_Q5",
+      "question": "Provide a comprehensive overview of Carnobacterium gilichinskyi strain WN1359, detailing its origin, unique growth capabilities, and key genomic characteristics.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3869332:abstract:746c0d8e",
+            "PMC3869332:body--catchall:f31d2233",
+            "PMC3869332:body--catchall:b23eb03e",
+            "PMC3869332:body--catchall:3a7a8848",
+            "PMC3869332:genome-announcement:2813bb3b",
+            "PMC3869332:genome-announcement:340093e2"
+          ],
+          "should_retrieve": [
+            "PMC3869332:body--catchall:012ffb95",
+            "PMC3869332:genome-announcement:acf75deb",
+            "PMC3869332:genome-announcement:4917dc81"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "*Carnobacterium gilichinskyi* strain WN1359 is a bacterium originally **isolated from Siberian permafrost** [1], [2], [5]. It is particularly notable for its unique ability to **grow under extreme conditions that simulate the atmosphere of Mars**, specifically **cold (0°C), anoxic, CO2-dominated, and low-pressure (0.7-kPa) environments** [1], [2], [5]. This strain has been proposed as the type strain for *C. gilichinskyi* sp. nov. and is officially deposited as strain DSM 27470 T in the German Collection of Microorganisms and Cell Cultures (DSMZ) [2], [5].\n\nThe complete genome sequence of strain WN1359, determined using the PacBio SMRT system [8], reveals a **circular chromosome of 2,347,813 bp** with an overall **GC content of 35.26%** [3], [6]. In addition to the chromosome, the genome harbors **five plasmids**, which are designated pWNCR9 (9,615 bp), pWNCR12 (12,656 bp), pWNCR15 (15,476 bp), pWNCR47 (47,068 bp), and pWNCR64 (64,492 bp) [3], [6].\n\nGenomic analysis, performed via the RAST pipeline and GLIMMER [3], [6], identified **2,152 protein-encoding open reading frames (ORFs)** on the chromosome. Of these, 1,697 (79%) were assigned to known protein functions, while 455 (21%) were assigned to unknown functions [4], [6]. Furthermore, 1,841 ORFs (86%) were categorized into Clusters of Orthologous Group (COG) categories [4], [6]. The genome also contains **74 tRNAs and 8 rRNA operons**, comprising 5S, 16S, and 23S rRNA genes [4], [7]. The complete genome and plasmid sequences have been deposited in GenBank under accession numbers CP006812 (chromosome) and CP006813-CP006817 (plasmids) [4], [7].",
+          "citations": [
+            {
+              "id": "PMC3869332:abstract:746c0d8e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "Provides the origin (Siberian permafrost) and unique growth capabilities (Mars-like conditions) of the strain."
+            },
+            {
+              "id": "PMC3869332:body--catchall:f31d2233",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "Confirms the origin, Mars-like growth conditions, proposed name, and deposition details of the strain."
+            },
+            {
+              "id": "PMC3869332:body--catchall:b23eb03e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "Details the chromosome size, GC content, and lists the five plasmids with their individual sizes."
+            },
+            {
+              "id": "PMC3869332:body--catchall:3a7a8848",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "Describes the number of protein-encoding ORFs, their functional assignments, COG categories, and the identification of tRNAs and rRNA operons, along with GenBank accession numbers."
+            },
+            {
+              "id": "PMC3869332:genome-announcement:2813bb3b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "Reiterates the origin, Mars-like growth conditions, proposed name, and deposition details."
+            },
+            {
+              "id": "PMC3869332:genome-announcement:340093e2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "Duplicates information on chromosome size, GC content, plasmids and their sizes, ORF prediction/annotation, and COG categories."
+            },
+            {
+              "id": "PMC3869332:genome-announcement:4917dc81",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "Confirms the detection of tRNAs and rRNA operons, and provides the GenBank accession numbers."
+            },
+            {
+              "id": "PMC3869332:body--catchall:012ffb95",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+              "why_relevant": "Mentions the sequencing technology used (PacBio SMRT system)."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3869332:abstract:746c0d8e",
+            "PMC3869332:body--catchall:f31d2233",
+            "PMC3869332:body--catchall:b23eb03e",
+            "PMC3869332:body--catchall:3a7a8848",
+            "PMC3869332:genome-announcement:2813bb3b",
+            "PMC3869332:genome-announcement:340093e2",
+            "PMC3869332:genome-announcement:4917dc81",
+            "PMC3869332:body--catchall:012ffb95"
+          ],
+          "key_facts": [
+            "Origin: Isolated from Siberian permafrost.",
+            "Unique growth capabilities: Cold (0°C), anoxic, CO2-dominated, low-pressure (0.7-kPa) conditions, simulating Mars atmosphere.",
+            "Classification: Type strain for C. gilichinskyi sp. nov., deposited as DSM 27470 T.",
+            "Chromosome: Circular, 2,347,813 bp, 35.26% GC content.",
+            "Plasmids: Five detected (pWNCR9, pWNCR12, pWNCR15, pWNCR47, pWNCR64) with specific sizes.",
+            "ORFs: 2,152 protein-encoding, 79% known function, 21% unknown.",
+            "COG categories: 1,841 ORFs assigned.",
+            "RNAs: 74 tRNAs, 8 rRNA operons.",
+            "GenBank Accessions: CP006812 (chromosome), CP006813-CP006817 (plasmids)."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

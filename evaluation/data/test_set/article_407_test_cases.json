@@ -1,0 +1,343 @@
+{
+  "paper_id": "PMC11324864",
+  "paper_title": "Simulated microgravity impairs human NK cell cytotoxic activity against space radiation-relevant leukemic cells — Abstract",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+  "test_cases": [
+    {
+      "id": "PMC11324864_Q1",
+      "question": "What is the primary function of Natural Killer (NK) cells in the innate immune system?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11324864:introduction:645eab94"
+          ],
+          "should_retrieve": [
+            "PMC11324864:abstract:b85bd9b3"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Natural Killer (NK) cells are **effector lymphocytes of the innate immune system** that perform **immunosurveillance** and act as a **first line of defense** against virally-infected cells and cells undergoing malignant transformation. They recognize and eliminate these aberrant clones without prior sensitization [1]. Additionally, NK cells bridge to the adaptive immune system by releasing cytokines and chemokines to recruit T cells and stimulate their activation and proliferation [1].",
+          "citations": [
+            {
+              "id": "PMC11324864:introduction:645eab94",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk directly defines the primary functions of NK cells, including immunosurveillance, defense against infected/malignant cells, and their role in adaptive immunity."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11324864:introduction:645eab94"
+          ],
+          "key_facts": [
+            "NK cells are effector lymphocytes of the innate immune system.",
+            "They perform immunosurveillance.",
+            "They provide a first line of defense against virally-infected and malignant cells.",
+            "They eliminate aberrant clones without prior sensitization.",
+            "They release cytokines and chemokines to bridge to the adaptive immune system."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11324864_Q2",
+      "question": "How does the impact of simulated microgravity on primary human NK cell cytotoxicity differ when assessed using a traditional assay protocol versus a continuous microgravity assay protocol?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11324864:results:d0b3a71b",
+            "PMC11324864:results:5b2b36f1",
+            "PMC11324864:discussion:666aa391"
+          ],
+          "should_retrieve": [
+            "PMC11324864:results:97b4dae0",
+            "PMC11324864:results:8a09d8f3",
+            "PMC11324864:introduction:f3a5ff6f"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study found significant differences in assessing NK cell cytotoxicity depending on the assay protocol. In **traditional assays**, NK cells were exposed to simulated microgravity (sμG) for 48 hours, then centrifuged, and co-cultured with target cells under normal gravity (1G) for 4 hours [2, 3]. In contrast, the **continuous microgravity assay** maintained both NK cells and target tumor cells in a continuous state of sμG throughout the entire assay period [2, 4].\n\nWhen directly comparing these two methodologies for primary human NK cells against **MOLT-4 (T-ALL) cells**, maintaining sμG throughout the entire assay procedure led to a **statistically significant (p ≤ 0.05) further reduction in cytotoxicity** compared to the traditional assay [2]. This suggests that prior studies using traditional methods may have **underestimated the true reduction** in NK activity caused by microgravity, and that NK cells can **partially regain cytotoxic function** within as little as 4 hours when returned to normal gravity [2, 3].\n\nHowever, for **K-562 cells**, the cytotoxicity did **not differ significantly** between the two assay types [5, 6]. This lack of difference is attributed to K-562 cells' inherent high susceptibility to NK cell-mediated cytotoxicity due to reduced HLA class I expression and heightened expression of activating NK receptor ligands, which may mask subtle effects of stressors like continuous sμG [6].",
+          "citations": [
+            {
+              "id": "PMC11324864:results:d0b3a71b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk directly compares the two methodologies, stating that continuous sμG leads to a statistically significant further reduction in cytotoxicity for MOLT-4 cells and implies underestimation by traditional assays."
+            },
+            {
+              "id": "PMC11324864:results:5b2b36f1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk describes the traditional assay protocol involving 48h sμG, centrifugation, and 4h 1G co-incubation, and explains the rationale for developing the continuous sμG method."
+            },
+            {
+              "id": "PMC11324864:introduction:f3a5ff6f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk further details the limitations of traditional ground-based microgravity analogs, highlighting the potential for altered gene expression upon return to normal gravity or hypergravity during centrifugation."
+            },
+            {
+              "id": "PMC11324864:results:1f0d095d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk describes the modified workflow for continuous sμG and its purpose for more accurate evaluation of NK cell function."
+            },
+            {
+              "id": "PMC11324864:results:97b4dae0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk explicitly states that cytotoxicity towards K-562 cells did not differ significantly between the two assay types."
+            },
+            {
+              "id": "PMC11324864:results:8a09d8f3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk provides the explanation for why K-562 cells did not show a significant difference between the two assay types, attributing it to their inherent high susceptibility to NK lysis."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11324864:results:d0b3a71b",
+            "PMC11324864:results:5b2b36f1",
+            "PMC11324864:introduction:f3a5ff6f",
+            "PMC11324864:results:1f0d095d",
+            "PMC11324864:results:97b4dae0",
+            "PMC11324864:results:8a09d8f3",
+            "PMC11324864:discussion:666aa391"
+          ],
+          "key_facts": [
+            "Traditional assays involve 48h sμG exposure followed by centrifugation and 4h 1G co-incubation.",
+            "Continuous sμG assays maintain microgravity throughout the entire assay period.",
+            "Continuous sμG significantly (p ≤ 0.05) further reduced cytotoxicity against MOLT-4 cells compared to traditional assays.",
+            "Traditional assays likely underestimated the true impact of microgravity on NK function.",
+            "NK cells partially regain cytotoxic function within 4 hours when returned to normal gravity.",
+            "No significant difference was observed for K-562 cells between the two assay types.",
+            "K-562 cells' high susceptibility to NK lysis may mask subtle effects of continuous sμG."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11324864_Q3",
+      "question": "Based on the RNA-seq analysis, what are the key molecular and cellular pathways potentially altered by simulated microgravity that contribute to the observed impairment of NK cell cytotoxic activity?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11324864:results:e5c96064",
+            "PMC11324864:results:8d391b83",
+            "PMC11324864:results:2fa70ba5",
+            "PMC11324864:discussion:b483750e"
+          ],
+          "should_retrieve": [
+            "PMC11324864:results:5c0f9d7b",
+            "PMC11324864:results:370bd20b",
+            "PMC11324864:results:6609c1fc"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "RNA-seq analysis revealed that exposure to simulated microgravity (sμG) significantly altered the expression of 2184 genes in primary human NK cells, suggesting multiple molecular and cellular pathways contribute to impaired cytotoxicity [1, 2]. These alterations include both up-regulation of inhibitory factors and down-regulation of activating factors:\n\n**Up-regulated Transcripts (leading to decreased cytotoxicity):**\n*   **CD1 isoforms (CD1b, CD1c, CD1d, CD1e)**: Marked induction of mRNA for these isoforms in NK cells themselves (p-values ranging from 1.87e-3 to 8.43e-3), which have been shown to inhibit NK cell-mediated killing [3, 4].\n*   **CD3D**: Consistent with the NK2.4 subset of memory-like NK cells that accumulates with aging and exhibits low expression of the TCR complex [4].\n*   **CD5**: A cell surface protein with an inhibitory function in antigen receptor signaling, not normally expressed on NK cells, and expected to impair NK functionality [4].\n*   **Decay-accelerating factor/CD55**: Its expression inhibits human NK cell cytotoxicity against hematological cancers [4].\n*   **CD84**: Engagement of this molecule significantly dampens NK cell cytotoxicity [4].\n*   **CD200**: Shedding of CD200 in the tumor microenvironment leads to NK cell dysfunction and apoptosis [4].\n*   **CD47**: May play an inhibitory role in NK cell-mediated cytotoxicity against cancer cells [4].\n*   **LAIR1**: A potent inhibitor of NK cytotoxicity [4].\n*   **NFATC1**: A negative regulator of NK cell tumor immunosurveillance [4].\n*   **CD34**: An antigen present only on the earliest precursors of the NK lineage, suggesting sμG may provoke a regression of NK cells to an immature, undifferentiated stem-like state [4].\n*   **CD8A**: Marked induction (p = 0.05) of CD8A expression, which has been shown to suppress CD4+ T cell activation and proliferation, potentially indirectly impacting the acquired immune system [5].\n\n**Down-regulated Transcripts (leading to decreased cytotoxicity):**\n*   **KLRC3/NKG2E**: A de facto NK activating receptor (p = 0.01) [5].\n*   **NOTCH2NLR**: A receptor in a signaling pathway crucial for human NK cell maturation and tumor killing (p = 6e-3) [5].\n*   **TNFRSF10C**: A molecule thought to protect cells from TRAIL-induced apoptosis (p = 0.03) [5].\n\nCollectively, the differential expression of these myriad genes, intimately involved in NK cytotoxicity and function, provides multiple viable mechanistic explanations for the observed reduction in NK killing under sμG conditions [5]. These findings pave the way for future studies to develop targeted medical countermeasures [6].",
+          "citations": [
+            {
+              "id": "PMC11324864:results:e09a6bc3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk states that 2184 genes were significantly up- or down-regulated by sμG, providing the overall scope of gene expression changes."
+            },
+            {
+              "id": "PMC11324864:results:e5c96064",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk introduces the RNA-seq analysis performed to understand mechanisms of NK impairment by sμG."
+            },
+            {
+              "id": "PMC11324864:results:5c0f9d7b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk specifically mentions the induction of CD1 isoforms and their known inhibitory role in NK cell-mediated killing."
+            },
+            {
+              "id": "PMC11324864:results:8d391b83",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk lists several up-regulated transcripts (CD3D, CD5, CD55, CD84, CD200, CD47, LAIR1, NFATC1, CD34) and their known inhibitory or developmental roles, explaining decreased NK cytotoxicity."
+            },
+            {
+              "id": "PMC11324864:results:2fa70ba5",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk lists down-regulated transcripts (KLRC3/NKG2E, NOTCH2NLR, TNFRSF10C) that are important for NK activation, maturation, and tumor killing, and also mentions the induction of CD8A and its suppressive role."
+            },
+            {
+              "id": "PMC11324864:discussion:b483750e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk summarizes that RNA-seq revealed multiple altered pathways central to NK function, paving the way for future countermeasure development."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11324864:results:e5c96064",
+            "PMC11324864:results:e09a6bc3",
+            "PMC11324864:results:5c0f9d7b",
+            "PMC11324864:results:8d391b83",
+            "PMC11324864:results:2fa70ba5",
+            "PMC11324864:discussion:b483750e"
+          ],
+          "key_facts": [
+            "Simulated microgravity (sμG) alters expression of 2184 genes in NK cells.",
+            "Up-regulated genes include CD1 isoforms (CD1b, CD1c, CD1d, CD1e), CD3D, CD5, CD55, CD84, CD200, CD47, LAIR1, NFATC1, and CD34, many of which are inhibitory or indicative of an immature state.",
+            "Down-regulated genes include KLRC3/NKG2E, NOTCH2NLR, and TNFRSF10C, which are involved in NK activation, maturation, and tumor killing.",
+            "CD8A expression is induced, which can suppress CD4+ T cell activation.",
+            "These differential gene expressions provide mechanistic explanations for reduced NK cytotoxicity.",
+            "The findings suggest targets for medical countermeasures to mitigate microgravity-induced NK deficits."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11324864_Q4",
+      "question": "Which specific transcripts, identified as down-regulated in primary human NK cells by simulated microgravity, are associated with NK activating receptors or tumor killing pathways, and what were their corresponding p-values?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11324864:results:2fa70ba5",
+            "PMC11324864:results:a566ec44"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Exposure to simulated microgravity (sμG) led to the significant down-regulation of several transcripts in primary human NK cells that are associated with NK activating receptors or tumor killing pathways [1, 2]:\n\n*   **KLRC3/NKG2E**: Identified as a de facto NK activating receptor, with a **p-value of 0.01** [1, 2].\n*   **NOTCH2NLR**: A receptor in a signaling pathway that plays a substantial role in human NK cell maturation and tumor killing, with a **p-value of 6e-3** [1, 2].\n*   **TNFRSF10C**: A molecule thought to protect cells from TRAIL-induced apoptosis, with a **p-value of 0.03** [1, 2].",
+          "citations": [
+            {
+              "id": "PMC11324864:results:2fa70ba5",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk directly lists the down-regulated transcripts (KLRC3/NKG2E, NOTCH2NLR, TNFRSF10C), their associated functions, and their specific p-values."
+            },
+            {
+              "id": "PMC11324864:results:a566ec44",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk reiterates the down-regulated transcripts and their p-values, confirming the findings."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11324864:results:2fa70ba5",
+            "PMC11324864:results:a566ec44"
+          ],
+          "key_facts": [
+            "KLRC3/NKG2E (an NK activating receptor) was down-regulated with p = 0.01.",
+            "NOTCH2NLR (involved in NK maturation and tumor killing) was down-regulated with p = 6e-3.",
+            "TNFRSF10C (protects from TRAIL-induced apoptosis) was down-regulated with p = 0.03."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11324864_Q5",
+      "question": "What are the main findings of this study regarding the effect of simulated microgravity on human NK cell function, and what are the implications for astronaut cancer risk during prolonged missions beyond Low Earth Orbit?",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11324864:abstract:b85bd9b3",
+            "PMC11324864:discussion:a8a4e9d2",
+            "PMC11324864:results:d0b3a71b",
+            "PMC11324864:results:e5c96064",
+            "PMC11324864:results:8d391b83",
+            "PMC11324864:results:2fa70ba5"
+          ],
+          "should_retrieve": [
+            "PMC11324864:introduction:931fa1eb",
+            "PMC11324864:discussion:b483750e",
+            "PMC11324864:results:53dd5cf4"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "This study's main findings demonstrate that **simulated microgravity (sμG) significantly impairs human Natural Killer (NK) cell cytotoxic activity** against leukemic cells, with critical implications for astronaut health during prolonged space missions [1, 2].\n\n**Key Findings:**\n*   **Reduced Cytotoxicity:** Even brief (48 hours) exposure to sμG markedly reduced the ability of both NK-92MI cell lines and primary human NK cells to kill K-562 (CML) and MOLT-4 (T-ALL) leukemic cells [1, 3, 4].\n*   **Underestimation by Traditional Assays:** The study highlights that traditional cytotoxicity assays, which involve returning cells to normal gravity during the assay, likely **underestimated the true impact of microgravity** [1, 5]. When cytotoxicity assays were performed under continuous sμG, the reduction in NK cell killing of MOLT-4 cells was **significantly further impaired** compared to traditional methods, suggesting NK cells partially regain function upon return to normal gravity [1, 5].\n*   **Molecular Mechanisms Identified:** RNA-seq analysis revealed that sμG significantly altered the expression of **2184 genes** in NK cells. These changes include the **up-regulation of multiple inhibitory transcripts** (e.g., CD1 isoforms, CD5, CD55, CD84, CD200, CD47, LAIR1, NFATC1, CD34) and the **down-regulation of activating receptors and pathways** (e.g., KLRC3/NKG2E, NOTCH2NLR, TNFRSF10C) [6, 7, 8]. The induction of CD34 suggests a potential regression of NK cells to an immature state, while increased CD8A could suppress T cell activation [7, 8].\n\n**Implications for Astronaut Cancer Risk:**\n*   **Increased Leukemogenesis Risk:** The reduced NK cytotoxicity, particularly against T-ALL cells, combined with prior research showing space radiation-induced human T-ALL, raises the **troubling possibility that the combined exposure to space radiation and microgravity may increase astronaut risk of hematological malignancies** during prolonged missions beyond Low Earth Orbit (LEO) [1, 2, 9, 10].\n*   **Compromised Anti-tumor Immunity:** The observed deficits in NK function suggest that astronauts' immune systems may be less effective at recognizing and eliminating malignant clones that arise from space radiation-induced mutations [1, 11].\n*   **Need for Countermeasures:** The identification of specific altered molecular pathways provides a foundation for future research to **develop targeted medical countermeasures** to mitigate these microgravity-induced deficits and safeguard astronaut health [1, 11].",
+          "citations": [
+            {
+              "id": "PMC11324864:abstract:b85bd9b3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk provides the overall summary of the study's findings on NK cell impairment by sμG and its implications for astronaut cancer risk, especially leukemogenesis."
+            },
+            {
+              "id": "PMC11324864:discussion:a8a4e9d2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk directly discusses the troubling possibility of increased astronaut risk for hematological malignancy due to combined space radiation and microgravity exposure."
+            },
+            {
+              "id": "PMC11324864:results:b0db5937",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk describes the initial finding of reduced cytotoxicity of NK-92MI cells against K-562 and MOLT-4 after 48h sμG exposure."
+            },
+            {
+              "id": "PMC11324864:results:84abf2fb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk extends the finding of reduced cytotoxicity to primary human NK cells against K-562 and MOLT-4 after 48h sμG exposure."
+            },
+            {
+              "id": "PMC11324864:results:d0b3a71b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk directly compares traditional vs. continuous sμG assays, highlighting the significant further reduction in cytotoxicity for MOLT-4 cells in continuous sμG and the underestimation by previous methods."
+            },
+            {
+              "id": "PMC11324864:results:e5c96064",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk introduces the RNA-seq analysis as a method to gain insight into the mechanisms of NK impairment by sμG."
+            },
+            {
+              "id": "PMC11324864:results:8d391b83",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk lists numerous up-regulated transcripts (e.g., CD1 isoforms, CD5, CD55, CD84, CD200, CD47, LAIR1, NFATC1, CD34) that contribute to decreased NK cytotoxicity."
+            },
+            {
+              "id": "PMC11324864:results:2fa70ba5",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk lists down-regulated transcripts (KLRC3/NKG2E, NOTCH2NLR, TNFRSF10C) that are important for NK activation/tumor killing, and also mentions CD8A induction, all contributing to impaired NK function."
+            },
+            {
+              "id": "PMC11324864:results:53dd5cf4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk reinforces the link between reduced NK cytotoxicity against T-ALL in sμG and the increased risk of malignancy when combined with GCR exposure."
+            },
+            {
+              "id": "PMC11324864:introduction:931fa1eb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk summarizes the key findings and their implications for astronaut risk of malignancy during prolonged missions beyond LEO, emphasizing the need for further research and countermeasures."
+            },
+            {
+              "id": "PMC11324864:discussion:b483750e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+              "why_relevant": "This chunk highlights the importance of RNA-seq findings for developing medical countermeasures to mitigate microgravity-induced NK deficits."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11324864:abstract:b85bd9b3",
+            "PMC11324864:results:b0db5937",
+            "PMC11324864:results:84abf2fb",
+            "PMC11324864:results:d0b3a71b",
+            "PMC11324864:results:e5c96064",
+            "PMC11324864:results:e09a6bc3",
+            "PMC11324864:results:8d391b83",
+            "PMC11324864:results:2fa70ba5",
+            "PMC11324864:discussion:a8a4e9d2",
+            "PMC11324864:results:53dd5cf4",
+            "PMC11324864:introduction:931fa1eb",
+            "PMC11324864:discussion:b483750e"
+          ],
+          "key_facts": [
+            "Simulated microgravity (sμG) significantly reduces NK cell cytotoxic activity against leukemic cells (K-562 and MOLT-4).",
+            "Traditional assay protocols likely underestimate the true impact of microgravity, as continuous sμG exposure leads to a significantly greater reduction in cytotoxicity against MOLT-4 cells.",
+            "NK cells may partially regain cytotoxic function when returned to normal gravity.",
+            "RNA-seq analysis revealed sμG alters expression of 2184 genes, including up-regulation of inhibitory factors (e.g., CD1 isoforms, CD5, CD55, CD47, LAIR1) and down-regulation of activating factors (e.g., KLRC3/NKG2E, NOTCH2NLR).",
+            "Microgravity may induce an immature, undifferentiated state in NK cells (CD34 upregulation) and indirectly impact adaptive immunity (CD8A induction).",
+            "The combined exposure to space radiation and microgravity may increase astronaut risk of hematological malignancies, particularly T-ALL, during prolonged missions beyond LEO.",
+            "The findings highlight the need for targeted medical countermeasures to mitigate microgravity-induced immune deficits."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

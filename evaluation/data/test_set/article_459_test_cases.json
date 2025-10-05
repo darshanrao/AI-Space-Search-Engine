@@ -1,0 +1,519 @@
+{
+  "paper_id": "PMC4309301",
+  "paper_title": "A Tissue Retrieval and Postharvest Processing Regimen for Rodent Reproductive Tissues Compatible with Long-Term Storage on the International Space Station and Postflight Biospecimen Sharing Program — 1. Introduction",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+  "test_cases": [
+    {
+      "id": "PMC4309301_Q1",
+      "question": "What was the maximum time after euthanasia that mouse testes maintained histological properties comparable to time 0-harvested mice?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4309301:3--results:5bf658ad"
+          ],
+          "should_retrieve": [
+            "PMC4309301:4--discussion:fd16533c"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Mouse testes maintained histological properties comparable to time 0-harvested mice when harvested any time between time 0 after euthanasia up to **2.5 hours** after euthanasia [1]. The discussion section also broadly states that mouse testes retained excellent histological details when processed up to **3 hours** after euthanasia [2].",
+          "citations": [
+            {
+              "id": "PMC4309301:3--results:5bf658ad",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "This chunk directly states the specific time window (up to 2.5 hours) for mouse testes maintaining histological quality."
+            },
+            {
+              "id": "PMC4309301:4--discussion:fd16533c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "This chunk provides a slightly broader summary of the finding, mentioning up to 3 hours for mouse testes."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4309301:3--results:5bf658ad",
+            "PMC4309301:4--discussion:fd16533c"
+          ],
+          "key_facts": [
+            "Mouse testes maintained histological quality up to 2.5 hours after euthanasia.",
+            "Mouse testes retained excellent histological details when processed up to 3 hours after euthanasia."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC4309301_Q2",
+      "question": "Compare the histological stability of mouse ovaries and gerbil ovaries after euthanasia.",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4309301:3--results:2846a17e"
+          ],
+          "should_retrieve": [
+            "PMC4309301:4--discussion:fdc1fb64"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Mouse ovaries demonstrated **excellent histological properties** and were devoid of apparent tissue degradation when harvested up to **3 hours** after euthanasia [1]. In contrast, gerbil ovaries were significantly more sensitive to delayed processing. While they showed normal healthy follicles and oocytes up to 1 hour after euthanasia, at **1.5 hours**, high numbers of unhealthy follicles, shrunken oocytes, and 'vacuoles-like' structures (indicative of degradation) were observed [1]. The gerbil ovaries harvested after 1.5 hours were too fragile and degraded to sustain histological processing, implying they should be harvested within **1 hour** of euthanasia [1], [2].",
+          "citations": [
+            {
+              "id": "PMC4309301:3--results:2846a17e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "This chunk provides direct comparative results for both mouse and gerbil ovarian histological stability over time after euthanasia."
+            },
+            {
+              "id": "PMC4309301:4--discussion:fdc1fb64",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "This chunk reinforces the finding that gerbil ovaries are the most sensitive tissue studied and require more rapid processing than mouse ovaries."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4309301:3--results:2846a17e",
+            "PMC4309301:4--discussion:fdc1fb64"
+          ],
+          "key_facts": [
+            "Mouse ovaries maintained excellent histology up to 3 hours after euthanasia.",
+            "Gerbil ovaries showed degradation at 1.5 hours after euthanasia, with unhealthy follicles and shrunken oocytes.",
+            "Gerbil ovaries were too fragile to process after 1.5 hours, suggesting a harvest window within 1 hour.",
+            "Gerbil ovaries were the most sensitive tissue to processing delays among those studied."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC4309301_Q3",
+      "question": "How does the study's proposed tissue processing regimen address the logistical challenges of multi-investigator biospecimen sharing programs for spaceflight experiments?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4309301:1--introduction:c84ddc06",
+            "PMC4309301:1--introduction:145f904a",
+            "PMC4309301:3--results:c372fd70",
+            "PMC4309301:3--results:14692be3",
+            "PMC4309301:4--discussion:5985e42d",
+            "PMC4309301:4--discussion:1ba099ab",
+            "PMC4309301:4--discussion:0438db88",
+            "PMC4309301:4--discussion:2c2e244a",
+            "PMC4309301:5--conclusion:df132d15",
+            "PMC4309301:abstract:d02d19c1"
+          ],
+          "should_retrieve": [
+            "PMC4309301:1--introduction:fd8ca976",
+            "PMC4309301:1--introduction:e789041c",
+            "PMC4309301:3--results:ec6d8877",
+            "PMC4309301:4--discussion:cad73619",
+            "PMC4309301:4--discussion:e59a2d47",
+            "PMC4309301:4--discussion:4ed6cc79",
+            "PMC4309301:5--conclusion:006a1424",
+            "PMC4309301:abstract:76e5edcd"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study's proposed tissue processing regimen addresses the logistical challenges of multi-investigator biospecimen sharing programs for spaceflight experiments by providing **optimized protocols for tissue harvest, long-term storage, and safe shipping** [1], [2], [3].\n\n1.  **Optimal Tissue Harvest Windows**: The regimen determines **tissue-specific and species-specific windows of time between euthanasia and fixation** that retain high quality histology, protein, and RNA [1], [4], [5]. This is crucial for multi-investigator programs where tissues are harvested at remote sites (e.g., ISS) and then shipped to various labs, often after primary investigators have taken their samples [6]. For example, mouse reproductive tissues generally maintained histological integrity for 2.5-3 hours, while gerbil ovaries required processing within 1 hour [7], [8].\n\n2.  **Long-Term Storage Compatibility with ISS**: The study developed methods for **long-term storage (10 months at -80°C) in RNA later solution** that yield high-quality RNA and protein [2], [9], [10]. This is vital for spaceflight, as samples may be stored on the ISS for many months before return to Earth, spanning multiple return opportunities [1], [11]. RNA quality was preserved in tissues placed in RNA later up to **40 minutes after euthanasia** [12].\n\n3.  **Safe Shipping Protocols**: The regimen includes methods for **fixative removal and transfer of tissues into aqueous media (PBS) for safe international shipping**, and reconstitution protocols into 70% ethanol to retain excellent histology [3], [13]. This overcomes restrictions on shipping common fixatives like Bouin's (which contains picric acid) due to airline safety regulations [14], [15]. A **stepwise replacement of ETOH-PBS-ETOH** was found to cause less degradation than single-step changes [3].\n\nBy standardizing these processes, the regimen ensures that high-quality biological samples are available to all participating investigators, maximizing data generation from limited and valuable spaceflight animal payloads [1], [2], [16].",
+          "citations": [
+            {
+              "id": "PMC4309301:abstract:d02d19c1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Provides an overview of the challenges (postflight alterations, histological degradation) and the study's solutions (optimal harvest windows, long-term storage, RNA/protein quality)."
+            },
+            {
+              "id": "PMC4309301:4--discussion:5985e42d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "States the logical method for optimal harvest time and long-term storage regimen compatible with ISS conditions and post-return processing/shipping."
+            },
+            {
+              "id": "PMC4309301:5--conclusion:df132d15",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Summarizes the new methods for fixative removal, transfer to aqueous media for shipping, reconstitution, and the stability of RNA/protein after long-term storage in RNA later."
+            },
+            {
+              "id": "PMC4309301:1--introduction:c84ddc06",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Highlights the need to determine tissue-specific windows for fixation and long-term storage to retain quality for multi-investigator programs, especially for ISS samples."
+            },
+            {
+              "id": "PMC4309301:1--introduction:145f904a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "States the development of strategies for optimal harvest windows for histology and methods for long-term storage for RNA/protein, adaptable to multi-investigator programs."
+            },
+            {
+              "id": "PMC4309301:1--introduction:e789041c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Explains the necessity of determining harvest windows for BSP investigators who receive tissues after primary PIs, to ensure highest possible quality."
+            },
+            {
+              "id": "PMC4309301:4--discussion:4ed6cc79",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Discusses the integrated approach needed for multi-investigator programs, considering tissue degradation and species/tissue-specific windows for optimal postharvest maintenance."
+            },
+            {
+              "id": "PMC4309301:4--discussion:fdc1fb64",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Identifies gerbil ovaries as most sensitive, emphasizing the need for rapid processing and planning harvest sequences based on time-sensitivity."
+            },
+            {
+              "id": "PMC4309301:3--results:c372fd70",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Demonstrates excellent RNA quality and yield from tissues stored in RNA later for 10 months, mimicking ISS storage, and suitability for protein extraction."
+            },
+            {
+              "id": "PMC4309301:3--results:14692be3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Confirms excellent expression levels of proteins (ERα, β-actin) with no proteolytic degradation after 10 months storage in RNA later, validating its effectiveness for long-term preservation."
+            },
+            {
+              "id": "PMC4309301:4--discussion:0438db88",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Discusses the 10-month storage timeframe aligning with ISS flight intervals and the finding that RNA stability is achieved if tissues are placed in RNA later up to 40 minutes after euthanasia."
+            },
+            {
+              "id": "PMC4309301:4--discussion:1ba099ab",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Addresses the challenge of shipping phenol-based fixatives like TRIzol internationally and highlights RNA later as a solution for RNA/protein quality over long-term storage."
+            },
+            {
+              "id": "PMC4309301:4--discussion:2c2e244a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Explains the problem with shipping Bouin's fixative due to safety regulations and the optimization of protocols for its removal and storage in PBS or 70% ethanol for safe transport."
+            },
+            {
+              "id": "PMC4309301:5--conclusion:006a1424",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Concludes that the protocols will facilitate integration of tissue harvest logistics for optimal histology and high-quality RNA/protein recovery in multi-investigator programs on ISS and other platforms."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4309301:1--introduction:fd8ca976",
+            "PMC4309301:1--introduction:c84ddc06",
+            "PMC4309301:1--introduction:e789041c",
+            "PMC4309301:1--introduction:145f904a",
+            "PMC4309301:3--results:2846a17e",
+            "PMC4309301:3--results:5bf658ad",
+            "PMC4309301:3--results:c2014337",
+            "PMC4309301:3--results:4a592f3a",
+            "PMC4309301:3--results:ec6d8877",
+            "PMC4309301:3--results:c372fd70",
+            "PMC4309301:3--results:14692be3",
+            "PMC4309301:4--discussion:5985e42d",
+            "PMC4309301:4--discussion:cad73619",
+            "PMC4309301:4--discussion:1ba099ab",
+            "PMC4309301:4--discussion:0438db88",
+            "PMC4309301:4--discussion:4ed6cc79",
+            "PMC4309301:4--discussion:fd16533c",
+            "PMC4309301:4--discussion:fdc1fb64",
+            "PMC4309301:4--discussion:2c2e244a",
+            "PMC4309301:5--conclusion:df132d15",
+            "PMC4309301:5--conclusion:006a1424",
+            "PMC4309301:abstract:d02d19c1",
+            "PMC4309301:abstract:76e5edcd"
+          ],
+          "key_facts": [
+            "Determined tissue-specific and species-specific optimal harvest windows (e.g., mouse testes up to 3h, gerbil ovaries within 1h).",
+            "Developed long-term storage methods (10 months at -80°C in RNA later) for high-quality RNA and protein.",
+            "Established safe shipping protocols by replacing Bouin's fixative with 70% ethanol or PBS.",
+            "Ensured RNA quality was preserved if tissues were placed in RNA later up to 40 minutes after euthanasia.",
+            "Optimized postfixation processing with stepwise rehydration-dehydration for better histological preservation."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC4309301_Q4",
+      "question": "What storage conditions were tested for RNA later solution to preserve RNA integrity in mouse testicular tissue?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4309301:2--materials-and-methods:94225b4a",
+            "PMC4309301:3--results:ec6d8877"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Mouse testicular tissue samples placed in RNA later solution were stored under three different conditions to assess RNA integrity: \n1.  **Two weeks at 4°C** [1], [2].\n2.  **One week at room temperature (RT) followed by one week at 4°C** [1], [2].\n3.  **Two weeks at room temperature (RT)** [1], [2].\n\nTotal RNA integrity analysis demonstrated high quality RNA after storing tissue in RNA later under all these conditions, comparable to TRIzol preservation, with distinct 28S and 18S ribosomal RNA and absence of degraded RNA [2].",
+          "citations": [
+            {
+              "id": "PMC4309301:2--materials-and-methods:94225b4a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "This chunk explicitly lists the three different storage conditions for RNA later solution used in the methods section."
+            },
+            {
+              "id": "PMC4309301:3--results:ec6d8877",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "This chunk confirms that high quality RNA was obtained after storing tissue in RNA later for 1-2 weeks at RT or 4°C, directly referencing the conditions described in the methods."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4309301:2--materials-and-methods:94225b4a",
+            "PMC4309301:3--results:ec6d8877"
+          ],
+          "key_facts": [
+            "RNA later storage conditions tested: 2 weeks at 4°C.",
+            "RNA later storage conditions tested: 1 week at RT and 1 week at 4°C.",
+            "RNA later storage conditions tested: 2 weeks at RT.",
+            "All tested RNA later storage conditions resulted in high quality RNA."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC4309301_Q5",
+      "question": "Summarize the primary objectives, experimental design, and key findings of this study regarding rodent reproductive tissue preservation for spaceflight.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4309301:abstract:d02d19c1",
+            "PMC4309301:abstract:76e5edcd",
+            "PMC4309301:1--introduction:c84ddc06",
+            "PMC4309301:1--introduction:145f904a",
+            "PMC4309301:2--materials-and-methods:2707db6f",
+            "PMC4309301:2--materials-and-methods:581861a6",
+            "PMC4309301:2--materials-and-methods:cdc14b09",
+            "PMC4309301:2--materials-and-methods:8373b15c",
+            "PMC4309301:2--materials-and-methods:94225b4a",
+            "PMC4309301:2--materials-and-methods:0ea5a9a9",
+            "PMC4309301:3--results:5bf658ad",
+            "PMC4309301:3--results:2846a17e",
+            "PMC4309301:3--results:4a592f3a",
+            "PMC4309301:3--results:ec6d8877",
+            "PMC4309301:3--results:c372fd70",
+            "PMC4309301:3--results:14692be3",
+            "PMC4309301:4--discussion:5985e42d",
+            "PMC4309301:4--discussion:2c2e244a",
+            "PMC4309301:5--conclusion:df132d15"
+          ],
+          "should_retrieve": [
+            "PMC4309301:1--introduction:fd8ca976",
+            "PMC4309301:1--introduction:17be69ac",
+            "PMC4309301:1--introduction:e789041c",
+            "PMC4309301:2--materials-and-methods:89274284",
+            "PMC4309301:3--results:552cdaa2",
+            "PMC4309301:3--results:927fc86f",
+            "PMC4309301:3--results:c2014337",
+            "PMC4309301:4--discussion:cad73619",
+            "PMC4309301:4--discussion:1ba099ab",
+            "PMC4309301:4--discussion:0438db88",
+            "PMC4309301:4--discussion:e59a2d47",
+            "PMC4309301:4--discussion:4ed6cc79",
+            "PMC4309301:4--discussion:fd16533c",
+            "PMC4309301:4--discussion:fdc1fb64",
+            "PMC4309301:5--conclusion:006a1424",
+            "PMC4309301:percent-progressive-motility---sd--of-mouse-cauda-epididymal-sperm-after-exposure-of-epididymis-to-various-conditions----table-1:e5af0bcc",
+            "PMC4309301:percent-total-motility---sd--of-mouse-cauda-epididymal-sperm-after-exposure-of-epididymis-to-various-posteuthanasia-conditions----table-2:53e1e8ef",
+            "PMC4309301:percent-total-motility-of-gerbil-cauda-epididymal-sperm-recovered-from-the-epididymis-after-storage-in-the-carcass-at-rt-for-the-times-indicated---n---1-at-each-time-point-----table-3:07d45319"
+          ],
+          "may_retrieve": [
+            "PMC4309301:body---figure-1:5f81ccb7",
+            "PMC4309301:body---figure-2:a09cd85b",
+            "PMC4309301:body---figure-3:6ebf3da4",
+            "PMC4309301:body---figure-4:1ef414d1",
+            "PMC4309301:body---figure-5:8dcdaa51",
+            "PMC4309301:body---figure-6:d8672332",
+            "PMC4309301:body---figure-7:5089583d"
+          ]
+        },
+        "answer": {
+          "answer_markdown": "This study aimed to develop a **comprehensive tissue retrieval and postharvest processing regimen** for rodent reproductive tissues (testis, epididymis, ovary, and uterus) [1], [2]. The primary objectives were to determine: \n1.  **Optimal species-specific and tissue-specific time windows** between euthanasia and fixation that preserve high-quality histology, RNA, and protein [3], [4].\n2.  **Methods for long-term tissue storage** (e.g., 10 months at -80°C) compatible with International Space Station (ISS) logistics and delayed sample return [3], [5].\n3.  **Standardized postfixation processing** for safe shipping to external laboratories, especially for multi-investigator Biospecimen Sharing Programs (BSP) [3], [6].\n\n**Experimental Design:**\nApproximately 8-week-old male and female C57Bl/6J mice and 10-month-old male and female Mongolian gerbils were used [7]. Animals were euthanized, and reproductive tissues were harvested at various time intervals (0 to 3 hours) post-euthanasia under different conditions: kept in the carcass at room temperature (RT), or immediately placed in Ham's F-10 medium on ice or at RT, before fixation in Bouin's solution [8], [9], [10]. Histological quality was assessed using hematoxylin and eosin (HE) staining [11]. Sperm motility (total and progressive) was analyzed using computer-assisted sperm analysis (CASA) [12]. RNA integrity and quantity were determined using Agilent Bioanalyzer, and RT-PCR was performed for GAPDH and IL-1α [13]. Protein quality and expression (e.g., ERα, β-actin) were evaluated via Western blotting after extraction from tissues stored in RNA later [14], [15]. Post-fixation processing methods, including rapid vs. slow stepwise ethanol-PBS transitions, were also compared for histological preservation [16].\n\n**Key Findings:**\n*   **Histological Stability:** Mouse testes maintained excellent histological properties up to **2.5-3 hours** after euthanasia [17], [18]. Mouse ovaries and uteri also showed excellent histology up to **3 hours** [19]. However, gerbil ovaries were more sensitive, showing signs of degradation (unhealthy follicles, shrunken oocytes, vacuoles) at **1.5 hours** and requiring harvest within **1 hour** of euthanasia [19], [20]. Gerbil sperm motility showed a suggestion of a slight drop at 2.5 hours, while mouse sperm motility was relatively stable across tested time points [21].\n*   **RNA and Protein Quality:** Tissues (e.g., ovaries, uteri) stabilized in **RNA later solution** and stored for **10 months at -80°C** yielded excellent RNA quality and high-quality protein suitable for Western blotting, with no evidence of proteolytic degradation [14], [15], [22]. High RNA quality was achieved if tissues were placed into RNA later up to **40 minutes after euthanasia** [23]. RNA later was superior to TRIzol for long-term storage and international shipping due to safety regulations [24].\n*   **Postfixation Processing:** A **slow rehydration-dehydration stepwise replacement of ETOH-PBS-ETOH** preserved better testicular and epididymal morphology compared to rapid single-step solution changes, which resulted in poor histological quality [16], [25].\n*   **Shipping Compatibility:** New methods were developed for **replacing Bouin's fixative with 70% ethanol for safe domestic shipping** and **replacing 70% ethanol with PBS for safe international shipping**, while retaining excellent histology [2], [26].\n\nThese findings provide crucial protocols to ensure the integrity of valuable biological samples from spaceflight experiments, facilitating multi-investigator research and maximizing scientific data output [27].",
+          "citations": [
+            {
+              "id": "PMC4309301:abstract:d02d19c1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Outlines the overall goal of developing a strategy for optimal harvest windows and long-term storage for spaceflight biospecimens."
+            },
+            {
+              "id": "PMC4309301:5--conclusion:df132d15",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Summarizes the key methods (fixative removal, reconstitution, stepwise replacement) and findings (optimal time frames, RNA/protein stability in RNA later) of the study."
+            },
+            {
+              "id": "PMC4309301:1--introduction:145f904a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "States the specific objectives of developing strategies for harvest windows for histology and long-term storage for RNA/protein."
+            },
+            {
+              "id": "PMC4309301:1--introduction:c84ddc06",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Explains the need to determine tissue-specific windows for fixation and storage to retain quality for multi-investigator programs, especially for ISS samples."
+            },
+            {
+              "id": "PMC4309301:4--discussion:5985e42d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Discusses the logical method for optimal harvest and fixation, long-term storage compatible with ISS, and procedures for shipping to external labs."
+            },
+            {
+              "id": "PMC4309301:abstract:76e5edcd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Mentions RNA quality preservation in RNA later and standardization of postfixation processing for safe shipment."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:2707db6f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Details the animal models (mice, gerbils) and the initial experimental setup for tissue harvest and fixation conditions."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:581861a6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Describes the time intervals (0-2.5 hr) and conditions (on ice, at RT, in carcass) for tissue handling before Bouin's fixation for male mice."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:cdc14b09",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Details the time intervals (0-3 hr) and conditions for female mouse and gerbil tissue harvest and fixation, and sperm motility assessment."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:8373b15c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Continues detailing gerbil tissue harvest and fixation, and introduces the four postfixation storage groups for histology."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:89274284",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Describes the different postfixation processing methods (control, rapid transition, slow Re-ETOH only, slow rehydration-dehydration) and the use of TRIzol/RNA later for RNA stabilization."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:cdc14b09",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Details the time intervals (0-3 hr) and conditions for female mouse and gerbil tissue harvest and fixation, and sperm motility assessment."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:94225b4a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Describes RNA extraction, integrity determination, and RT-PCR methods, including storage conditions for RNA later."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:0ea5a9a9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Details RNA isolation from STS-135 samples, protein extraction from RNA later-preserved tissues, and protein concentration determination."
+            },
+            {
+              "id": "PMC4309301:2--materials-and-methods:572c5e62",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Describes Western blot procedures for protein analysis, including antibodies used and densitometric quantitation."
+            },
+            {
+              "id": "PMC4309301:3--results:4a592f3a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Reports the findings on epididymal tissue sensitivity to dehydration/rehydration shock and the superior preservation with slow stepwise ETOH replacement."
+            },
+            {
+              "id": "PMC4309301:3--results:5bf658ad",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "States that mouse testes maintained excellent histological properties up to 2.5 hours after euthanasia and sperm motility was not significantly different across time points/scenarios."
+            },
+            {
+              "id": "PMC4309301:4--discussion:fd16533c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Reiterates mouse testes histological stability up to 3 hours and discusses mouse and gerbil sperm motility findings."
+            },
+            {
+              "id": "PMC4309301:3--results:2846a17e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Provides the comparative results for mouse and gerbil ovarian and uterine histological stability, highlighting gerbil ovary sensitivity."
+            },
+            {
+              "id": "PMC4309301:4--discussion:fdc1fb64",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Emphasizes that gerbil ovaries are the most sensitive tissue and require more rapid processing (within 1 hour)."
+            },
+            {
+              "id": "PMC4309301:3--results:552cdaa2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Mentions gerbil sperm motility analysis and suggests relative stability with a possible drop at 2.5 hours."
+            },
+            {
+              "id": "PMC4309301:3--results:c372fd70",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Details the excellent RNA quality and yield from STS-135 samples stored in RNA later for 10 months and its suitability for protein extraction."
+            },
+            {
+              "id": "PMC4309301:3--results:ec6d8877",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Reports high RNA quality after storing tissue in RNA later for 1-2 weeks at RT or 4°C, and no differences in RNA quality for samples placed in RNA later 15-40 minutes after euthanasia."
+            },
+            {
+              "id": "PMC4309301:4--discussion:0438db88",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Discusses RNA later as a popular reagent for preserving RNA expression profiles and its use for human tissue, confirming RNA stability up to 40 min post-euthanasia."
+            },
+            {
+              "id": "PMC4309301:3--results:c2014337",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Compares the histological quality of testicular tissue after different postfixation processing methods, highlighting the poor quality with rapid transition."
+            },
+            {
+              "id": "PMC4309301:4--discussion:2c2e244a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Explains the challenge of shipping Bouin's fixative and the optimized protocols for its removal and storage in PBS or 70% ethanol for safe shipping."
+            },
+            {
+              "id": "PMC4309301:5--conclusion:006a1424",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+              "why_relevant": "Concludes that the protocols will facilitate integration of tissue harvest logistics for optimal histology and high-quality RNA/protein recovery in multi-investigator programs on ISS and other platforms."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4309301:abstract:d02d19c1",
+            "PMC4309301:abstract:76e5edcd",
+            "PMC4309301:1--introduction:fd8ca976",
+            "PMC4309301:1--introduction:c84ddc06",
+            "PMC4309301:1--introduction:145f904a",
+            "PMC4309301:2--materials-and-methods:2707db6f",
+            "PMC4309301:2--materials-and-methods:581861a6",
+            "PMC4309301:2--materials-and-methods:cdc14b09",
+            "PMC4309301:2--materials-and-methods:8373b15c",
+            "PMC4309301:2--materials-and-methods:89274284",
+            "PMC4309301:2--materials-and-methods:94225b4a",
+            "PMC4309301:2--materials-and-methods:0ea5a9a9",
+            "PMC4309301:2--materials-and-methods:572c5e62",
+            "PMC4309301:3--results:5bf658ad",
+            "PMC4309301:3--results:552cdaa2",
+            "PMC4309301:3--results:2846a17e",
+            "PMC4309301:3--results:927fc86f",
+            "PMC4309301:3--results:c2014337",
+            "PMC4309301:3--results:4a592f3a",
+            "PMC4309301:3--results:ec6d8877",
+            "PMC4309301:3--results:c372fd70",
+            "PMC4309301:3--results:14692be3",
+            "PMC4309301:4--discussion:5985e42d",
+            "PMC4309301:4--discussion:1ba099ab",
+            "PMC4309301:4--discussion:0438db88",
+            "PMC4309301:4--discussion:4ed6cc79",
+            "PMC4309301:4--discussion:fd16533c",
+            "PMC4309301:4--discussion:fdc1fb64",
+            "PMC4309301:4--discussion:2c2e244a",
+            "PMC4309301:5--conclusion:df132d15",
+            "PMC4309301:5--conclusion:006a1424"
+          ],
+          "key_facts": [
+            "Primary objectives: Determine optimal tissue harvest windows, develop long-term storage methods, and standardize safe shipping protocols for spaceflight biospecimens.",
+            "Experimental design involved C57Bl/6J mice and Mongolian gerbils, with reproductive tissues harvested at various post-euthanasia time points (0-3 hours) under different conditions.",
+            "Histological quality, sperm motility, and RNA/protein integrity (after long-term RNA later storage) were assessed.",
+            "Key finding: Mouse testes, ovaries, and uteri maintained excellent histology up to 2.5-3 hours post-euthanasia.",
+            "Key finding: Gerbil ovaries were highly sensitive, showing degradation at 1.5 hours and requiring harvest within 1 hour.",
+            "Key finding: Tissues stored in RNA later for 10 months at -80°C yielded high-quality RNA and protein.",
+            "Key finding: RNA quality was preserved if tissues were placed in RNA later up to 40 minutes after euthanasia.",
+            "Key finding: Stepwise rehydration-dehydration for Bouin's-fixed tissues preserved histology better than rapid transitions.",
+            "Key finding: Protocols were developed for safe shipping by replacing Bouin's with 70% ethanol or PBS."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

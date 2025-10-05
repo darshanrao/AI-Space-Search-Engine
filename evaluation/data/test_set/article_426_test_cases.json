@@ -1,0 +1,417 @@
+{
+  "paper_id": "PMC6130020",
+  "paper_title": "ANN1 and ANN2 Function in Post-Phloem Sugar Transport in Root Tips to Affect Primary Root Growth 1 , [OPEN] — ANN1 and ANN2 Knockout Seedlings Show Suc-Dependent Phenotypes",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+  "test_cases": [
+    {
+      "id": "PMC6130020_Q1",
+      "question": "What is the percentage identity in the primary structure between Arabidopsis annexins ANN1 and ANN2?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6130020:abstract:fd16708a"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Arabidopsis annexins ANN1 and ANN2 are **64% identical** in their primary structure [1].",
+          "citations": [
+            {
+              "id": "PMC6130020:abstract:fd16708a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk directly states the percentage identity between ANN1 and ANN2 in their primary structure."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6130020:abstract:fd16708a"
+          ],
+          "key_facts": [
+            "64% identity",
+            "primary structure",
+            "ANN1 and ANN2"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6130020_Q2",
+      "question": "How do the primary root growth and root cap development differ between ANN1/ANN2 knockout mutants and wild-type Arabidopsis seedlings when grown without exogenous Suc?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:f5e84e87",
+            "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:0521eeb0",
+            "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:61bda5d0"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "When grown without exogenous Suc, ANN1 and ANN2 knockout mutants (e.g., ann1-2, ann2-1) exhibit **significantly shorter primary root lengths** and **slower growth rates** compared to wild-type seedlings [1]. In terms of root cap development, the mutants show **reduced layers of starch-containing columella cells** (typically three layers instead of four in wild type) and **lack border-like cells** around their root caps [2]. Additionally, these mutant root tips contain **significantly lower levels of starch** [3].",
+          "citations": [
+            {
+              "id": "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:f5e84e87",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk provides details on the inhibited primary root growth and slower growth rates in ANN1/ANN2 knockout mutants compared to wild type when grown without Suc."
+            },
+            {
+              "id": "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:0521eeb0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk describes the root cap developmental defects in the mutants, specifically the reduced layers of columella cells and absence of border-like cells."
+            },
+            {
+              "id": "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:61bda5d0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk confirms the significantly lower levels of starch in the root tips of ann1-2 mutants compared to wild type."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:f5e84e87",
+            "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:0521eeb0",
+            "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:61bda5d0"
+          ],
+          "key_facts": [
+            "shorter primary root lengths in mutants",
+            "slower primary root growth rates in mutants",
+            "reduced layers of starch-containing columella cells (3 vs 4) in mutants",
+            "absence of border-like cells in mutant root caps",
+            "significantly lower starch levels in mutant root tips"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6130020_Q3",
+      "question": "Explain the proposed mechanism by which impaired post-phloem sugar transport in ANN1/ANN2 knockout mutants leads to the observed up-regulation of photosynthetic genes in cotyledons.",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:d402b51f",
+            "PMC6130020:knocking-out-ann1-and-ann2-induces-accumulation-of-soluble-sugars-in-primary-roots:2f4e9a21",
+            "PMC6130020:knocking-out-ann1-and-ann2-increased-ros-levels-and-callose-accumulation-in-root-tips:199edc5b",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:aa30d823",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:052d6675",
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03",
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:deb726ac"
+          ],
+          "should_retrieve": [
+            "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:21a720ba",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:e784d96c",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:36c67cba",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:7928b9d8"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The impaired post-phloem sugar transport in ANN1/ANN2 knockout mutants leads to **sugar starvation in the actively growing root apex**, despite an **unexpected accumulation of soluble sugars in the primary roots** [1, 2, 3]. This restriction in sugar diffusion to the root tips is linked to **increased ROS levels and callose accumulation**, which likely **restricts plasmodesmatal sugar transport** [4, 5, 6]. The hypothesis is that root tips act as sugar-sensing tissues [7]. When these root tips experience sugar deprivation due to the transport defect, they initiate a **root-to-shoot signal** [8]. This signal, similar to how roots communicate nutrient or stress status, then **induces the up-regulation of photosynthetic genes and increased chlorophyll accumulation in the cotyledons** as a feedback mechanism to compensate for the perceived sugar deficit in the sink organs [7, 9, 10]. Exogenous sugar supply rescues both the root growth defects and reverses the photosynthetic enhancement, supporting this feedback regulation [11].",
+          "citations": [
+            {
+              "id": "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:d402b51f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk describes the restricted diffusion of CF (a sugar analog) in the root tips of ann1-2 and ann2-1 mutants, indicating impaired post-phloem transport."
+            },
+            {
+              "id": "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:21a720ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk explicitly states that knocking out ANN1 and ANN2 restricted the diffusion of sugars from the phloem to the root tip."
+            },
+            {
+              "id": "PMC6130020:knocking-out-ann1-and-ann2-induces-accumulation-of-soluble-sugars-in-primary-roots:2f4e9a21",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk reports the unexpected finding of significantly higher soluble sugar content in the primary roots of mutants, suggesting sugars accumulate but don't reach the tips."
+            },
+            {
+              "id": "PMC6130020:knocking-out-ann1-and-ann2-increased-ros-levels-and-callose-accumulation-in-root-tips:199edc5b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk details the detection of significantly higher levels of ROS and callose deposition in the root tips of ann1-2 and ann2-1 mutants."
+            },
+            {
+              "id": "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:36c67cba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk explains how ROS accumulation can increase callose, which may restrict plasmodesmatal transport, linking these factors to inhibited sugar transport in mutants."
+            },
+            {
+              "id": "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:e784d96c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk discusses how restricted symplastic diffusion in post-phloem transport impairs root growth and development, and mentions callose deposition restricting plasmodesmata."
+            },
+            {
+              "id": "PMC6130020:sugar-in-regulation-of-photosynthesis:aa30d823",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk hypothesizes that root tips are sugar-sensing tissues and their sugar status affects photosynthesis, and notes that apical sugar starvation in mutants led to up-regulation of photosynthetic genes."
+            },
+            {
+              "id": "PMC6130020:sugar-in-regulation-of-photosynthesis:052d6675",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk proposes that accumulated sugars cannot reach the root apex due to defective transport, leading to sugar starvation in root tips, which then initiates a root-to-shoot signal to up-regulate photosynthetic genes."
+            },
+            {
+              "id": "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk provides the experimental evidence for the up-regulation of specific photosynthetic genes in cotyledons of ann1-2 seedlings grown without Suc."
+            },
+            {
+              "id": "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:deb726ac",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk confirms the increased chlorophyll autofluorescence in ann1-2 cotyledons and that exogenous Suc reverses this enhancement."
+            },
+            {
+              "id": "PMC6130020:sugar-in-regulation-of-photosynthesis:7928b9d8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk states that exogenous sugars rescued root growth defects and reversed photosynthesis enhancement, supporting the feedback regulation model."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:d402b51f",
+            "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:21a720ba",
+            "PMC6130020:knocking-out-ann1-and-ann2-induces-accumulation-of-soluble-sugars-in-primary-roots:2f4e9a21",
+            "PMC6130020:knocking-out-ann1-and-ann2-increased-ros-levels-and-callose-accumulation-in-root-tips:199edc5b",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:36c67cba",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:e784d96c",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:aa30d823",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:052d6675",
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03",
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:deb726ac",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:7928b9d8"
+          ],
+          "key_facts": [
+            "Impaired post-phloem sugar transport in mutants",
+            "Sugar starvation in root tips despite accumulation in primary roots",
+            "Increased ROS and callose in root tips",
+            "Restriction of plasmodesmatal sugar transport by callose",
+            "Root tips act as sugar-sensing tissues",
+            "Initiation of a root-to-shoot signal due to sugar deprivation",
+            "Up-regulation of photosynthetic genes and chlorophyll in cotyledons as feedback",
+            "Exogenous Suc reverses these effects"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6130020_Q4",
+      "question": "Which four specific photosynthetic genes were significantly up-regulated in the cotyledons of 4-day-old ann1-2 seedlings grown without Suc, as identified by RT-qPCR analysis?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The four specific photosynthetic genes significantly up-regulated in the cotyledons of 4-day-old ann1-2 seedlings grown without Suc were: **chlorophyll-binding protein 2 (CAB2, LHCB1.1)**, **chlorophyll-binding protein 3 (CAB3, LHCB1.2)**, and **two subunits of PSII light-harvesting complex (PSII, LHB1B1, and LHB1B2)** [1].",
+          "citations": [
+            {
+              "id": "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk directly lists the four specific photosynthetic genes found to be significantly up-regulated in ann1-2 cotyledons by RT-qPCR."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03"
+          ],
+          "key_facts": [
+            "CAB2 (LHCB1.1)",
+            "CAB3 (LHCB1.2)",
+            "LHB1B1",
+            "LHB1B2",
+            "up-regulated in ann1-2 cotyledons without Suc"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6130020_Q5",
+      "question": "Summarize the main findings regarding the function of ANN1 and ANN2 in Arabidopsis, particularly concerning their role in sugar transport, root growth, and the resulting physiological effects in knockout mutants.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6130020:abstract:fd16708a",
+            "PMC6130020:abstract:212f49ea",
+            "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:f5e84e87",
+            "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:0521eeb0",
+            "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:d402b51f",
+            "PMC6130020:knocking-out-ann1-and-ann2-induces-accumulation-of-soluble-sugars-in-primary-roots:2f4e9a21",
+            "PMC6130020:knocking-out-ann1-and-ann2-increased-ros-levels-and-callose-accumulation-in-root-tips:199edc5b",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:254b7a6a",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:052d6675",
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03"
+          ],
+          "should_retrieve": [
+            "PMC6130020:ann1-and-ann2-knockout-seedlings-show-suc-dependent-phenotypes:4f59b83b",
+            "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:17ec0bfe",
+            "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:61bda5d0",
+            "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:21a720ba",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:36c67cba",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:aa30d823",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:7928b9d8",
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:deb726ac"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study reveals that Arabidopsis annexins ANN1 and ANN2 play a **crucial role in post-phloem sugar transport to the root tips**, which is essential for primary root growth and development [1, 2, 3]. Knockout mutations of ANN1 and ANN2 lead to several defects when seedlings are grown without exogenous sugar:\n\n1.  **Impaired Primary Root Growth:** Mutants exhibit **significantly shorter primary roots** and **slower growth rates**, which can be **rescued by exogenous Suc, Glc, or Fru**, indicating a nutritional or signaling role rather than an osmotic effect [4, 5].\n2.  **Defective Root Cap Development:** Root caps show **reduced layers of starch-containing columella cells** and **lack border-like cells**, along with **lower starch levels in root tips**, defects also rescued by Suc [6, 7, 8].\n3.  **Restricted Sugar Diffusion:** Despite successful phloem transport and even **higher overall soluble sugar content in the primary roots** of mutants, the **diffusion of sugars (and CFDA dye) into the fast-growing root tips is impaired** [9, 10, 11, 12]. This suggests a bottleneck in the post-phloem symplastic transport from the unloading zone to the root apex [1, 13].\n4.  **Increased ROS and Callose:** The impaired sugar diffusion is linked to **significantly higher levels of reactive oxygen species (ROS) and callose accumulation in root tips**, which are known to restrict plasmodesmatal permeability and thus sugar transport [14, 15].\n5.  **Feedback on Photosynthesis:** The sugar starvation in the root tips, caused by the transport defect, triggers a **root-to-shoot signal** that leads to a **compensatory up-regulation of photosynthetic gene expression and chlorophyll accumulation in the cotyledons** [16, 17, 18, 19]. This enhancement is reversed by exogenous Suc, confirming a feedback mechanism [20].\n\nIn essence, ANN1 and ANN2 facilitate the efficient delivery of sugars to the root tip, and their absence disrupts this process, leading to localized sugar starvation that impacts root morphology, growth, and even distant photosynthetic activity [3, 21].",
+          "citations": [
+            {
+              "id": "PMC6130020:abstract:212f49ea",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk introduces the finding that post-phloem sugar transport is impaired in ann-mutant root tips and that ANN1 and ANN2 play an important role in this process, indirectly influencing photosynthetic rates."
+            },
+            {
+              "id": "PMC6130020:abstract:fd16708a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk provides an overview of the mutant phenotypes, including decreased primary root growth, altered columella cells, rescue by Suc, and up-regulation of photosynthetic genes, despite higher overall sugar content in roots."
+            },
+            {
+              "id": "PMC6130020:abstract:89599f52",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk summarizes the paper's focus on the mechanistic role of ANN1 and ANN2 in post-phloem transport of sugars into root tips."
+            },
+            {
+              "id": "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:f5e84e87",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk details the significantly shorter primary root lengths and slower growth rates of the knockout mutants, and their rescue by Suc, but not by osmotic equivalents like mannitol."
+            },
+            {
+              "id": "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:17ec0bfe",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk further confirms that Glc and Fru also rescued primary root growth inhibition, supporting a carbon source or signaling role for sugars."
+            },
+            {
+              "id": "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:0521eeb0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk describes the root cap developmental defects, including reduced columella cell layers and absence of border-like cells, and their rescue by Suc."
+            },
+            {
+              "id": "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:61bda5d0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk provides quantitative evidence for significantly lower starch levels in mutant root tips."
+            },
+            {
+              "id": "PMC6130020:abstract:fd16708a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk mentions altered columella cells in root caps as a mutant defect."
+            },
+            {
+              "id": "PMC6130020:ann1-and-ann2-knockout-seedlings-show-suc-dependent-phenotypes:4f59b83b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk states that phloem transport of sugar was successful, but diffusion of CFDA into root tips was impaired in mutants, indicating restricted sugar diffusion."
+            },
+            {
+              "id": "PMC6130020:knocking-out-ann1-and-ann2-induces-accumulation-of-soluble-sugars-in-primary-roots:2f4e9a21",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk reports the unexpected finding of significantly higher amounts of soluble sugars in the primary roots of mutants, suggesting accumulation due to transport issues."
+            },
+            {
+              "id": "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:d402b51f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk shows that CF diffusion in root tips was restricted in ann1-2 and ann2-1, with significantly lower CF fluorescence in root caps."
+            },
+            {
+              "id": "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:21a720ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk concludes that knocking out ANN1 and ANN2 restricted the diffusion of sugars from the phloem to the root tip."
+            },
+            {
+              "id": "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:e784d96c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk discusses how restricted symplastic diffusion in post-phloem transport from the unloading zone to root tips impairs primary root growth and root cap development."
+            },
+            {
+              "id": "PMC6130020:knocking-out-ann1-and-ann2-increased-ros-levels-and-callose-accumulation-in-root-tips:199edc5b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk presents evidence for significantly higher levels of ROS and callose deposition in the root tips of ann1-2 and ann2-1 mutants."
+            },
+            {
+              "id": "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:36c67cba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk explains the link between ROS accumulation, increased callose, and reduced plasmodesmatal transport, suggesting this mechanism restricts sugar diffusion."
+            },
+            {
+              "id": "PMC6130020:sugar-in-regulation-of-photosynthesis:aa30d823",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk hypothesizes root tips as sugar-sensing tissues and links apical sugar starvation in mutants to up-regulated photosynthesis."
+            },
+            {
+              "id": "PMC6130020:sugar-in-regulation-of-photosynthesis:052d6675",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk proposes that sugar accumulation in the phloem/unloading zone without sufficient diffusion to the root apex leads to starvation, initiating a root-to-shoot signal for photosynthetic gene up-regulation."
+            },
+            {
+              "id": "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk provides the experimental evidence for the significant up-regulation of photosynthetic genes in ann1-2 cotyledons."
+            },
+            {
+              "id": "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:deb726ac",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk confirms the increased chlorophyll autofluorescence in ann1-2 cotyledons and its reversal by exogenous Suc."
+            },
+            {
+              "id": "PMC6130020:sugar-in-regulation-of-photosynthesis:7928b9d8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk states that exogenous sugars rescued root growth defects and reversed photosynthesis enhancement, supporting the feedback regulation model."
+            },
+            {
+              "id": "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:254b7a6a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+              "why_relevant": "This chunk provides a concise conclusion, linking ANN1/ANN2 to primary root growth, post-phloem sugar transport, and indirect impact on photosynthetic rates."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6130020:abstract:fd16708a",
+            "PMC6130020:abstract:212f49ea",
+            "PMC6130020:abstract:89599f52",
+            "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:f5e84e87",
+            "PMC6130020:inhibition-of-primary-root-growth-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc-independent-of-its-osmotic-effects:17ec0bfe",
+            "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:0521eeb0",
+            "PMC6130020:inhibition-of-root-cap-development-in-ann1-and-ann2-knockout-mutants-is-rescued-by-exogenous-suc:61bda5d0",
+            "PMC6130020:ann1-and-ann2-knockout-seedlings-show-suc-dependent-phenotypes:4f59b83b",
+            "PMC6130020:knocking-out-ann1-and-ann2-induces-accumulation-of-soluble-sugars-in-primary-roots:2f4e9a21",
+            "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:d402b51f",
+            "PMC6130020:knocking-out-ann1-and-ann2-impairs-post-phloem-transport-in-root-tips:21a720ba",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:e784d96c",
+            "PMC6130020:knocking-out-ann1-and-ann2-increased-ros-levels-and-callose-accumulation-in-root-tips:199edc5b",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:36c67cba",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:aa30d823",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:052d6675",
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:d96f1c03",
+            "PMC6130020:expression-of-photosynthesis-related-genes-and-chlorophyll-accumulation-is-enhanced-in-ann1-knockout-mutants--dependent-on-the-absence-of-exogenous-suc:deb726ac",
+            "PMC6130020:sugar-in-regulation-of-photosynthesis:7928b9d8",
+            "PMC6130020:post-phloem-transport-of-sugar-to-root-tips:254b7a6a"
+          ],
+          "key_facts": [
+            "ANN1 and ANN2 are crucial for post-phloem sugar transport to root tips.",
+            "Knockout mutants show decreased primary root growth and slower rates.",
+            "Root growth defects are rescued by exogenous Suc, Glc, or Fru (not osmotic effect).",
+            "Mutants have defective root cap development (reduced columella layers, no border-like cells, lower starch).",
+            "Root cap defects are rescued by exogenous Suc.",
+            "Phloem transport is successful, but sugar diffusion into root tips is impaired.",
+            "Mutant primary roots accumulate higher soluble sugar content (Glc, Fru).",
+            "Impaired diffusion is linked to increased ROS and callose accumulation in root tips.",
+            "ROS and callose likely restrict plasmodesmatal sugar transport.",
+            "Sugar starvation in root tips triggers a root-to-shoot signal.",
+            "This signal leads to compensatory up-regulation of photosynthetic genes and chlorophyll in cotyledons.",
+            "Exogenous Suc reverses the photosynthetic enhancement."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

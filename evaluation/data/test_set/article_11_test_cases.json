@@ -1,0 +1,444 @@
+{
+  "paper_id": "PMC3040128",
+  "paper_title": "AtRabD2b and AtRabD2c have overlapping functions in pollen development and pollen tube growth",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+  "test_cases": [
+    {
+      "id": "PMC3040128_Q1",
+      "question": "What is the Pearson correlation value between the expression patterns of AtRabD2b and AtRabD2c?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3040128:pearson-correlation-between-expression-patterns-of-atrabd-family-members----table-1:b50212ba"
+          ],
+          "should_retrieve": [
+            "PMC3040128:results:0b4dd0c6"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The Pearson correlation value between the expression patterns of AtRabD2b and AtRabD2c is **77.81%** [1]. The text also states a correlation value of **0.72** [2].",
+          "citations": [
+            {
+              "id": "PMC3040128:pearson-correlation-between-expression-patterns-of-atrabd-family-members----table-1:b50212ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This table directly provides the Pearson correlation values for all AtRabD family members, including AtRabD2b and AtRabD2c."
+            },
+            {
+              "id": "PMC3040128:results:0b4dd0c6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk explicitly states the Pearson correlation value of 0.72 between AtRabD2b and AtRabD2c expression patterns."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3040128:pearson-correlation-between-expression-patterns-of-atrabd-family-members----table-1:b50212ba",
+            "PMC3040128:results:0b4dd0c6"
+          ],
+          "key_facts": [
+            "77.81% Pearson correlation",
+            "0.72 Pearson correlation"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3040128_Q2",
+      "question": "How do the pollen phenotypes of AtrabD2b/2c double mutants compare to those of AtrabD2b or AtrabD2c single mutants?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3040128:results:4f78be99",
+            "PMC3040128:results:8f195b2b",
+            "PMC3040128:results:5807ef43",
+            "PMC3040128:results:9122cfd3"
+          ],
+          "should_retrieve": [
+            "PMC3040128:abstract:ae28ea2a",
+            "PMC3040128:discussion:d93e0d6b",
+            "PMC3040128:discussion:cdf2b4da"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The pollen phenotypes of AtrabD2b/2c double mutants are significantly more severe than those of AtrabD2b or AtrabD2c single mutants:\n\n*   **Pollen Morphology**: AtrabD2b/2c double mutants exhibit a higher percentage of deformed and collapsed pollen (more than **20%**), with some lacking nuclei as indicated by DAPI staining [1]. In contrast, AtrabD2b and AtrabD2c single mutants also produce aberrant pollen, but at a lower level of about **10%** [2].\n*   **Pollen Germination and Tube Growth**: In vitro, approximately **10%** of AtrabD2b/2c pollen fails to germinate, and **50%** of germinated pollen does not grow apically, resulting in shorter tubes with swollen tips [3]. Additionally, some AtrabD2b/2c pollen tubes burst (≈5%) or branch (≈2%) [3]. Single mutants have a germination rate similar to wild-type, but about **20%** of their germinating pollen tubes show swollen tips, though the phenotype was not as severe as the double mutant, and no bursting or branching was observed [3]. Pollen tubes of the double mutant were much shorter than those of wild-type plants or either single mutant, and the single mutants also had shorter pollen tubes than wild-type plants [4].",
+          "citations": [
+            {
+              "id": "PMC3040128:results:4f78be99",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk details the morphological defects in AtrabD2b/2c pollen (>20% irregular/collapsed, some lacking nuclei) and notes that single mutants also produce ~10% aberrant pollen."
+            },
+            {
+              "id": "PMC3040128:results:8f195b2b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk confirms the ~10% aberrant pollen in single mutants and contrasts it with their normal silique appearance, implying a difference in severity."
+            },
+            {
+              "id": "PMC3040128:results:5807ef43",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk provides detailed comparisons of germination rates and pollen tube growth defects (non-germination, lack of apical growth, swollen tips, bursting, branching) between double and single mutants."
+            },
+            {
+              "id": "PMC3040128:results:9122cfd3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk quantifies the difference in pollen tube length, stating double mutants are much shorter than single mutants, and single mutants are shorter than wild-type."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3040128:results:4f78be99",
+            "PMC3040128:results:8f195b2b",
+            "PMC3040128:results:5807ef43",
+            "PMC3040128:results:9122cfd3",
+            "PMC3040128:abstract:ae28ea2a",
+            "PMC3040128:discussion:d93e0d6b",
+            "PMC3040128:discussion:cdf2b4da"
+          ],
+          "key_facts": [
+            "AtrabD2b/2c >20% deformed pollen, some lack nuclei",
+            "Single mutants ~10% aberrant pollen",
+            "AtrabD2b/2c 10% no germination, 50% no apical growth",
+            "AtrabD2b/2c pollen tubes shorter, swollen tips, burst/branch (5%, 2%)",
+            "Single mutants 20% swollen tips, no burst/branch",
+            "Double mutant pollen tubes much shorter than single mutants"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3040128_Q3",
+      "question": "The AtrabD2b/2c double mutant exhibits severe pollen and pollen tube defects, yet single mutants show normal siliques and vegetative growth. Explain the proposed reasons for this difference in severity and the specific vulnerability of pollen to these mutations.",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3040128:results:8f195b2b",
+            "PMC3040128:discussion:82308aed",
+            "PMC3040128:discussion:8bd8fe7e",
+            "PMC3040128:discussion:3a856d5a"
+          ],
+          "should_retrieve": [
+            "PMC3040128:abstract:ae28ea2a",
+            "PMC3040128:results:89f51afb",
+            "PMC3040128:results:0d3bccec",
+            "PMC3040128:results:4f78be99",
+            "PMC3040128:results:5807ef43",
+            "PMC3040128:results:9122cfd3"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The observed difference in severity between single and double mutants, and the specific vulnerability of pollen to the loss of AtRabD2b and AtRabD2c function, can be explained by several proposed reasons:\n\n1.  **Partial Functional Redundancy and Sufficient Normal Pollen in Single Mutants**: While AtrabD2b and AtrabD2c single mutants produce about **10% aberrant pollen** and have shorter pollen tubes with swollen tips, their siliques and seed quantities remain normal, similar to wild-type plants [1], [2], [3]. This suggests that there are **sufficient normal pollen grains** in the single mutants to efficiently fertilize the ovaries, masking the individual gene defects [2].\n2.  **Compensation by Other Rab Proteins in Vegetative Tissues**: Despite severe pollen defects, the AtrabD2b/2c double mutant is largely indistinguishable from wild-type plants in vegetative growth, except for shorter siliques [4]. This indicates that other Rab proteins, such as **AtRabD2a and AtRabD1**, or even other Rab families like **AtRabBs (AtRab2s)**, can compensate for the loss of AtRabD2b and AtRabD2c function in most vegetative cell types, preventing lethality [4], [5].\n3.  **High Secretory Demands in Rapidly Elongating Pollen Tubes**: Pollen tubes grow exceptionally fast by tip growth, a process that relies on **rapid and extensive vesicle trafficking** to deliver large amounts of membrane and cell wall components to the apical region [6]. This high secretory requirement may be so demanding that the remaining Rab proteins cannot fully compensate for the combined loss of AtRabD2b and AtRabD2c, leading to the severe pollen and pollen tube defects observed in the double mutant [6].\n4.  **High Expression of AtRabD2b and AtRabD2c in Pollen**: Both AtRabD2b and AtRabD2c are **highly expressed in pollen** and germinating pollen [7], [8]. This high expression level is likely crucial for facilitating the intense membrane trafficking necessary for the rapid elongation of pollen tubes, making these cells particularly sensitive to the absence of these two specific Rab GTPases [8].",
+          "citations": [
+            {
+              "id": "PMC3040128:results:89f51afb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk states that single mutants have no obvious vegetative phenotypes and normal silique length, contrasting with the double mutant's short siliques."
+            },
+            {
+              "id": "PMC3040128:results:8f195b2b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk explains that despite ~10% aberrant pollen in single mutants, their siliques are normal due to sufficient normal pollen for fertilization."
+            },
+            {
+              "id": "PMC3040128:results:9122cfd3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk reiterates that single mutants have normal siliques despite pollen defects, reinforcing the idea of sufficient normal pollen."
+            },
+            {
+              "id": "PMC3040128:discussion:82308aed",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk discusses why the double mutant isn't lethal, proposing compensation by other AtRabs (AtRabD2a, AtRabD1) or other Rab families (AtRabBs) in vegetative tissue."
+            },
+            {
+              "id": "PMC3040128:discussion:8bd8fe7e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk highlights the rapid growth of pollen tubes and their extensive trafficking requirements, suggesting this demand precludes full compensation by other Rabs."
+            },
+            {
+              "id": "PMC3040128:discussion:3a856d5a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk reinforces that high expression of AtRabD2b and AtRabD2c in pollen is important to facilitate membrane trafficking for pollen tube growth, making pollen particularly sensitive."
+            },
+            {
+              "id": "PMC3040128:results:6903a968",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk mentions public microarray data indicating high expression of AtRabD2b and AtRabD2c in floral organs and stamen."
+            },
+            {
+              "id": "PMC3040128:results:38055a5c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk confirms GUS staining results showing both genes expressed in pollen grains and germinating pollen, consistent with their role."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3040128:abstract:ae28ea2a",
+            "PMC3040128:results:89f51afb",
+            "PMC3040128:results:0d3bccec",
+            "PMC3040128:results:4f78be99",
+            "PMC3040128:results:8f195b2b",
+            "PMC3040128:results:5807ef43",
+            "PMC3040128:results:9122cfd3",
+            "PMC3040128:discussion:82308aed",
+            "PMC3040128:discussion:8bd8fe7e",
+            "PMC3040128:discussion:3a856d5a",
+            "PMC3040128:results:6903a968",
+            "PMC3040128:results:38055a5c"
+          ],
+          "key_facts": [
+            "Single mutants have ~10% aberrant pollen but normal siliques due to sufficient normal pollen.",
+            "Double mutant vegetative growth is normal, suggesting compensation by other Rabs (AtRabD1, AtRabD2a, AtRabBs).",
+            "Pollen tubes require rapid and extensive vesicle trafficking for tip growth.",
+            "High secretory demand in pollen tubes makes them vulnerable to loss of AtRabD2b/2c.",
+            "AtRabD2b and AtRabD2c are highly expressed in pollen, indicating their critical role."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3040128_Q4",
+      "question": "What specific experimental method was used to determine the subcellular localization of AtRabD2b and AtRabD2c proteins?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3040128:methods:ba825324",
+            "PMC3040128:results:9acac4ad"
+          ],
+          "should_retrieve": [
+            "PMC3040128:results:87d16a32",
+            "PMC3040128:subcellular-localization-of-atrabd2b-and-atrabd2c---figure-10:b9883423"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The subcellular localization of AtRabD2b and AtRabD2c proteins was determined using **confocal laser scanning microscopy** [1], [2]. This involved **co-transfecting Arabidopsis leaf protoplasts with GFP-AtRabD2b or GFP-AtRabD2c constructs and the trans-Golgi marker ST-YFP** [1], [2]. The colocalization of the GFP and YFP signals was then observed to verify their association with the Golgi apparatus [1].",
+          "citations": [
+            {
+              "id": "PMC3040128:methods:ba825324",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk describes the detailed methodology for confocal microscopy, including co-localization with ST-YFP, laser settings, and controls."
+            },
+            {
+              "id": "PMC3040128:results:9acac4ad",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk states the experimental approach: introducing GFP-AtRabD2b/c into protoplasts and co-transfecting with ST-YFP, then observing with confocal microscopy to determine colocalization."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3040128:methods:ba825324",
+            "PMC3040128:results:9acac4ad",
+            "PMC3040128:results:87d16a32",
+            "PMC3040128:subcellular-localization-of-atrabd2b-and-atrabd2c---figure-10:b9883423"
+          ],
+          "key_facts": [
+            "Confocal laser scanning microscopy",
+            "Co-transfection",
+            "GFP-AtRabD2b/c constructs",
+            "ST-YFP (trans-Golgi marker)",
+            "Arabidopsis leaf protoplasts"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3040128_Q5",
+      "question": "Describe the overall functional roles of AtRabD2b and AtRabD2c in Arabidopsis, including their general function as Rab GTPases, their specific roles in plant development, and evidence for their functional redundancy.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3040128:abstract:ae28ea2a",
+            "PMC3040128:abstract:295140b9",
+            "PMC3040128:background:043b9906",
+            "PMC3040128:background:8bc50f1c",
+            "PMC3040128:results:0b4dd0c6",
+            "PMC3040128:results:89f51afb",
+            "PMC3040128:results:0d3bccec",
+            "PMC3040128:results:f11e89ad",
+            "PMC3040128:results:4f78be99",
+            "PMC3040128:results:5807ef43",
+            "PMC3040128:results:9122cfd3",
+            "PMC3040128:results:249085ab",
+            "PMC3040128:results:071039c0",
+            "PMC3040128:results:38055a5c",
+            "PMC3040128:results:9acac4ad",
+            "PMC3040128:discussion:15cf06a2",
+            "PMC3040128:discussion:940ae86d",
+            "PMC3040128:discussion:d93e0d6b",
+            "PMC3040128:discussion:cdf2b4da",
+            "PMC3040128:conclusions:2e8a08ac"
+          ],
+          "should_retrieve": [
+            "PMC3040128:background:447280ee",
+            "PMC3040128:background:102064ec",
+            "PMC3040128:background:50956198",
+            "PMC3040128:pearson-correlation-between-expression-patterns-of-atrabd-family-members----table-1:b50212ba"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "AtRabD2b and AtRabD2c are Rab GTPases in *Arabidopsis thaliana* that play crucial roles in endomembrane trafficking, particularly in pollen development and pollen tube growth, and exhibit partial functional redundancy.\n\n**General Function as Rab GTPases**:\nAs members of the Rab GTPase family, AtRabD2b and AtRabD2c are **Ras-like small GTP-binding proteins** that function as molecular switches, regulating diverse processes in eukaryotic cells, including **intracellular membrane trafficking** [1], [2]. They are important regulators of **exocytosis, endocytosis, and membrane recycling** [1], [3]. Rab GTPases are hypothesized to work with SNARE proteins to promote specificity of vesicle transport to target compartments and facilitate vesicle and target membrane fusion, essential for protein and membrane transport through the endomembrane system [2], [4]. Both AtRabD2b and AtRabD2c proteins localize to **Golgi bodies** and the trans-Golgi network, consistent with their proposed role in trafficking from the ER to the Golgi apparatus [5], [6], [7].\n\n**Specific Roles in Plant Development**:\nWhile single mutants (AtrabD2b or AtrabD2c) show no obvious morphological changes during vegetative growth, the **AtrabD2b/2c double mutant exhibits significant defects primarily in reproductive development** [8], [9]. Their specific roles include:\n*   **Pollen Development**: The double mutant produces **deformed pollen** with irregular, collapsed morphology, and some pollen grains lack nuclei [10]. IKI staining also suggested decreased starch content in the double mutant pollen [11].\n*   **Pollen Germination**: Approximately **10%** of AtrabD2b/2c mutant pollen fails to germinate in vitro [12].\n*   **Pollen Tube Elongation**: AtrabD2b/2c pollen tubes are significantly **shorter, have swollen tips, and some exhibit branching or bursting** [12], [13]. These defects lead to reduced male fertility and **shorter siliques** (about 70% of wild-type length) due to approximately half of the ovules being unfertilized [8], [9], [14].\n\n**Evidence for Functional Redundancy**:\nSeveral lines of evidence support a partially redundant role for AtRabD2b and AtRabD2c:\n*   **Expression Correlation**: Their RNA accumulation patterns are highly correlated, with a Pearson correlation value of **0.72** or **77.81%** across various experimental conditions and developmental stages [15], [16]. They also have similar but overlapping expression patterns, both highly expressed in pollen [17], [18].\n*   **Double Mutant Phenotype**: Single mutants have no obvious vegetative or silique phenotype, but the **AtrabD2b/2c double mutant displays a striking short-silique phenotype** and severe pollen defects, indicating that the loss of one gene can be compensated by the other, but not the loss of both [8], [9], [19].\n*   **Complementation**: The short silique and seed fertilization defects in the AtrabD2b/2c double mutant can be **rescued by introducing either AtRabD2b or AtRabD2c** expressed from their native promoters [14].\n*   **Pollen-Specific Defects**: Crosses demonstrated that the reduced fertilization and shorter siliques are primarily caused by the **pollen defects** in the AtrabD2b/2c mutant, not by defects in the ovary [20], [21]. This suggests their functions are crucial for the high secretory demands of rapidly elongating pollen tubes, where other Rab proteins cannot fully compensate [22].",
+          "citations": [
+            {
+              "id": "PMC3040128:background:043b9906",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk defines Rab GTPases as Ras-like small GTP-binding proteins that regulate diverse processes including intracellular membrane trafficking, acting as molecular switches."
+            },
+            {
+              "id": "PMC3040128:abstract:ae28ea2a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk from the abstract introduces Rab GTPases as important regulators of endomembrane trafficking and highlights the role of AtRabD2b and AtRabD2c in pollen development, germination, and tube elongation."
+            },
+            {
+              "id": "PMC3040128:discussion:15cf06a2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk reiterates Rab GTPases' critical role in endomembrane transport (exocytosis, endocytosis, membrane recycling) and their interaction with SNARE proteins for vesicle transport specificity."
+            },
+            {
+              "id": "PMC3040128:background:447280ee",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk explains that Rab proteins work with SNARE proteins to promote specificity of vesicle transport and facilitate membrane fusion, essential for transport through the endomembrane system."
+            },
+            {
+              "id": "PMC3040128:results:9acac4ad",
+              "url": "https://www.ncbi.nlm.nihs.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk describes the experimental finding that both AtRabD2b and AtRabD2c colocalize with the trans-Golgi marker ST-YFP, indicating their association with the Golgi."
+            },
+            {
+              "id": "PMC3040128:abstract:295140b9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk states that both AtRabD2b and AtRabD2c proteins localize to Golgi bodies."
+            },
+            {
+              "id": "PMC3040128:conclusions:2e8a08ac",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk summarizes that both are Golgi residents and involved in tip growth of pollen tubes."
+            },
+            {
+              "id": "PMC3040128:results:89f51afb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk states that single mutants have no obvious vegetative phenotypes, but the double mutant shows a reproductive phenotype (shorter siliques)."
+            },
+            {
+              "id": "PMC3040128:results:0d3bccec",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk describes the shorter silique phenotype of the AtrabD2b/2c double mutant and the observation of approximately half unfertilized ovules."
+            },
+            {
+              "id": "PMC3040128:results:4f78be99",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk details the deformed and collapsed pollen morphology in the AtrabD2b/2c double mutant, with some lacking nuclei."
+            },
+            {
+              "id": "PMC3040128:results:56970f75",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk mentions the reduced IKI staining in AtrabD2b/2c double mutant pollen, suggesting decreased starch content."
+            },
+            {
+              "id": "PMC3040128:results:5807ef43",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk describes the pollen germination defects, including 10% non-germination and 50% non-apical growth, shorter tubes, swollen tips, bursting, and branching in the double mutant."
+            },
+            {
+              "id": "PMC3040128:results:9122cfd3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk quantifies the significantly shorter pollen tubes in the AtrabD2b/2c double mutant compared to wild-type and single mutants."
+            },
+            {
+              "id": "PMC3040128:results:f11e89ad",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk provides evidence for functional redundancy by showing that both AtRabD2b and AtRabD2c constructs can rescue the silique length and seed fertilization defects of the double mutant."
+            },
+            {
+              "id": "PMC3040128:results:0b4dd0c6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk states the Pearson correlation value of 0.72 between AtRabD2b and AtRabD2c expression patterns, supporting functional overlap."
+            },
+            {
+              "id": "PMC3040128:pearson-correlation-between-expression-patterns-of-atrabd-family-members----table-1:b50212ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This table explicitly shows the 77.81% Pearson correlation between AtRabD2b and AtRabD2c expression patterns."
+            },
+            {
+              "id": "PMC3040128:abstract:ae28ea2a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk mentions that AtRabD2b and AtRabD2c have different but overlapping expression patterns and are both highly expressed in pollen."
+            },
+            {
+              "id": "PMC3040128:results:38055a5c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk confirms that both genes are expressed in pollen grains and germinating pollen, consistent with their role."
+            },
+            {
+              "id": "PMC3040128:discussion:d93e0d6b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk discusses the short-silique phenotype and higher percentage of deformed pollen in the double mutant compared to single mutants, supporting partial redundancy."
+            },
+            {
+              "id": "PMC3040128:results:249085ab",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk describes the crossing experiments, showing that wild-type pollen can rescue the double mutant phenotype and double mutant pollen can bestow the phenotype on wild-type plants, confirming pollen defects are the cause."
+            },
+            {
+              "id": "PMC3040128:results:071039c0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk further confirms that unfertilized ovaries are mostly caused by pollen defects in the AtrabD2b/2c mutant based on crossing results."
+            },
+            {
+              "id": "PMC3040128:discussion:8bd8fe7e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+              "why_relevant": "This chunk explains that the rapid growth of pollen tubes requires extensive trafficking, which may preclude other Rabs from fully compensating for the loss of AtRabD2b and AtRabD2c."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3040128:abstract:ae28ea2a",
+            "PMC3040128:abstract:295140b9",
+            "PMC3040128:background:043b9906",
+            "PMC3040128:background:447280ee",
+            "PMC3040128:background:102064ec",
+            "PMC3040128:background:50956198",
+            "PMC3040128:background:8bc50f1c",
+            "PMC3040128:results:0b4dd0c6",
+            "PMC3040128:results:89f51afb",
+            "PMC3040128:results:0d3bccec",
+            "PMC3040128:results:f11e89ad",
+            "PMC3040128:results:4f78be99",
+            "PMC3040128:results:56970f75",
+            "PMC3040128:results:5807ef43",
+            "PMC3040128:results:9122cfd3",
+            "PMC3040128:results:249085ab",
+            "PMC3040128:results:071039c0",
+            "PMC3040128:results:38055a5c",
+            "PMC3040128:results:9acac4ad",
+            "PMC3040128:discussion:15cf06a2",
+            "PMC3040128:discussion:940ae86d",
+            "PMC3040128:discussion:d93e0d6b",
+            "PMC3040128:discussion:cdf2b4da",
+            "PMC3040128:conclusions:2e8a08ac",
+            "PMC3040128:pearson-correlation-between-expression-patterns-of-atrabd-family-members----table-1:b50212ba"
+          ],
+          "key_facts": [
+            "AtRabD2b and AtRabD2c are Rab GTPases, molecular switches regulating endomembrane trafficking.",
+            "They regulate exocytosis, endocytosis, and membrane recycling, working with SNARE proteins.",
+            "Both localize to Golgi bodies/trans-Golgi network.",
+            "Specific roles in pollen development, germination, and tube elongation.",
+            "Double mutant (AtrabD2b/2c) has deformed pollen, reduced germination, shorter/swollen/bursting/branching pollen tubes.",
+            "Double mutant leads to shorter siliques and unfertilized ovules.",
+            "Evidence for redundancy: high expression correlation (0.72/77.81%), severe double mutant phenotype vs. mild single mutant, complementation by either gene, pollen-specific defects due to high secretory demand."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

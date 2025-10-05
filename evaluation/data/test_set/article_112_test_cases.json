@@ -1,0 +1,380 @@
+{
+  "paper_id": "PMC11053165",
+  "paper_title": "NASA GeneLab derived microarray studies of Mus musculus and Homo sapiens organisms in altered gravitational conditions",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+  "test_cases": [
+    {
+      "id": "PMC11053165_Q1",
+      "question": "What specific genes were found to be significantly upregulated in two different human vastus lateralis experiments (OSD-195 and OSD-370) due to altered gravity conditions?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11053165:discussion:ecbd087e"
+          ],
+          "should_retrieve": [
+            "PMC11053165:results:215bb2e2"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The **CHRND**, **CHAD**, and **RRAD** genes were significantly upregulated in two different human experiments, OSD-195 and OSD-370, both studying vastus lateralis tissue [1], [2]. These genes are associated with biological processes such as acetylcholine binding, acetylcholine receptor activity, ligand-gated ion channel activity, protein kinase inhibitor activity, GTP binding, GTPase activity, calmodulin binding, and general protein binding [1].",
+          "citations": [
+            {
+              "id": "PMC11053165:discussion:ecbd087e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk explicitly lists the CHRND, CHAD, and RRAD genes as significantly upregulated in human vastus lateralis tissues (OSD-195 and OSD-370) and details their associated Gene Ontology functions."
+            },
+            {
+              "id": "PMC11053165:results:215bb2e2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk reiterates the specific upregulated genes (CHRND, CHAD, RRAD) in human vastus lateralis tissues (OSD-195 and OSD-370) and their involvement in multiple enriched GO terms, confirming the factual information."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11053165:discussion:ecbd087e",
+            "PMC11053165:results:215bb2e2"
+          ],
+          "key_facts": [
+            "CHRND, CHAD, RRAD genes were upregulated.",
+            "Upregulation observed in human OSD-195 and OSD-370 experiments.",
+            "Tissue type was vastus lateralis.",
+            "Associated GO terms include acetylcholine binding, protein kinase inhibitor activity, GTP binding, and protein binding."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11053165_Q2",
+      "question": "Compare the observed gene expression correlation coefficients between different human vastus lateralis bedrest experiments (OSD-195, OSD-370, OSD-51) and mouse gastrocnemius and soleus datasets (OSD-21, OSD-227, OSD-111).",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11053165:results:9f4fbee8",
+            "PMC11053165:results:c13add64"
+          ],
+          "should_retrieve": [
+            "PMC11053165:results:8011b7b9",
+            "PMC11053165:results:bc088f92",
+            "PMC11053165:discussion:b9fa7250",
+            "PMC11053165:discussion:774feb13",
+            "PMC11053165:results:8c39c8e1"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "In human vastus lateralis tissue, the correlation between OSD-195 (21 days bedrest) and OSD-370 (9 days bedrest) was **moderately positive**, with a coefficient of **0.64** when considering a reduced number of common genes, and **0.47** for a larger set [1], [2], [3]. However, comparisons involving OSD-51 (female bedrest study) showed **weak positive correlations** with OSD-195 (coefficient of **0.26**) and OSD-370 (coefficient of **0.23**) [1], [2]. For mouse datasets, the correlation between OSD-21 and OSD-227 gastrocnemius tissues was **close to 0.2**, indicating a weak positive correlation [4]. The correlation between OSD-111 and OSD-227 soleus tissues was even lower, at **0.02**, suggesting a minimal linear relationship [5]. Overall, the paper notes that higher correlation coefficients are observed between datasets which studied subjects of the same sex under similar experimental conditions [6].",
+          "citations": [
+            {
+              "id": "PMC11053165:results:9f4fbee8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk provides the correlation coefficients for human vastus lateralis experiments: OSD-195 vs OSD-370 (0.47 and 0.64), OSD-51 vs OSD-195 (0.26), and OSD-51 vs OSD-370 (0.23)."
+            },
+            {
+              "id": "PMC11053165:results:8011b7b9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk reinforces the correlation findings for human vastus lateralis, specifically highlighting the increased correlation between OSD-195 and OSD-370 compared to OSD-51."
+            },
+            {
+              "id": "PMC11053165:discussion:b9fa7250",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk discusses the moderate positive correlation between OSD-195 and OSD-370 (0.64) and the weaker correlations involving OSD-51 (0.26 for OSD-51 vs OSD-370, and OSD-51 vs OSD-195)."
+            },
+            {
+              "id": "PMC11053165:results:c13add64",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk provides the correlation coefficient for mouse gastrocnemius (OSD-21 vs OSD-227) as close to 0.2 and introduces the mouse soleus comparison."
+            },
+            {
+              "id": "PMC11053165:results:bc088f92",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk states the Pearson correlation coefficient for mouse soleus (OSD-111 vs OSD-227) as 0.02, indicating minimal linear relationship."
+            },
+            {
+              "id": "PMC11053165:results:8c39c8e1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk provides a general conclusion that higher correlation coefficients are observed between datasets studying subjects of the same sex under similar experimental conditions, which helps summarize the comparative findings."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11053165:results:9f4fbee8",
+            "PMC11053165:results:8011b7b9",
+            "PMC11053165:results:c13add64",
+            "PMC11053165:results:bc088f92",
+            "PMC11053165:discussion:b9fa7250",
+            "PMC11053165:discussion:774feb13",
+            "PMC11053165:results:8c39c8e1"
+          ],
+          "key_facts": [
+            "Human vastus lateralis (OSD-195 vs OSD-370): 0.64 (reduced genes), 0.47 (larger set).",
+            "Human vastus lateralis (OSD-51 vs OSD-195): 0.26 (weak positive).",
+            "Human vastus lateralis (OSD-51 vs OSD-370): 0.23 (weak positive).",
+            "Mouse gastrocnemius (OSD-21 vs OSD-227): ~0.2 (weak positive).",
+            "Mouse soleus (OSD-111 vs OSD-227): 0.02 (minimal linear relationship).",
+            "Higher correlations generally observed for same sex and similar experimental conditions."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11053165_Q3",
+      "question": "What are the major physiological systems and key biological processes identified as being affected by altered gravitational conditions in both mouse and human studies, and what challenges limit direct cross-species comparisons of these effects?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11053165:abstract:68410287",
+            "PMC11053165:abstract:8abcab7d",
+            "PMC11053165:discussion:607613a6",
+            "PMC11053165:discussion:f451f1e2"
+          ],
+          "should_retrieve": [
+            "PMC11053165:introduction:7671dcf9",
+            "PMC11053165:methods:14f7a0e9",
+            "PMC11053165:results:367b37d8",
+            "PMC11053165:results:2f08d08c",
+            "PMC11053165:results:b3dede6c",
+            "PMC11053165:results:7758efb1",
+            "PMC11053165:results:216224fb",
+            "PMC11053165:results:b6557643",
+            "PMC11053165:results:59c8ca3d",
+            "PMC11053165:results:80c9563a",
+            "PMC11053165:results:cc023b1e",
+            "PMC11053165:discussion:347b8709"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Altered gravitational conditions significantly affect multiple physiological systems in both mice and humans, including the **musculoskeletal, immune, cardiovascular, vestibular, integumentary (skin), and central nervous systems** [1], [2], [3], [4]. Key biological processes disrupted include **metabolism of skeletal muscle, bone formation response, inflammatory response, apoptosis, cell proliferation, stem cell differentiation, cell cycle disruption, neuron morphogenesis, neuronal synaptic signaling and migration, and cell morphology** [2], [5], [6], [7], [8], [9].\n\nChallenges in direct cross-species comparison are primarily due to the **limited availability of human samples** and the **small sample size in human datasets** [1], [10]. While some overlap and reproducibility in differentially expressed genes are observed within each species, the overlap *between* species was found to be significantly limited, partly attributed to these sample size constraints [1], [10]. Further research is needed to understand which differentially expressed gene signatures from *Mus musculus* are truly reflective of *Homo sapiens* response to altered gravity [11].",
+          "citations": [
+            {
+              "id": "PMC11053165:abstract:68410287",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk introduces the broad physiological alterations caused by spaceflight, listing musculoskeletal, cardiovascular, immune, and central nervous systems as affected."
+            },
+            {
+              "id": "PMC11053165:discussion:607613a6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk provides a comprehensive list of affected physiological systems (musculoskeletal, immune, cardiovascular, vestibular, integumentary, nervous system) and specific biological processes (metabolism, bone formation, inflammatory response, apoptosis, cell proliferation, stem cell differentiation, cell cycle disruption, neuron morphogenesis, neuronal synaptic signaling and migration, cell morphology) in both mice and humans."
+            },
+            {
+              "id": "PMC11053165:introduction:7671dcf9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk reiterates that microgravity causes physiological changes in mammals, specifically mentioning cardiovascular, immune, vestibular, and musculoskeletal systems, and notes that most spaceflight data come from model organisms due to human sample limitations."
+            },
+            {
+              "id": "PMC11053165:methods:14f7a0e9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk provides an overview of affected systems (musculoskeletal, immune, cardiovascular, vestibular, integumentary, and nervous system alterations) in both mouse and human systems, as depicted in Figure 9."
+            },
+            {
+              "id": "PMC11053165:results:367b37d8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk details specific effects on the central nervous system in mice, including decreased nerve growth factor and dysregulation of genes related to learning and memory."
+            },
+            {
+              "id": "PMC11053165:results:2f08d08c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk describes detrimental consequences on the musculoskeletal system, such as downregulation of extracellular matrix components in articular cartilage."
+            },
+            {
+              "id": "PMC11053165:results:b3dede6c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk highlights effects on the integumentary system (skin), including reduced dermal thickness, deregulated hair follicle cycle, and increased risk for pathophysiology damage."
+            },
+            {
+              "id": "PMC11053165:results:80c9563a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk details profound effects on lymphocyte functions and the immune system, including downregulated genes related to immune response and impaired T-cell activation."
+            },
+            {
+              "id": "PMC11053165:results:cc023b1e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk describes effects on endothelial cells and peripheral blood lymphocytes, noting altered transcripts related to oxidative phosphorylation, stress response, cell cycle, apoptosis, and inflammatory response."
+            },
+            {
+              "id": "PMC11053165:abstract:8abcab7d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk explicitly states that the level of overlap in differentially expressed genes between species (mouse and human) was significantly limited, partly due to the limited availability of human samples."
+            },
+            {
+              "id": "PMC11053165:discussion:f451f1e2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk discusses the challenge of direct comparison between human and mouse results due to small human sample sizes and limited overlap between species, emphasizing the need for further research to bridge this gap."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11053165:abstract:68410287",
+            "PMC11053165:abstract:8abcab7d",
+            "PMC11053165:introduction:7671dcf9",
+            "PMC11053165:discussion:607613a6",
+            "PMC11053165:discussion:f451f1e2",
+            "PMC11053165:methods:14f7a0e9",
+            "PMC11053165:results:367b37d8",
+            "PMC11053165:results:2f08d08c",
+            "PMC11053165:results:b3dede6c",
+            "PMC11053165:results:7758efb1",
+            "PMC11053165:results:216224fb",
+            "PMC11053165:results:b6557643",
+            "PMC11053165:results:59c8ca3d",
+            "PMC11053165:results:80c9563a",
+            "PMC11053165:results:cc023b1e",
+            "PMC11053165:discussion:347b8709"
+          ],
+          "key_facts": [
+            "Affected physiological systems: musculoskeletal, immune, cardiovascular, vestibular, integumentary, central nervous systems.",
+            "Affected biological processes: metabolism, bone formation, inflammatory response, apoptosis, cell proliferation, stem cell differentiation, cell cycle disruption, neuron morphogenesis, neuronal synaptic signaling and migration, cell morphology.",
+            "Challenges for cross-species comparison: limited availability of human samples and small human dataset sizes.",
+            "Limited overlap in gene expression between species."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11053165_Q4",
+      "question": "Which specific genes were identified as significantly upregulated in four or more mouse musculoskeletal tissues across different microgravity experiments, and what biological processes are consistently associated with their upregulation?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11053165:discussion:774feb13"
+          ],
+          "should_retrieve": [
+            "PMC11053165:results:c990e541",
+            "PMC11053165:results:8fdb946e"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The genes significantly upregulated in four or more mouse musculoskeletal tissues across experiments were **Fbxo32, Cdkn1a, Lcn2, Pnmt, Fkbp5, and Cebpd** [1], [2]. The analysis of Gene Ontology functions revealed a consistent trend of upregulation in several biological processes, including **protein binding, ubiquitin activity, and transferase activity** in mouse muscle tissues exposed to microgravity [1].",
+          "citations": [
+            {
+              "id": "PMC11053165:discussion:774feb13",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk directly lists the specific genes (Fbxo32, Cdkn1a, Lcn2, Pnmt, Fkbp5, and Cebpd) that were significantly upregulated in 4 or more mouse musculoskeletal tissues and identifies the associated biological processes: protein binding, ubiquitin activity, and transferase activity."
+            },
+            {
+              "id": "PMC11053165:results:c990e541",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk confirms the evaluation of Gene Ontology functions for genes significantly upregulated in four or more mouse musculoskeletal tissues and refers to Figure 3, which would visually represent these findings."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11053165:discussion:774feb13",
+            "PMC11053165:results:c990e541",
+            "PMC11053165:results:8fdb946e"
+          ],
+          "key_facts": [
+            "Upregulated genes: Fbxo32, Cdkn1a, Lcn2, Pnmt, Fkbp5, Cebpd.",
+            "Observed in four or more mouse musculoskeletal tissues.",
+            "Associated biological processes: protein binding, ubiquitin activity, transferase activity."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11053165_Q5",
+      "question": "Describe the primary purpose of the NASA GeneLab platform and the general methodology employed in this review to identify and analyze differentially expressed genes in mammalian organisms exposed to altered gravitational conditions.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11053165:introduction:6212cbe2",
+            "PMC11053165:methods:5a586929",
+            "PMC11053165:methods:14f7a0e9",
+            "PMC11053165:methods:19c50d7c"
+          ],
+          "should_retrieve": [
+            "PMC11053165:abstract:68410287",
+            "PMC11053165:methods:1efc0c07",
+            "PMC11053165:methods:7953f881",
+            "PMC11053165:methods:a1441fe8",
+            "PMC11053165:methods:50eaa381"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The **NASA GeneLab platform** is an interactive, open-access omics database, part of the NASA Open Science Data Repository, designed for users to upload, download, share, store, and analyze data from spaceflight and space-relevant experiments. Its primary purpose is to fully understand how altered gravitational conditions affect human physiology and to discover mechanisms essential for astronaut health during deep space exploration [1], [2].\n\nThe general methodology employed in this review to identify and analyze differentially expressed genes involved several steps:\n1.  **Identification of Microarray Studies:** All microarray studies and datasets housed in NASA GeneLab were identified using specific search filters for \"Assay Type: Microarray\" and \"Organisms: Mus musculus OR Human (Homo sapiens)\", limited to studies published up to January 2023 [3], [4]. Additional searches were conducted on academic databases like PubMed and ScienceDirect, though GeneLab already encompasses relevant GEO data [5].\n2.  **Comparative Meta-analysis Focus:** The study primarily focused on the **musculoskeletal system** for comparative meta-analysis, chosen because it encompasses a wide range of tissue types highly comparable between human and mouse datasets [6].\n3.  **Inclusion Criteria for Reproducible Genes:** To identify differentially expressed genes reproducible between experiments, specific inclusion criteria were applied: (1) case–control study, (2) derived from musculoskeletal tissue of the same species, (3) untreated samples, and (4) microgravity vs. control group comparison [7].\n4.  **Differential Expression Analysis:** Genes were identified as differentially expressed if they met an adjusted P value (Benjamini–Hochberg method) threshold of below **0.05** and a |log2FC| threshold above **1**, reflecting a substantial change in gene expression [8].\n5.  **Data Preprocessing and Quality Control:** Data preprocessing and differential expression analysis procedures were conducted using the R programming language. Normalization was performed using the RMA algorithm for Affymetrix datasets (via affy or oligo packages) and the limma package for Agilent datasets. Quality control checks, including outlier removal based on MA and PCA plots, were also executed [8], [9].\n6.  **Correlation Analysis:** Pearson correlation coefficients were calculated between gene counts in different datasets from the same tissue type to demonstrate concordance on a gene-by-gene level [7].",
+          "citations": [
+            {
+              "id": "PMC11053165:introduction:6212cbe2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk defines the NASA GeneLab platform as an omics interactive open-access database for spaceflight data, highlighting its role in discovering unknown mechanisms for astronaut health."
+            },
+            {
+              "id": "PMC11053165:abstract:68410287",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk states the overall goal of understanding how altered gravitational conditions affect human physiology and characterizing biological effects through gene expression datasets from NASA GeneLab."
+            },
+            {
+              "id": "PMC11053165:methods:5a586929",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk details the initial step of identifying microarray studies in GeneLab using specific search filters for assay type, organisms, and publication date."
+            },
+            {
+              "id": "PMC11053165:methods:1efc0c07",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk lists the specific datasets obtained from Mus musculus and Homo sapiens, reinforcing the scope of the data collection."
+            },
+            {
+              "id": "PMC11053165:methods:7953f881",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk describes the broader search strategy, including federated search with GEO and academic databases, and clarifies that research articles found were used to inform the discussion."
+            },
+            {
+              "id": "PMC11053165:methods:14f7a0e9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk explains the rationale for focusing the comparative meta-analysis on the musculoskeletal system due to its comparability between human and mouse datasets."
+            },
+            {
+              "id": "PMC11053165:methods:a1441fe8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk outlines the inclusion criteria for identifying reproducible differentially expressed genes and mentions the calculation of Pearson correlation coefficients for concordance."
+            },
+            {
+              "id": "PMC11053165:methods:19c50d7c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk specifies the thresholds for differentially expressed genes (adjusted P < 0.05, |log2FC| > 1) and details the data preprocessing and differential expression analysis procedures using R packages (affy, oligo, limma)."
+            },
+            {
+              "id": "PMC11053165:methods:50eaa381",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+              "why_relevant": "This chunk describes the quality control procedures, including the use of arrayQualityMetrics and outlier removal based on MA and PCA plots."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11053165:introduction:6212cbe2",
+            "PMC11053165:abstract:68410287",
+            "PMC11053165:methods:5a586929",
+            "PMC11053165:methods:1efc0c07",
+            "PMC11053165:methods:7953f881",
+            "PMC11053165:methods:14f7a0e9",
+            "PMC11053165:methods:a1441fe8",
+            "PMC11053165:methods:19c50d7c",
+            "PMC11053165:methods:50eaa381"
+          ],
+          "key_facts": [
+            "NASA GeneLab: open-access omics database for spaceflight data, understanding gravity effects on human physiology.",
+            "Methodology: Identified microarray studies (Mus musculus/Homo sapiens, up to Jan 2023).",
+            "Focus: Musculoskeletal system for comparative meta-analysis.",
+            "Inclusion criteria: case-control, same species/tissue, untreated, microgravity vs control.",
+            "Differentially expressed genes (DEGs) defined by adjusted P < 0.05 and |log2FC| > 1.",
+            "Data preprocessing: R, RMA (Affymetrix), limma (Agilent), quality control (outlier removal).",
+            "Concordance assessed by Pearson correlation coefficient."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

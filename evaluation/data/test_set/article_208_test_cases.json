@@ -1,0 +1,365 @@
+{
+  "paper_id": "PMC11833055",
+  "paper_title": "Behavioral and multiomics analysis of 3D clinostat simulated microgravity effect in mice focusing on the central nervous system",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+  "test_cases": [
+    {
+      "id": "PMC11833055_Q1",
+      "question": "What specific behavioral changes were observed in mice treated with the 3D clinostat in the open field test?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11833055:results:1e737e59"
+          ],
+          "should_retrieve": [
+            "PMC11833055:abstract:1627c118",
+            "PMC11833055:discussion:cad00960"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "In the open field test, mice treated with the 3D clinostat exhibited a significant **reduction in movement distance** and **exercise time**, indicating decreased activity and exploratory desire [1].",
+          "citations": [
+            {
+              "id": "PMC11833055:results:1e737e59",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "This chunk directly states the observed reductions in movement distance and exercise time in the open field test for clinostat-treated mice."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11833055:results:1e737e59"
+          ],
+          "key_facts": [
+            "Reduced movement distance in open field test",
+            "Reduced exercise time in open field test",
+            "Indicates decreased activity and exploratory desire"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11833055_Q2",
+      "question": "How does the 3D clinostat model compare to the hindlimb unloading (HU) model in terms of mimicking spaceflight-induced brain transcriptome changes and shared KEGG pathways?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11833055:conclusion:e4a68f45",
+            "PMC11833055:discussion:32da4f0e",
+            "PMC11833055:results:f712911a",
+            "PMC11833055:results:7b824122",
+            "PMC11833055:results:bacd7b2d"
+          ],
+          "should_retrieve": [
+            "PMC11833055:abstract:1627c118",
+            "PMC11833055:discussion:f78cb485",
+            "PMC11833055:results:005414cf"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The 3D clinostat (CS) model demonstrates a **closer resemblance to spaceflight (FL) brain transcriptome expression profiles** compared to the hindlimb unloading (HU) model [1], [3], [4]. Quantitatively, the brain transcriptome distance between CS and FL (S CS/FL = **747.25**) is significantly smaller than between HU and FL (S HU/FL = **1756.26**), underscoring this closer similarity [7], [8].\n\nWhile there was minimal overlap in differentially expressed genes among all three models, the CS model shared **eight genes** (Ibsp, Adam3, Xlr3b, G530011O06Rik, Wdr62, Cd22, Gm4675, and Nusap1) with the FL model, whereas the HU model only shared **two genes** (Serpinc1 and Ccl19) with the FL model. Notably, no shared differentially expressed genes were identified between the CS and HU models [5].\n\nIn terms of KEGG pathways, the **GnRH signaling pathway** was commonly altered across all three models. Additionally, the CS and FL models shared two more pathways: **Neuroactive ligand-receptor interaction** and **Ovarian steroidogenesis**. In contrast, the CS and HU models only shared **Diabetic cardiomyopathy** [6]. These findings collectively indicate that the CS model is a more accurate and reliable tool for studying microgravity effects on the central nervous system than the HU model [2], [4].",
+          "citations": [
+            {
+              "id": "PMC11833055:conclusion:e4a68f45",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "States that the 3D clinostat model demonstrates a closer resemblance to spaceflight brain transcriptome expression profiles than the hindlimb unloading model."
+            },
+            {
+              "id": "PMC11833055:discussion:f78cb485",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Explains that the CS model appears to more closely mimic gene expression changes seen in real spaceflight, particularly immune and endocrine-related pathways."
+            },
+            {
+              "id": "PMC11833055:discussion:32da4f0e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Highlights the greater similarity in gene expression profiles between CS and FL models, supporting CS as a representative model, and notes limitations of the HU model."
+            },
+            {
+              "id": "PMC11833055:results:bacd7b2d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Provides the quantitative comparison of brain transcriptome distances (S CS/FL vs S HU/FL) showing CS is significantly closer to FL."
+            },
+            {
+              "id": "PMC11833055:results:f712911a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Details the specific number of shared differentially expressed genes between CS and FL (8 genes), HU and FL (2 genes), and the absence of shared genes between CS and HU."
+            },
+            {
+              "id": "PMC11833055:results:7b824122",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Identifies common KEGG pathways: GnRH (all three), Neuroactive ligand-receptor interaction and Ovarian steroidogenesis (CS and FL), and Diabetic cardiomyopathy (CS and HU), further supporting CS's similarity to FL."
+            },
+            {
+              "id": "PMC11833055:results:005414cf",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Provides the numerical values for the brain transcriptome distances (S CS/FL, S HU/FL, S CS/HU) used for comparison."
+            },
+            {
+              "id": "PMC11833055:methods:38e29b0f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Describes the methodology for calculating the brain transcriptome distance (S values) between models."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11833055:conclusion:e4a68f45",
+            "PMC11833055:discussion:f78cb485",
+            "PMC11833055:discussion:32da4f0e",
+            "PMC11833055:results:f712911a",
+            "PMC11833055:results:7b824122",
+            "PMC11833055:results:005414cf",
+            "PMC11833055:results:bacd7b2d",
+            "PMC11833055:methods:38e29b0f"
+          ],
+          "key_facts": [
+            "3D clinostat (CS) model shows closer resemblance to spaceflight (FL) brain transcriptome than hindlimb unloading (HU) model.",
+            "Quantitative distance S CS/FL (747.25) is significantly smaller than S HU/FL (1756.26).",
+            "CS model shares 8 differentially expressed genes with FL, while HU shares only 2 with FL.",
+            "No shared differentially expressed genes between CS and HU models.",
+            "GnRH signaling pathway is common to all three models.",
+            "CS and FL models additionally share Neuroactive ligand-receptor interaction and Ovarian steroidogenesis pathways.",
+            "CS and HU models share Diabetic cardiomyopathy pathway."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11833055_Q3",
+      "question": "Based on the identified KEGG pathways, what are the potential long-term health implications for astronauts related to endocrine, neurological, and reproductive system changes during extended space missions?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11833055:discussion:a1b32114",
+            "PMC11833055:discussion:bdb63118",
+            "PMC11833055:results:7b824122"
+          ],
+          "should_retrieve": [
+            "PMC11833055:results:aa91cf01"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study identified convergent alterations in three key KEGG signaling pathways—**GnRH signaling pathway**, **Neuroactive ligand-receptor interaction**, and **Ovarian steroidogenesis**—in both the 3D clinostat (CS) and spaceflight (FL) models, suggesting significant implications for astronauts' health during long-term missions [1], [4].\n\n*   **GnRH signaling pathway**: This pathway is crucial for regulating the **hypothalamic–pituitary–gonadal (HPG) axis** and **sex hormone levels**. Alterations could lead to fluctuations in sex hormones, potentially impacting **cognition, emotion, and behavior** [1].\n*   **Neuroactive ligand-receptor interaction**: This pathway is vital for **neural transmission, emotional regulation, cognitive functions, and neural plasticity**. Microgravity-induced changes in neurotransmitter levels and sensitivity could impair these functions, affecting overall **cognitive performance and emotional stability** [2].\n*   **Ovarian steroidogenesis**: While primarily involved in reproductive hormone production (estrogen, progesterone), it significantly influences the brain, regulating **emotions, cognition, and neural plasticity**. A decrease in neuroprotective estrogen levels under microgravity could diminish its effects, potentially increasing the risk of **neurodegenerative diseases or cognitive decline** [3].\n\nCollectively, these pathway alterations suggest potential long-term risks for astronauts, including **hormonal imbalances**, **impaired cognitive function**, **emotional dysregulation**, and an increased susceptibility to **neurological issues**, underscoring the need for targeted interventions [1], [4].",
+          "citations": [
+            {
+              "id": "PMC11833055:discussion:a1b32114",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Identifies GnRH signaling pathway, Neuroactive ligand-receptor interaction, and Ovarian steroidogenesis as convergently altered pathways and explains the role of GnRH in HPG axis, sex hormones, cognition, emotion, and behavior."
+            },
+            {
+              "id": "PMC11833055:discussion:bdb63118",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Explains the roles of Neuroactive ligand-receptor interaction (neural transmission, emotional regulation, cognitive functions, neural plasticity) and Ovarian steroidogenesis (estrogen/progesterone, brain influence, neuroprotective properties, risk of neurodegenerative diseases/cognitive decline)."
+            },
+            {
+              "id": "PMC11833055:results:7b824122",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Confirms that GnRH signaling pathway, Neuroactive ligand-receptor interaction, and Ovarian steroidogenesis are commonly altered pathways shared between the CS and FL models."
+            },
+            {
+              "id": "PMC11833055:results:aa91cf01",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Mentions that 3D clinostat primarily affects immune and endocrine-related signaling pathways, including GnRH secretion and signaling pathway, and Ovarian steroidogenesis."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11833055:discussion:a1b32114",
+            "PMC11833055:discussion:bdb63118",
+            "PMC11833055:results:aa91cf01",
+            "PMC11833055:results:7b824122"
+          ],
+          "key_facts": [
+            "GnRH signaling pathway alterations may impact sex hormone levels, cognition, emotion, and behavior.",
+            "Neuroactive ligand-receptor interaction changes could impair neural transmission, emotional regulation, cognitive functions, and neural plasticity.",
+            "Ovarian steroidogenesis alterations, particularly decreased estrogen, may increase risk of neurodegenerative diseases or cognitive decline.",
+            "These pathways are commonly affected in simulated and actual spaceflight models.",
+            "Overall implications include hormonal imbalances, impaired cognitive function, emotional dysregulation, and neurological risks."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11833055_Q4",
+      "question": "Which specific serum metabolites were significantly downregulated in the CS group compared to the SB group?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11833055:results:605931bd"
+          ],
+          "should_retrieve": [
+            "PMC11833055:discussion:418d6b04"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Compared to the survival box (SB) group, the 3D clinostat (CS) group exhibited significant downregulation of the following serum metabolites: **Poricoic acid a, L-Lysine, Oleic acid, Ile-Pro, 1,2-dioleoyl-sn-glycero-3-phosphoethanolamine-n,n-dimethyl, Niacinamide**, and **1-(1z-octadecenyl)-2-(4z,7z,10z,13z,16z,19z-docosahexaenoyl)-sn-glycero-3-phosphocholine** [1].",
+          "citations": [
+            {
+              "id": "PMC11833055:results:605931bd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "This chunk directly lists the specific serum metabolites that were significantly downregulated in the CS group compared to the SB group."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11833055:results:605931bd"
+          ],
+          "key_facts": [
+            "Poricoic acid a was downregulated.",
+            "L-Lysine was downregulated.",
+            "Oleic acid was downregulated.",
+            "Ile-Pro was downregulated.",
+            "1,2-dioleoyl-sn-glycero-3-phosphoethanolamine-n,n-dimethyl was downregulated.",
+            "Niacinamide was downregulated.",
+            "1-(1z-octadecenyl)-2-(4z,7z,10z,13z,16z,19z-docosahexaenoyl)-sn-glycero-3-phosphocholine was downregulated."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11833055_Q5",
+      "question": "What are the major physiological and behavioral impacts observed in mice subjected to 3D clinostat simulated microgravity, as identified by multiomics and behavioral analyses?",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11833055:abstract:1627c118",
+            "PMC11833055:results:1e737e59",
+            "PMC11833055:results:0d46c283",
+            "PMC11833055:results:684d0b87",
+            "PMC11833055:results:615021ce",
+            "PMC11833055:results:aa91cf01",
+            "PMC11833055:results:605931bd",
+            "PMC11833055:results:42235edd",
+            "PMC11833055:results:60be38ba"
+          ],
+          "should_retrieve": [
+            "PMC11833055:discussion:cad00960",
+            "PMC11833055:discussion:f6b49a88",
+            "PMC11833055:discussion:caf13d22",
+            "PMC11833055:discussion:eb22157f",
+            "PMC11833055:discussion:418d6b04",
+            "PMC11833055:discussion:95d9330f",
+            "PMC11833055:discussion:b9bbd0c2"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Mice subjected to 3D clinostat simulated microgravity exhibited a wide range of physiological and behavioral impacts across multiple systems, as identified by multiomics and behavioral analyses [1]:\n\n*   **Behavioral Changes**: There was a significant **reduction in physical activity** and **exploratory drive**, as seen in open field, Y Maze, and elevated plus maze tests [2], [3]. While learning and memory were not significantly affected, mice showed **enhanced fear memory** and **increased sensitivity to fear stimuli**, with weakened fear extinction [4], [5]. Subtle yet significant changes in the **vestibular balance system** and **gait parameters** were also observed, along with an adapted balancing ability in the rotarod test [4], [6].\n*   **Bone Metabolism**: Micro-CT analysis of femurs revealed significant **bone loss**, characterized by a decrease in **bone volume** and **trabecular number**, and an increase in **trabecular pattern factor** and **trabecular separation** [1], [7].\n*   **Brain Transcriptome**: Significant changes in gene expression were found, primarily affecting **immune response** and **endocrine signaling pathways**, including GnRH signaling, Ovarian steroidogenesis, and Neuroactive ligand-receptor interaction [1], [8], [9].\n*   **Serum Metabolomics**: Alterations in various metabolic pathways were detected, such as **ABC transporters, Sphingolipid signaling, and the Pentose phosphate pathway**. Key metabolites like **L-Lysine, oleic acid, and niacinamide were downregulated**, suggesting potential nutritional deficiencies and disrupted lipid/energy metabolism [1], [10], [11].\n*   **Gut Microbiome**: The fecal microbiota showed significant alterations, including a **reduction in richness** and distinct compositional changes. Specifically, the genera **Bacteroides** and **Turicibacter** were significantly reduced. Functional analysis indicated affected pathways like Ferroptosis, PPAR signaling, and Glycosaminoglycan degradation [1], [12], [13], [14].\n\nThese multiomics and behavioral analyses collectively highlight the complex systemic effects of simulated microgravity, affecting neurological, skeletal, metabolic, and immune systems [1].",
+          "citations": [
+            {
+              "id": "PMC11833055:abstract:1627c118",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Provides an abstract overview of all major findings: decreased activity, altered gait, enhanced fear memory, bone loss, immune/endocrine changes in brain transcriptome, and altered metabolic pathways in serum and gut microbiota."
+            },
+            {
+              "id": "PMC11833055:results:1e737e59",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Details behavioral results, specifically the significant reduction in movement distance and exercise time in the open field test, indicating reduced activity and exploratory desire."
+            },
+            {
+              "id": "PMC11833055:discussion:cad00960",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Reinforces the behavioral findings of reduced movement distance and exercise time, suggesting a decrease in overall motivation and exploratory drive."
+            },
+            {
+              "id": "PMC11833055:results:684d0b87",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Describes the findings from the fear conditioning test, showing increased sensitivity to fear behavior, enhanced fear memory, and weakened extinction in CS mice."
+            },
+            {
+              "id": "PMC11833055:discussion:f6b49a88",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Mentions the enhanced fear memory and increased sensitivity to fear stimuli, linking it to amygdala changes."
+            },
+            {
+              "id": "PMC11833055:results:0d46c283",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Reports significant changes in gait parameters and a longer latency to fall in the rotarod test for CS mice, indicating an impact on the vestibular balance system."
+            },
+            {
+              "id": "PMC11833055:results:615021ce",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Presents micro-CT results showing significant bone loss in CS mice, including decreased bone volume and trabecular number, and increased trabecular pattern factor and trabecular separation."
+            },
+            {
+              "id": "PMC11833055:results:aa91cf01",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Highlights brain transcriptome changes, specifically identifying immune and endocrine-related signaling pathways (e.g., GnRH, Ovarian steroidogenesis, IL17 signaling) as primarily affected."
+            },
+            {
+              "id": "PMC11833055:discussion:eb22157f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Discusses the transcriptomic analysis revealing significant changes in gene expression associated with immune response, endocrine signaling, and nervous system functions."
+            },
+            {
+              "id": "PMC11833055:results:605931bd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Details the serum metabolomics findings, including specific upregulated and downregulated metabolites and affected pathways like ABC transporters, Sphingolipid signaling, and Pentose phosphate pathway."
+            },
+            {
+              "id": "PMC11833055:discussion:418d6b04",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Explains the implications of altered metabolic pathways and downregulated metabolites (L-Lysine, oleic acid, niacinamide) for lipid metabolism, energy production, and potential nutritional deficiencies."
+            },
+            {
+              "id": "PMC11833055:results:42235edd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Reports on the gut microbiome analysis, showing reduced richness, distinct segregation, and significant reduction in Bacteroides and Turicibacter genera."
+            },
+            {
+              "id": "PMC11833055:discussion:95d9330f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Confirms the reduction in Bacteroides and Turicibacter in the gut microbiota and links it to immune function, metabolism, and overall health."
+            },
+            {
+              "id": "PMC11833055:results:60be38ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+              "why_relevant": "Details the functional analysis of the microbial community, identifying affected KEGG signaling pathways such as Ferroptosis, PPAR signaling, and Glycosaminoglycan degradation."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11833055:abstract:1627c118",
+            "PMC11833055:discussion:cad00960",
+            "PMC11833055:discussion:f6b49a88",
+            "PMC11833055:discussion:caf13d22",
+            "PMC11833055:discussion:eb22157f",
+            "PMC11833055:discussion:418d6b04",
+            "PMC11833055:discussion:95d9330f",
+            "PMC11833055:discussion:b9bbd0c2",
+            "PMC11833055:results:1e737e59",
+            "PMC11833055:results:0d46c283",
+            "PMC11833055:results:684d0b87",
+            "PMC11833055:results:615021ce",
+            "PMC11833055:results:aa91cf01",
+            "PMC11833055:results:605931bd",
+            "PMC11833055:results:42235edd",
+            "PMC11833055:results:60be38ba"
+          ],
+          "key_facts": [
+            "Reduced physical activity and exploratory drive.",
+            "Enhanced fear memory and increased sensitivity to fear stimuli.",
+            "Subtle changes in vestibular balance system and gait.",
+            "Significant bone loss (decreased bone volume, trabecular number; increased trabecular pattern factor, trabecular separation).",
+            "Altered brain transcriptome affecting immune response and endocrine signaling pathways (e.g., GnRH, Ovarian steroidogenesis).",
+            "Changes in serum metabolome, including downregulation of L-Lysine, oleic acid, and niacinamide, affecting lipid metabolism and energy production.",
+            "Significant alterations in gut microbiota composition, with reduced Bacteroides and Turicibacter genera.",
+            "Affected microbial functional pathways like Ferroptosis, PPAR signaling, and Glycosaminoglycan degradation."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

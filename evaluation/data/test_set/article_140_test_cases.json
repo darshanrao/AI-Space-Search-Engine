@@ -1,0 +1,393 @@
+{
+  "paper_id": "PMC10813126",
+  "paper_title": "Metabolomic Profiling of the Secretome from Human Neural Stem Cells Flown into Space",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+  "test_cases": [
+    {
+      "id": "PMC10813126_Q1",
+      "question": "How many biochemicals were identified with significantly different levels of expression between space-flown and ground control neural stem cell secretomes?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC10813126:3--results:0d4f24b6"
+          ],
+          "should_retrieve": [
+            "PMC10813126:body---figure-3:b187e7c7"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "A total of **221 biochemicals** were identified with significantly different levels of expression between the space-flown NSCs (NSCs-SPC) and ground control NSCs (NSCs-GC) secretomes [1], [2]. Specifically, **79 were increased** and **142 were decreased** in NSCs-SPC compared to NSCs-GC [1], [2].",
+          "citations": [
+            {
+              "id": "PMC10813126:3--results:0d4f24b6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk directly states the total number of biochemicals identified with significant differences and their breakdown into increased and decreased levels."
+            },
+            {
+              "id": "PMC10813126:body---figure-3:b187e7c7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This figure caption reiterates the total number of biochemical alterations (221) and the count of increased (79) and decreased (142) species, confirming the factual data."
+            }
+          ],
+          "used_context_ids": [
+            "PMC10813126:3--results:0d4f24b6",
+            "PMC10813126:body---figure-3:b187e7c7"
+          ],
+          "key_facts": [
+            "221 biochemicals identified with significant differences.",
+            "79 biochemicals increased in space-flown NSCs.",
+            "142 biochemicals decreased in space-flown NSCs."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC10813126_Q2",
+      "question": "How do the levels of nitrogen waste metabolites like creatine and urea in space-flown neural stem cells compare between short-term (3 days) and longer-term (39 days) exposure to microgravity?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC10813126:3--results:d045dffa"
+          ],
+          "should_retrieve": [
+            "PMC10813126:body---figure-8:47d5276a"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "After **3 days** in space, the levels of nitrogen waste metabolites such as **creatine, creatinine, and urea are reduced** in space-flown NSCs (NSCs-SPC) compared to ground control NSCs (NSCs-GC) [1], [2]. However, the study notes that there is a **significant increase** in the levels of these same metabolites after **39 days** in space, suggesting that the initial reduction represents the beginning of an adaptive mechanism to 0 G [1].",
+          "citations": [
+            {
+              "id": "PMC10813126:3--results:d045dffa",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk directly compares the levels of creatine, creatinine, and urea at 3 days in space (reduced) with unpublished results at 39 days (increased), indicating a temporal shift in adaptive mechanisms."
+            },
+            {
+              "id": "PMC10813126:body---figure-8:47d5276a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This figure caption, along with its associated table, illustrates the fold change ratios for nitrogen metabolism intermediates, including urea and creatine, at the 3-day mark, visually supporting the initial reduction."
+            }
+          ],
+          "used_context_ids": [
+            "PMC10813126:3--results:d045dffa",
+            "PMC10813126:body---figure-8:47d5276a"
+          ],
+          "key_facts": [
+            "Creatine, creatinine, and urea levels are reduced after 3 days in space.",
+            "These metabolites significantly increase after 39 days in space.",
+            "The increase after 39 days suggests an adaptive mechanism to microgravity."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC10813126_Q3",
+      "question": "Based on the metabolomic profiling, describe the primary adaptive metabolic strategies employed by human neural stem cells in response to short-term microgravity exposure, encompassing energy production and stress response mechanisms.",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC10813126:abstract:291e957e",
+            "PMC10813126:1--introduction:89c5935b",
+            "PMC10813126:3--results:f719f63d",
+            "PMC10813126:3--results:fdc0e050",
+            "PMC10813126:3--results:d045dffa",
+            "PMC10813126:3--results:91b3ac6a",
+            "PMC10813126:3--results:9683bf5a",
+            "PMC10813126:4--discussion:323fb394",
+            "PMC10813126:4--discussion:2de3b720"
+          ],
+          "should_retrieve": [
+            "PMC10813126:4--discussion:34f86b92",
+            "PMC10813126:body---figure-4:a15ee05b",
+            "PMC10813126:body---figure-5:97973a25",
+            "PMC10813126:body---figure-6:83622f31",
+            "PMC10813126:body---figure-7:87911180",
+            "PMC10813126:body---figure-8:47d5276a"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "In response to short-term microgravity (μG) exposure, human neural stem cells (NSCs) employ several adaptive metabolic strategies primarily focused on **increasing energy production** and triggering **stress response mechanisms** [1], [2], [3].\n\n1.  **Enhanced Energy Production**: NSCs-SPC show increased **glycolysis**, indicated by higher pyruvate and glycerate levels, which then preferentially feeds into a more efficient **TCA cycle** [4], [5], [6], [7]. This is further supported by increased **glutaminolysis**, where glutamate and alpha-ketoglutarate levels rise while glutamine and alanine decrease, providing substrates for the TCA cycle [6], [8]. Additionally, active **branched-chain amino acid (BCAA) catabolism** produces acetyl-CoA and propionyl-CoA, also serving as substrates for the TCA cycle and gluconeogenesis, specifically for energy generation [5], [9], [10]. Lipids, evidenced by a reduction in phospholipids and ketone bodies and an increase in glycerol-3-phosphate, are also utilized as an energy source [11].\n\n2.  **NAD+ Synthesis**: There is a strong stimulation of **de novo NAD+ synthesis**, crucial for energy metabolism and as an effector substrate for sirtuins, PARPs, and CD38, which maintain tissue physiology under environmental stresses [12], [13], [14].\n\n3.  **Stress Response and Autophagy**: A significant increase in the polyamine **spermidine** is observed, which is critical for cellular homeostasis and involved in inducing **autophagy** [15], [16]. This autophagy-like behavior is considered another adaptive mechanism to cope with the stress imposed by low gravity [15], [16]. These changes collectively suggest that NSCs in μG require more energy to adapt to the new conditions [5].",
+          "citations": [
+            {
+              "id": "PMC10813126:abstract:291e957e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "The abstract provides an overview of increased glycolysis, BCAA/glutamine catabolism, NADH synthesis, and spermidine formation, all indicative of increased energy demands and adaptation."
+            },
+            {
+              "id": "PMC10813126:1--introduction:89c5935b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk summarizes the study's findings, stating that microgravity increases energy production (TCA cycle) and triggers stress response mechanisms for adaptation."
+            },
+            {
+              "id": "PMC10813126:4--discussion:34f86b92",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This discussion chunk highlights the aim to investigate adaptive changes and presents evidence for increased energy production and consumption, specifically mentioning activated glycolysis."
+            },
+            {
+              "id": "PMC10813126:4--discussion:323fb394",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk explains the transition of glycolysis to the TCA cycle due to high energy demands, and the role of BCAA catabolism and glutamine in providing TCA substrates."
+            },
+            {
+              "id": "PMC10813126:3--results:fdc0e050",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk details the activation of BCAA catabolism for energy production and the preferential utilization of the glycolytic pathway for efficient TCA, indicating increased energy requirements."
+            },
+            {
+              "id": "PMC10813126:3--results:f719f63d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk describes increased glutaminolysis to provide TCA substrates and increased BCAA catabolism, both contributing to energy generation."
+            },
+            {
+              "id": "PMC10813126:body---figure-6:83622f31",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "The figure caption for glycolysis visually supports the changes in glycolytic pathway metabolites, indicating increased activity."
+            },
+            {
+              "id": "PMC10813126:body---figure-4:a15ee05b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "The figure caption for glutaminolysis visually supports the changes in glutamine and its metabolites, indicating increased glutaminolysis."
+            },
+            {
+              "id": "PMC10813126:body---figure-5:97973a25",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "The figure caption for BCAA catabolism visually supports the changes in BCAA metabolites, indicating increased catabolism for energy."
+            },
+            {
+              "id": "PMC10813126:3--results:d045dffa",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk describes the stimulation of de novo NAD+ synthesis, which is crucial for energy metabolism."
+            },
+            {
+              "id": "PMC10813126:4--discussion:2de3b720",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk explains the role of NAD+ in cellular processes and its importance under environmental stresses, and introduces spermidine's role in cellular homeostasis and autophagy."
+            },
+            {
+              "id": "PMC10813126:body---figure-7:87911180",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "The figure caption for NADH synthesis visually supports the shift towards de novo pathway, indicating increased NAD+ production."
+            },
+            {
+              "id": "PMC10813126:3--results:91b3ac6a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk highlights the significant increase in spermidine and its involvement in cell homeostasis and autophagy as an adaptive mechanism to low gravity stress."
+            },
+            {
+              "id": "PMC10813126:body---figure-8:47d5276a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "The figure caption for nitrogen metabolism visually supports the increase in spermidine levels."
+            },
+            {
+              "id": "PMC10813126:3--results:9683bf5a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk indicates that lipids are used as an energy source, evidenced by changes in phospholipids, ketone bodies, and glycerol-3-phosphate."
+            }
+          ],
+          "used_context_ids": [
+            "PMC10813126:abstract:291e957e",
+            "PMC10813126:1--introduction:89c5935b",
+            "PMC10813126:3--results:f719f63d",
+            "PMC10813126:3--results:fdc0e050",
+            "PMC10813126:3--results:d045dffa",
+            "PMC10813126:3--results:91b3ac6a",
+            "PMC10813126:3--results:9683bf5a",
+            "PMC10813126:4--discussion:323fb394",
+            "PMC10813126:4--discussion:2de3b720",
+            "PMC10813126:4--discussion:34f86b92",
+            "PMC10813126:body---figure-4:a15ee05b",
+            "PMC10813126:body---figure-5:97973a25",
+            "PMC10813126:body---figure-6:83622f31",
+            "PMC10813126:body---figure-7:87911180",
+            "PMC10813126:body---figure-8:47d5276a"
+          ],
+          "key_facts": [
+            "Microgravity increases energy production in NSCs.",
+            "Glycolysis and TCA cycle activity are enhanced.",
+            "Glutaminolysis and BCAA catabolism provide substrates for energy.",
+            "Lipids are utilized as an additional energy source.",
+            "De novo NAD+ synthesis is stimulated.",
+            "Spermidine levels increase, indicating activation of autophagy-like stress response."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC10813126_Q4",
+      "question": "What analytical technique was used to identify metabolites in the secretome samples, and how were these metabolites identified?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC10813126:2--materials-and-methods:825158b9"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Metabolites in the secretome samples were analyzed by **ultrahigh performance liquid chromatography/mass spectrometry (UHPLC/MS)**, performed in positive (two methods), negative, or polar ion mode [1]. Metabolites were identified by **automated comparison of ion features to a reference library of chemical standards**, followed by visual inspection for quality control [1].",
+          "citations": [
+            {
+              "id": "PMC10813126:2--materials-and-methods:825158b9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk explicitly describes the analytical technique (UHPLC/MS) and the method for metabolite identification (automated comparison to a reference library)."
+            }
+          ],
+          "used_context_ids": [
+            "PMC10813126:2--materials-and-methods:825158b9"
+          ],
+          "key_facts": [
+            "Analytical technique: Ultrahigh performance liquid chromatography/mass spectrometry (UHPLC/MS).",
+            "Performed in positive, negative, or polar ion mode.",
+            "Metabolites identified by automated comparison to a reference library of chemical standards.",
+            "Visual inspection for quality control was also performed."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC10813126_Q5",
+      "question": "Provide a comprehensive overview of the key metabolic and cellular changes observed in human neural stem cells after short-term exposure to space microgravity, as detailed in this study.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC10813126:abstract:291e957e",
+            "PMC10813126:1--introduction:89c5935b",
+            "PMC10813126:3--results:0d4f24b6",
+            "PMC10813126:3--results:f719f63d",
+            "PMC10813126:3--results:fdc0e050",
+            "PMC10813126:3--results:d045dffa",
+            "PMC10813126:3--results:91b3ac6a",
+            "PMC10813126:3--results:9683bf5a",
+            "PMC10813126:4--discussion:34f86b92",
+            "PMC10813126:4--discussion:323fb394",
+            "PMC10813126:4--discussion:2de3b720",
+            "PMC10813126:body---figure-3:b187e7c7"
+          ],
+          "should_retrieve": [
+            "PMC10813126:1--introduction:7568929d",
+            "PMC10813126:1--introduction:9516518c",
+            "PMC10813126:1--introduction:ff4d32b1",
+            "PMC10813126:body---figure-4:a15ee05b",
+            "PMC10813126:body---figure-5:97973a25",
+            "PMC10813126:body---figure-6:83622f31",
+            "PMC10813126:body---figure-7:87911180",
+            "PMC10813126:body---figure-8:47d5276a",
+            "PMC10813126:body---figure-9:e940bca3"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "This study reveals that short-term exposure to space microgravity (μG) induces significant metabolic and cellular adaptations in human neural stem cells (NSCs), primarily characterized by an **increased demand for energy** and activation of **stress response mechanisms** [1], [2], [3].\n\n1.  **Global Metabolic Alterations**: A total of **221 biochemicals** were found to be significantly altered in space-flown NSCs (SPC-NSCs) compared to ground control NSCs (GC-NSCs), with 79 increasing and 142 decreasing, resulting in distinct biochemical profiles [4], [5].\n\n2.  **Enhanced Energy Production**: NSCs in μG exhibit a metabolic shift towards increased energy generation. This includes **activated glycolysis**, evidenced by higher levels of pyruvate and glycerate, which then preferentially feeds into a more efficient **Tri-Carboxylic Acid (TCA) cycle** [1], [6], [7], [8]. **Glutaminolysis** is also increased, converting glutamine to glutamate and alpha-ketoglutarate to supply the TCA cycle [7], [9]. Furthermore, active **branched-chain amino acid (BCAA) catabolism** produces acetyl-CoA and propionyl-CoA, serving as substrates for the TCA cycle and gluconeogenesis [7], [10]. Lipids are also utilized as an energy source, indicated by a reduction in phospholipids and ketone bodies and an increase in glycerol-3-phosphate [11].\n\n3.  **NAD+ Synthesis**: The cells strongly stimulate the **de novo synthesis of NAD+**, a crucial coenzyme for energy metabolism and a key player in signaling processes that maintain tissue physiology under environmental stresses [12], [13].\n\n4.  **Stress Response and Autophagy**: A notable finding is the significant increase in the polyamine **spermidine**, which is critical for cellular homeostasis and known to induce **autophagy** [14], [15]. This autophagy-like behavior is considered an adaptive mechanism to cope with the stress imposed by low gravity [14], [15].\n\nThese comprehensive changes underscore the profound and rapid adaptive responses of CNS cells to the unique challenges of the space environment, with implications for maintaining CNS homeostasis and astronaut health during extended space travel [2], [16].",
+          "citations": [
+            {
+              "id": "PMC10813126:abstract:291e957e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "The abstract provides a concise summary of the key findings, including increased glycolysis, BCAA/glutamine catabolism, NADH synthesis, and spermidine formation, all pointing to increased energy demands and adaptation."
+            },
+            {
+              "id": "PMC10813126:1--introduction:89c5935b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk summarizes the overall results, stating that microgravity increases energy production (TCA cycle) and triggers stress response mechanisms for adaptation."
+            },
+            {
+              "id": "PMC10813126:4--discussion:34f86b92",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This discussion chunk highlights the aim to investigate adaptive changes and presents evidence for increased energy production and consumption, specifically mentioning activated glycolysis."
+            },
+            {
+              "id": "PMC10813126:3--results:0d4f24b6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk provides the quantitative data on the total number of biochemicals (221) with significant differences, and their breakdown, indicating global metabolic changes."
+            },
+            {
+              "id": "PMC10813126:body---figure-3:b187e7c7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This figure caption confirms the global biochemical changes (221 alterations) and that PCA revealed distinct biochemical profiles, supporting the broad impact."
+            },
+            {
+              "id": "PMC10813126:3--results:fdc0e050",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk details the activation of BCAA catabolism for energy production and the preferential utilization of the glycolytic pathway for efficient TCA, indicating increased energy requirements."
+            },
+            {
+              "id": "PMC10813126:3--results:f719f63d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk describes increased glutaminolysis to provide TCA substrates and increased BCAA catabolism, both contributing to energy generation."
+            },
+            {
+              "id": "PMC10813126:4--discussion:323fb394",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk explains the transition of glycolysis to the TCA cycle due to high energy demands, and the role of BCAA catabolism and glutamine in providing TCA substrates."
+            },
+            {
+              "id": "PMC10813126:3--results:9683bf5a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk indicates that lipids are used as an energy source, evidenced by changes in phospholipids, ketone bodies, and glycerol-3-phosphate."
+            },
+            {
+              "id": "PMC10813126:3--results:d045dffa",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk describes the stimulation of de novo NAD+ synthesis, which is crucial for energy metabolism."
+            },
+            {
+              "id": "PMC10813126:4--discussion:2de3b720",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk explains the role of NAD+ in cellular processes and its importance under environmental stresses, and introduces spermidine's role in cellular homeostasis and autophagy."
+            },
+            {
+              "id": "PMC10813126:3--results:91b3ac6a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk highlights the significant increase in spermidine and its involvement in cell homeostasis and autophagy as an adaptive mechanism to low gravity stress."
+            },
+            {
+              "id": "PMC10813126:e173673d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+              "why_relevant": "This chunk provides the concluding remarks, summarizing that microgravity induces a stress response in NSCs, leading to increased energy production and autophagy-like behavior, and discusses implications for future space travel."
+            }
+          ],
+          "used_context_ids": [
+            "PMC10813126:abstract:291e957e",
+            "PMC10813126:1--introduction:89c5935b",
+            "PMC10813126:3--results:0d4f24b6",
+            "PMC10813126:3--results:f719f63d",
+            "PMC10813126:3--results:fdc0e050",
+            "PMC10813126:3--results:d045dffa",
+            "PMC10813126:3--results:91b3ac6a",
+            "PMC10813126:3--results:9683bf5a",
+            "PMC10813126:4--discussion:34f86b92",
+            "PMC10813126:4--discussion:323fb394",
+            "PMC10813126:4--discussion:2de3b720",
+            "PMC10813126:body---figure-3:b187e7c7",
+            "PMC10813126:e173673d"
+          ],
+          "key_facts": [
+            "221 biochemicals showed significant changes (79 increased, 142 decreased).",
+            "Increased glycolysis and TCA cycle activity for energy.",
+            "Activated glutaminolysis and BCAA catabolism as energy sources.",
+            "Lipids are utilized for energy production.",
+            "Stimulated de novo NAD+ synthesis.",
+            "Increased spermidine levels, indicating autophagy-like stress response.",
+            "Overall, microgravity increases energy demands and triggers adaptive stress responses in NSCs."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

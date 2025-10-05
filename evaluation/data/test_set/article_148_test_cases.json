@@ -1,0 +1,321 @@
+{
+  "paper_id": "PMC6201722",
+  "paper_title": "Utilization of single‐image normalized difference vegetation index ( SI ‐ NDVI ) for early plant stress detection — Abstract",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+  "test_cases": [
+    {
+      "id": "PMC6201722_Q1",
+      "question": "What specific camera model was retrofitted to create the SI-NDVI imager?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6201722:methods-and-results:d820dbb9"
+          ],
+          "should_retrieve": [
+            "PMC6201722:methods-and-results:15840ddd",
+            "PMC6201722:camera-and-camera-settings---figure-1:5e2b9b76"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The SI-NDVI imager was created by retrofitting a **GoPro Hero4 Black camera** with a Back-Bone Ribcage AIR modification kit [1], [2].",
+          "citations": [
+            {
+              "id": "PMC6201722:methods-and-results:d820dbb9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk directly states that a 'GoPro Hero4 Black camera... was retrofitted... to create the SI-NDVI imager.'"
+            },
+            {
+              "id": "PMC6201722:methods-and-results:15840ddd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk reconfirms the GoPro Hero4 Black camera model and describes its Protune settings, reinforcing the primary chunk's information."
+            },
+            {
+              "id": "PMC6201722:camera-and-camera-settings---figure-1:5e2b9b76",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "The caption for Figure 1, part (A), explicitly labels the 'GoPro Hero4 Black camera retrofitted with a Back-Bone system' as part of the imager."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6201722:methods-and-results:d820dbb9",
+            "PMC6201722:methods-and-results:15840ddd",
+            "PMC6201722:camera-and-camera-settings---figure-1:5e2b9b76"
+          ],
+          "key_facts": [
+            "GoPro Hero4 Black camera",
+            "Retrofitted with Back-Bone Ribcage AIR modification kit",
+            "Used to create the SI-NDVI imager"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6201722_Q2",
+      "question": "Compare the early stress detection times for Arabidopsis thaliana under salinity stress and Eruca sativa under ammonium nitrate treatment using the SI-NDVI system.",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6201722:abstract:2932f2bb",
+            "PMC6201722:conclusions:e7d40fda"
+          ],
+          "should_retrieve": [
+            "PMC6201722:methods-and-results:f4931294",
+            "PMC6201722:methods-and-results:ef1fe95f"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The SI-NDVI system detected stress in **Arabidopsis thaliana seedlings within 15 minutes** of salinity application, before visual detection [1], [3]. For **Eruca sativa plants**, stress was observed during ammonium nitrate treatment as early as **6 hours** after exposure, also before visual detection [2], [4].",
+          "citations": [
+            {
+              "id": "PMC6201722:abstract:2932f2bb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This abstract chunk states that stress was detected in Arabidopsis thaliana seedlings within 15 min of salinity application."
+            },
+            {
+              "id": "PMC6201722:conclusions:e7d40fda",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk confirms stress detection in Arabidopsis within 15 min and in young arugula plants within 6 h of ammonium nitrate exposure."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:f4931294",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk details the experimental finding that stress was detectable in Arabidopsis SI-NDVI images after only 15 min of salt exposure, prior to visible changes."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:ef1fe95f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk explains that SI-NDVI quantitative analysis detected a decrease in healthy plant tissue in ammonium nitrate-treated arugula as early as 6 hours after stress treatment."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6201722:abstract:2932f2bb",
+            "PMC6201722:conclusions:e7d40fda",
+            "PMC6201722:methods-and-results:f4931294",
+            "PMC6201722:methods-and-results:ef1fe95f"
+          ],
+          "key_facts": [
+            "Arabidopsis thaliana: 15 minutes for salinity stress detection",
+            "Eruca sativa: 6 hours for ammonium nitrate stress detection",
+            "Both detected before visual signs of stress"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6201722_Q3",
+      "question": "Describe the complete process of how the SI-NDVI system detects plant stress, from image capture to quantitative analysis, including the role of specific hardware and software components.",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6201722:methods-and-results:d820dbb9",
+            "PMC6201722:methods-and-results:e7329bde",
+            "PMC6201722:methods-and-results:06f1d584",
+            "PMC6201722:methods-and-results:b06df95f",
+            "PMC6201722:methods-and-results:0b5147cc"
+          ],
+          "should_retrieve": [
+            "PMC6201722:methods-and-results:15840ddd",
+            "PMC6201722:lighting---figure-2:1f795644",
+            "PMC6201722:camera-and-camera-settings---figure-1:5e2b9b76",
+            "PMC6201722:methods-and-results:7ab6889b"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The SI-NDVI system detects plant stress through a multi-step process involving specialized hardware and software:\n\n1.  **Image Capture**: A **GoPro Hero4 Black camera** retrofitted with a Back-Bone system and an **NDVI-7 filter** (allowing 400–575 nm and 675–775 nm light transmission) captures images [1], [2], [3]. A **Heliospectra LX300 lighting system** provides controlled **near-infrared (735 nm) and blue (450 nm) light** to the plant tissue [4], [5]. The camera's Protune settings are manually calibrated for consistent image quality [2].\n2.  **Image Processing**: Captured images are analyzed using the **Photo Monitoring plugin in Fiji image processing software** [6]. The software is configured to use the blue channel for the blue band and the red channel for the NIR band, as NIR reflectance is recorded in the camera's red channel [6].\n3.  **SI-NDVI Calculation**: The **SI-NDVI equation, (NIR - Blue) / (NIR + Blue)**, is applied to each individual pixel [7]. This generates SI-NDVI scores ranging from -1.0 to 1.0.\n4.  **Color Index and False Color Images**: The SI-NDVI scores are then divided into **256 \"color index values\"** (0-255), where each value corresponds to an increment of 0.0078125 in SI-NDVI scores [7]. False color images are produced by applying a customizable **color lookup table (LUT)** to these color index values, allowing visual representation of stress levels [7], [8].\n5.  **Quantitative Analysis**: For quantitative analysis, the system generates graphs displaying the number of pixels at each color index value [9]. Pixels with SI-NDVI scores between 0.00 and 1.00 (representing vegetative data) are specifically categorized, and background pixels are removed [9]. Changes in the curve of pixel counts over time indicate plant health or growth, allowing for early stress detection [9], [10].",
+          "citations": [
+            {
+              "id": "PMC6201722:methods-and-results:d820dbb9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Describes the core hardware: GoPro camera, Back-Bone system, NDVI-7 filter, and M12 lens for image capture."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:15840ddd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Details the specific Protune settings for the GoPro camera, which are crucial for consistent image acquisition."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:e7329bde",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Explains the Heliospectra LX300 lighting system and the specific blue (450 nm) and NIR (735 nm) wavelengths supplied to plant tissue."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:06f1d584",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Introduces Fiji software and the Photo Monitoring plugin for image analysis, and the critical channel selection (blue for blue, red for NIR) for SI-NDVI calculation."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:b06df95f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Provides the exact SI-NDVI equation and explains how SI-NDVI scores are converted into 256 'color index values'."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:7ab6889b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Describes the process of generating false color images by applying Lookup Tables (LUTs) to color index files."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:0b5147cc",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Explains the generation of quantitative graphs from pixel data, focusing on vegetative tissue, and how changes in the curve over time indicate plant health."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:2799722a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Reiterates that plant health or growth can be studied by analyzing changes in the curve over time, linking quantitative analysis to stress detection."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6201722:methods-and-results:d820dbb9",
+            "PMC6201722:methods-and-results:15840ddd",
+            "PMC6201722:methods-and-results:e7329bde",
+            "PMC6201722:methods-and-results:06f1d584",
+            "PMC6201722:methods-and-results:b06df95f",
+            "PMC6201722:methods-and-results:7ab6889b",
+            "PMC6201722:methods-and-results:0b5147cc",
+            "PMC6201722:methods-and-results:2799722a"
+          ],
+          "key_facts": [
+            "Image capture using GoPro Hero4 Black with Back-Bone system and NDVI-7 filter under controlled NIR/blue light.",
+            "Image processing via Fiji software's Photo Monitoring plugin, selecting specific channels.",
+            "SI-NDVI calculation: (NIR - Blue) / (NIR + Blue) per pixel.",
+            "Conversion to 256 color index values and application of Lookup Tables (LUTs) for false color images.",
+            "Quantitative analysis by graphing pixel counts per color index value, focusing on vegetative data, to track changes over time."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6201722_Q4",
+      "question": "What are the precise wavelength ranges that the NDVI-7 filter allows for light transmission in the SI-NDVI imager?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6201722:methods-and-results:d820dbb9"
+          ],
+          "should_retrieve": [
+            "PMC6201722:methods-and-results:15840ddd",
+            "PMC6201722:camera-and-camera-settings---figure-1:5e2b9b76"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The NDVI-7 filter used in the SI-NDVI imager allows light transmission in two specific ranges: **400–575 nm** and **675–775 nm** [1], [2], [3].",
+          "citations": [
+            {
+              "id": "PMC6201722:methods-and-results:d820dbb9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk explicitly states that the NDVI-7 filter 'allowed light to transmit in the 400–575‐nm range and the 675–775‐nm range.'"
+            },
+            {
+              "id": "PMC6201722:methods-and-results:15840ddd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk reconfirms the NDVI-7 filter and its specified wavelength ranges as part of the camera setup description."
+            },
+            {
+              "id": "PMC6201722:camera-and-camera-settings---figure-1:5e2b9b76",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "The caption for Figure 1, part (B), states 'The NDVI‐7 filter added to allow light transmission in the 400–575‐nm and 675–775‐nm ranges.'"
+            }
+          ],
+          "used_context_ids": [
+            "PMC6201722:methods-and-results:d820dbb9",
+            "PMC6201722:methods-and-results:15840ddd",
+            "PMC6201722:camera-and-camera-settings---figure-1:5e2b9b76"
+          ],
+          "key_facts": [
+            "NDVI-7 filter",
+            "Allows light transmission in 400–575 nm range",
+            "Allows light transmission in 675–775 nm range"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6201722_Q5",
+      "question": "What are the primary advantages and potential applications of the SI-NDVI imaging system for plant health monitoring, as highlighted in the paper?",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6201722:abstract:b8ee4bea",
+            "PMC6201722:conclusions:2d5ef34b",
+            "PMC6201722:conclusions:e7d40fda"
+          ],
+          "should_retrieve": [
+            "PMC6201722:abstract:2932f2bb",
+            "PMC6201722:methods-and-results:f4931294",
+            "PMC6201722:methods-and-results:ef1fe95f"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The SI-NDVI imaging system offers several primary advantages and potential applications for plant health monitoring:\n\n*   **Early Stress Detection**: It can detect plant stress significantly **before it becomes visually apparent** to the human eye, as demonstrated with Arabidopsis thaliana (within 15 min of salinity) and Eruca sativa (within 6 h of ammonium nitrate) [1], [2], [5], [6].\n*   **Cost-Efficiency**: The system is **more cost-efficient** than traditional dual-image NDVI or hyper-spectral imaging because it requires only one camera and can utilize free, open-source software for analysis [3], [4].\n*   **Simplicity and Ease of Implementation**: It is **simpler to use** and has essentially **nonexistent implementation barriers** within laboratory or greenhouse settings [3], [4].\n*   **Applications in Controlled Environments**: It has clear applications in the **development of indoor farming practices**, which are crucial for providing fresh food in areas not conducive to traditional cultivation (e.g., urban cities, extreme temperatures) [4].\n*   **High-Throughput Screening**: The system could potentially be used as a **high-throughput screening technique for identifying mutant phenotypes** in controlled laboratory plant studies [4].\n*   **Improved Cultivation Success**: By enabling early detection, SI-NDVI imaging is expected to **improve the overall success rate of cultivation** in controlled greenhouse or laboratory growing efforts [4].",
+          "citations": [
+            {
+              "id": "PMC6201722:abstract:2932f2bb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This abstract chunk introduces the capability of early plant stress detection before visual signs in both Arabidopsis and Eruca sativa."
+            },
+            {
+              "id": "PMC6201722:abstract:b8ee4bea",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk highlights early detection as a key possibility and states that SI-NDVI is simpler to use and more cost-efficient than traditional methods."
+            },
+            {
+              "id": "PMC6201722:conclusions:2d5ef34b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk details the low dollar cost, reliance on free open-source software, and non-existent implementation barriers as advantages."
+            },
+            {
+              "id": "PMC6201722:conclusions:e7d40fda",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "This chunk discusses the specific early detection times for Arabidopsis and arugula, and outlines applications in indoor farming and high-throughput screening for mutant phenotypes."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:f4931294",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Provides experimental evidence for early stress detection in Arabidopsis after 15 minutes of salt exposure, before visible changes, supporting the 'early detection' advantage."
+            },
+            {
+              "id": "PMC6201722:methods-and-results:ef1fe95f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+              "why_relevant": "Provides experimental evidence for early stress detection in arugula after 6 hours of ammonium nitrate treatment, before visible changes, further supporting the 'early detection' advantage."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6201722:abstract:2932f2bb",
+            "PMC6201722:abstract:b8ee4bea",
+            "PMC6201722:conclusions:2d5ef34b",
+            "PMC6201722:conclusions:e7d40fda",
+            "PMC6201722:methods-and-results:f4931294",
+            "PMC6201722:methods-and-results:ef1fe95f"
+          ],
+          "key_facts": [
+            "Early detection of plant stress before visual signs (e.g., 15 min for Arabidopsis, 6 h for Eruca sativa).",
+            "More cost-efficient than traditional NDVI or hyper-spectral imaging.",
+            "Simpler to use and low implementation barriers.",
+            "Applicable to indoor farming practices.",
+            "Potential for high-throughput screening of mutant phenotypes.",
+            "Improves success rate of controlled cultivation efforts."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "paper_id": "PMC7000411",
+  "paper_title": "Spaceflight and simulated microgravity conditions increase virulence of Serratia marcescens in the Drosophila melanogaster infection model",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+  "test_cases": [
+    {
+      "id": "PMC7000411_Q1",
+      "question": "What was the main finding regarding Serratia marcescens virulence after spaceflight exposure?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7000411:abstract:08675690"
+          ],
+          "should_retrieve": [
+            "PMC7000411:results:cfc7b115"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Spaceflight-exposed **Serratia marcescens (strain Db11)** was significantly **more lethal to Drosophila melanogaster** than ground-based controls [1], [2]. This increased virulence was also observed in bacteria grown in simulated microgravity conditions on the ground [1].",
+          "citations": [
+            {
+              "id": "PMC7000411:abstract:08675690",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Directly states the main finding that S. marcescens was significantly more lethal to D. melanogaster after growth on the ISS and in simulated microgravity."
+            },
+            {
+              "id": "PMC7000411:results:cfc7b115",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Confirms the main finding by reporting that fly survival was significantly lower when infected with spaceflight-exposed S. marcescens samples compared to ground controls."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7000411:abstract:08675690",
+            "PMC7000411:results:cfc7b115"
+          ],
+          "key_facts": [
+            "Serratia marcescens Db11 grown on ISS was more lethal to Drosophila melanogaster.",
+            "Increased virulence was also seen in simulated microgravity."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7000411_Q2",
+      "question": "How did the virulence of spaceflight-exposed Serratia marcescens compare between the initial samples and those that were subcultured on the ground?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7000411:abstract:08675690",
+            "PMC7000411:results:cfc7b115",
+            "PMC7000411:results:aeb2c01b"
+          ],
+          "should_retrieve": [
+            "PMC7000411:discussion:116cdee9",
+            "PMC7000411:results:f1c952c3"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Initially, **Serratia marcescens grown during spaceflight was significantly more lethal** to *Drosophila melanogaster* compared to ground controls [1], [3]. However, this **increased virulence phenotype did not persist** after the bacterial cultures were subcultured on the ground [1], [5]. After subculturing, there was no significant difference in host survival or in vivo bacterial growth between spaceflight and ground samples [4]. This suggests the changes were temporary physiological adaptations rather than heritable genetic alterations [2].",
+          "citations": [
+            {
+              "id": "PMC7000411:abstract:08675690",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "States that S. marcescens was more lethal after spaceflight but the increased virulence did not persist after passaging on the ground."
+            },
+            {
+              "id": "PMC7000411:results:f1c952c3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Explains that the virulence changes were temporary physiological changes induced by spaceflight, not genetically heritable changes."
+            },
+            {
+              "id": "PMC7000411:results:cfc7b115",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Provides statistical evidence for significantly lower fly survival when infected with initial spaceflight samples."
+            },
+            {
+              "id": "PMC7000411:results:aeb2c01b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Reports that subculture-infected hosts did not show significant differences in survival from ground-infected hosts, indicating loss of increased virulence."
+            },
+            {
+              "id": "PMC7000411:discussion:116cdee9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Mentions that the increased lethality disappears after the first subculture is conducted on the ground, consistent with the results."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7000411:abstract:08675690",
+            "PMC7000411:discussion:116cdee9",
+            "PMC7000411:results:cfc7b115",
+            "PMC7000411:results:f1c952c3",
+            "PMC7000411:results:aeb2c01b"
+          ],
+          "key_facts": [
+            "Initial spaceflight S. marcescens showed increased virulence/lethality.",
+            "After subculturing on the ground, this increased virulence disappeared.",
+            "The changes were temporary physiological adaptations, not heritable genetic changes."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7000411_Q3",
+      "question": "Based on the study's findings, what evidence suggests that the increased lethality of spaceflight-exposed Serratia marcescens is primarily due to changes in the pathogen itself, rather than alterations in the host's immune response?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7000411:abstract:f45d4bda",
+            "PMC7000411:discussion:a7d6c80c",
+            "PMC7000411:results:0fb0dd12",
+            "PMC7000411:results:11c19e91"
+          ],
+          "should_retrieve": [
+            "PMC7000411:results:fa3bd297",
+            "PMC7000411:results:345552ea",
+            "PMC7000411:results:a86a3ba0",
+            "PMC7000411:results:2e532f2a"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study provides several lines of evidence suggesting that the increased lethality of spaceflight-exposed *Serratia marcescens* is due to changes in the pathogen, not the host immune system:\n\n1.  **Host Immune Pathway Mutants**: Increased virulence of space-flown bacteria was observed similarly in both wild-type flies and those with mutations in the well-characterized Imd and Toll immune pathways [1], [4]. This suggests that changes to the host immune system after infection are likely not a major factor contributing to increased susceptibility [1], [4].\n2.  **Bacterial Growth Kinetics**: Spaceflight bacteria grew at a greater rate than ground controls *in vitro* and *in vivo* at later timepoints [1], [5]. The increased virulence was consistently accompanied by an increase in the bacterial growth rate within the fly host, particularly from 12 hours post-infection onwards [3], [5].\n3.  **Host Gene Expression**: RNA sequencing of wild-type flies infected with spaceflight bacteria showed few significant changes in host gene expression, particularly in known immune-related genes [6], [7]. Out of 11 differentially expressed genes, only **Attacin-A** was directly related to the immune response [8]. Principal component analysis (PCA) also showed significant overlap among treatment groups, indicating minimal differences in host gene expression [7].\n\nThese findings collectively indicate that the pathogen's physiological changes, such as enhanced growth kinetics, are the primary drivers of increased lethality, rather than a compromised host immune response [2].",
+          "citations": [
+            {
+              "id": "PMC7000411:abstract:f45d4bda",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "States that increased virulence was similar in wild-type and immune mutant flies, and spaceflight bacteria grew at a greater rate, suggesting host immune changes are not a major factor."
+            },
+            {
+              "id": "PMC7000411:discussion:a7d6c80c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Concludes that differences in lethality are likely due to changes to the pathogen, not host immune response, given faster growth kinetics in vitro and in vivo."
+            },
+            {
+              "id": "PMC7000411:results:fa3bd297",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Explains that the increase in virulence was accompanied by an increase in the bacterial growth rate within the fly host."
+            },
+            {
+              "id": "PMC7000411:results:0fb0dd12",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "States that space-flown bacteria caused greater lethality regardless of the fly host's genotype (immune-impaired or robust wild-type lines)."
+            },
+            {
+              "id": "PMC7000411:results:a86a3ba0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Details that in vivo growth of Space 1 sample was significantly higher in the fly host at later time points (12h and 15h) compared to ground samples."
+            },
+            {
+              "id": "PMC7000411:results:11c19e91",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Reports that RNA sequencing showed few significant changes in host gene expression of known immune-related genes when exposed to spaceflight bacteria."
+            },
+            {
+              "id": "PMC7000411:results:2e532f2a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Mentions that principal components analysis (PCA) showed significant overlap among groups, further indicating few differences between space bacteria-infected and ground bacteria-infected hosts."
+            },
+            {
+              "id": "PMC7000411:results:345552ea",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Specifies that only AttA (Attacin-A) out of the 11 differentially expressed genes was directly related to the immune response."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7000411:abstract:f45d4bda",
+            "PMC7000411:discussion:a7d6c80c",
+            "PMC7000411:results:fa3bd297",
+            "PMC7000411:results:0fb0dd12",
+            "PMC7000411:results:a86a3ba0",
+            "PMC7000411:results:11c19e91",
+            "PMC7000411:results:2e532f2a",
+            "PMC7000411:results:345552ea"
+          ],
+          "key_facts": [
+            "Spaceflight bacteria caused similar lethality in wild-type and immune-deficient (Imd/Toll) flies.",
+            "Spaceflight bacteria showed increased growth rates in vitro and in vivo.",
+            "Host RNA sequencing revealed few significant changes in immune-related gene expression.",
+            "Only one immune-related gene (Attacin-A) was among the 11 differentially expressed genes."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7000411_Q4",
+      "question": "Besides Attacin-A, what other specific genes were identified as significantly differentially expressed in wild-type D. melanogaster after infection with spaceflight-exposed Serratia marcescens compared to ground control bacteria?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7000411:results:345552ea"
+          ],
+          "should_retrieve": [
+            "PMC7000411:results:11c19e91"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "After infection with spaceflight-exposed *Serratia marcescens*, **only eleven transcripts were significantly differentially expressed** in wild-type *Drosophila melanogaster* [2]. Besides **Attacin-A (AttA)**, which is an antimicrobial peptide, other specific genes identified as differentially expressed include:\n*   **lola (longitudinals lacking)**: The most highly overexpressed gene, involved in axon growth and guidance [1].\n*   **vsg (visgun)**: The next most highly overexpressed gene, linked to alcohol sensitivity [1].\n*   **eEF2**: An underexpressed translation elongation factor [1].\n*   **CG31650**: An underexpressed gene with unknown function [1].\n*   **RhoGEF2**: An underexpressed gene linked to wound repair and regulation of actin/myosin dynamics [1].",
+          "citations": [
+            {
+              "id": "PMC7000411:results:345552ea",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Directly lists and describes the specific differentially expressed genes (lola, vsg, eEF2, CG31650, RhoGEF2) and their known functions, noting AttA as the only immune-related one."
+            },
+            {
+              "id": "PMC7000411:results:11c19e91",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "States that only eleven transcripts were significantly differentially expressed at the q-value < 0.05 threshold, providing context for the specific genes."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7000411:results:345552ea",
+            "PMC7000411:results:11c19e91"
+          ],
+          "key_facts": [
+            "11 transcripts were significantly differentially expressed.",
+            "Overexpressed genes: lola, vsg.",
+            "Underexpressed genes: eEF2, CG31650, RhoGEF2.",
+            "Attacin-A was the only immune-related gene."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7000411_Q5",
+      "question": "Describe the overall experimental design used to investigate the effects of spaceflight and simulated microgravity on Serratia marcescens virulence, including the host model, bacterial treatments, and key measurements taken.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7000411:abstract:08675690",
+            "PMC7000411:introduction:05cd1545",
+            "PMC7000411:materials-and-methods:b4072ea4",
+            "PMC7000411:materials-and-methods:f62b400d",
+            "PMC7000411:materials-and-methods:268a80fc"
+          ],
+          "should_retrieve": [
+            "PMC7000411:introduction:4f98fcc9",
+            "PMC7000411:materials-and-methods:b77f5ce5",
+            "PMC7000411:materials-and-methods:3bbaad84",
+            "PMC7000411:materials-and-methods:aba9db5d",
+            "PMC7000411:materials-and-methods:2a8ee916",
+            "PMC7000411:materials-and-methods:41d7832f",
+            "PMC7000411:results:11c19e91"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study investigated the effects of spaceflight and simulated microgravity on *Serratia marcescens* virulence using the **Drosophila melanogaster** (fruit fly) as a host model [1], [2].\n\n**Bacterial Treatments**:\n*   **Spaceflight**: *S. marcescens* (strain Db11) was grown on solid semi-defined fly food media on the **International Space Station (ISS)** for 5 days, after 30 days of 4°C storage [3], [4], [5]. Ground control bacteria were grown in identical hardware and environmental conditions on Earth [5]. After retrieval, bacteria were isolated and stored frozen [4].\n*   **Simulated Microgravity (LSMMG)**: Ground-based *S. marcescens* cultures were grown in a **rotating wall vessel (RWV)** apparatus, rotated horizontally at 25 rpm to simulate low fluid shear microgravity conditions. A vertical rotation served as a normal gravity control [1], [6].\n*   **Subculture Experiment**: To test reversibility, spaceflight and LSMMG-treated bacteria were subcultured overnight under normal Earth gravity conditions before injection into flies [1], [7].\n\n**Host Model and Infection**:\n*   **Drosophila melanogaster**: Wild-type (w1118) and immune pathway mutant flies (Imd and Toll pathways) were used to assess host immune response [1], [3], [8].\n*   **Infection**: 2-3 day-old female flies were injected in the ventrolateral abdomen with approximately **10 CFU/fly** of treated bacteria diluted in PBS, or a sterile sham control [4], [9].\n\n**Key Measurements**:\n*   **Host Survival**: Monitored hourly for at least 24 hours post-injection, analyzed using Cox Proportional Hazards model [9], [10].\n*   **In vivo Bacterial Load**: Assayed in flies at 0, 9, 12, and 15 hours post-injection by homogenizing flies and plating serial dilutions on LB agar [10].\n*   **Host Gene Expression**: RNA sequencing was performed on wild-type flies 18 hours post-infection to identify differentially expressed genes related to host immunity [8], [11].\n\nThis comprehensive design aimed to compare virulence and growth kinetics under true spaceflight and simulated microgravity, assess the reversibility of these effects, and determine whether host immunity or pathogen physiology was primarily responsible for observed changes [1], [2].",
+          "citations": [
+            {
+              "id": "PMC7000411:abstract:08675690",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Provides an abstract-level overview of the host (Drosophila), pathogen (S. marcescens), conditions (ISS, simulated microgravity), and the main finding of increased virulence and its non-persistence."
+            },
+            {
+              "id": "PMC7000411:introduction:05cd1545",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Offers a detailed introduction to the experimental approach, including sending S. marcescens to the ISS, using RWV for simulated microgravity, infecting D. melanogaster (wild-type and immune mutants), and investigating the reversibility of virulence."
+            },
+            {
+              "id": "PMC7000411:materials-and-methods:b77f5ce5",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Details the specific fly lines used (w1118, immune mutants) and the FIT cassette hardware for spaceflight experiments."
+            },
+            {
+              "id": "PMC7000411:materials-and-methods:3bbaad84",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Describes the preparation of spaceflight and ground control bacterial samples on solid semi-defined fly food media."
+            },
+            {
+              "id": "PMC7000411:materials-and-methods:b4072ea4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Explains the bacterial isolation process after spaceflight and the general method of injecting bacteria into flies for ground-based assays."
+            },
+            {
+              "id": "PMC7000411:materials-and-methods:f62b400d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Specifies the injection volume (~10 CFU/fly), the use of a sham control, and that survival experiments and in vivo growth assays were performed."
+            },
+            {
+              "id": "PMC7000411:materials-and-methods:aba9db5d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Details the frequency of survival monitoring and the procedure for assaying in vivo bacterial load at specific time points (0, 9, 12, 15h)."
+            },
+            {
+              "id": "PMC7000411:materials-and-methods:2a8ee916",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Describes the subculturing method used to test whether the increased virulence of space-flown bacteria would persist after growth under ground conditions."
+            },
+            {
+              "id": "PMC7000411:materials-and-methods:268a80fc",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Explains the setup for simulated microgravity using the Rotating Wall Vessel (RWV), including horizontal/vertical rotation and growth conditions."
+            },
+            {
+              "id": "PMC7000411:materials-and-methods:41d7832f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Mentions RNA extraction and sequencing for host gene expression analysis to determine differences in host immunity."
+            },
+            {
+              "id": "PMC7000411:results:11c19e91",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+              "why_relevant": "Confirms that RNA sequencing was performed on wild-type fruit flies after infection to test for changes in host gene expression."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7000411:abstract:08675690",
+            "PMC7000411:introduction:05cd1545",
+            "PMC7000411:materials-and-methods:b77f5ce5",
+            "PMC7000411:materials-and-methods:3bbaad84",
+            "PMC7000411:materials-and-methods:b4072ea4",
+            "PMC7000411:materials-and-methods:f62b400d",
+            "PMC7000411:materials-and-methods:aba9db5d",
+            "PMC7000411:materials-and-methods:2a8ee916",
+            "PMC7000411:materials-and-methods:268a80fc",
+            "PMC7000411:materials-and-methods:41d7832f",
+            "PMC7000411:results:11c19e91"
+          ],
+          "key_facts": [
+            "Host model: Drosophila melanogaster (wild-type and immune mutants).",
+            "Spaceflight treatment: S. marcescens grown on ISS on solid media.",
+            "Simulated microgravity: S. marcescens grown in Rotating Wall Vessel (RWV).",
+            "Reversibility test: Subculturing treated bacteria on ground.",
+            "Infection method: Direct injection of ~10 CFU/fly.",
+            "Measurements: Host survival, in vivo bacterial load, host gene expression (RNA-seq)."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

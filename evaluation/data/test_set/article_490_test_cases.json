@@ -1,0 +1,393 @@
+{
+  "paper_id": "PMC6876156",
+  "paper_title": "Swim exercise in Caenorhabditis elegans extends neuromuscular and gut healthspan, enhances learning ability, and protects against neurodegeneration",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+  "test_cases": [
+    {
+      "id": "PMC6876156_Q1",
+      "question": "Which long-term swim exercise regimen induced the most consistent transcriptional upregulation of muscle structural genes in *C. elegans*?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6876156:results:2b7d3604"
+          ],
+          "should_retrieve": [
+            "PMC6876156:results:74027fbc",
+            "PMC6876156:results:f65a7eba"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The **3+3+2+2 regimen** induced the most consistent transcriptional upregulation of muscle structural genes in *C. elegans*. This regimen led to a statistically significant upregulation in 6 out of 10 tested genes, including *tnt-2*, *unc-27*, *mlc-1*, *unc-54*, *zig-12*, and *unc-87* [1]. This paralleled a feature of mammalian exercise adaptation [2].",
+          "citations": [
+            {
+              "id": "PMC6876156:results:2b7d3604",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "This chunk explicitly states that the 3+3+2+2 regimen induced the most consistent transcriptional upregulation and lists the specific genes."
+            },
+            {
+              "id": "PMC6876156:results:74027fbc",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "This chunk provides context about muscle structural genes being upregulated in mammals and their importance in C. elegans."
+            },
+            {
+              "id": "PMC6876156:results:f65a7eba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "This chunk reinforces that the 3+3+2+2 regimen induces improvements in multiple assays and features long-term functional maintenance."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6876156:results:2b7d3604",
+            "PMC6876156:results:74027fbc",
+            "PMC6876156:results:f65a7eba"
+          ],
+          "key_facts": [
+            "3+3+2+2 regimen",
+            "Most consistent transcriptional upregulation",
+            "6 of 10 muscle structural genes (tnt-2, unc-27, mlc-1, unc-54, zig-12, unc-87) significantly upregulated"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6876156_Q2",
+      "question": "How do the 3+3+2+2 and 4+4+4+4 swim exercise regimens differ in their effects on *C. elegans* muscle gene expression, mitochondrial health, and midlife survival?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6876156:results:2b7d3604",
+            "PMC6876156:results:574ef47a",
+            "PMC6876156:results:672b1122",
+            "PMC6876156:results:409a4f61"
+          ],
+          "should_retrieve": [
+            "PMC6876156:results:97f6531e",
+            "PMC6876156:results:80935960"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The **3+3+2+2 regimen** promoted a **consistent transcriptional upregulation** of muscle structural genes, with 6 out of 10 genes showing significant increases [1]. It also led to improvements in whole-animal mitochondrial health, including increased maximal respiration, spare capacity, and ATP-linked respiration, and resulted in a **~15% increase in midlife survival** [3], [4], [5].\n\nIn contrast, the **4+4+4+4 regimen** induced a wider range of transcriptional outcomes for muscle genes, with some upregulated (e.g., *tnt-2*, *unc-27*) and some downregulated (e.g., *unc-15*, *myo-3*), suggesting that excessive exercise can be deleterious [2]. While it also showed increases in maximal respiration, spare capacity, and ATP-linked respiration, overall oxygen consumption rates were significantly lower, indicating that this regimen was **stressful for animals and associated with an overall reduction in mitochondrial health** [3], [4]. Furthermore, the 4+4+4+4 regimen was **detrimental to overall *C. elegans* health, causing a significant ~12% decrease in midlife survival** compared to control animals [5].",
+          "citations": [
+            {
+              "id": "PMC6876156:results:2b7d3604",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Details the consistent upregulation of muscle structural genes by the 3+3+2+2 regimen."
+            },
+            {
+              "id": "PMC6876156:results:574ef47a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Describes the varied and potentially deleterious transcriptional outcomes of the 4+4+4+4 regimen on muscle genes."
+            },
+            {
+              "id": "PMC6876156:results:97f6531e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Explains the improvements in mitochondrial respiration parameters (maximal respiration, spare capacity, ATP-linked respiration) for the 3+3+2+2 regimen."
+            },
+            {
+              "id": "PMC6876156:results:672b1122",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Compares mitochondrial health outcomes, noting that 4+4+4+4 regimen is stressful and reduces mitochondrial health compared to 3+3+2+2."
+            },
+            {
+              "id": "PMC6876156:results:409a4f61",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Provides survival data for both regimens, showing midlife survival increase for 3+3+2+2 and decrease for 4+4+4+4."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6876156:results:2b7d3604",
+            "PMC6876156:results:574ef47a",
+            "PMC6876156:results:97f6531e",
+            "PMC6876156:results:80935960",
+            "PMC6876156:results:672b1122",
+            "PMC6876156:results:409a4f61"
+          ],
+          "key_facts": [
+            "3+3+2+2 regimen: consistent muscle gene upregulation, improved mitochondrial health, ~15% midlife survival increase",
+            "4+4+4+4 regimen: mixed muscle gene expression (some up, some down), overall reduced mitochondrial health, ~12% midlife survival decrease",
+            "4+4+4+4 regimen considered stressful and deleterious"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6876156_Q3",
+      "question": "Explain how swim exercise performed exclusively in early adulthood in *C. elegans* can lead to long-lasting, systemic health benefits in tissues not directly involved in physical activity, such as the pharynx and intestine, and what potential mechanisms are suggested for this transtissue signaling.",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6876156:abstract:0a07aebe",
+            "PMC6876156:discussion:c4f9e2ae",
+            "PMC6876156:discussion:5aaf9cbf",
+            "PMC6876156:results:b1384c33",
+            "PMC6876156:results:044f9dc2"
+          ],
+          "should_retrieve": [
+            "PMC6876156:discussion:6d1b16e9",
+            "PMC6876156:discussion:4b150deb",
+            "PMC6876156:results:022e7d75"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Swim exercise performed exclusively in early adulthood in *C. elegans* induces **long-lasting systemic health benefits** that are detectable in midlife, even in tissues not directly engaged in physical activity [1], [2]. The study observed improvements in the functionality of the pharynx and intestine, which are not directly involved in the swimming motion [2], [3].\n\nSpecifically, the **pharyngeal pumping rate**, a cardiac-like muscle function, showed a significant increase in exercised animals at Ad11 and Ad15, which is 7 to 11 days after the last exercise session. This benefit became evident late in life, during a period of accentuated age-related decline [4]. For the **intestine**, long-term swim exercise improved intestinal barrier function, evidenced by a one-third lower proportion of \"Smurf animals\" (indicating reduced intestinal leakage) at Ad11 in exercised nematodes compared to controls [5].\n\nThese benefits to non-directly exercised tissues are suggested to be conferred via **transtissue signals** rather than direct exercise-enhanced contraction [3]. The paper highlights that early adult activity can trigger a **potential 'switch mechanism' for healthy aging trajectories** that extends late into life [2]. The establishment of *C. elegans* as an exercise model offers an exciting opportunity to uncover the **molecular signals and circuitry responsible for these life-long, exercise-dependent systemic health benefits** [1], [6].",
+          "citations": [
+            {
+              "id": "PMC6876156:abstract:0a07aebe",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "States that early adult swim exercise promotes long-lasting systemic benefits and allows for dissection of molecular circuitry involved in system-wide benefits."
+            },
+            {
+              "id": "PMC6876156:discussion:4b150deb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Emphasizes that benefits of young adult exercise extend late into life, suggesting a potential switch mechanism for healthy aging trajectories."
+            },
+            {
+              "id": "PMC6876156:discussion:c4f9e2ae",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Discusses how exercise promotes health benefits in multiple tissues not directly engaged, specifically mentioning pharyngeal pumping rate and intestinal barrier function, and suggesting transtissue signals."
+            },
+            {
+              "id": "PMC6876156:results:b1384c33",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Provides specific results for the increased pharyngeal pumping rate at Ad11 and Ad15 in exercised animals."
+            },
+            {
+              "id": "PMC6876156:results:044f9dc2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Details the improvement in intestinal integrity, showing a reduced percentage of Smurf animals at Ad11."
+            },
+            {
+              "id": "PMC6876156:discussion:5aaf9cbf",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Reiterates the long-lasting nature of exercise benefits and the potential for uncovering molecular signals for systemic health."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6876156:abstract:0a07aebe",
+            "PMC6876156:discussion:6d1b16e9",
+            "PMC6876156:discussion:4b150deb",
+            "PMC6876156:discussion:c4f9e2ae",
+            "PMC6876156:discussion:5aaf9cbf",
+            "PMC6876156:results:022e7d75",
+            "PMC6876156:results:b1384c33",
+            "PMC6876156:results:044f9dc2"
+          ],
+          "key_facts": [
+            "Early adult exercise leads to long-lasting systemic benefits in non-directly active tissues.",
+            "Pharyngeal pumping rate increased significantly at Ad11 and Ad15.",
+            "Intestinal barrier function improved, reducing 'Smurf animals' at Ad11.",
+            "Benefits are attributed to transtissue signals.",
+            "Suggests a 'switch mechanism' for healthy aging trajectories.",
+            "C. elegans model can help uncover molecular signals for these systemic benefits."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6876156_Q4",
+      "question": "Which specific muscle structural genes were significantly upregulated by the 3+3+2+2 swim exercise regimen in *C. elegans*?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6876156:results:2b7d3604"
+          ],
+          "should_retrieve": [
+            "PMC6876156:results:74027fbc"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The 3+3+2+2 swim exercise regimen in *C. elegans* significantly upregulated the expression of **six specific muscle structural genes**: *tnt-2*, *unc-27*, *mlc-1*, *unc-54*, *zig-12*, and *unc-87* [1]. These genes represent major structural gene classes found to be upregulated in mammals in an exercise-dependent manner [2].",
+          "citations": [
+            {
+              "id": "PMC6876156:results:2b7d3604",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "This chunk directly lists the six specific muscle structural genes that showed statistically significant upregulation with the 3+3+2+2 regimen."
+            },
+            {
+              "id": "PMC6876156:results:74027fbc",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "This chunk provides the context that these genes are part of major structural gene classes known to be upregulated in mammalian endurance exercise."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6876156:results:2b7d3604",
+            "PMC6876156:results:74027fbc"
+          ],
+          "key_facts": [
+            "3+3+2+2 swim exercise regimen",
+            "Upregulated muscle structural genes: tnt-2, unc-27, mlc-1, unc-54, zig-12, unc-87",
+            "Six specific genes identified"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6876156_Q5",
+      "question": "What are the main systemic health benefits observed in *C. elegans* after long-term swim exercise, encompassing neuromuscular, metabolic, intestinal, and neuronal functions?",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6876156:abstract:0a07aebe",
+            "PMC6876156:discussion:f6621f91",
+            "PMC6876156:results:f65a7eba",
+            "PMC6876156:results:81ab3166",
+            "PMC6876156:results:97f6531e",
+            "PMC6876156:results:409a4f61",
+            "PMC6876156:results:b1384c33",
+            "PMC6876156:results:044f9dc2",
+            "PMC6876156:results:f9301620",
+            "PMC6876156:results:92f84537"
+          ],
+          "should_retrieve": [
+            "PMC6876156:discussion:6d1b16e9",
+            "PMC6876156:results:2b7d3604",
+            "PMC6876156:results:35133c93",
+            "PMC6876156:results:d9037f7f",
+            "PMC6876156:results:81423d2f",
+            "PMC6876156:results:693842a6",
+            "PMC6876156:results:4aa4b210"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Long-term swim exercise in *C. elegans* induces a wide array of systemic health benefits across various physiological systems, often with long-lasting effects even after the exercise period ends [1], [2], [3].\n\nKey benefits include:\n\n*   **Neuromuscular Health**: Exercise leads to the **upregulation of muscle structural genes** and a **significant increase in crawling maximum velocity** [4], [5]. It also improves **burrowing performance** and maintains **healthier muscle mitochondrial network organization** [6], [7].\n*   **Metabolic Health**: Whole-animal mitochondrial function is enhanced, characterized by **increased maximal respiration, spare capacity, and ATP-linked respiration** [8]. A temporary increase in proton leak is also observed, potentially as a protective mechanism [8].\n*   **Longevity**: The 3+3+2+2 regimen promotes a **~15% increase in midlife survival** of the *C. elegans* population, although it does not change maximum lifespan [9].\n*   **Intestinal Health**: Exercise significantly **improves intestinal barrier function**, reducing the percentage of \"Smurf animals\" (indicating gut leakage) at Ad11 [10].\n*   **Pharyngeal Function**: Pharyngeal pumping rate, a cardiac-like muscle function, shows a **significant increase late in life** (Ad11 and Ad15), demonstrating benefits to tissues not directly trained [11].\n*   **Neuronal Health and Cognition**: Learning ability is **markedly increased**, with exercised animals showing an average 35% higher learning index [12]. Exercise also provides protection against neurodegeneration, improving **motility in tauopathy models** [13], reducing **nerve cord morphological abnormalities** in Tau-expressing animals [14], enhancing **chemotactic ability in Alzheimer's disease models** [15], and improving **touch sensitivity in Huntington's disease models** [16].\n*   **Benefits in Older Animals**: Even post-reproductive *C. elegans* can exhibit improved locomotory vigor upon swim exercise with modified regimens [17].\n\nOverall, these findings highlight that *C. elegans* exercise promotes health benefits at the body wall muscle, pharyngeal, intestinal, and neuronal levels, with many effects being long-lasting [3].",
+          "citations": [
+            {
+              "id": "PMC6876156:abstract:0a07aebe",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Provides an abstract overview of neuromuscular, gut healthspan, learning ability, and neurodegeneration protection."
+            },
+            {
+              "id": "PMC6876156:discussion:6d1b16e9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Discusses robust exercise adaptations in multiple tissues, including whole-animal health, mitochondrial respiration, midlife survival, pharynx, intestine, learning, and neurodegeneration."
+            },
+            {
+              "id": "PMC6876156:discussion:f6621f91",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Summarizes the transtissue impact of exercise on body wall muscle, pharyngeal, intestinal, and neuronal levels."
+            },
+            {
+              "id": "PMC6876156:results:2b7d3604",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Details the upregulation of muscle structural genes (e.g., tnt-2, unc-27, mlc-1, unc-54, zig-12, unc-87)."
+            },
+            {
+              "id": "PMC6876156:results:f65a7eba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "States that multiple daily swim regimens promoted a significant increase in maximum crawling velocity, with 3+3+2+2 showing a 24% increase at Ad8."
+            },
+            {
+              "id": "PMC6876156:results:35133c93",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Describes the improvement in burrowing performance for exercised nematodes."
+            },
+            {
+              "id": "PMC6876156:results:81ab3166",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Explains the significant improvement in muscle mitochondrial network organization at Ad5, Ad8, and Ad11."
+            },
+            {
+              "id": "PMC6876156:results:97f6531e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Details the increase in maximal respiration, spare capacity, ATP-linked respiration, and proton leak in exercised animals."
+            },
+            {
+              "id": "PMC6876156:results:409a4f61",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Reports the ~15% increase in midlife survival for the 3+3+2+2 regimen."
+            },
+            {
+              "id": "PMC6876156:results:044f9dc2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Describes the improvement in intestinal integrity, with a one-third lower proportion of Smurf animals at Ad11."
+            },
+            {
+              "id": "PMC6876156:results:b1384c33",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Details the significant increase in pharyngeal pumping rate at Ad11 and Ad15."
+            },
+            {
+              "id": "PMC6876156:results:f9301620",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "States that the 3+3+2+2 regimen increased the learning index of Ad5 exercised animals by an average of 35%."
+            },
+            {
+              "id": "PMC6876156:results:d9037f7f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Shows a clear increase in mean velocity in exercised aggregating Tau animals."
+            },
+            {
+              "id": "PMC6876156:results:81423d2f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Reports a decrease in the average number of gaps in GABAergic motor neurons in swim-exercised Tau mutants."
+            },
+            {
+              "id": "PMC6876156:results:693842a6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Indicates that exercised Aβ 1–42-expressing animals exhibited a significantly higher chemotaxis index toward benzaldehyde."
+            },
+            {
+              "id": "PMC6876156:results:92f84537",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Shows significant improvement in touch sensitivity for exercised polyQ animals at Ad5, Ad8, and Ad11."
+            },
+            {
+              "id": "PMC6876156:results:4aa4b210",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+              "why_relevant": "Mentions that postreproductive C. elegans can improve locomotory vigor upon swim exercise."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6876156:abstract:0a07aebe",
+            "PMC6876156:discussion:6d1b16e9",
+            "PMC6876156:discussion:f6621f91",
+            "PMC6876156:results:2b7d3604",
+            "PMC6876156:results:f65a7eba",
+            "PMC6876156:results:35133c93",
+            "PMC6876156:results:81ab3166",
+            "PMC6876156:results:97f6531e",
+            "PMC6876156:results:409a4f61",
+            "PMC6876156:results:b1384c33",
+            "PMC6876156:results:044f9dc2",
+            "PMC6876156:results:f9301620",
+            "PMC6876156:results:d9037f7f",
+            "PMC6876156:results:81423d2f",
+            "PMC6876156:results:693842a6",
+            "PMC6876156:results:92f84537",
+            "PMC6876156:results:4aa4b210"
+          ],
+          "key_facts": [
+            "Upregulation of muscle structural genes and increased crawling velocity.",
+            "Improved burrowing performance and healthier muscle mitochondrial networks.",
+            "Enhanced whole-animal mitochondrial function (maximal respiration, spare capacity, ATP-linked respiration).",
+            "Increased midlife survival (~15%).",
+            "Improved intestinal barrier function.",
+            "Increased pharyngeal pumping rate late in life.",
+            "Enhanced learning ability (35% higher learning index).",
+            "Protection against neurodegeneration in models of tauopathy, Alzheimer's, and Huntington's disease (improved motility, reduced nerve cord abnormalities, enhanced chemotaxis, improved touch sensitivity).",
+            "Locomotory vigor improvements even in post-reproductive animals."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

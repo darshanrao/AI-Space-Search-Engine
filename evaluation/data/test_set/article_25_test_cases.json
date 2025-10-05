@@ -1,0 +1,428 @@
+{
+  "paper_id": "PMC9267413",
+  "paper_title": "Extraterrestrial Gynecology: Could Spaceflight Increase the Risk of Developing Cancer in Female Astronauts? An Updated Review",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+  "test_cases": [
+    {
+      "id": "PMC9267413_Q1",
+      "question": "What are the three main sources of ionizing space radiation?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The three main sources of ionizing space radiation are **galactic cosmic radiation (GCR)**, **solar particle events (SPE)**, and the **Van Allen radiation belt** [1].",
+          "citations": [
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "This chunk explicitly lists the three main sources of ionizing space radiation."
+            }
+          ],
+          "used_context_ids": [
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f"
+          ],
+          "key_facts": [
+            "Galactic cosmic radiation (GCR)",
+            "Solar particle events (SPE)",
+            "Van Allen radiation belt"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC9267413_Q2",
+      "question": "Compare the characteristics and biological hazards of Galactic Cosmic Radiation (GCR) and Solar Particle Events (SPE) radiation.",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:1db058b0",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:535fb9b0"
+          ],
+          "should_retrieve": [
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:519d44dc",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:c2a8ae24"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Galactic Cosmic Radiation (GCR) is composed of **98% nuclei (87% hydrogen, 12% helium, 1% heavy metal nuclei) and 2% electrons and positrons**, accelerated to relativistic speeds by intra-galactic supernovae [1], [2]. These high-energy particles (HZEs, protons, heavy ions) are **energetic enough to penetrate spacecraft shielding and bodily tissues**, making them very damaging to biological tissue due to their high Linear Energy Transfer (LET) values, which allows them to induce complex double-strand breaks [2], [3].\n\nIn contrast, Solar Particle Events (SPEs) consist mainly of **95% protons, electrons, HZE ions, and alpha particles**, but are characterized by **high flux and low energy** [4]. This low energy means that **spacecraft shielding is much more effective at blocking SPE radiation**, and most residual SPE radiation can be absorbed by superficial tissues. Consequently, **skin doses from SPEs are 5–10 times higher than internal organs**, making them more likely to cause skin lesions and hematological/immunological disturbances, though they rarely result in high total dose exposures [4].",
+          "citations": [
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Provides the composition of GCR and states it constitutes a significant part of the total radiation dose."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:1db058b0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Explains that high-energy GCR particles (HZEs, protons, heavy ions) penetrate spacecraft shielding and the body."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:519d44dc",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Details that HZEs and protons have high LET values, making them highly penetrating and damaging to biological tissue by inducing complex double-strand breaks."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:c2a8ae24",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Introduces Solar Particle Events (SPEs) and their particle composition."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:535fb9b0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Compares SPE radiation to GCR, highlighting SPE's high flux/low energy, greater effectiveness of shielding against it, and its impact on superficial tissues (skin doses)."
+            }
+          ],
+          "used_context_ids": [
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:1db058b0",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:519d44dc",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:c2a8ae24",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:535fb9b0"
+          ],
+          "key_facts": [
+            "GCR: 98% nuclei (hydrogen, helium, heavy metals), 2% electrons/positrons, relativistic speeds, high LET, deeply penetrating, causes complex double-strand breaks.",
+            "SPE: mainly 95% protons, electrons, HZE ions, alpha particles, high flux, low energy.",
+            "Spacecraft shielding more effective against SPEs.",
+            "SPEs cause higher skin doses (5–10x internal organs) and superficial tissue damage."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC9267413_Q3",
+      "question": "How do current medical selection and post-flight screening protocols for female astronauts address the potential risks of gynecological cancers and reproductive health issues identified in spaceflight research?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:d2d9cba2",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:dd7c3213",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:82046560",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:f7eec62d",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:044628ab",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:046e26dd"
+          ],
+          "should_retrieve": [
+            "PMC9267413:1--introduction:aa3dd989",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:01d747c7",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:a5d77a23",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:91b8108a",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:e05975a8",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:cd6e05dc",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:0b4e59bc",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:1fbd5ccf"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Despite a historical paucity of research on female reproductive health and cancer risks in space [1], [2], [3], [4], current medical selection and post-flight screening protocols for female astronauts are becoming more comprehensive. While the overall number of female astronauts is low, making epidemiological studies difficult [5], significant measures are in place.\n\nDuring the final astronaut selection process, female candidates undergo **pelvic and abdominal sonography, colposcopy, gynecologic examination, Pap smears, and screening for high-risk HPV** [6]. Any gynecologic malignancy, except successfully treated cervical carcinoma in situ, is disqualifying [6]. Pre-flight medical evaluations are even more comprehensive, including **abdominal and pelvic ultrasound studies and breast MRI**, with all female astronauts receiving a **pre-flight transvaginal ultrasound (TVUS)** [7], [8]. If endometrial stripe abnormalities are noted on TVUS, terrestrial guidelines for endometrial hyperplasia/cancer screening are considered [8]. Astronauts are also encouraged to obtain the **HPV vaccine series** and undergo **genetic screening for hereditary cancer syndromes** based on personal and family history [8], [10]. Counseling regarding the known effects of hormonal contraception on breast, ovarian, and endometrial cancers is also part of pre-flight discussions [8], [9].\n\nFor post-flight screening, more conservative recommendations include **annual mammography with adjunctive ultrasound for dense breast tissue, or alternating mammography with biennial breast magnetic resonance imaging (MRI)**. Additionally, **earlier and more frequent colon cancer screening (starting at 40 years and every 5 years thereafter)**, and an **annual skin exam by a dermatologist** are recommended [11]. The new radiation exposure limit is now a universal standard of less than 600 mGy for all ages and sexes, reflecting an updated approach to radiation risk management [12].",
+          "citations": [
+            {
+              "id": "PMC9267413:1--introduction:aa3dd989",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Highlights the historical lack of research on female reproductive health and carcinogenesis in space."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:01d747c7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Mentions the limited research into sex/gender-related differences and microgravity's effect on the female reproductive system."
+            },
+            {
+              "id": "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:a5d77a23",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Reinforces the paucity of evidence on spaceflight effects on the female reproductive system and the increasing need for study due to more women in space."
+            },
+            {
+              "id": "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:91b8108a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "States that scientific literature on reproductive changes in female astronauts remains sparse."
+            },
+            {
+              "id": "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:ebb5f1d6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Discusses the difficulty in conducting studies due to the low number of female astronauts and the possibility that current limitations are effective."
+            },
+            {
+              "id": "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:d2d9cba2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Details the gynecologic screening tests performed during the final astronaut selection process and disqualifying conditions."
+            },
+            {
+              "id": "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:dd7c3213",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Describes the components of annual examinations and preflight medical evaluations, including breast MRI and abdominal/pelvic ultrasound."
+            },
+            {
+              "id": "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:82046560",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Outlines pre-flight TVUS, endometrial screening, HPV vaccination, genetic screening for hereditary cancer syndromes, and counseling on hormonal contraception risks/benefits."
+            },
+            {
+              "id": "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:044628ab",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Provides details on the terrestrial benefits and risks of hormonal contraception use in relation to various cancers, which is part of counseling."
+            },
+            {
+              "id": "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:046e26dd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Suggests genetic counseling and screening for mutations like BRCA1/BRCA2 as a reasonable consideration for astronauts."
+            },
+            {
+              "id": "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:f7eec62d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Details post-flight screening recommendations for female astronauts, including mammography, colon cancer screening, and skin exams."
+            },
+            {
+              "id": "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:1fbd5ccf",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Mentions the new universal radiation standard of less than 600 mGy for all ages and sexes."
+            }
+          ],
+          "used_context_ids": [
+            "PMC9267413:1--introduction:aa3dd989",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:01d747c7",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:a5d77a23",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:91b8108a",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:e05975a8",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:cd6e05dc",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:ebb5f1d6",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:0b4e59bc",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:1fbd5ccf",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:d2d9cba2",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:dd7c3213",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:82046560",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:f7eec62d",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:044628ab",
+            "PMC9267413:6--current-challenges-in-gynecological-cancer-risk-prediction-for-spaceflight:046e26dd"
+          ],
+          "key_facts": [
+            "Selection: pelvic/abdominal sonography, colposcopy, Pap smear, HPV screening.",
+            "Disqualifying: most gynecologic malignancies.",
+            "Pre-flight: comprehensive evaluations, TVUS, breast MRI, endometrial screening if needed.",
+            "Prevention: HPV vaccine, genetic screening for hereditary cancer syndromes (e.g., BRCA1/2), counseling on hormonal contraception risks/benefits.",
+            "Post-flight: annual mammography (with adjunctive ultrasound or biennial MRI), earlier/frequent colon cancer screening, annual skin exam.",
+            "Radiation limits: new universal standard of <600 mGy for all sexes/ages."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC9267413_Q4",
+      "question": "What specific changes in gene expression and morphology were observed in human cervical carcinoma CaSki cells flown on the \"Shen Zhou IV\" space shuttle mission?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC9267413:5--gynecological-cancers-and-space:4e097979"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Human cervical carcinoma CaSki cells flown on the \"Shen Zhou IV\" space shuttle mission exhibited several specific changes. The **growth of CaSki cells in the flight group was slow** compared to ground controls. Morphologically, light microscopy revealed that the flight group cells were **smaller, rounder, smoother, and had low adhesion** [1]. Furthermore, these space-grown CaSki cells showed **altered gene expression** in genes regulating the **cell cycle, cell morphology, signal transduction, and apoptosis** [1].",
+          "citations": [
+            {
+              "id": "PMC9267413:5--gynecological-cancers-and-space:4e097979",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "This chunk directly describes the observed changes in CaSki cell morphology, proliferation, and gene expression after spaceflight."
+            }
+          ],
+          "used_context_ids": [
+            "PMC9267413:5--gynecological-cancers-and-space:4e097979"
+          ],
+          "key_facts": [
+            "Slower growth of CaSki cells in flight group.",
+            "Flight cells were smaller, rounder, smoother, and had low adhesion.",
+            "Altered gene expression in genes regulating cell cycle, cell morphology, signal transduction, and apoptosis."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC9267413_Q5",
+      "question": "What are the primary space-environmental factors affecting astronaut health, and how do they specifically impact the female reproductive system and overall cancer risk, according to the review?",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC9267413:1--introduction:aa3dd989",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:adf87d06",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:01d747c7",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:17c3ae46",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:a5d77a23",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:99fe5aeb",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:c67116c7",
+            "PMC9267413:4--effect-of-space-travel-on-cancer:ac8a7bd6",
+            "PMC9267413:4--effect-of-space-travel-on-cancer:b95ac34c",
+            "PMC9267413:5--gynecological-cancers-and-space:0d02e438",
+            "PMC9267413:5--gynecological-cancers-and-space:d0f9bff7",
+            "PMC9267413:5--gynecological-cancers-and-space:6894eb64",
+            "PMC9267413:8--conclusions:b50a1c25"
+          ],
+          "should_retrieve": [
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:3e7bfa55",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:91b8108a",
+            "PMC9267413:4--effect-of-space-travel-on-cancer:45ed39a1",
+            "PMC9267413:4--effect-of-space-travel-on-cancer:cd6d7e54",
+            "PMC9267413:5--gynecological-cancers-and-space:1704fdff",
+            "PMC9267413:5--gynecological-cancers-and-space:ff95ea4a",
+            "PMC9267413:5--gynecological-cancers-and-space:408dc697"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The primary space-environmental factors affecting astronaut health are **microgravity and ionizing radiation**, which are identified as the most significant hazards during space travel, especially for long-duration missions [1], [2].\n\n**Impact of Microgravity:**\nMicrogravity leads to complex biological and systemic changes, including remodeling of the cardiovascular and musculoskeletal systems [3], [4]. Its effects are significant, global, and amplified with mission duration, though research into sex/gender-related differences and the female reproductive system's response is limited [4]. Microgravity exposure poses multiple female reproductive health concerns, including effects on **gonadal function and fertility**, potentially exacerbated by secondary stressors like sleep disruption [5], [6]. Studies on mouse embryos flown in space revealed **impaired blastocyst formation and quality, severe DNA damage, and global hypomethylation** [7]. At a cellular level, microgravity can influence processes involved in carcinogenesis such as **differentiation, proliferation, migration, survival, apoptosis, and adhesion** [8]. It has also been observed to **impair radiation-induced DNA damage response**, increase radiosensitivity, and dysregulate important signaling pathways (e.g., PI3K) commonly involved in cancer [9]. Simulated microgravity has been shown to **decrease proliferation and migration in human endometrial stromal cells** [10].\n\n**Impact of Ionizing Radiation:**\nIonizing radiation, stemming from galactic cosmic radiation (GCR), solar particle events (SPE), and the Van Allen radiation belt, is a known carcinogen [11], [12]. It can directly or indirectly damage cells by causing **single-strand or double-strand DNA breaks**, which can lead to cell death or mutation [13]. An **increased rate of carcinogenesis** is a primary concern for long-duration spaceflight [12]. The **ovary is extremely radiosensitive**, and radiation exposure can induce temporary or permanent infertility, with permanent sterility requiring doses ranging from 3500–20,000 mGy [14]. Animal studies have demonstrated that **heavy ion irradiation can induce ovarian tumors** in mice [15], [16]. Furthermore, DNA damage in human cervical carcinoma cells has been shown to correlate with spaceflight duration [17]. Spaceflight can also cause **immune dysregulation**, including impaired NK cell function and reduced T cell activation, which may lead to the **reactivation of latent oncogenic viruses** like HPV, Epstein–Barr virus, and varicella-zoster virus, potentially increasing cancer risk [17], [18].\n\nOverall, the review highlights a **scarcity of knowledge** regarding the combined impact of space radiation and microgravity on gynecologic cancer, largely due to the insufficient number of female astronauts exposed to long-duration, low-dose rate, and proton and heavy ion radiation [19]. The male and female gonads are noted as among the most sensitive tissues to radiation [19].",
+          "citations": [
+            {
+              "id": "PMC9267413:1--introduction:aa3dd989",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Identifies microgravity and radiation as significant hazards and states the review's focus on female reproductive system and gynecological cancer."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:adf87d06",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Lists gravity (or lack thereof) and radiation as two of the five key threats to long-duration space travel."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:3e7bfa55",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Explains that microgravity leads to complex biological and systemic-level changes, including remodeling of cardiovascular and musculoskeletal systems."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:01d747c7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "States that microgravity effects are significant, global, amplified with mission duration, and can synergistically combine with radiation, while research into sex/gender differences is limited."
+            },
+            {
+              "id": "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:a5d77a23",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Highlights the paucity of evidence on spaceflight effects on the female reproductive system and mentions microgravity concerns for gonadal function and fertility."
+            },
+            {
+              "id": "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:91b8108a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Further details microgravity concerns including effects of weightlessness on gonadal function and fertility, and secondary spaceflight stressors."
+            },
+            {
+              "id": "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:99fe5aeb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Describes the negative impacts of spaceflight on mouse embryos, including impaired blastocyst formation, DNA damage, and epigenetic abnormalities."
+            },
+            {
+              "id": "PMC9267413:5--gynecological-cancers-and-space:1704fdff",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Explains how microgravity influences various cellular processes involved in carcinogenesis, such as differentiation, proliferation, and apoptosis."
+            },
+            {
+              "id": "PMC9267413:4--effect-of-space-travel-on-cancer:b95ac34c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Discusses microgravity's effect on DNA damage response, radiosensitivity, and dysregulation of signaling pathways like PI3K, linking them to increased cancer risk."
+            },
+            {
+              "id": "PMC9267413:5--gynecological-cancers-and-space:408dc697",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Provides a specific example of simulated microgravity decreasing proliferation and migration in human endometrial stromal cells."
+            },
+            {
+              "id": "PMC9267413:4--effect-of-space-travel-on-cancer:ac8a7bd6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "States that space radiation and microgravity contribute to tumor development and that ionizing radiation is a known carcinogen."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Identifies the three main sources of ionizing space radiation (GCR, SPE, Van Allen belt) and highlights increased carcinogenesis as a primary concern for long-duration spaceflight."
+            },
+            {
+              "id": "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:17c3ae46",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Explains how ionizing radiation impacts cells, causing DNA breaks, mutations, and acting as an etiological agent for cancer."
+            },
+            {
+              "id": "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:c67116c7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Emphasizes the extreme radiosensitivity of the ovary and provides dose ranges for temporary and permanent sterility in women."
+            },
+            {
+              "id": "PMC9267413:5--gynecological-cancers-and-space:0d02e438",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Cites a study showing heavy ion irradiation induced ovarian tumors in female mice."
+            },
+            {
+              "id": "PMC9267413:5--gynecological-cancers-and-space:ff95ea4a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Cites a study demonstrating that charged iron particle irradiation can induce ovarian tumors in mice, raising concerns for female astronauts."
+            },
+            {
+              "id": "PMC9267413:5--gynecological-cancers-and-space:d0f9bff7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Reports DNA damage in HeLa cells correlating with spaceflight duration and discusses the potential for oncogenic virus reactivation (e.g., HPV) due to immune dysregulation."
+            },
+            {
+              "id": "PMC9267413:5--gynecological-cancers-and-space:6894eb64",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Details immune dysregulation (impaired NK cell function, reduced T cell activation) and increased viral shedding (EBV, VZV, CMV) during spaceflight, linking it to potential HPV reactivation and increased cancer risk."
+            },
+            {
+              "id": "PMC9267413:8--conclusions:b50a1c25",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+              "why_relevant": "Concludes that there is a scarcity of knowledge on the impact of space radiation and microgravity on gynecologic cancer and that gonads are among the most radiation-sensitive tissues."
+            }
+          ],
+          "used_context_ids": [
+            "PMC9267413:1--introduction:aa3dd989",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:adf87d06",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:3e7bfa55",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:01d747c7",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:17c3ae46",
+            "PMC9267413:2--space-environmental-factors--microgravity-and-space-radiation:e193067f",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:a5d77a23",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:91b8108a",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:99fe5aeb",
+            "PMC9267413:3--effect-of-spaceflight-on-female-reproduction:c67116c7",
+            "PMC9267413:4--effect-of-space-travel-on-cancer:ac8a7bd6",
+            "PMC9267413:4--effect-of-space-travel-on-cancer:b95ac34c",
+            "PMC9267413:5--gynecological-cancers-and-space:1704fdff",
+            "PMC9267413:5--gynecological-cancers-and-space:0d02e438",
+            "PMC9267413:5--gynecological-cancers-and-space:ff95ea4a",
+            "PMC9267413:5--gynecological-cancers-and-space:d0f9bff7",
+            "PMC9267413:5--gynecological-cancers-and-space:6894eb64",
+            "PMC9267413:5--gynecological-cancers-and-space:408dc697",
+            "PMC9267413:8--conclusions:b50a1c25"
+          ],
+          "key_facts": [
+            "Primary factors: microgravity and ionizing radiation.",
+            "Microgravity impacts: gonadal function, fertility, impaired blastocyst formation/quality, DNA damage, epigenetic abnormalities in embryos.",
+            "Microgravity cellular effects: influences differentiation, proliferation, migration, survival, apoptosis, adhesion; impairs DNA damage response; increases radiosensitivity; dysregulates PI3K pathway; decreases endometrial stromal cell proliferation/migration.",
+            "Ionizing radiation impacts: DNA damage (single/double-strand breaks), mutations, increased carcinogenesis risk.",
+            "Ovary is extremely radiosensitive, leading to temporary/permanent infertility.",
+            "Heavy ion irradiation induces ovarian tumors in mice.",
+            "Space radiation causes DNA damage in cervical cancer cells.",
+            "Spaceflight causes immune dysregulation, leading to reactivation of oncogenic viruses (HPV, EBV, VZV, CMV), increasing cancer risk.",
+            "Overall knowledge on combined effects on gynecologic cancer is scarce."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

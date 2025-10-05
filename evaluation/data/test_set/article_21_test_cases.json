@@ -1,0 +1,360 @@
+{
+  "paper_id": "PMC6371294",
+  "paper_title": "FAIRness and Usability for Open-access Omics Data Systems",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+  "test_cases": [
+    {
+      "id": "PMC6371294_Q1",
+      "question": "What was the average overall FAIRness score for the omics data systems assessed, and what was the range?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6371294:abstract:799f75f7",
+            "PMC6371294:summary-of-fairness-assessments:04d7f7fd"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The average overall FAIRness score for the assessed omics data systems was **10.1** (out of 14), with a range of **6 to 12** [1], [2].",
+          "citations": [
+            {
+              "id": "PMC6371294:abstract:799f75f7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk provides the average FAIRness score and the range of scores for the evaluated systems."
+            },
+            {
+              "id": "PMC6371294:summary-of-fairness-assessments:04d7f7fd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk reiterates and confirms the average FAIRness score and the range, serving as a direct source for the factual information."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6371294:abstract:799f75f7",
+            "PMC6371294:summary-of-fairness-assessments:04d7f7fd"
+          ],
+          "key_facts": [
+            "Average FAIRness score: 10.1",
+            "Range of FAIRness scores: 6-12",
+            "Maximum possible score: 14"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6371294_Q2",
+      "question": "How did the assessed omics data systems generally perform across the four main FAIR principles (Findability, Accessibility, Interoperability, and Reusability)?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6371294:abstract:799f75f7",
+            "PMC6371294:summary-of-fairness-assessments:04d7f7fd",
+            "PMC6371294:fairness-of-omics-data:6bca3c77"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The assessed omics data systems generally performed **best in the areas of data accessibility and reusability**, and **slightly worse in data findability**. They performed **far worse in data interoperability** [1], [2], [3]. The abstract also notes that reusability of metadata, in particular, was frequently not well supported [1].",
+          "citations": [
+            {
+              "id": "PMC6371294:abstract:799f75f7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk provides an initial summary of performance, stating best in findability/accessibility and worst in interoperability, and that reusability of metadata was not well supported."
+            },
+            {
+              "id": "PMC6371294:summary-of-fairness-assessments:04d7f7fd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk offers a more detailed summary of performance across the FAIR principles, confirming best in accessibility and reusability, slightly worse in findability, and far worse in interoperability."
+            },
+            {
+              "id": "PMC6371294:fairness-of-omics-data:6bca3c77",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk defines the four FAIR principles, which is essential context for understanding the comparative performance."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6371294:abstract:799f75f7",
+            "PMC6371294:summary-of-fairness-assessments:04d7f7fd",
+            "PMC6371294:fairness-of-omics-data:6bca3c77"
+          ],
+          "key_facts": [
+            "Best performance in Accessibility and Reusability",
+            "Slightly worse performance in Findability",
+            "Worst performance in Interoperability",
+            "Reusability of metadata often not well supported"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6371294_Q3",
+      "question": "What are the primary challenges identified in the paper for achieving true semantic interoperability and data reusability in omics data systems, particularly concerning metadata?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6371294:discussion:c98696c1",
+            "PMC6371294:discussion:3dafb3d9",
+            "PMC6371294:interoperability:e743474d",
+            "PMC6371294:interoperability:caa6feb1",
+            "PMC6371294:discussion:4e372f04"
+          ],
+          "should_retrieve": [
+            "PMC6371294:discussion:c755cb17",
+            "PMC6371294:discussion:fb7e9142",
+            "PMC6371294:interoperability:d69cf24f",
+            "PMC6371294:interoperability:85958679",
+            "PMC6371294:interoperability:66e33e3f"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Achieving true semantic interoperability and data reusability in omics data systems faces several primary challenges, particularly concerning metadata:\n\n1.  **Lack of Semantic Metadata Representation:** Systems often do not use metadata representation languages with sufficient semantics, nor do they fully leverage FAIR vocabularies. Existing metadata specifications lack inherent semantics, making semantic integration difficult [1], [2], [3].\n2.  **Myriad and Overlapping Vocabularies:** There are numerous vocabularies (ontologies) within biological sub-domains, often with overlapping semantic content, which necessitates complex normalization mechanisms. Reliably mapping these ever-changing ontologies is a significant hurdle [1], [4].\n3.  **Low Motivation for Rich Metadata Provision:** Data submitters in the biomedical field have relatively low motivation to provide extensive, rich metadata, partly because only a small fraction of shared data is cited upon reuse. This places a burden on systems with limited resources to acquire and maintain quality metadata [4].\n4.  **Absence of Formal Semantic Schemas and Maps:** Data systems define metadata differently, and none make their schemas available in formal semantic language formats (like RDF or OWL). This requires manual creation of semantic maps for federated querying, which is resource-intensive and difficult to maintain as data sources evolve [5], [6].\n5.  **Lack of Community Semantic Resources:** There is a general lack of available semantic resources developed by the community to generate metadata specifications and vocabularies, especially in newer omics domains. This extends to processed data and analysis workflows, where domain-specific semantics are often missing, hindering their discovery and reuse [2], [7], [8].\n6.  **Difficulty in Semantic Data Linking:** Semantically linking data between different systems is a challenging objective. It requires either time-consuming manual linking by subject matter experts or automated linking, which depends on both source and linked data being semantically characterized, a capability that is largely still forthcoming [9].",
+          "citations": [
+            {
+              "id": "PMC6371294:discussion:c98696c1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Highlights shortcomings in metadata representation language, lack of FAIR vocabularies, and the issue of myriad, overlapping vocabularies requiring normalization."
+            },
+            {
+              "id": "PMC6371294:interoperability:e743474d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "States that assessed repositories lack metadata specifications with inherent semantics and that tools for semantic languages like RDF/OWL require sophistication."
+            },
+            {
+              "id": "PMC6371294:interoperability:caa6feb1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Discusses the lack of open, community-developed vocabularies with semantics and a general scarcity of semantic resources in omics domains."
+            },
+            {
+              "id": "PMC6371294:discussion:3dafb3d9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Explains the challenge of reliably mapping ever-changing ontologies and the low motivation of submitters to provide rich metadata."
+            },
+            {
+              "id": "PMC6371294:discussion:c755cb17",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Illustrates the problem with the GLDS's experience, where manual semantic mapping was required due to the absence of formal semantic language schemas and existing maps between systems."
+            },
+            {
+              "id": "PMC6371294:discussion:fb7e9142",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Emphasizes that manual schema mapping is resource-intensive and difficult to maintain over time."
+            },
+            {
+              "id": "PMC6371294:interoperability:d69cf24f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Identifies the lack of semantic resources for creating metadata specifications for processed data and processing workflows as a challenge."
+            },
+            {
+              "id": "PMC6371294:interoperability:85958679",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Further elaborates on the lack of domain-specific semantics for data transformations and biological concepts in processed data and workflows."
+            },
+            {
+              "id": "PMC6371294:interoperability:66e33e3f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Describes the challenge of semantically linking data 'out' to external systems, requiring either manual expertise or automated semantic characterization, which is still developing."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6371294:discussion:c98696c1",
+            "PMC6371294:discussion:3dafb3d9",
+            "PMC6371294:discussion:4e372f04",
+            "PMC6371294:discussion:c755cb17",
+            "PMC6371294:discussion:fb7e9142",
+            "PMC6371294:interoperability:e743474d",
+            "PMC6371294:interoperability:caa6feb1",
+            "PMC6371294:interoperability:d69cf24f",
+            "PMC6371294:interoperability:85958679",
+            "PMC6371294:interoperability:66e33e3f"
+          ],
+          "key_facts": [
+            "Lack of semantic metadata representation languages",
+            "Myriad and overlapping vocabularies requiring normalization",
+            "Low motivation for submitters to provide rich metadata",
+            "Absence of formal semantic schemas and maps between systems",
+            "Resource-intensive manual schema mapping",
+            "Lack of community-developed semantic resources for omics data and workflows",
+            "Difficulty in semantically linking data across systems"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6371294_Q4",
+      "question": "What solution does the paper propose for organizations developing open-access systems to address challenges in user credentialing and authentication, particularly for diverse user groups like those targeted by GeneLab?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6371294:accessibility:d2aa60cb",
+            "PMC6371294:accessibility:2fc6a651",
+            "PMC6371294:accessibility:c134bf93"
+          ],
+          "should_retrieve": [
+            "PMC6371294:accessibility:d3c92c14",
+            "PMC6371294:accessibility:8bf01693",
+            "PMC6371294:methods---figure:4ffb9841"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "For organizations developing open-access systems, the paper proposes investing in the development of an **Integrated Credentialing and Authentication Architecture (ICAA)** and establishing policies that allow users to leverage **extramural credentials** [1]. This approach aims to provide flexibility, meet organizational policy requirements, and support access for a wide range of users [1].\n\nSpecifically, an ICAA allows for technical compatibility between authentication services and the ICAA itself, facilitated by authentication protocols and standards. It also requires compatibility of credentialing policies between organizations [1]. For instance, NASA is developing an ICAA that permits intramural users to use internal services while allowing extramural users to authenticate via a defined set of externally-managed credentialing systems, such as Google.com credentials [2]. This enables extramural users to gain almost immediate access with minimal information (e.g., a verifiable email address), albeit with appropriate access controls for certain functions due to a lower level of authentication confidence [3]. The paper suggests this as an additional principle (A1.2.1) for FAIR data systems to maximize access [4].",
+          "citations": [
+            {
+              "id": "PMC6371294:accessibility:d2aa60cb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk directly proposes the solution of an Integrated Credentialing and Authentication Architecture (ICAA) and policies for leveraging extramural credentials, outlining the requirements for technical and policy compatibility."
+            },
+            {
+              "id": "PMC6371294:accessibility:2fc6a651",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk provides an example of NASA implementing an ICAA, allowing extramural users to authenticate with external systems like Google.com credentials."
+            },
+            {
+              "id": "PMC6371294:accessibility:c134bf93",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk explains how the ICAA facilitates access for extramural users with minimal information, while also implementing appropriate access controls based on confidence levels."
+            },
+            {
+              "id": "PMC6371294:accessibility:8bf01693",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk suggests leveraging an ICAA as an additional principle (A1.2.1) to offer the widest possible access to data."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6371294:accessibility:d3c92c14",
+            "PMC6371294:accessibility:d2aa60cb",
+            "PMC6371294:accessibility:2fc6a651",
+            "PMC6371294:accessibility:c134bf93",
+            "PMC6371294:accessibility:8bf01693",
+            "PMC6371294:methods---figure:4ffb9841"
+          ],
+          "key_facts": [
+            "Proposed solution: Integrated Credentialing and Authentication Architecture (ICAA)",
+            "Allows leveraging extramural credentials",
+            "Requires technical and policy compatibility",
+            "Enables wider access for diverse user groups (e.g., extramural users with social media credentials)",
+            "Facilitates immediate access with minimal information",
+            "Implements appropriate access controls based on authentication confidence"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6371294_Q5",
+      "question": "Describe the four main FAIR principles, the general methodology used to assess them in this paper, and the overall findings regarding the performance of omics data systems against these principles.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6371294:fairness-of-omics-data:6bca3c77",
+            "PMC6371294:fairness-of-omics-data:67669f94",
+            "PMC6371294:fairness-of-omics-data:3dc8d88a",
+            "PMC6371294:summary-of-fairness-assessments:04d7f7fd",
+            "PMC6371294:abstract:799f75f7"
+          ],
+          "should_retrieve": [
+            "PMC6371294:introduction:6ff7df84",
+            "PMC6371294:introduction:aabc0e62",
+            "PMC6371294:findability:f6b5d940",
+            "PMC6371294:accessibility:93ca11a0",
+            "PMC6371294:interoperability:e743474d",
+            "PMC6371294:reusability:8156824e"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The FAIR principles are a set of guiding principles designed to make data maximally **Findable, Accessible, Interoperable, and Reusable** [1], [2].\n\n*   **Findability:** Requires data to have a persistent, global unique identifier (GUID), be described by rich metadata, and be indexed by a retrieval system [1], [6].\n*   **Accessibility:** Stipulates the use of standardized, open communication protocols for data retrieval by GUID, and includes provisions for authentication and authorization where necessary [1], [7].\n*   **Interoperability:** Supported through the use of machine-actionable metadata and data, often requiring formal languages for knowledge representation and community-developed vocabularies with semantics [1], [8].\n*   **Reusability:** Demands compliance with the first three principles, ensuring data and metadata can be linked and integrated across FAIR systems, including providing data usage licenses and provenance metadata, and conforming to community-derived standards [1], [9].\n\n**Methodology for Assessment:**\nThe authors assessed the FAIRness of NASA’s GeneLab Data Systems (GLDS) and four other open-access omics data systems (Gene Expression Omnibus (GEO), European Nucleotide Archive (ENA), Metagenomics Analysis Server (MG-RAST), and Metabolights) [3]. They used 14 FAIRness metrics from the current working draft developed by the GO FAIR Metrics group. The assessment was semi-quantitative, with systems rated as **Pass** (no evidence of failure), **Partial Pass** (passed some but not all components, or inconsistent passes), or **Fail** (no evidence of compliance). An overall FAIRness score was calculated by assigning 1 for each Pass, 0.5 for each Partial Pass, and 0 for each Fail [3], [4].\n\n**Overall Findings:**\nThere was considerable variability in FAIRness among the assessed systems. The overall FAIRness scores ranged from **6 to 12** (out of 14), with an average of **10.1** and a standard deviation of 2.4. The percentage of Pass ratings ranged from 29-79%, Partial Pass from 0-21%, and Fail from 7-50% [2], [5].\n\nComparatively, the systems performed **best in the areas of data accessibility and reusability**, were **slightly worse in data findability**, and performed **far worse in data interoperability** [2], [5]. Specifically, the reusability of metadata was frequently not well supported [2].",
+          "citations": [
+            {
+              "id": "PMC6371294:fairness-of-omics-data:6bca3c77",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk defines the four FAIR principles (Findability, Accessibility, Interoperability, Reusability) and their core requirements."
+            },
+            {
+              "id": "PMC6371294:abstract:799f75f7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk introduces the FAIRness assessment, mentions the average score and range, and summarizes the best and worst performing areas (findability/accessibility best, interoperability worst, reusability of metadata not well supported)."
+            },
+            {
+              "id": "PMC6371294:fairness-of-omics-data:67669f94",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk describes the methodology, including the use of GO FAIR Metrics, the systems assessed (GLDS, GEO, ENA, MG-RAST, Metabolights), and the semi-quantitative rating system (Pass, Partial Pass, Fail)."
+            },
+            {
+              "id": "PMC6371294:fairness-of-omics-data:3dc8d88a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk details how the overall FAIRness score was calculated (1 for Pass, 0.5 for Partial Pass, 0 for Fail)."
+            },
+            {
+              "id": "PMC6371294:summary-of-fairness-assessments:04d7f7fd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "This chunk provides a comprehensive summary of the assessment findings, including the range of Pass/Partial Pass/Fail ratings, overall score range and average, and comparative performance across the four FAIR areas."
+            },
+            {
+              "id": "PMC6371294:findability:f6b5d940",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Provides more detail on the Findability principle, specifically F1 regarding globally unique and persistent identifiers."
+            },
+            {
+              "id": "PMC6371294:accessibility:93ca11a0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Provides more detail on the Accessibility principle, specifically A1.1 and A1.2 regarding open source communication protocols and authentication/authorization."
+            },
+            {
+              "id": "PMC6371294:interoperability:e743474d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Provides more detail on the Interoperability principle, specifically I1 regarding formal languages for knowledge representation and semantics."
+            },
+            {
+              "id": "PMC6371294:reusability:8156824e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+              "why_relevant": "Provides more detail on the Reusability principle, specifically R1.1, R1.2, and R1.3 regarding licenses, provenance metadata, and community standards."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6371294:fairness-of-omics-data:6bca3c77",
+            "PMC6371294:fairness-of-omics-data:67669f94",
+            "PMC6371294:fairness-of-omics-data:3dc8d88a",
+            "PMC6371294:summary-of-fairness-assessments:04d7f7fd",
+            "PMC6371294:abstract:799f75f7",
+            "PMC6371294:introduction:6ff7df84",
+            "PMC6371294:introduction:aabc0e62",
+            "PMC6371294:findability:f6b5d940",
+            "PMC6371294:accessibility:93ca11a0",
+            "PMC6371294:interoperability:e743474d",
+            "PMC6371294:reusability:8156824e"
+          ],
+          "key_facts": [
+            "FAIR principles: Findable, Accessible, Interoperable, Reusable",
+            "Methodology: 14 GO FAIR Metrics, semi-quantitative (Pass, Partial Pass, Fail)",
+            "Scoring: 1 for Pass, 0.5 for Partial Pass, 0 for Fail",
+            "Overall FAIRness score range: 6-12 (average 10.1)",
+            "Pass ratings range: 29-79%",
+            "Partial Pass ratings range: 0-21%",
+            "Fail ratings range: 7-50%",
+            "Best performance in Accessibility and Reusability",
+            "Slightly worse performance in Findability",
+            "Worst performance in Interoperability",
+            "Reusability of metadata often not well supported"
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

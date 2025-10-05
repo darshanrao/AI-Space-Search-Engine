@@ -1,0 +1,325 @@
+{
+  "paper_id": "PMC12040010",
+  "paper_title": "Cryptococcus albidus meningitis: A case report and literature review",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+  "test_cases": [
+    {
+      "id": "PMC12040010_Q1",
+      "question": "What is the reported mortality rate for CNS infections caused by *Cryptococcus albidus*?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC12040010:1--introduction:4c9a4ec5"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The mortality rate for CNS infections caused by *C. albidus* is **67%** [1]. This rate is more than double that of patients infected with other *Cryptococcus* species [1].",
+          "citations": [
+            {
+              "id": "PMC12040010:1--introduction:4c9a4ec5",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk explicitly states the mortality rate for CNS infections caused by Cryptococcus albidus and compares it to other Cryptococcus species."
+            }
+          ],
+          "used_context_ids": [
+            "PMC12040010:1--introduction:4c9a4ec5"
+          ],
+          "key_facts": [
+            "Mortality rate for C. albidus CNS infections: 67%",
+            "This rate is more than double that of other Cryptococcus species."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC12040010_Q2",
+      "question": "How did the patient's brain MRI findings change from before surgery/treatment to after treatment for *Cryptococcus albidus* meningitis?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC12040010:2--case-presentation:03984ed8",
+            "PMC12040010:2--case-presentation---figure-1:c39c0b55",
+            "PMC12040010:2--case-presentation:21933f7e",
+            "PMC12040010:2--case-presentation:c0de9a24",
+            "PMC12040010:2--case-presentation---figure-2:c3426cc9"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Before surgery, the patient's brain MRI revealed **prominent circular lesions** in the right parietal lobe (approximately 4 × 4 × 3 cm³) with moderate edema, and in the left frontal insular region (approximately 3 × 3 × 3 cm³) with mild edema. Both lesions showed uneven and significant enhancement [1], [2]. After surgery and 3 weeks of treatment with liposomal-AmB and 5-fluorocytosine, the lesion in the **right parietal lobe was resected**. The lesion in the **left frontal lobe was still observed**, but enhanced MRI scanning showed it was only mildly enhanced, and the surrounding parenchyma was otherwise normal [3], [4], [5].",
+          "citations": [
+            {
+              "id": "PMC12040010:2--case-presentation:03984ed8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk describes the initial brain MRI findings, including the location, size, and edema of the lesions before treatment."
+            },
+            {
+              "id": "PMC12040010:2--case-presentation---figure-1:c39c0b55",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This caption provides detailed information about the pre-surgery MRI, confirming lesion sizes, locations, and enhancement characteristics."
+            },
+            {
+              "id": "PMC12040010:2--case-presentation:21933f7e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk mentions the MRI results after 3 weeks of treatment, indicating that only the left frontal insular region still had a lesion."
+            },
+            {
+              "id": "PMC12040010:2--case-presentation:c0de9a24",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk describes the post-surgery MRI findings, noting the resection of the right parietal lobe lesion and the mild enhancement of the remaining left frontal lobe lesion."
+            },
+            {
+              "id": "PMC12040010:2--case-presentation---figure-2:c3426cc9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This caption details the post-surgery MRI, confirming the resection of the right parietal lesion and the continued observation of the left frontal lesion with mild enhancement."
+            }
+          ],
+          "used_context_ids": [
+            "PMC12040010:2--case-presentation:03984ed8",
+            "PMC12040010:2--case-presentation---figure-1:c39c0b55",
+            "PMC12040010:2--case-presentation:21933f7e",
+            "PMC12040010:2--case-presentation:c0de9a24",
+            "PMC12040010:2--case-presentation---figure-2:c3426cc9"
+          ],
+          "key_facts": [
+            "Before treatment: prominent circular lesions in right parietal (4x4x3 cm³) and left frontal insular (3x3x3 cm³) regions, both with edema and significant enhancement.",
+            "After treatment: right parietal lesion resected.",
+            "After treatment: left frontal insular lesion still present but only mildly enhanced, with otherwise normal parenchyma."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC12040010_Q3",
+      "question": "Given the patient's characteristics, what specific considerations were highlighted regarding the dosage of liposomal-AmB, and what was the rationale behind these recommendations?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC12040010:2--case-presentation:386316b1",
+            "PMC12040010:abstract:9d5f6735",
+            "PMC12040010:3--discussion:d6a3354f",
+            "PMC12040010:3--discussion:6efc1e06",
+            "PMC12040010:4--conclusion:d7fe3ad6",
+            "PMC12040010:2--case-presentation:c0de9a24"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The patient was a **25-year-old severely obese female** weighing **100 kg** [1], [2]. For such patients, the paper highlights a specific consideration for liposomal-AmB dosage: it may be more reasonable to calculate the dose using **ideal bodyweight rather than actual bodyweight** [3], [4], [5]. The rationale is based on animal studies showing **increased AmB serum concentrations and higher rates of nephrotoxicity** in obese rats and rabbits, attributed to poor distribution of the drug in adipose tissue [3]. Additionally, women have a higher body fat rate, which is a risk factor for acute kidney injury caused by liposomal-AmB [3]. The case report demonstrated the **efficacy and safety** of this approach in the patient, who maintained normal renal function throughout treatment [4], [6].",
+          "citations": [
+            {
+              "id": "PMC12040010:2--case-presentation:386316b1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk provides the patient's age, gender, and actual bodyweight (100 kg), which are crucial for understanding the dosing considerations."
+            },
+            {
+              "id": "PMC12040010:abstract:9d5f6735",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk identifies the patient as a 'severely obese female patient,' reinforcing the context for dosage discussions."
+            },
+            {
+              "id": "PMC12040010:3--discussion:d6a3354f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk discusses the pharmacokinetics of liposomal-AmB in obese patients, citing animal studies on increased serum concentrations, nephrotoxicity, poor adipose tissue distribution, and women's higher body fat as a risk factor for acute kidney injury."
+            },
+            {
+              "id": "PMC12040010:3--discussion:6efc1e06",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk explicitly recommends considering ideal bodyweight for calculating liposomal-AmB dose in severely obese female patients and states that the case demonstrated its efficacy and safety."
+            },
+            {
+              "id": "PMC12040010:4--conclusion:d7fe3ad6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk reiterates the conclusion that using ideal bodyweight for liposomal-AmB dosage in obese patients with C. albidus meningitis is both efficacious and safe."
+            },
+            {
+              "id": "PMC12040010:2--case-presentation:c0de9a24",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk confirms that the patient maintained normal renal function throughout the treatment period, supporting the safety aspect of the chosen dosing strategy."
+            }
+          ],
+          "used_context_ids": [
+            "PMC12040010:2--case-presentation:386316b1",
+            "PMC12040010:abstract:9d5f6735",
+            "PMC12040010:3--discussion:d6a3354f",
+            "PMC12040010:3--discussion:6efc1e06",
+            "PMC12040010:4--conclusion:d7fe3ad6",
+            "PMC12040010:2--case-presentation:c0de9a24"
+          ],
+          "key_facts": [
+            "Patient was a 25-year-old severely obese female (100 kg).",
+            "Recommendation: Calculate liposomal-AmB dose using ideal bodyweight instead of actual bodyweight.",
+            "Rationale: Animal studies show increased AmB serum concentrations and nephrotoxicity in obese subjects due to poor adipose tissue distribution.",
+            "Rationale: Women have a higher body fat rate, which is a risk factor for acute kidney injury from liposomal-AmB.",
+            "Outcome: The approach was efficacious and safe, with the patient maintaining normal renal function."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC12040010_Q4",
+      "question": "What were the minimal inhibitory concentrations (MICs) of amphotericin B, fluconazole, and 5-fluorocytosine specifically for *C. albidus* in the reported case?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC12040010:2--case-presentation:21933f7e",
+            "PMC12040010:antifungal-susceptibility-of-cryptococcus-species----table-3:a138787d"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "For the *C. albidus* isolated in the present case, the minimal inhibitory concentrations (MICs) were determined as follows: **amphotericin B (AmB) at 0.5 mg L⁻¹**, **fluconazole at 4 mg L⁻¹**, and **5-fluorocytosine at 4 mg L⁻¹** [1], [2].",
+          "citations": [
+            {
+              "id": "PMC12040010:2--case-presentation:21933f7e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk explicitly lists the minimal inhibitory concentrations (MICs) for amphotericin B, fluconazole, voriconazole, itraconazole, and 5-fluorocytosine for C. albidus in the reported case."
+            },
+            {
+              "id": "PMC12040010:antifungal-susceptibility-of-cryptococcus-species----table-3:a138787d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "Table 3 provides a summary of antifungal susceptibility, including the MICs for C. albidus in the 'Present case' column, confirming the values for amphotericin B, 5-flucytosine, and fluconazole."
+            }
+          ],
+          "used_context_ids": [
+            "PMC12040010:2--case-presentation:21933f7e",
+            "PMC12040010:antifungal-susceptibility-of-cryptococcus-species----table-3:a138787d"
+          ],
+          "key_facts": [
+            "Amphotericin B (AmB) MIC: 0.5 mg L⁻¹",
+            "Fluconazole MIC: 4 mg L⁻¹",
+            "5-fluorocytosine MIC: 4 mg L⁻¹"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC12040010_Q5",
+      "question": "Based on the case report and literature review, what are the key characteristics of *Cryptococcus albidus* CNS infections, encompassing its epidemiology, risk factors, clinical presentation, diagnostic methods, and recommended treatment strategies?",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC12040010:1--introduction:4c9a4ec5",
+            "PMC12040010:1--introduction:27dfe492",
+            "PMC12040010:3--discussion:3cbb6c0e",
+            "PMC12040010:3--discussion:c7a5474d",
+            "PMC12040010:3--discussion:91acf13e",
+            "PMC12040010:3--discussion:7da3c079",
+            "PMC12040010:3--discussion:b00f7016",
+            "PMC12040010:4--conclusion:d7fe3ad6",
+            "PMC12040010:abstract:9d5f6735",
+            "PMC12040010:abstract:8bda5a71",
+            "PMC12040010:3--discussion:6efc1e06"
+          ],
+          "should_retrieve": [
+            "PMC12040010:2--case-presentation:3b5e975a"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "*Cryptococcus albidus* CNS infections are **rare but life-threatening**, with a high mortality rate of **67%**, more than double that of other *Cryptococcus* species [1].\n\n*   **Epidemiology & Risk Factors**: *C. albidus* is commonly isolated from the **gastrointestinal tracts and droppings of birds** [2]. Risk factors include **immunocompromised states** (e.g., HIV infection, leukemia, cancer), widespread use of immunosuppressive agents, prolonged use of central venous catheters, exposure to bird excrement, contact with animals, and **prior surgery** [2], [3], [4].\n\n*   **Clinical Presentation**: The most common symptom is **headache**, reported by nearly all patients, while fever is less frequent (31%) [5]. Other symptoms include altered mental state, nausea, vomiting, and increased intracranial pressure [5].\n\n*   **Diagnostic Methods**: While culture and API® strip assimilation tests are used, **mass spectrometry (e.g., VITEK MS)** is considered reliable for identification [6], [7]. However, for rare species, **rRNA sequencing (D1/D2 domains of the large-subunit rRNA or internal transcribed spacer)** is crucial to prevent misidentification due to phenotypic similarities [6], [8], [9].\n\n*   **Treatment Strategies**: There are no evidence-based guidelines due to the infrequency of disease [6], [10]. However, **Amphotericin B (AmB)-based treatment is the first choice**, as *C. albidus* and its related species are consistently sensitive to it [6], [11]. Recommendations include using **liposomal-AmB** over AmB deoxycholate for safety and faster CSF sterilization, administering at least 1g of AmB during prolonged treatment, and combining AmB with **5-fluorocytosine** to reduce toxicity and relapse rates [11]. For obese patients, calculating the liposomal-AmB dose using **ideal bodyweight** is recommended for efficacy and safety [12], [13].",
+          "citations": [
+            {
+              "id": "PMC12040010:1--introduction:4c9a4ec5",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk introduces C. albidus CNS infections as life-threatening with a high mortality rate (67%)."
+            },
+            {
+              "id": "PMC12040010:3--discussion:3cbb6c0e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk discusses the isolation of C. albidus from birds and mentions the lack of explanation for human contraction, contributing to epidemiology."
+            },
+            {
+              "id": "PMC12040010:3--discussion:c7a5474d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk details various risk factors for C. albidus infections, including immunocompromised states, immunosuppressive agents, catheters, bird excrement, animal contact, and surgery."
+            },
+            {
+              "id": "PMC12040010:4--conclusion:d7fe3ad6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk summarizes key risk factors like leukemia and cancer, and highlights headache as the most frequent symptom."
+            },
+            {
+              "id": "PMC12040010:3--discussion:91acf13e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk describes the common clinical manifestations, such as headache (most common), fever frequency, altered mental state, nausea, vomiting, and increased intracranial pressure."
+            },
+            {
+              "id": "PMC12040010:3--discussion:7da3c079",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk discusses diagnostic methods, emphasizing the reliability of mass spectrometry (VITEK MS) and the critical role of rRNA sequencing for accurate species identification to avoid misidentification."
+            },
+            {
+              "id": "PMC12040010:2--case-presentation:3b5e975a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk mentions the patient's diagnosis by VITEK mass spectrometry, supporting its use as a diagnostic method."
+            },
+            {
+              "id": "PMC12040010:1--introduction:27dfe492",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk highlights the lack of clear epidemiological markers and recommended treatment guidelines for C. albidus, underscoring the challenges."
+            },
+            {
+              "id": "PMC12040010:3--discussion:b00f7016",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk provides detailed treatment recommendations, including AmB as the first choice, preference for liposomal-AmB, recommended dosage/duration, and combination with 5-fluorocytosine."
+            },
+            {
+              "id": "PMC12040010:3--discussion:d6a3354f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk discusses the general antifungal treatment recommended for cryptococcal meningoencephalitis (liposomal-AmB plus flucytosine) and introduces the complexity of dosing for obese patients."
+            },
+            {
+              "id": "PMC12040010:3--discussion:6efc1e06",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+              "why_relevant": "This chunk recommends using ideal bodyweight for liposomal-AmB dosage in severely obese female patients, which is a specific treatment strategy."
+            }
+          ],
+          "used_context_ids": [
+            "PMC12040010:1--introduction:4c9a4ec5",
+            "PMC12040010:1--introduction:27dfe492",
+            "PMC12040010:3--discussion:3cbb6c0e",
+            "PMC12040010:3--discussion:c7a5474d",
+            "PMC12040010:3--discussion:91acf13e",
+            "PMC12040010:3--discussion:7da3c079",
+            "PMC12040010:3--discussion:b00f7016",
+            "PMC12040010:4--conclusion:d7fe3ad6",
+            "PMC12040010:abstract:9d5f6735",
+            "PMC12040010:abstract:8bda5a71",
+            "PMC12040010:3--discussion:6efc1e06",
+            "PMC12040010:2--case-presentation:3b5e975a",
+            "PMC12040010:3--discussion:d6a3354f"
+          ],
+          "key_facts": [
+            "C. albidus CNS infections are rare, life-threatening, with a 67% mortality rate.",
+            "Epidemiology: Isolated from bird gastrointestinal tracts/droppings; human contraction mechanism unclear.",
+            "Risk Factors: Immunocompromised states (HIV, leukemia, cancer), immunosuppressive agents, central venous catheters, bird excrement, animal contact, prior surgery.",
+            "Clinical Presentation: Headache (most common), fever (31%), altered mental state, nausea, vomiting, increased intracranial pressure.",
+            "Diagnostic Methods: VITEK MS reliable, but rRNA sequencing (D1/D2 domains, ITS) is crucial for accurate identification to prevent misidentification.",
+            "Treatment Strategies: AmB-based therapy is first choice (C. albidus consistently sensitive). Recommendations include liposomal-AmB (safer, faster CSF sterilization), at least 1g AmB during prolonged treatment, and combination with 5-fluorocytosine (reduces toxicity/relapse). For obese patients, ideal bodyweight should be used for dose calculation."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

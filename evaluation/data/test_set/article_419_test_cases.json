@@ -1,0 +1,551 @@
+{
+  "paper_id": "PMC3509447",
+  "paper_title": "Hypergravity disruption of homeorhetic adaptations to lactation in rat dams include changes in circadian clocks",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+  "test_cases": [
+    {
+      "id": "PMC3509447_Q1",
+      "question": "What was the pup survival rate for hypergravity (HG) exposed dams on Postnatal day 1 (P1) and Postnatal day 3 (P3)?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3509447:results:0a6996bb"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "For hypergravity (HG) exposed dams, the pup survival rate was **57% on P1** and **48% on P3** [1]. In contrast, control dams maintained a 100% survival rate at all ages [1].",
+          "citations": [
+            {
+              "id": "PMC3509447:results:0a6996bb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "This chunk directly states the pup survival rates for HG and control dams on P0, P1, and P3."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3509447:results:0a6996bb"
+          ],
+          "key_facts": [
+            "HG pup survival on P1 was 57%.",
+            "HG pup survival on P3 was 48%.",
+            "Control pup survival was 100% at all ages."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3509447_Q2",
+      "question": "How did hypergravity exposure affect glucose metabolism (oxidation and lipid incorporation) in mammary tissue compared to liver tissue during lactation?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3509447:results:3550ce5e",
+            "PMC3509447:results:b6e4117f",
+            "PMC3509447:results:72d1b1eb",
+            "PMC3509447:discussion:cda5552f",
+            "PMC3509447:discussion:d0cb28ba"
+          ],
+          "should_retrieve": [
+            "PMC3509447:effects-of-gravity-load-on-mammary-metabolic-activity-during-the-periparturient-period---figure-3:e42e46ae"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Hypergravity exposure significantly reduced glucose metabolism in both mammary and liver tissues during lactation, but with some distinct patterns:\n\n*   **Mammary Tissue:** Hypergravity had an overall effect of **reducing the rate of glucose oxidation to CO2** across all measured days, most pronounced on P1 where control mammary tissue oxidized 2.7 times more glucose [2]. Glucose incorporation into lipids also saw a dramatic reduction, with a **six-fold decrease in lipid synthesis from glucose on P1** in HG dams compared to controls, a difference still evident on P3 [2]. This suggests impaired milk production [3].\n*   **Liver Tissue:** Increased gravity-load also **reduced the rate of glucose oxidation to CO2** in liver tissue, with control animals oxidizing 40% more glucose than HG dams on P3 [4]. While glucose incorporation into lipids was generally low in liver tissue for all groups, the relationship reversed during lactation: control dams incorporated approximately **4-fold more glucose into lipids than HG dams** at both P1 and P3, indicating suppressed hepatic capacity to supply fatty acids for milk synthesis in HG dams [4], [5]. During pregnancy (G21), however, HG dams showed higher lipid synthesis from glucose in the liver [4].",
+          "citations": [
+            {
+              "id": "PMC3509447:results:3550ce5e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Provides specific data on glucose oxidation and lipid incorporation in mammary tissue under hypergravity."
+            },
+            {
+              "id": "PMC3509447:results:838bfd8a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Details the methods for measuring glucose metabolism, relevant for understanding the results in both tissues."
+            },
+            {
+              "id": "PMC3509447:results:b6e4117f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Details the effects of hypergravity on glucose oxidation in liver tissue."
+            },
+            {
+              "id": "PMC3509447:results:72d1b1eb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Explains the impact of hypergravity on glucose incorporation into lipids in liver tissue during pregnancy and lactation, and notes the low overall rates."
+            },
+            {
+              "id": "PMC3509447:discussion:cda5552f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Discusses the reduction in mammary metabolism (lipid synthesis and glucose oxidation) due to hypergravity and its potential role in neonatal mortality."
+            },
+            {
+              "id": "PMC3509447:discussion:d0cb28ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Discusses the suppressed rates of glucose incorporation into lipids in liver tissue of HG dams during lactation and links it to the capacity to supply fatty acids for milk synthesis."
+            },
+            {
+              "id": "PMC3509447:effects-of-gravity-load-on-mammary-metabolic-activity-during-the-periparturient-period---figure-3:e42e46ae",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "The caption for Figure 3 describes the measurements of glucose oxidation and incorporation into lipids in mammary, liver, and adipose tissues, providing context for the metabolic results."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3509447:results:3550ce5e",
+            "PMC3509447:results:838bfd8a",
+            "PMC3509447:results:b6e4117f",
+            "PMC3509447:results:72d1b1eb",
+            "PMC3509447:discussion:cda5552f",
+            "PMC3509447:discussion:d0cb28ba",
+            "PMC3509447:effects-of-gravity-load-on-mammary-metabolic-activity-during-the-periparturient-period---figure-3:e42e46ae"
+          ],
+          "key_facts": [
+            "Mammary glucose oxidation and lipid synthesis were significantly reduced in HG dams during lactation.",
+            "Liver glucose oxidation was reduced in HG dams during lactation.",
+            "Liver glucose incorporation into lipids was suppressed in HG dams during lactation, despite being higher during pregnancy.",
+            "The reduction in mammary metabolism is linked to impaired milk production."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3509447_Q3",
+      "question": "What is the proposed overarching mechanism by which hypergravity disrupts maternal homeorhetic adaptations to lactation, ultimately leading to decreased pup survival?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3509447:abstract:f7240972",
+            "PMC3509447:discussion:392a1d17",
+            "PMC3509447:discussion:cda5552f",
+            "PMC3509447:discussion:819670d0",
+            "PMC3509447:discussion:94cc781a",
+            "PMC3509447:discussion:d0cb28ba",
+            "PMC3509447:discussion:3472951b",
+            "PMC3509447:discussion:7ff77dfc",
+            "PMC3509447:discussion:e83d31e0",
+            "PMC3509447:introduction:94047f1b"
+          ],
+          "should_retrieve": [
+            "PMC3509447:abstract:0d616dc0",
+            "PMC3509447:discussion:e20d3d68",
+            "PMC3509447:discussion:05fb63e0",
+            "PMC3509447:discussion:ed14970f",
+            "PMC3509447:discussion:ec3f282a",
+            "PMC3509447:discussion:a34983a7"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The proposed overarching mechanism is that **hypergravity-induced alterations in the dam's circadian system disrupt homeorhetic adaptations** needed for successful lactation, leading to reduced pup survival [10], [8].\n\nSpecifically, hypergravity exposure causes:\n\n1.  **Disruption of Circadian Clocks:** HG significantly changes the expression of core clock genes in mammary and liver tissues, and alters circadian rhythms of maternal behavior [2], [9], [13]. This dampening of circadian cyclicity in activity and aberrant patterns of maternal behavior (e.g., nesting) are observed [12].\n2.  **Shift in Maternal Metabolism:** This disruption leads to a shift in maternal metabolism from reproductive support to maternal survival [3]. There's a significant decrease in the capacity to oxidize glucose or incorporate glucose into lipids in mammary, liver, and adipose tissues during lactation [5], [6], [7]. Mammary lipid synthesis and glucose oxidation are decreased by approximately 70% and 25% respectively, impairing milk production [4].\n3.  **Altered Hormone Concentrations:** HG alters levels of key hormones like PRL, corticosterone (Cort), and insulin (INS), and their receptor genes [2], [11]. While the direct causal link of these hormonal changes to metabolic disruption is unclear, they are consistent with the overall metabolic shift [11]. Leptin (LEP) levels are also reduced, consistent with decreased body fat [11].\n4.  **Impaired Maternal Behavior and Milk Production:** The metabolic and hormonal changes, coupled with altered circadian rhythms, result in impaired milk production and transfer, and changes in maternal behavior such as less digging/nesting and altered nursing patterns [3], [12].\n\nCollectively, these disruptions in the dam's physiology and behavior lead to **decreased fetal-pup body mass, reduced total body fat in pups, and significantly increased pup mortality** [2], [3], [12].",
+          "citations": [
+            {
+              "id": "PMC3509447:abstract:f7240972",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "States that HG altered circadian clock genes in mammary and liver and circadian rhythms of maternal behavior, impacting homeorhetic adaptations and pup mortality."
+            },
+            {
+              "id": "PMC3509447:discussion:392a1d17",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Suggests HG causes a shift in maternal metabolism from reproductive to maternal survival at the expense of pup survival, leading to decreased fetal-pup body mass and reduced survival."
+            },
+            {
+              "id": "PMC3509447:discussion:cda5552f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Details the decrease in mammary lipid synthesis (70%) and glucose oxidation (25%) due to HG, linking it to neonatal mortality."
+            },
+            {
+              "id": "PMC3509447:discussion:819670d0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Suggests that decreased mammary lipid metabolic rate and suppressed genes involved in lipid metabolism resulted in impaired milk production in HG dams."
+            },
+            {
+              "id": "PMC3509447:discussion:94cc781a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Shows that HG decreased metabolic rate in adipose tissue and glucose oxidation in liver tissue, indicating limited supplies for milk fat synthesis."
+            },
+            {
+              "id": "PMC3509447:discussion:d0cb28ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Concludes that HG caused a decrease in the capacity to oxidize glucose or incorporate glucose into lipid in all three tissues during lactation."
+            },
+            {
+              "id": "PMC3509447:discussion:3472951b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Introduces the hypothesis that the circadian system mediates homeorhetic adaptations to lactation, integrating environmental cues and coordinating physiological changes."
+            },
+            {
+              "id": "PMC3509447:discussion:7ff77dfc",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Explains that changes to core clocks affect the proteome and metabolome to support lactation, and chronic HG affects circadian and homeostatic regulation."
+            },
+            {
+              "id": "PMC3509447:discussion:e83d31e0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Proposes that HG-induced alterations in homeorhetic adaptations, including metabolic capacity and behavior, are due to the impact of increased gravity load on circadian clocks, leading to reduced milk quality/quantity and pup survival."
+            },
+            {
+              "id": "PMC3509447:introduction:94047f1b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "States the hypothesis that alterations to the dam's circadian system by gravitational force may limit homeorhetic adaptations for successful lactation."
+            },
+            {
+              "id": "PMC3509447:abstract:0d616dc0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Provides initial context about HG causing changes in circadian, metabolic, and reproductive systems, and decreased mammary metabolic activity and increased pup mortality."
+            },
+            {
+              "id": "PMC3509447:discussion:e20d3d68",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Highlights parallels between HG dams and Clock mutant dams, including dampened circadian cyclicity, aberrant maternal behavior, offspring growth lag, and increased pup mortality, supporting the circadian disruption hypothesis."
+            },
+            {
+              "id": "PMC3509447:discussion:05fb63e0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Discusses how differences in expression of core clock genes and regulatory genes suggest HG impacted molecular clocks, and endocrine milieu changes may also indicate circadian system changes."
+            },
+            {
+              "id": "PMC3509447:discussion:ed14970f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Discusses the regulation of metabolism by PRL, Cort, INS, and thyroid hormones, and notes that while thyroid hormones were not altered, PRL, Cort, and INS levels were, suggesting regulatory mechanisms outside the endocrine system are at play."
+            },
+            {
+              "id": "PMC3509447:discussion:ec3f282a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Details the reduction in plasma Cort and INS levels in HG dams and discusses their potential, but not sole, contribution to metabolic changes."
+            },
+            {
+              "id": "PMC3509447:discussion:a34983a7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Mentions reduced LEP levels in HG dams, consistent with reduced body fat and altered INS/Cort, reinforcing the idea of a broader disruption beyond just endocrine factors."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3509447:abstract:f7240972",
+            "PMC3509447:discussion:392a1d17",
+            "PMC3509447:discussion:cda5552f",
+            "PMC3509447:discussion:819670d0",
+            "PMC3509447:discussion:94cc781a",
+            "PMC3509447:discussion:d0cb28ba",
+            "PMC3509447:discussion:3472951b",
+            "PMC3509447:discussion:7ff77dfc",
+            "PMC3509447:discussion:e83d31e0",
+            "PMC3509447:introduction:94047f1b",
+            "PMC3509447:abstract:0d616dc0",
+            "PMC3509447:discussion:e20d3d68",
+            "PMC3509447:discussion:05fb63e0",
+            "PMC3509447:discussion:ed14970f",
+            "PMC3509447:discussion:ec3f282a",
+            "PMC3509447:discussion:a34983a7"
+          ],
+          "key_facts": [
+            "Hypergravity disrupts circadian clocks in mammary and liver tissues and maternal behavior.",
+            "This leads to a metabolic shift from reproductive to maternal survival, reducing glucose oxidation and lipid synthesis in mammary, liver, and adipose tissues.",
+            "Hormone levels (PRL, Cort, INS, LEP) are altered, consistent with metabolic changes.",
+            "Impaired milk production and altered maternal behavior result from these disruptions.",
+            "Ultimately, these factors contribute to decreased pup body mass and increased pup mortality."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3509447_Q4",
+      "question": "Which specific lipid metabolic genes were analyzed in the study, and how did their expression in mammary tissue of hypergravity (HG) dams compare to control dams on G20 and P1?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3509447:materials-and-methods:0498d55e",
+            "PMC3509447:results:8fdd8722",
+            "PMC3509447:results:b45e9670",
+            "PMC3509447:effects-of-gravity-load-on-gene-expression-of-hormone-receptors-and-enzymes-that-regulate-lipid-metabolism---figure-4:259f01ac"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The specific lipid metabolic genes analyzed were **ATP-citrate lyase (Acly), acetyl co-A carboxylase (Acaca), fatty acid synthetase (Fasn), and lipoprotein lipase (Lpl)** [1]. Additionally, hormone receptor genes like glucocorticoid receptor (Nr3c1) and prolactin receptor (Prlr) were also measured [1], [4].\n\nIn mammary tissue, the expression of **Acaca, Acly, Lpl, and Prlr was significantly reduced in HG dams** relative to control dams on both G20 (late pregnancy) and P1 (early lactation) [2], [3]. For instance, Acaca expression was 4.5 times greater in control mammary tissue on G20, increasing to 11 times greater on P1 compared to HG dams [2]. The typical increase in gene expression from pregnancy to lactation observed in control dams was minimal in HG animals [3]. In fact, Lpl expression was reduced by 45% from G20 to P1 in HG rats [3].",
+          "citations": [
+            {
+              "id": "PMC3509447:materials-and-methods:0498d55e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Lists the specific lipid metabolic genes (Acly, Acaca, Fasn, Lpl) and hormone receptor genes (Nr3c1, Prlr) that were analyzed using RT-qPCR."
+            },
+            {
+              "id": "PMC3509447:results:8fdd8722",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Details the significant reduction in mammary specific gene expression of Acaca, Acly, Lpl, and Prlr in HG dams compared to controls on G20 and P1, including specific fold changes."
+            },
+            {
+              "id": "PMC3509447:results:b45e9670",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Explains that the magnitude of increase in gene expression from pregnancy to lactation was minimal in HG animals, and notes the reduction of Lpl in HG rats."
+            },
+            {
+              "id": "PMC3509447:effects-of-gravity-load-on-gene-expression-of-hormone-receptors-and-enzymes-that-regulate-lipid-metabolism---figure-4:259f01ac",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "The caption for Figure 4 confirms the measurement of Acaca, Acyl (Acly), Lpl, GR (Nr3c1), and Prlr expression in mammary, liver, and adipose tissues."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3509447:materials-and-methods:0498d55e",
+            "PMC3509447:results:8fdd8722",
+            "PMC3509447:results:b45e9670",
+            "PMC3509447:effects-of-gravity-load-on-gene-expression-of-hormone-receptors-and-enzymes-that-regulate-lipid-metabolism---figure-4:259f01ac"
+          ],
+          "key_facts": [
+            "Lipid metabolic genes analyzed include Acly, Acaca, Fasn, and Lpl.",
+            "Hormone receptor genes Nr3c1 and Prlr were also analyzed.",
+            "Expression of Acaca, Acly, Lpl, and Prlr was significantly reduced in mammary tissue of HG dams on G20 and P1 compared to controls.",
+            "The normal increase in gene expression from pregnancy to lactation was minimal or reversed in HG mammary tissue."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC3509447_Q5",
+      "question": "Provide a comprehensive overview of the main cellular, molecular, and behavioral effects of hypergravity exposure on rat dams and their offspring during pregnancy and early lactation.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC3509447:abstract:0d616dc0",
+            "PMC3509447:abstract:f7240972",
+            "PMC3509447:discussion:392a1d17",
+            "PMC3509447:discussion:7dfb934e",
+            "PMC3509447:discussion:32e24a51",
+            "PMC3509447:discussion:93069228",
+            "PMC3509447:discussion:cda5552f",
+            "PMC3509447:discussion:819670d0",
+            "PMC3509447:discussion:94cc781a",
+            "PMC3509447:discussion:d0cb28ba",
+            "PMC3509447:discussion:ed14970f",
+            "PMC3509447:discussion:ec3f282a",
+            "PMC3509447:discussion:a34983a7",
+            "PMC3509447:discussion:e20d3d68",
+            "PMC3509447:discussion:05fb63e0",
+            "PMC3509447:results:1e82a4ed",
+            "PMC3509447:results:0a6996bb",
+            "PMC3509447:results:76f2177c",
+            "PMC3509447:results:f6288511",
+            "PMC3509447:results:0879c271",
+            "PMC3509447:results:3550ce5e",
+            "PMC3509447:results:b6e4117f",
+            "PMC3509447:results:72d1b1eb",
+            "PMC3509447:results:9745ee48",
+            "PMC3509447:results:8fdd8722",
+            "PMC3509447:results:b45e9670",
+            "PMC3509447:results:8466f5a0",
+            "PMC3509447:results:5f36e63a",
+            "PMC3509447:results:cd98173c",
+            "PMC3509447:results:e3f8b565"
+          ],
+          "should_retrieve": [
+            "PMC3509447:introduction:cc5c7adb",
+            "PMC3509447:introduction:b97c380f",
+            "PMC3509447:introduction:94b985db",
+            "PMC3509447:introduction:94047f1b",
+            "PMC3509447:discussion:3472951b",
+            "PMC3509447:discussion:7ff77dfc",
+            "PMC3509447:discussion:e83d31e0"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Hypergravity (2-g) exposure during pregnancy and early lactation in rat dams leads to a wide range of cellular, molecular, and behavioral disruptions, ultimately impacting pup survival [1], [2], [3].\n\n**Effects on Offspring:**\n*   **Increased Pup Mortality:** A significant reduction in pup survival was observed, with rates dropping to **57% on P1 and 48% on P3** in HG litters compared to 100% in controls [3], [4]. This mortality was attributed to changes in maternal physiology rather than direct gravity effects on pups [3], [5].\n*   **Reduced Body Mass and Growth:** Fetuses and pups from HG dams weighed significantly less (e.g., 27% less in late pregnancy, 20-30% less during early lactation) and had shorter crown-rump lengths after birth [4].\n\n**Effects on Dams (Physiological & Metabolic):**\n*   **Body Mass and Composition:** HG dams experienced **reduced body mass (10-21% lower)** and significantly **less total body fat** (e.g., 18.7% vs 27.1% on P1) compared to controls [6], [7]. This reduction in body fat is likely due to increased energy demands in the hypergravity environment [8].\n*   **Altered Tissue Metabolism:** There was a significant **decrease in glucose oxidation to CO2 and incorporation into lipids** in mammary, liver, and adipose tissues during lactation [1], [9], [10], [11], [12]. Mammary lipid synthesis was reduced by approximately 70% and glucose oxidation by 25% [8]. Adipose tissue lipolysis was also significantly reduced [12]. This metabolic shift indicates a re-prioritization of energy from reproductive needs to maternal survival [3], [13].\n*   **Hormonal Changes:** Plasma levels of **corticosterone (Cort) were reduced by ~50%** in HG dams at all periparturient stages, while **prolactin (PRL) was five times higher on P0** but not consistently different at other times [14], [15]. Insulin (INS) levels were significantly less on P3 in HG dams, and leptin (LEP) levels were significantly reduced on P3, consistent with lower body fat [15], [16]. Thyroid hormone levels were not significantly altered [15].\n\n**Effects on Dams (Behavioral & Molecular):**\n*   **Altered Maternal Behavior:** HG dams exhibited **reduced overall activity during the dark phase** of the circadian cycle in early exposure, but became hyperactive in late pregnancy [17]. They spent **more time eating/drinking and digging/nest-building**, but less time self-grooming and rearing offspring [17]. On P1, HG dams spent more time nursing but less time self-grooming and eating/drinking [18]. These behavioral changes, including aberrant nesting and nursing patterns, parallel those seen in Clock mutant mice [19].\n*   **Circadian Clock Disruption:** HG exposure significantly **changed the expression of core clock genes** (e.g., Arntl, Npas2) and clock regulatory genes (e.g., Rora, Bhlhe40e, Csnk1e, Nr1d1) in mammary and liver tissues [2], [20], [21], [22], [23], [24]. This suggests that gravity load impacts molecular clocks that generate circadian rhythms, which are hypothesized to mediate homeorhetic adaptations to lactation [2], [25], [26].",
+          "citations": [
+            {
+              "id": "PMC3509447:abstract:0d616dc0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Introduces the study's focus on hypergravity affecting circadian, metabolic, and reproductive systems, leading to decreased mammary metabolic activity and increased pup mortality."
+            },
+            {
+              "id": "PMC3509447:abstract:f7240972",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Summarizes key findings: reduced dam/pup body mass, altered PRL, corticosterone, insulin levels and receptor genes, altered mammary/liver/adipose metabolism and lipid metabolism gene expression, and changes in core clock genes and circadian rhythms of maternal behavior."
+            },
+            {
+              "id": "PMC3509447:discussion:392a1d17",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "States that hypergravity causes a shift in maternal metabolism from reproductive to maternal survival, leading to decreased fetal-pup body mass, reduced total body fat, and reduced survival."
+            },
+            {
+              "id": "PMC3509447:results:0a6996bb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Provides specific data on pup survival rates (57% on P1, 48% on P3 for HG) and reduced fetal/pup body mass and crown-rump length."
+            },
+            {
+              "id": "PMC3509447:discussion:7dfb934e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Mentions pup mortality coinciding with altered maternal behavior, such as less digging/nesting and self-care, and more nursing time."
+            },
+            {
+              "id": "PMC3509447:results:1e82a4ed",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Details the reduction in dam body mass (10-21% lower) and significantly less body fat (e.g., 18.7% vs 27.1% on P1) in HG dams."
+            },
+            {
+              "id": "PMC3509447:discussion:93069228",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Explains that the majority of dam body mass difference was due to loss of maternal tissue (mammary glands, total body fat), not just smaller litters."
+            },
+            {
+              "id": "PMC3509447:discussion:cda5552f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Highlights the reduction in mammary lipid synthesis (70%) and glucose oxidation (25%) due to hypergravity, linking it to increased energy demands and neonatal mortality."
+            },
+            {
+              "id": "PMC3509447:results:3550ce5e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Provides specific data on the reduction of glucose oxidation and lipid incorporation in mammary tissue due to hypergravity."
+            },
+            {
+              "id": "PMC3509447:results:b6e4117f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Details the reduction in glucose oxidation in liver tissue due to hypergravity."
+            },
+            {
+              "id": "PMC3509447:results:72d1b1eb",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Explains the impact on glucose incorporation into lipids in liver tissue, noting the reversal of relationship during lactation."
+            },
+            {
+              "id": "PMC3509447:results:9745ee48",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Describes the reduction in glucose oxidation and lipid incorporation in adipose tissue, and the significant reduction in lipolysis (glycerol release) in HG dams."
+            },
+            {
+              "id": "PMC3509447:discussion:d0cb28ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Concludes that HG caused a decrease in the capacity to oxidize glucose or incorporate glucose into lipid in all three tissues during lactation, indicative of an extra energy investment."
+            },
+            {
+              "id": "PMC3509447:results:f6288511",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Reports plasma PRL levels being 5 times greater on P0 in HG dams and plasma Cort levels reduced by approximately 50% at all stages."
+            },
+            {
+              "id": "PMC3509447:results:0879c271",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "States that INS concentrations differed on P3 (less in HG), LEP levels were significantly reduced on P3 in HG dams, and thyroid hormones were not altered."
+            },
+            {
+              "id": "PMC3509447:discussion:a34983a7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Discusses reduced LEP levels in HG dams, consistent with reduced body fat and altered INS/Cort, suggesting regulatory mechanisms outside the endocrine system are involved."
+            },
+            {
+              "id": "PMC3509447:results:76f2177c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Describes altered maternal behavior, including reduced activity during the dark phase, higher activity in late pregnancy, more time eating/drinking and digging/nest-building, and less self-grooming and rearing offspring."
+            },
+            {
+              "id": "PMC3509447:discussion:e20d3d68",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Highlights parallels between HG dams and Clock mutant dams, including dampened circadian cyclicity, aberrant nursing/nest-building, offspring growth lag, and increased pup mortality, supporting the circadian disruption hypothesis."
+            },
+            {
+              "id": "PMC3509447:results:8466f5a0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Reports significant changes in the expression of core molecular clock genes (Arntl, Npas2) and regulatory genes (Rora, Nr1d1, Csnk1e, Bhlhe40) in mammary and liver tissues due to hypergravity."
+            },
+            {
+              "id": "PMC3509447:results:5f36e63a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Details the lack of significant difference in Arntl and Npas2 expression between G20 and P1 in HG mammary dams, and their lower expression on P1 compared to controls."
+            },
+            {
+              "id": "PMC3509447:results:cd98173c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Describes the increased expression of Arntl and Npas2 in liver from G20 to P1 in both control and HG dams, but with different magnitudes and higher expression in HG on G20 and P1."
+            },
+            {
+              "id": "PMC3509447:results:e3f8b565",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Reports Rora expression being higher in HG liver on P1, and Nr1d1 expression being significantly less in HG dams compared to controls on both G20 and P1."
+            },
+            {
+              "id": "PMC3509447:discussion:05fb63e0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Suggests that differences in clock gene expression and endocrine milieu indicate that hypergravity impacted molecular clocks and the circadian system."
+            },
+            {
+              "id": "PMC3509447:introduction:94047f1b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "States the hypothesis that alterations to the dam's circadian system induced by changes in gravitational force may limit homeorhetic adaptations needed for a successful lactation."
+            },
+            {
+              "id": "PMC3509447:discussion:3472951b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Hypothesizes that the circadian system mediates homeorhetic adaptations to lactation, integrating environmental and physiological cues to coordinate changes across tissues."
+            },
+            {
+              "id": "PMC3509447:discussion:e83d31e0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+              "why_relevant": "Proposes that hypergravity-induced alterations in homeorhetic adaptations, including dam metabolic capacity and behavior, are due to the impact of increased gravity load on circadian clocks, leading to reduced milk quality/quantity and decreased pup survival."
+            }
+          ],
+          "used_context_ids": [
+            "PMC3509447:abstract:0d616dc0",
+            "PMC3509447:abstract:f7240972",
+            "PMC3509447:discussion:392a1d17",
+            "PMC3509447:discussion:7dfb934e",
+            "PMC3509447:discussion:32e24a51",
+            "PMC3509447:discussion:93069228",
+            "PMC3509447:discussion:cda5552f",
+            "PMC3509447:discussion:819670d0",
+            "PMC3509447:discussion:94cc781a",
+            "PMC3509447:discussion:d0cb28ba",
+            "PMC3509447:discussion:ed14970f",
+            "PMC3509447:discussion:ec3f282a",
+            "PMC3509447:discussion:a34983a7",
+            "PMC3509447:discussion:e20d3d68",
+            "PMC3509447:discussion:05fb63e0",
+            "PMC3509447:results:1e82a4ed",
+            "PMC3509447:results:0a6996bb",
+            "PMC3509447:results:76f2177c",
+            "PMC3509447:results:f6288511",
+            "PMC3509447:results:0879c271",
+            "PMC3509447:results:3550ce5e",
+            "PMC3509447:results:b6e4117f",
+            "PMC3509447:results:72d1b1eb",
+            "PMC3509447:results:9745ee48",
+            "PMC3509447:results:8fdd8722",
+            "PMC3509447:results:b45e9670",
+            "PMC3509447:results:8466f5a0",
+            "PMC3509447:results:5f36e63a",
+            "PMC3509447:results:cd98173c",
+            "PMC3509447:results:e3f8b565",
+            "PMC3509447:introduction:cc5c7adb",
+            "PMC3509447:introduction:b97c380f",
+            "PMC3509447:introduction:94b985db",
+            "PMC3509447:introduction:94047f1b",
+            "PMC3509447:discussion:3472951b",
+            "PMC3509447:discussion:7ff77dfc",
+            "PMC3509447:discussion:e83d31e0"
+          ],
+          "key_facts": [
+            "Hypergravity significantly increases pup mortality (57% on P1, 48% on P3) and reduces pup body mass and growth.",
+            "Dams experience reduced body mass and total body fat due to increased energy demands.",
+            "Glucose oxidation and lipid synthesis are significantly decreased in mammary, liver, and adipose tissues during lactation.",
+            "Hormone levels (Cort, PRL, INS, LEP) are altered, reflecting metabolic shifts.",
+            "Maternal behavior is disrupted, including altered activity, nesting, and nursing patterns.",
+            "Expression of core circadian clock genes and regulatory genes is significantly changed in mammary and liver tissues, suggesting circadian system disruption as a key underlying mechanism."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

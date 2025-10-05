@@ -47,41 +47,23 @@ class RAGEvaluator:
         found = len(rag_set.intersection(combined_set))
         return found / len(combined_set)
 
-    def calculate_precision_at_k(self, rag_citations: List[str],
-                                  must_retrieve: List[str],
-                                  should_retrieve: List[str],
-                                  may_retrieve: List[str]) -> float:
-        """
-        Calculate precision: # of RAG citations in (must + should + may) / total RAG citations
-        """
-        if not rag_citations:
-            return 0.0
-
-        all_relevant = set(must_retrieve + should_retrieve + may_retrieve)
-        rag_set = set(rag_citations)
-
-        relevant_found = len(rag_set.intersection(all_relevant))
-        return relevant_found / len(rag_citations)
-
     def calculate_retrieval_score(self, rag_citations: List[str], ground_truth: Dict[str, Any]) -> Dict[str, float]:
         """
         Calculate all retrieval metrics and return combined score.
-        Returns dict with strict_recall, soft_recall, precision, and retrieval_score.
+        Returns dict with strict_recall, soft_recall, and retrieval_score.
+        Note: Precision removed since fixed K > relevant docs makes it meaningless.
         """
         must_retrieve = ground_truth.get('must_retrieve', [])
         should_retrieve = ground_truth.get('should_retrieve', [])
-        may_retrieve = ground_truth.get('may_retrieve', [])
 
         strict_recall = self.calculate_strict_recall_at_k(rag_citations, must_retrieve)
         soft_recall = self.calculate_soft_recall_at_k(rag_citations, must_retrieve, should_retrieve)
-        precision = self.calculate_precision_at_k(rag_citations, must_retrieve, should_retrieve, may_retrieve)
 
-        retrieval_score = (strict_recall + soft_recall + precision) / 3.0
+        retrieval_score = (strict_recall + soft_recall) / 2.0
 
         return {
-            'strict_recall_at_15': round(strict_recall, 4),
-            'soft_recall_at_15': round(soft_recall, 4),
-            'precision_at_15': round(precision, 4),
+            'strict_recall_at_k': round(strict_recall, 4),
+            'soft_recall_at_k': round(soft_recall, 4),
             'retrieval_score': round(retrieval_score, 4)
         }
 
@@ -101,25 +83,47 @@ class RAGEvaluator:
         similarity = cosine_similarity([embeddings[0]], [embeddings[1]])[0][0]
         return float(similarity)
 
-    def normalize_text(self, text: str) -> str:
-        """Normalize text for fuzzy matching: lowercase, remove punctuation."""
-        text = text.lower()
-        text = text.translate(str.maketrans('', '', string.punctuation))
-        return text
-
-    def calculate_key_facts_coverage(self, rag_answer: str, key_facts: List[str]) -> float:
+    def calculate_key_facts_coverage(self, rag_answer: str, key_facts: List[str], threshold: float = 0.5) -> float:
         """
-        Calculate what fraction of key facts appear in RAG answer (fuzzy match).
+        Calculate what fraction of key facts are covered in RAG answer using semantic similarity.
+
+        Compares each fact to individual sentences in the answer (not the whole answer),
+        and uses the maximum similarity score.
+
+        Args:
+            rag_answer: The generated RAG answer
+            key_facts: List of key facts from ground truth
+            threshold: Minimum similarity score to consider a fact as covered (default 0.5)
+
+        Returns:
+            Fraction of key facts covered (0.0 to 1.0)
         """
         if not key_facts:
             return 1.0  # No facts to check = perfect coverage
 
-        normalized_answer = self.normalize_text(rag_answer)
+        if not rag_answer:
+            return 0.0
 
+        # Split answer into sentences (simple split on . ! ?)
+        import re
+        sentences = re.split(r'[.!?]+', rag_answer)
+        sentences = [s.strip() for s in sentences if s.strip()]
+
+        if not sentences:
+            return 0.0
+
+        # Encode all sentences and facts
+        sentence_embeddings = self.similarity_model.encode(sentences)
+        fact_embeddings = self.similarity_model.encode(key_facts)
+
+        # Check each fact against the most similar sentence
         found_count = 0
-        for fact in key_facts:
-            normalized_fact = self.normalize_text(fact)
-            if normalized_fact in normalized_answer:
+        for fact_embedding in fact_embeddings:
+            # Calculate similarity with each sentence
+            similarities = cosine_similarity([fact_embedding], sentence_embeddings)[0]
+            max_similarity = np.max(similarities)
+
+            if max_similarity >= threshold:
                 found_count += 1
 
         return found_count / len(key_facts)
@@ -207,9 +211,12 @@ class RAGEvaluator:
     def calculate_overall_score(self, retrieval_score: float, answer_score: float, citation_score: float) -> float:
         """
         Calculate weighted overall score:
-        0.3 × retrieval + 0.5 × answer + 0.2 × citation
+        0.35 * retrieval + 0.45 * answer + 0.20 * citation
+
+        Weights prioritize answer quality while giving significant weight to retrieval
+        since it's the foundation of the RAG system.
         """
-        overall = 0.3 * retrieval_score + 0.5 * answer_score + 0.2 * citation_score
+        overall = 0.35 * retrieval_score + 0.45 * answer_score + 0.20 * citation_score
         return round(overall, 4)
 
     # ==================== MAIN EVALUATION ====================
@@ -219,21 +226,24 @@ class RAGEvaluator:
         Evaluate a single test case.
 
         Args:
-            rag_output: Dict with 'answer_markdown' and 'citations' (list of dicts with 'id')
+            rag_output: Dict with 'answer_markdown', 'citations' (list of dicts with 'id'),
+                       and 'retrieved_chunks' (list of chunk IDs from vector search)
             ground_truth: Dict with test case data (must_retrieve, answer_markdown, key_facts, etc.)
 
         Returns:
             Dict with all metrics and overall score
         """
-        # Extract RAG citation IDs
+        # Extract RAG data
         rag_citation_ids = [c['id'] for c in rag_output.get('citations', [])]
+        rag_retrieved_ids = rag_output.get('retrieved_chunks', [])
         rag_answer = rag_output.get('answer_markdown', '')
 
         # Extract ground truth citation IDs
         gt_citations = ground_truth.get('citations', [])
 
         # Calculate all metrics
-        retrieval_metrics = self.calculate_retrieval_score(rag_citation_ids, ground_truth)
+        # Use retrieved chunks for retrieval metrics, not citations!
+        retrieval_metrics = self.calculate_retrieval_score(rag_retrieved_ids, ground_truth)
         answer_metrics = self.calculate_answer_score(rag_answer, ground_truth)
         citation_metrics = self.calculate_citation_score(rag_citation_ids, gt_citations)
 

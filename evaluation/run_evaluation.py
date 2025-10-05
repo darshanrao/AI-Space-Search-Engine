@@ -80,16 +80,23 @@ class RAGEvaluationRunner:
 
     def parse_rag_output(self, output_file: str) -> Dict[str, Any]:
         """
-        Parse RAG output text file to extract JSON answer.
+        Parse RAG output text file to extract JSON answer and retrieved chunk IDs.
 
         Args:
             output_file: Path to RAG output text file
 
         Returns:
-            Dict with answer_markdown and citations
+            Dict with answer_markdown, citations, and retrieved_chunks
         """
         with open(output_file, 'r', encoding='utf-8') as f:
             content = f.read()
+
+        # Extract all retrieved chunk IDs from the RETRIEVED DOCUMENTS section
+        retrieved_chunk_ids = []
+        citation_id_pattern = r'Citation ID:\s*([^\s\n]+)'
+        for match in re.finditer(citation_id_pattern, content):
+            chunk_id = match.group(1)
+            retrieved_chunk_ids.append(chunk_id)
 
         # Find the JSON blob after " GENERATED ANSWER"
         # Look for the JSON object that contains answer_markdown and citations
@@ -100,6 +107,9 @@ class RAGEvaluationRunner:
 
         json_str = json_match.group(0)
         rag_output = json.loads(json_str)
+
+        # Add retrieved chunks to the output
+        rag_output['retrieved_chunks'] = retrieved_chunk_ids
 
         return rag_output
 
@@ -244,10 +254,9 @@ class RAGEvaluationRunner:
         for r in results:
             # Calculate component scores from sub-metrics
             retrieval_score = (
-                r['retrieval']['strict_recall_at_15'] +
-                r['retrieval']['soft_recall_at_15'] +
-                r['retrieval']['precision_at_15']
-            ) / 3.0
+                r['retrieval']['strict_recall_at_k'] +
+                r['retrieval']['soft_recall_at_k']
+            ) / 2.0
 
             answer_score = (
                 r['answer']['semantic_similarity'] +

@@ -1,0 +1,356 @@
+{
+  "paper_id": "PMC5659752",
+  "paper_title": "Novel organelles with elements of bacterial and eukaryotic secretion systems weaponize parasites of Drosophila",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+  "test_cases": [
+    {
+      "id": "PMC5659752_Q1",
+      "question": "What is the approximate size of the spiked VLPs introduced by Leptopilina spp. parasitic wasps?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC5659752:a:a70ab55a"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The spiked VLPs introduced by *Leptopilina spp.* parasitic wasps are approximately **300-nm** in size [1].",
+          "citations": [
+            {
+              "id": "PMC5659752:a:a70ab55a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk directly states the size of the VLPs produced by Leptopilina spp. parasitic wasps."
+            }
+          ],
+          "used_context_ids": [
+            "PMC5659752:a:a70ab55a"
+          ],
+          "key_facts": [
+            "VLPs are 300-nm",
+            "VLPs are spiked",
+            "Introduced by Leptopilina spp. parasitic wasps"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC5659752_Q2",
+      "question": "How do the effects of Leptopilina heterotoma (Lh) and Leptopilina boulardi (Lb) wasp infections differ on Drosophila larval lymph glands, and what are the observed morphological differences in their respective VLPs?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC5659752:sister-leptopilina-species-produce-different-vlps:05d7b3b3",
+            "PMC5659752:a:a70ab55a"
+          ],
+          "should_retrieve": [
+            "PMC5659752:sister-leptopilina-species-produce-different-vlps:c1bdfa4b"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Infections by *Leptopilina heterotoma* (Lh) and *Leptopilina boulardi* (Lb) wasps have distinct effects on *Drosophila* larval lymph glands. **Lb 17 infection induces lamellocyte differentiation**, while **Lh 14 attack causes significant cell loss in both the medulla and cortex** of the lymph gland, with few cells surviving [1]. Morphologically, **Lb 17 VLPs have fewer spikes and are somewhat larger than Lh VLPs** [1]. Lh VLPs are typically **300-nm** and possess an external lipid bilayer, lacking the typical coat-like structure found in some viruses [1], [2].",
+          "citations": [
+            {
+              "id": "PMC5659752:sister-leptopilina-species-produce-different-vlps:05d7b3b3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk directly compares the effects of Lh and Lb infections on Drosophila lymph glands and describes morphological differences in their VLPs."
+            },
+            {
+              "id": "PMC5659752:a:a70ab55a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk provides the specific size of Lh VLPs, which is relevant for the morphological comparison."
+            },
+            {
+              "id": "PMC5659752:sister-leptopilina-species-produce-different-vlps:c1bdfa4b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk reinforces the idea that VLP composition differences underlie the contrasting infection strategies and mentions the lipid bilayer of Lh VLPs."
+            }
+          ],
+          "used_context_ids": [
+            "PMC5659752:sister-leptopilina-species-produce-different-vlps:05d7b3b3",
+            "PMC5659752:a:a70ab55a",
+            "PMC5659752:sister-leptopilina-species-produce-different-vlps:c1bdfa4b"
+          ],
+          "key_facts": [
+            "Lb 17 infection induces lamellocyte differentiation",
+            "Lh 14 attack causes cell loss in medulla and cortex",
+            "Lb 17 VLPs have fewer spikes and are larger than Lh VLPs",
+            "Lh VLPs are 300-nm and have a peripheral membrane lipid bilayer"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC5659752_Q3",
+      "question": "Based on the proteomic and structural analyses, what is the proposed new classification for Leptopilina heterotoma VLPs, and what evidence supports their \"mixed strategy\" of both eukaryotic microvesicular and bacterial secretion system properties?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC5659752:summary:7419265a",
+            "PMC5659752:discussion:7dd6b0f6",
+            "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:19bc17e0",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5ba3e028",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:9894caab"
+          ],
+          "should_retrieve": [
+            "PMC5659752:discussion:07c69fde",
+            "PMC5659752:discussion:39c5e282",
+            "PMC5659752:discussion:7bd89309",
+            "PMC5659752:novel-endomembrane-active-gtpases:5864fc91",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5864db0e",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:4af13d79"
+          ],
+          "may_retrieve": [
+            "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:8100e267",
+            "PMC5659752:a:c63cdec4"
+          ]
+        },
+        "answer": {
+          "answer_markdown": "The paper proposes a new classification for *Leptopilina heterotoma* (Lh) VLPs as **Mixed Strategy Extracellular Vesicles (MSEVs)**, replacing the term VLP [1], [2]. This classification is supported by evidence of their mixed prokaryotic and eukaryotic properties. \n\n**Eukaryotic microvesicular properties** are indicated by:\n*   The presence of **conserved eukaryotic proteins with microvesicular signatures**, including orthologs of *Drosophila* and mammalian extra- and intracellular vesicle components, and membrane proteins [3], [4], [11].\n*   The proteome contains **transmembrane and vesicle transport proteins** (e.g., Na/K pump, SERCA calcium pump, H+-ATPase, Rab proteins), suggesting functional similarities to eukaryotic extracellular microvesicles that transfer proteins between cells [4].\n*   Lh VLPs exhibit **heterogeneity in shapes, sizes, and spike numbers**, reminiscent of eukaryotic organelles, and mature outside the cells of origin [5].\n\n**Bacterial secretion system properties** are indicated by:\n*   The identification of **Lh-specific VLP proteins with sequence similarities to bacterial secretion system proteins** [1].\n*   An abundant Lh VLP surface/spike-tip protein, **p40, shows structural similarities to needle-tip invasin proteins SipD/IpaD of Gram-negative bacterial Type 3 Secretion Systems (T3SS)** [1], [6], [7], [8]. These bacterial proteins breach immune barriers and deliver virulence factors [7].\n*   **Prokaryotic protein motifs** were found in nearly 10% of novel Class 3 sequences, including Syd-like (Type 2 secretion systems) and flgE-like (bacterial flagellar hook) proteins [6].\n*   Some novel GTPase family members possess **prokaryotic domains** (e.g., PF09488) and their closest homologs are often prokaryotic [9].\n*   The hypothesis is that p40, like IpaD/SipD, facilitates invasive contact with host cell membranes to deliver VLP contents [8].\n*   The presence of prokaryotic-like (T3SS/flagellar-like) proteins hints at a shared evolutionary history or derivation of MSEV spikes from primordial flagellar/needle-like structures [10].",
+          "citations": [
+            {
+              "id": "PMC5659752:summary:7419265a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk introduces the proposed term MSEVs and highlights similarities to bacterial secretion systems and eukaryotic microvesicles."
+            },
+            {
+              "id": "PMC5659752:discussion:7dd6b0f6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk formally proposes the MSEV moniker and discusses the diversity of virulence proteins with homologs across biological kingdoms."
+            },
+            {
+              "id": "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:8100e267",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk categorizes VLP proteins, noting conserved eukaryotic proteins with core biological function and microvesicular components."
+            },
+            {
+              "id": "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:19bc17e0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk explicitly states that Lh VLPs share functional properties with eukaryotic extracellular microvesicles due to the presence of transmembrane and vesicle transport proteins."
+            },
+            {
+              "id": "PMC5659752:discussion:07c69fde",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk describes VLPs as lacking viral structural proteins but possessing conserved eukaryotic microvesicular signatures, and notes their heterogeneity similar to eukaryotic organelles."
+            },
+            {
+              "id": "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:9894caab",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk identifies prokaryotic protein motifs, including Syd-like (Type 2 secretion systems) and flgE-like (bacterial flagellar hook) proteins, and introduces p40's role in lamellocyte lysis."
+            },
+            {
+              "id": "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5ba3e028",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk details the identification of a bacterial T3SS domain (IpaD/SipD/BipD) in p40 and notes p40 as the first eukaryotic protein with such a domain."
+            },
+            {
+              "id": "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5864db0e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk explains the function of IpaD-like proteins as T3SS injectisome tip proteins and links p40's transmembrane domain and extracellular localization to microvesicle-like structures."
+            },
+            {
+              "id": "PMC5659752:novel-endomembrane-active-gtpases:5864fc91",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk highlights that several GTPase family members possess prokaryotic domains and their closest homologs are prokaryotic."
+            },
+            {
+              "id": "PMC5659752:discussion:7bd89309",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk discusses the evolutionary implications of prokaryotic-like proteins, suggesting MSEV spikes may share history with flagellar/needle-like structures."
+            },
+            {
+              "id": "PMC5659752:a:c63cdec4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk provides quantitative data on the organelle character of Lh VLPs, including the percentage of mitochondrial and microvesicular/exosomal proteins."
+            }
+          ],
+          "used_context_ids": [
+            "PMC5659752:summary:7419265a",
+            "PMC5659752:discussion:7dd6b0f6",
+            "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:8100e267",
+            "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:19bc17e0",
+            "PMC5659752:discussion:07c69fde",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:9894caab",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5ba3e028",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5864db0e",
+            "PMC5659752:novel-endomembrane-active-gtpases:5864fc91",
+            "PMC5659752:discussion:7bd89309",
+            "PMC5659752:a:c63cdec4"
+          ],
+          "key_facts": [
+            "Proposed new classification: Mixed Strategy Extracellular Vesicles (MSEVs)",
+            "Eukaryotic evidence: conserved microvesicular proteins, transmembrane/vesicle transport proteins, heterogeneity in shape/size, maturation outside cells of origin",
+            "Bacterial evidence: Lh-specific proteins similar to bacterial secretion systems, p40 protein structurally similar to T3SS invasins (SipD/IpaD), prokaryotic motifs in novel proteins and GTPases, evolutionary link to flagellar/needle-like structures"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC5659752_Q4",
+      "question": "What is the known function of the Drosophila melanogaster diedel protein, which is a putative homolog to two diedel-like Lh VLP sequences?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC5659752:a:0b2f355f"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The *Drosophila melanogaster* diedel, a putative homolog to two diedel-like Lh VLP sequences, is a **negative regulator of the JAK-STAT pathway** [1].",
+          "citations": [
+            {
+              "id": "PMC5659752:a:0b2f355f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk explicitly states the function of the D. melanogaster diedel homolog."
+            }
+          ],
+          "used_context_ids": [
+            "PMC5659752:a:0b2f355f"
+          ],
+          "key_facts": [
+            "D. melanogaster diedel is a negative regulator",
+            "Regulates the JAK-STAT pathway"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC5659752_Q5",
+      "question": "Describe the overall composition and key characteristics of Leptopilina heterotoma (Lh) VLPs, including their classification, protein categories, and what they are distinguished from.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC5659752:summary:3a8fb3a7",
+            "PMC5659752:summary:7419265a",
+            "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:8100e267",
+            "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:19bc17e0",
+            "PMC5659752:a:c63cdec4",
+            "PMC5659752:discussion:07c69fde",
+            "PMC5659752:discussion:de764f19",
+            "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:7fe23f7e",
+            "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:ad2e4a24",
+            "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:39c706b0",
+            "PMC5659752:a:a70ab55a",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5ba3e028"
+          ],
+          "should_retrieve": [
+            "PMC5659752:sister-leptopilina-species-produce-different-vlps:c1bdfa4b"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "*Leptopilina heterotoma* (Lh) VLPs are proposed to be a new class of extracellular organelles, termed **Mixed Strategy Extracellular Vesicles (MSEVs)**, due to their unique blend of prokaryotic and eukaryotic properties [1], [2].\n\nTheir key characteristics and composition include:\n*   **Morphology and Structure**: They are **spiked, 300-nm particles** with an external lipid bilayer, but **lack the defined symmetry and external coat found in many true viruses** [3], [4], [12]. They also exhibit heterogeneity in shapes, sizes, and spike numbers, similar to eukaryotic organelles [4].\n*   **Protein Composition**: The Lh VLP proteome consists of approximately **161 common proteins** categorized into three classes [5]:\n    1.  **Class 1 (42%)**: Conserved eukaryotic proteins with core biological functions, including orthologs of *Drosophila* and mammalian extra- and intracellular vesicle components, and membrane proteins [5]. This class includes transmembrane proteins (e.g., Na/K pump, SERCA calcium pump) and vesicle transport proteins (e.g., H+-ATPase, Rab proteins) [6].\n    2.  **Class 2 (24%)**: Virulence/immunity-associated proteins, such as diedel-like proteins (modulating IMD/NF-κB), enhancin-like proteins (similar to *Yersinia* spp. enhancins), imaginal disc growth factor 4-like, fire ant venom allergen, B-cell receptor-associated protein 31, knottin proteins, and juvenile hormone binding proteins [7], [8]. This class also includes RhoGAPs and metalloendopeptidases (MEPs) [8].\n    3.  **Class 3 (34%)**: Novel sequences, many of which are Lh-specific (not expressed by *Lb 17*) [5]. This class contains proteins with unexpected diversity of domains, including some previously found exclusively in prokaryotic proteins, and viral domains (Pox L5, Baculo_PEP_C, Baculo_11_kDa) [4], [9]. Notably, the abundant surface protein **p40** in Lh VLPs shows structural similarities to bacterial Type 3 Secretion System (T3SS) needle-tip invasin proteins (SipD/IpaD) [2], [10].\n*   **Organelle Character**: Enrichment analyses show that 71% of VLP proteins with annotated orthologs are mitochondrial, with 12% localized to the inner membrane. Approximately 50% of conserved sequences are common to microvesicles/exosomes. Terms related to vesicular and mitochondrial components, including the pro-apoptotic caspase complex, are highly over-represented [11].\n*   **Distinctions**: Lh VLPs are explicitly distinguished from **viruses** (lack viral structural proteins and nucleic acids) and **endosymbiotic bacteria** (genomically encoded, non-replicating, unaffected by antibiotic treatment for *Wolbachia*) [4], [13]. Their unique composition and properties suggest they are not traditional viruses or bacteria but a novel class of microvesicle-like organelles [13].",
+          "citations": [
+            {
+              "id": "PMC5659752:summary:3a8fb3a7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk provides an overview of Lh VLPs, their role in immune suppression, and mentions their protein composition (eukaryotic vesicular transport, immunity, novel proteins)."
+            },
+            {
+              "id": "PMC5659752:summary:7419265a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk introduces the proposed term MSEVs and highlights similarities to bacterial secretion systems (p40 and T3SS) and eukaryotic microvesicles."
+            },
+            {
+              "id": "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:8100e267",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk details the categorization of the 161 common VLP proteins into three classes (conserved eukaryotic, virulence/immunity, novel) and notes the absence of viral structural proteins."
+            },
+            {
+              "id": "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:19bc17e0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk identifies specific transmembrane and vesicle transport proteins, reinforcing the functional similarities of Lh VLPs to eukaryotic extracellular microvesicles."
+            },
+            {
+              "id": "PMC5659752:a:c63cdec4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk provides quantitative data on the organelle character of Lh VLPs, including the percentage of mitochondrial and microvesicular/exosomal proteins and over-represented GO terms."
+            },
+            {
+              "id": "PMC5659752:discussion:07c69fde",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk discusses the complex composition of Lh VLPs, emphasizing the absence of viral structural proteins, presence of eukaryotic microvesicular signatures, and unexpected diversity of domains, including prokaryotic ones. It also notes their heterogeneity and maturation outside cells."
+            },
+            {
+              "id": "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:7fe23f7e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk lists specific candidate immune-modulating (Class 2) VLP proteins like diedel-like, enhancin-like, imaginal disc growth factor, fire ant venom allergen, and B-cell receptor-associated protein 31."
+            },
+            {
+              "id": "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:ad2e4a24",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk continues to list Class 2 proteins (knottin, juvenile hormone binding protein, RhoGAPs, MEPs) and discusses their potential roles in parasite development and virulence."
+            },
+            {
+              "id": "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:39c706b0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk describes Class 3 novel proteins, including those with viral domains and Lh-specific gene families like GTPases and fibronectin domain-containing sequences."
+            },
+            {
+              "id": "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5ba3e028",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk specifically highlights p40 as an abundant surface protein with a bacterial T3SS domain (IpaD/SipD/BipD)."
+            },
+            {
+              "id": "PMC5659752:a:a70ab55a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk provides the physical description of VLPs as spiked, 300-nm particles."
+            },
+            {
+              "id": "PMC5659752:sister-leptopilina-species-produce-different-vlps:c1bdfa4b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk mentions the peripheral membrane lipid bilayer of Lh VLPs and their lack of a typical viral coat-like structure."
+            },
+            {
+              "id": "PMC5659752:discussion:de764f19",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+              "why_relevant": "This chunk explicitly distinguishes VLPs from viruses (lack nucleic acids, non-replicating) and endosymbiotic bacteria (genomically encoded, unaffected by antibiotics)."
+            }
+          ],
+          "used_context_ids": [
+            "PMC5659752:summary:3a8fb3a7",
+            "PMC5659752:summary:7419265a",
+            "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:8100e267",
+            "PMC5659752:lh-vlps-are-rich-in-eukaryotic-microvesicular-proteins:19bc17e0",
+            "PMC5659752:a:c63cdec4",
+            "PMC5659752:discussion:07c69fde",
+            "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:7fe23f7e",
+            "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:ad2e4a24",
+            "PMC5659752:diverse-pathogenicity-mechanisms-are-housed-in-vlps:39c706b0",
+            "PMC5659752:t3ss-like-vlp-proteins--similarities-between-vlp-p40-and-bacterial-sipd-ipad:5ba3e028",
+            "PMC5659752:a:a70ab55a",
+            "PMC5659752:sister-leptopilina-species-produce-different-vlps:c1bdfa4b",
+            "PMC5659752:discussion:de764f19"
+          ],
+          "key_facts": [
+            "Classified as Mixed Strategy Extracellular Vesicles (MSEVs)",
+            "Spiked, 300-nm particles with lipid bilayer",
+            "Lack viral structural proteins and nucleic acids; not endosymbiotic bacteria",
+            "Proteome has ~161 proteins in 3 classes: conserved eukaryotic, virulence/immunity, novel",
+            "Class 1 includes eukaryotic vesicle components, transmembrane, and transport proteins",
+            "Class 2 includes diedel-like, enhancin-like, p40, RhoGAPs, MEPs, knottins, JHBP",
+            "Class 3 includes novel sequences with prokaryotic and viral domains; p40 similar to bacterial T3SS invasins",
+            "High percentage of mitochondrial and microvesicular/exosomal proteins"
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

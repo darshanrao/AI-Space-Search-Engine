@@ -1,0 +1,299 @@
+{
+  "paper_id": "PMC7264257",
+  "paper_title": "Biomass Production of the EDEN ISS Space Greenhouse in Antarctica During the 2018 Experiment Phase",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+  "test_cases": [
+    {
+      "id": "PMC7264257_Q1",
+      "question": "What was the total edible biomass produced by the EDEN ISS greenhouse in 2018?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7264257:abstract:642e47cf"
+          ],
+          "should_retrieve": [
+            "PMC7264257:results:c7b16ee0"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "During the 2018 experiment phase, the EDEN ISS greenhouse facility produced **more than 268 kg of edible biomass** [1], [2].",
+          "citations": [
+            {
+              "id": "PMC7264257:abstract:642e47cf",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk directly states the total edible biomass produced in 2018."
+            },
+            {
+              "id": "PMC7264257:results:c7b16ee0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk confirms the total edible biomass produced by the FEG."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7264257:abstract:642e47cf",
+            "PMC7264257:results:c7b16ee0"
+          ],
+          "key_facts": [
+            "Total edible biomass: 268 kg",
+            "Year of production: 2018"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7264257_Q2",
+      "question": "How did the EDEN ISS greenhouse's yearly production rates for cucumbers, tomatoes, and lettuce compare to FAOSTAT data for the Netherlands in 2017?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7264257:discussion:d656b9c5",
+            "PMC7264257:discussion:f80de481"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "When comparing the EDEN ISS 2018 yearly production values to FAOSTAT data for the Netherlands in 2017:\n\n*   **Cucumbers**: EDEN ISS production was **much higher** at **122.99 kg/m²** compared to FAOSTAT's **68.97 kg/m²** [1], [2].\n*   **Lettuce**: EDEN ISS production was **much higher** at **36.11 kg/m²** compared to FAOSTAT's **3.11 kg/m²** [1], [2].\n*   **Tomatoes**: EDEN ISS production was **lower**, at **19.70 kg/m²**, which is only around **40%** of FAOSTAT's **50.84 kg/m²** [1], [2].\n\nThe higher yield for cucumbers and lettuce in EDEN ISS is attributed to the absence of seasonal temperature and illumination changes, which affect conventional greenhouse farming. The lower tomato yield is likely due to the decision to grow less-effective dwarf tomato cultivars instead of normal-sized, high-productive varieties [2].",
+          "citations": [
+            {
+              "id": "PMC7264257:discussion:d656b9c5",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk provides the FAOSTAT data for the Netherlands and the EDEN ISS yearly production values for cucumbers, tomatoes, and lettuce, enabling direct comparison."
+            },
+            {
+              "id": "PMC7264257:discussion:f80de481",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk explains the differences observed in the comparison, particularly for tomatoes, and provides context for the higher yields of cucumbers and lettuce."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7264257:discussion:d656b9c5",
+            "PMC7264257:discussion:f80de481"
+          ],
+          "key_facts": [
+            "EDEN ISS cucumber production: 122.99 kg/m² (much higher than FAOSTAT 68.97 kg/m²)",
+            "EDEN ISS lettuce production: 36.11 kg/m² (much higher than FAOSTAT 3.11 kg/m²)",
+            "EDEN ISS tomato production: 19.70 kg/m² (40% of FAOSTAT 50.84 kg/m²)",
+            "Reason for higher cucumber/lettuce: absence of seasonal changes",
+            "Reason for lower tomato: use of dwarf cultivars"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7264257_Q3",
+      "question": "Describe the target environmental conditions within the EDEN ISS Future Exploration Greenhouse (FEG) and the specific challenges encountered in maintaining these conditions during the 2018 experiment phase.",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7264257:materials-and-methods:c4d45894",
+            "PMC7264257:materials-and-methods:4e3a0cc1",
+            "PMC7264257:materials-and-methods:aa580a26"
+          ],
+          "should_retrieve": [
+            "PMC7264257:abstract:642e47cf"
+          ],
+          "may_retrieve": [
+            "PMC7264257:atmosphere---figure-4:7d4f5a16",
+            "PMC7264257:atmosphere---figure-5:081256b7",
+            "PMC7264257:atmosphere---figure-6:ff2b1a4a"
+          ]
+        },
+        "answer": {
+          "answer_markdown": "The target environmental conditions within the EDEN ISS Future Exploration Greenhouse (FEG) were **21°C during the photoperiod, 19°C during the dark period, 65% relative humidity, and 1000 ppm CO2 concentration** [1], [2].\n\nSpecific challenges encountered in maintaining these conditions during the 2018 experiment phase included:\n\n*   **Temperature**: During the Antarctic winter, the facility sometimes failed to maintain the dark period temperature, resulting in drops down to **16°C**. Some off-nominal events with the thermal control subsystem also led to temperature increases beyond the **21°C** set point. Additionally, erroneous measurements (showing 0°C) occurred due to communication issues [2], [3].\n*   **Relative Humidity**: The FEG experienced larger deviations from the **65%** set point, particularly between April and July, where relative humidity would go as high as **86%** for periods of a few hours. This was attributed to issues with the condensate recovery design, which required mitigation through adjustments to flow rates, coolant temperatures, and control logic [3], [4].\n*   **CO2 Concentration**: The CO2 concentration within the FEG was almost always higher than the **1000 ppm** set point. This was primarily due to the on-site operator frequently (almost every day) working inside the greenhouse and emitting CO2, coupled with the absence of a CO2 removal system. Depending on the time spent inside, CO2 levels could rise to **~2000 ppm or even ~4000 ppm**, taking approximately one day for plants to consume enough CO2 to return to the set point [4].",
+          "citations": [
+            {
+              "id": "PMC7264257:materials-and-methods:c4d45894",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk explicitly states the temperature, humidity, and CO2 set points for the FEG and mentions that temperature was generally maintained, but also refers to figures showing actual values and issues."
+            },
+            {
+              "id": "PMC7264257:abstract:642e47cf",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk provides a summary of the environmental set points, confirming the target conditions."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:4e3a0cc1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk details the challenges with temperature maintenance during winter and off-nominal events, as well as the initial issues with relative humidity control and their mitigation."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:aa580a26",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk explains the persistent issue of elevated CO2 concentrations due to operator presence and the lack of a CO2 removal system, and also mentions improved humidity control later in the experiment."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7264257:materials-and-methods:c4d45894",
+            "PMC7264257:materials-and-methods:4e3a0cc1",
+            "PMC7264257:materials-and-methods:aa580a26",
+            "PMC7264257:abstract:642e47cf"
+          ],
+          "key_facts": [
+            "Target temperature: 21°C (photoperiod), 19°C (dark period)",
+            "Target relative humidity: 65%",
+            "Target CO2 concentration: 1000 ppm",
+            "Temperature challenge: drops to 16°C in winter, increases above 21°C due to off-nominal events",
+            "Humidity challenge: deviations up to 86% due to condensate recovery design issues, later mitigated",
+            "CO2 challenge: frequently exceeded 1000 ppm (up to 2000-4000 ppm) due to operator presence and no removal system"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7264257_Q4",
+      "question": "What was the time-normalized edible fresh weight production rate for Mizuna in the EDEN ISS greenhouse?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7264257:leafy-greens-edible-fresh-weight-production-values----table-6:f30c80ba"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The time-normalized edible fresh weight production rate for Mizuna in the EDEN ISS greenhouse was **0.194 kg/(m²*d)** [1].",
+          "citations": [
+            {
+              "id": "PMC7264257:leafy-greens-edible-fresh-weight-production-values----table-6:f30c80ba",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This table directly provides the time-normalized edible fresh weight production value for Mizuna."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7264257:leafy-greens-edible-fresh-weight-production-values----table-6:f30c80ba"
+          ],
+          "key_facts": [
+            "Mizuna production rate: 0.194 kg/(m²*d)"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC7264257_Q5",
+      "question": "Provide an overview of the EDEN ISS Mobile Test Facility, including its purpose, location, physical structure, and the main subsystems that enable plant cultivation.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC7264257:abstract:b5430299",
+            "PMC7264257:introduction:57cd3fdd",
+            "PMC7264257:materials-and-methods:accc2fc9",
+            "PMC7264257:materials-and-methods:725ac7e1",
+            "PMC7264257:materials-and-methods:fc3a98d8",
+            "PMC7264257:materials-and-methods:6ff72242",
+            "PMC7264257:materials-and-methods:c2142f16",
+            "PMC7264257:materials-and-methods:cdfc03e1",
+            "PMC7264257:materials-and-methods:b8afc5d5"
+          ],
+          "should_retrieve": [
+            "PMC7264257:introduction:2d24d19b",
+            "PMC7264257:introduction:889157cd",
+            "PMC7264257:eden-iss-mobile-test-facility-infrastructure---figure-2:79b4cd28"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The EDEN ISS Mobile Test Facility (MTF) is a **space-analog test facility** established for **multidisciplinary research on topics related to future plant cultivation on human space exploration missions**. Its primary purpose is to enable food production during space missions to reduce resupply mass and costs, while also producing oxygen, removing carbon dioxide, and recycling water [1], [2], [3].\n\n*   **Location**: The MTF is situated in **Antarctica**, approximately **400 m south** of the German Neumayer Station III. This continent provides several conditions favorable for space analog test campaigns [2], [3], [4].\n\n*   **Physical Structure**: The MTF is constructed from **two customized 20-foot high cube shipping containers** placed on a raised platform. It is divided into three distinct sections [4], [5]:\n    1.  **Airlock/Cold-Porch (Blue section)**: A small room for storage, an air buffer to limit cold air entry, and houses the main fresh and waste water tanks [4], [6].\n    2.  **Service Section (Red section)**: Contains the primary control, atmosphere management, thermal control, power control, and nutrient delivery systems, along with a work desk and storage [6], [7].\n    3.  **Future Exploration Greenhouse (FEG) (Green section)**: The main plant cultivation space, featuring multi-level plant growth racks operating in a controlled environment to study plant cultivation and related technologies for future planetary habitats [7], [8].\n\n*   **Main Subsystems**: The MTF integrates six key subsystems to manage the controlled environment for plant cultivation [8]:\n    1.  **Nutrient Delivery Subsystem**: Adjusts the irrigation water's pH and EC, provides dedicated nutrient solutions (leafy or fruit-building crop specific) directly to the roots via high-pressure pumps spraying a fine mist [9], [10].\n    2.  **Atmosphere Management Subsystem**: Regulates temperature, humidity, and CO2 concentration within the FEG. It also filters air (particle, HEPA, activated carbon) and recovers humidity condensate water for reuse [10].\n    3.  **Thermal Control Subsystem**: Removes excess heat from the MTF and provides a cool fluid for condensation of plant-produced humidity [11].\n    4.  **Illumination Control Subsystem**: Comprises 42 fluid-cooled LED fixtures within the FEG, allowing independent control of light spectrum (red, blue, far-red, white) and intensity for each plant tray [11].\n    5.  **Power Distribution Subsystem**: Supplies electrical energy to all MTF subsystems, with power generated at the Neumayer Station III [12].\n    6.  **Control and Data Handling Subsystem**: Consists of independent programmable logic controllers that receive sensor data, control MTF functions, send system telemetry to a mission control center in Bremen, Germany, and transmit daily images for remote expert monitoring and assistance to the on-site operator [12], [13].",
+          "citations": [
+            {
+              "id": "PMC7264257:abstract:b5430299",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk introduces the EDEN ISS greenhouse as a space-analog test facility and states its purpose for multidisciplinary research on future plant cultivation for space missions."
+            },
+            {
+              "id": "PMC7264257:introduction:57cd3fdd",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk describes the EDEN ISS project as the newest space greenhouse analog project, its goals, and its unique location in Antarctica near Neumayer Station III."
+            },
+            {
+              "id": "PMC7264257:introduction:2d24d19b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk explains the broader purpose of food production in space missions, including reducing resupply mass, producing oxygen, and recycling water."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:accc2fc9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk details the MTF's location, its design as an experimental facility, its construction from two shipping containers, and introduces the three distinct sections: Airlock/Cold-Porch."
+            },
+            {
+              "id": "PMC7264257:eden-iss-mobile-test-facility-infrastructure---figure-2:79b4cd28",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This caption describes the schematic top-view of the MTF, identifying the blue (cold porch), red (service section), and green (FEG) sections, which is key to understanding the physical structure."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:725ac7e1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk further describes the Airlock/Cold-Porch and introduces the Service Section, detailing its functions and housed systems."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:fc3a98d8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk continues the description of the Service Section and introduces the Future Exploration Greenhouse (FEG) as the main plant cultivation space."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:6ff72242",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk reiterates the FEG's purpose and introduces the six different subsystems required to cultivate plants in a controlled environment."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:c2142f16",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk describes the Nutrient Delivery Subsystem and the Atmosphere Management Subsystem in detail."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:cdfc03e1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk describes the Thermal Control Subsystem and the Illumination Control Subsystem in detail."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:b8afc5d5",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk describes the Power Distribution Subsystem and the Control and Data Handling Subsystem in detail."
+            },
+            {
+              "id": "PMC7264257:materials-and-methods:c6332ede",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+              "why_relevant": "This chunk further elaborates on the Control and Data Handling Subsystem's functions, including telemetry and image transmission for remote monitoring."
+            }
+          ],
+          "used_context_ids": [
+            "PMC7264257:abstract:b5430299",
+            "PMC7264257:introduction:2d24d19b",
+            "PMC7264257:introduction:57cd3fdd",
+            "PMC7264257:materials-and-methods:accc2fc9",
+            "PMC7264257:materials-and-methods:725ac7e1",
+            "PMC7264257:materials-and-methods:fc3a98d8",
+            "PMC7264257:materials-and-methods:6ff72242",
+            "PMC7264257:materials-and-methods:c2142f16",
+            "PMC7264257:materials-and-methods:cdfc03e1",
+            "PMC7264257:materials-and-methods:b8afc5d5",
+            "PMC7264257:materials-and-methods:c6332ede",
+            "PMC7264257:eden-iss-mobile-test-facility-infrastructure---figure-2:79b4cd28"
+          ],
+          "key_facts": [
+            "Purpose: Multidisciplinary research for future human space exploration plant cultivation, reducing resupply, producing oxygen, recycling water.",
+            "Location: Antarctica, near German Neumayer Station III (400m south).",
+            "Physical Structure: Two 20-foot high cube shipping containers, divided into Airlock/Cold-Porch, Service Section, and Future Exploration Greenhouse (FEG).",
+            "Subsystems: Nutrient Delivery, Atmosphere Management, Thermal Control, Illumination Control, Power Distribution, Control and Data Handling."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

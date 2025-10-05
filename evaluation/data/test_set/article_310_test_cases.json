@@ -1,0 +1,436 @@
+{
+  "paper_id": "PMC11166981",
+  "paper_title": "Spaceflight induces changes in gene expression profiles linked to insulin and estrogen",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+  "test_cases": [
+    {
+      "id": "PMC11166981_Q1",
+      "question": "Which mouse organ exhibited the highest number of differentially expressed genes (DEGs) after 37 days of spaceflight?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11166981:results:94ba4060",
+            "PMC11166981:results:b5af2caa"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The **liver** was the mouse organ that exhibited the highest number of differentially expressed genes (DEGs) after 37 days of spaceflight, with **3670 DEGs** [1], [2]. This was followed by the soleus muscle (3518 DEGs) and the extensor digitorum longus (EDL) muscle (1859 DEGs) [1].",
+          "citations": [
+            {
+              "id": "PMC11166981:results:94ba4060",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "This chunk directly states that the liver had the greatest number of differentially expressed genes (3670) compared to other tissues."
+            },
+            {
+              "id": "PMC11166981:results:b5af2caa",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "This chunk reiterates that the liver was the most impacted organ by spaceflight, having the highest number of DEGs."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11166981:results:94ba4060",
+            "PMC11166981:results:b5af2caa"
+          ],
+          "key_facts": [
+            "Liver had the highest number of DEGs.",
+            "3670 DEGs were observed in the mouse liver.",
+            "Soleus and EDL muscles followed with 3518 and 1859 DEGs, respectively."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11166981_Q2",
+      "question": "How did insulin signaling pathways respond differently in the soleus muscle compared to the extensor digitorum longus (EDL) muscle in spaceflown rodents?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11166981:discussion:f2142710",
+            "PMC11166981:discussion:f0709b4d",
+            "PMC11166981:results:39a2e9e2"
+          ],
+          "should_retrieve": [
+            "PMC11166981:discussion:4f3972c5",
+            "PMC11166981:discussion:7563d267"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Insulin signaling pathways responded distinctly in the soleus and extensor digitorum longus (EDL) muscles during spaceflight. In the **soleus muscle**, which experienced a 19% decrease in weight, there was a **decreased expression of IRS2** (Insulin receptor substrate 2), a major downstream insulin signaling component. This suggests that insulin alterations contributed to a decline in protein synthesis, promoting muscle atrophy [1]. In contrast, the **EDL muscle** showed **activated insulin receptor signaling** (z-score: 2.52) and an upregulation of insulin-induced ACACA, an enzyme involved in lipogenesis, indicating an **insulin-responsive state** [1]. Overall, the majority of insulin signaling genes at the intersection of these two muscles were regulated in opposite directions, highlighting their distinctive responses to spaceflight [2]. The EDL muscle also displayed an enrichment for growth pathways, while the soleus muscle declined in size [3].",
+          "citations": [
+            {
+              "id": "PMC11166981:discussion:f2142710",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "This chunk directly compares the insulin signaling response in soleus (decreased IRS2, muscle atrophy) and EDL (activated insulin receptor signaling, upregulated ACACA) muscles."
+            },
+            {
+              "id": "PMC11166981:discussion:f0709b4d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "This chunk explicitly states that insulin signaling genes in soleus and EDL were regulated in opposite directions, indicating distinctive insulin responses."
+            },
+            {
+              "id": "PMC11166981:discussion:7563d267",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "This chunk mentions that soleus size declined while EDL remained stable and showed enrichment for growth pathways, further highlighting the differential response."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11166981:discussion:f2142710",
+            "PMC11166981:discussion:f0709b4d",
+            "PMC11166981:results:39a2e9e2",
+            "PMC11166981:discussion:4f3972c5",
+            "PMC11166981:discussion:7563d267"
+          ],
+          "key_facts": [
+            "Soleus muscle showed decreased IRS2 expression, contributing to muscle atrophy.",
+            "EDL muscle exhibited activated insulin receptor signaling and upregulated ACACA, indicating an insulin-responsive state.",
+            "Insulin signaling genes in soleus and EDL were regulated in opposite directions.",
+            "Soleus muscle experienced mass loss, while EDL muscle remained stable and showed growth pathway enrichment."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11166981_Q3",
+      "question": "Explain the interconnected mechanisms by which spaceflight-induced alterations in insulin and estrogen signaling contribute to hepatic steatosis and mitochondrial dysfunction in mice.",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11166981:abstract:70b4b38d",
+            "PMC11166981:discussion:ac606285",
+            "PMC11166981:discussion:f9ce0e41",
+            "PMC11166981:discussion:9388d31a",
+            "PMC11166981:results:385fa795",
+            "PMC11166981:results:d3cf1658",
+            "PMC11166981:results:4446bc07"
+          ],
+          "should_retrieve": [
+            "PMC11166981:results:79841bde",
+            "PMC11166981:gene-expression-changes-and-proteomics-suggest-underlying-insulin-resistance-in-spaceflight-induced-hepatosteatosis---figure-4:cd57cf67"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Spaceflight induces significant alterations in both insulin and estrogen signaling in the mouse liver, which are intricately linked to the development of hepatic steatosis and mitochondrial dysfunction [1], [2].\n\n**Hepatic Steatosis:**\nSpaceflight leads to the **inhibition of insulin receptor signaling** in the liver, with downregulation of key components like INSR, AKT1, and AKT2 [2]. This inhibition results in **dysglycemia, insulin resistance, and hepatic steatosis** [2]. Hepatic steatosis itself is a direct consequence of insulin resistance and can create a vicious cycle by exacerbating it [3]. The SREBP pathway, known to be involved in Nonalcoholic Fatty Liver Disease (NAFLD), was positively enriched, and genes like INSR, IRS1, AKT1, and AKT2 were among the top enriched genes for hepatic steatosis [6]. Impaired **estrogen signaling** (z-score < -2) also contributes to hepatic insulin resistance [3], [5].\n\n**Mitochondrial Dysfunction:**\nSpaceflight-induced mitochondrial dysfunction is closely tied to these hormonal changes [4]. The downregulation of **PPARGC1A (PGC-1α)**, a master regulator of metabolism and mitochondrial biogenesis, was observed in the liver, affecting both insulin and estrogen gene expression changes [4]. Estrogen plays a crucial role in regulating mitochondrial function and biogenesis [4]. In the liver, the **estrogen signaling network showed downregulation of mitochondrial complex I, complex II, and ATP synthase genes** [4], [5]. This impairment of estrogen signaling can directly hamper oxidative phosphorylation, particularly affecting complex I [5]. Additionally, inhibition of mitochondrial fatty acid oxidation (FAO) was observed, further indicating derangement of mitochondrial activity [5]. The identification of **MFN2**, a mitochondrial fusion protein associated with insulin signaling and oxidative stress in NAFLD, further highlights the connection between these pathways and mitochondrial health [6].\n\nIn summary, spaceflight disrupts insulin signaling, leading to insulin resistance and hepatic steatosis, while simultaneously impairing estrogen signaling, which directly contributes to both hepatic insulin resistance and mitochondrial dysfunction through the downregulation of key mitochondrial complexes and regulators.",
+          "citations": [
+            {
+              "id": "PMC11166981:abstract:70b4b38d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Provides an overview that spaceflight induces changes in insulin and estrogen signaling in rodents, most prominent in the liver, leading to hepatic insulin resistance and steatosis."
+            },
+            {
+              "id": "PMC11166981:discussion:ac606285",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Details that liver showed largest changes in insulin and estrogen signaling gene expression, with downregulation of INSR, AKT1, AKT2, leading to inhibited metabolic pathways, dysglycemia, insulin resistance, and hepatic steatosis."
+            },
+            {
+              "id": "PMC11166981:discussion:f9ce0e41",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Explains that hepatic steatosis is a consequence of insulin resistance and can exacerbate it, and that impaired estrogen signaling may contribute to hepatic insulin resistance."
+            },
+            {
+              "id": "PMC11166981:discussion:9388d31a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Connects mitochondrial dysfunction to alterations in insulin and estrogen signaling, specifically mentioning PPARGC1A downregulation and downregulation of mitochondrial complex I, complex II, and ATP synthase genes in the estrogen signaling network."
+            },
+            {
+              "id": "PMC11166981:results:385fa795",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Confirms insulin resistance and hepatic steatosis development, insulin receptor downregulation, inhibition of mitochondrial fatty acid oxidation, and inhibition of estrogen receptor signaling, with downregulation of mitochondrial complex I, II, and ATP synthase genes in the estrogen network."
+            },
+            {
+              "id": "PMC11166981:results:4446bc07",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Mentions MFN2, a mitochondrial fusion protein associated with insulin signaling and oxidative stress in NAFLD, as a top leading gene in hepatic steatosis."
+            },
+            {
+              "id": "PMC11166981:results:79841bde",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "States that the SREBP pathway, involved in NAFLD, was positively enriched, and insulin signaling pathways were universally enriched in hepatic steatosis."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11166981:abstract:70b4b38d",
+            "PMC11166981:discussion:ac606285",
+            "PMC11166981:discussion:f9ce0e41",
+            "PMC11166981:discussion:9388d31a",
+            "PMC11166981:results:385fa795",
+            "PMC11166981:results:d3cf1658",
+            "PMC11166981:results:79841bde",
+            "PMC11166981:results:4446bc07",
+            "PMC11166981:gene-expression-changes-and-proteomics-suggest-underlying-insulin-resistance-in-spaceflight-induced-hepatosteatosis---figure-4:cd57cf67"
+          ],
+          "key_facts": [
+            "Spaceflight inhibits insulin receptor signaling (INSR, AKT1, AKT2 downregulation) in the liver, leading to dysglycemia, insulin resistance, and hepatic steatosis.",
+            "Impaired estrogen signaling contributes to hepatic insulin resistance.",
+            "Hepatic steatosis is exacerbated by insulin resistance, forming a vicious cycle.",
+            "Mitochondrial dysfunction is linked to altered insulin and estrogen signaling.",
+            "PPARGC1A (PGC-1α) is downregulated in the liver, affecting mitochondrial biogenesis.",
+            "Estrogen signaling network shows downregulation of mitochondrial complex I, complex II, and ATP synthase genes.",
+            "Inhibition of mitochondrial fatty acid oxidation (FAO) and MFN2 involvement further indicate mitochondrial derangement."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11166981_Q4",
+      "question": "Which specific genes related to tissue remodeling, extracellular matrix, wound healing, and collagen synthesis were downregulated in the dorsal skin of male mice during spaceflight?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11166981:results:ed54c302"
+          ],
+          "should_retrieve": [
+            "PMC11166981:discussion:6b5d3178"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "In the dorsal skin of male mice during spaceflight, the following specific genes involved in tissue remodeling, extracellular matrix, wound healing, and collagen synthesis were downregulated: **ACE, FN1, IGFBP5, MMP3, COL6A3, COL6A1, COL1A1, COL5A1, BGN, FASN, and LOXL2** [1]. Notably, FN1 encodes fibronectin, an essential component of the extracellular matrix, and MMP3, which regulates wound healing, were among those downregulated [1].",
+          "citations": [
+            {
+              "id": "PMC11166981:results:ed54c302",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "This chunk directly lists the specific genes that were downregulated in male mice skin related to tissue remodeling and collagen synthesis."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11166981:results:ed54c302",
+            "PMC11166981:discussion:6b5d3178"
+          ],
+          "key_facts": [
+            "Genes downregulated in male mouse dorsal skin include ACE, FN1, IGFBP5, MMP3, COL6A3, COL6A1, COL1A1, COL5A1, BGN, FASN, LOXL2.",
+            "These genes are involved in tissue remodeling, extracellular matrix, wound healing, and collagen synthesis.",
+            "FN1 (fibronectin) and MMP3 (matrix metalloproteinase) were specifically mentioned as downregulated."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11166981_Q5",
+      "question": "Provide a comprehensive overview of the main findings regarding the impact of spaceflight on insulin and estrogen signaling in both rodents and humans, including affected tissues, key molecular changes, and potential health implications.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11166981:abstract:70b4b38d",
+            "PMC11166981:discussion:ac606285",
+            "PMC11166981:discussion:f9ce0e41",
+            "PMC11166981:discussion:9388d31a",
+            "PMC11166981:discussion:f2142710",
+            "PMC11166981:discussion:f0709b4d",
+            "PMC11166981:discussion:755c1dfe",
+            "PMC11166981:discussion:ee11a0fc",
+            "PMC11166981:results:94ba4060",
+            "PMC11166981:results:b5af2caa",
+            "PMC11166981:results:b1ded4a8",
+            "PMC11166981:results:385fa795",
+            "PMC11166981:results:ed54c302",
+            "PMC11166981:results:5618c4aa",
+            "PMC11166981:results:ead49ef4",
+            "PMC11166981:results:12750d0b",
+            "PMC11166981:results:8f59ac5b",
+            "PMC11166981:discussion:690a3905"
+          ],
+          "should_retrieve": [
+            "PMC11166981:abstract:822b27fa",
+            "PMC11166981:discussion:4f3972c5",
+            "PMC11166981:discussion:7563d267",
+            "PMC11166981:discussion:6b5d3178",
+            "PMC11166981:discussion:64543b29",
+            "PMC11166981:results:fd0595fe",
+            "PMC11166981:results:39a2e9e2",
+            "PMC11166981:results:bd536067",
+            "PMC11166981:results:c5b154a3",
+            "PMC11166981:results:b675433d",
+            "PMC11166981:results:f9cc2ebc",
+            "PMC11166981:results:ca86d2fa"
+          ],
+          "may_retrieve": [
+            "PMC11166981:introduction:a63bf82d",
+            "PMC11166981:introduction:dd456de7",
+            "PMC11166981:introduction:995a65e7",
+            "PMC11166981:introduction:8d071895",
+            "PMC11166981:introduction:5b8321a9",
+            "PMC11166981:introduction:2164adc8",
+            "PMC11166981:introduction:d4fffcac"
+          ]
+        },
+        "answer": {
+          "answer_markdown": "Spaceflight significantly alters gene expression profiles linked to insulin and estrogen signaling in both rodents and humans, impacting various tissues and foreboding metabolic comorbidities [1], [18].\n\n**Affected Tissues and Key Molecular Changes in Rodents:**\n*   **Liver:** The liver was the **most impacted organ**, showing the highest number of differentially expressed genes (3670 DEGs) [9], [10]. Spaceflight induced **inhibition of insulin and estrogen receptor signaling** (z-scores: -3.772 and -5.859, respectively), leading to **hepatic insulin resistance and steatosis** [1], [2], [11]. Downregulation of insulin receptor (INSR) and downstream kinases (AKT1, AKT2) was observed [2]. Furthermore, **mitochondrial dysfunction** was evident, with downregulation of PPARGC1A (PGC-1α) and genes for mitochondrial complex I, complex II, and ATP synthase within the estrogen signaling network [4], [11]. Proteomics data also confirmed the liver as having the most insulin and estrogen-related protein abundance changes [12].\n*   **Muscles (Soleus vs. EDL):** Insulin signaling showed **distinct responses**. The **soleus muscle** experienced atrophy and a 19% decrease in weight, with decreased expression of IRS2, suggesting reduced protein synthesis [5]. In contrast, the **extensor digitorum longus (EDL) muscle** showed activated insulin receptor signaling and upregulated ACACA, indicating an insulin-responsive state and enrichment for growth pathways [5], [6]. Estrogen receptor signaling also displayed diverse actions, with ESR1 upregulated in soleus (possibly compensatory) and ESRRA, ESRRB, ESRRG upregulated in EDL [7], [8].\n*   **Skin:** Differences in pathway enrichment scores were observed between female and male mice. In male mice, genes involved in tissue remodeling, extracellular matrix, wound healing, and collagen synthesis (e.g., **ACE, FN1, IGFBP5, MMP3, COL6A3, COL6A1, COL1A1, COL5A1, BGN, FASN, LOXL2**) were downregulated [13]. Insulin receptor (INSR), IRS2, estrogen receptor 1 (ESR1), and ESRRG were upregulated in male dorsal skin [14].\n*   **General:** Circadian rhythm genes (e.g., ARNTL, NPAS2, NR1D2, PER2, PER3) were commonly altered across various tissues, indicating a global effect of spaceflight on the circadian clock and its association with insulin signaling [15].\n\n**Affected Tissues and Key Molecular Changes in Humans:**\n*   **Blood (Plasma cfRNAs, PBMCs):** Changes in insulin resistance-related genes were detected both inflight and postflight [16]. Postflight, **upregulation of insulin signaling genes** (e.g., AKT1, RARRES2) and enriched insulin secretion and PI3K/AKT signaling were observed [16], [17]. Glucagon signaling was also upregulated postflight, potentially indicating stress and insulin resistance [16]. Estrogen signaling pathways were enriched with insulin-related genes, with ESR1 showing an initial upregulation followed by downregulation postflight [17], [18]. Genes related to steroidogenesis, such as CYP17A1, were upregulated postflight, explaining enriched ovarian steroidogenesis and steroid hormone synthesis pathways [18], [19]. Mitochondrial complex I subunits (MT-ND1, MT-ND6) and fatty acid metabolism genes (CD36, CPT1A) were upregulated during spaceflight [17]. The leptin receptor (LEPR) was downregulated postflight [19].\n*   **Skin:** Human skin samples showed increased enrichments in insulin resistance genes and decreased enrichments in estrogen and insulin signaling genes postflight [20]. Sex differences were noted, with insulin resistance-linked genes being more enriched in females in the postflight vascular compartment and outer epidermis [21].\n\n**Potential Health Implications:**\nThese widespread alterations in insulin and estrogen signaling forebode **metabolic comorbidities** [18]. Disease enrichment analysis in rodents highlighted **diabetes mellitus and fatty liver** as top enriched diseases, while in humans, **obesity and hypertension** were prominent [10], [16]. The findings suggest a heightened risk for conditions like insulin resistance, hepatic steatosis, muscle atrophy, and potentially impaired skin integrity [1], [3], [5], [13]. The prominent immune-mediated cytokine and adipokine response also points to broader systemic effects [17]. The study emphasizes the need for further research on the metabolic and reproductive endocrinologic effects of space travel to ensure the success of future interplanetary missions, with insulin and estrogen signaling identified as potential targets for countermeasures [1], [18].",
+          "citations": [
+            {
+              "id": "PMC11166981:abstract:70b4b38d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Provides the overarching summary that spaceflight induces changes in insulin and estrogen signaling in rodents and humans, affecting energy metabolism and sex hormone signaling, leading to insulin resistance, estrogen signaling, stress response, and viral infection pathways."
+            },
+            {
+              "id": "PMC11166981:discussion:ac606285",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Details specific rodent liver findings: insulin signaling gene expression changes, downregulation of INSR, AKT1, AKT2, inhibition of metabolic pathways, resulting in dysglycemia, insulin resistance, and hepatic steatosis."
+            },
+            {
+              "id": "PMC11166981:discussion:f9ce0e41",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Explains hepatic steatosis as a consequence of insulin resistance and how impaired estrogen signaling contributes to hepatic insulin resistance."
+            },
+            {
+              "id": "PMC11166981:discussion:9388d31a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Connects mitochondrial dysfunction to insulin and estrogen signaling alterations, mentioning PPARGC1A downregulation and mitochondrial complex I, II, and ATP synthase gene downregulation in the liver."
+            },
+            {
+              "id": "PMC11166981:discussion:f2142710",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Compares insulin signaling in soleus (decreased IRS2, muscle atrophy) and EDL (activated insulin receptor signaling, upregulated ACACA)."
+            },
+            {
+              "id": "PMC11166981:discussion:f0709b4d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Highlights the opposite regulation of insulin signaling genes in soleus and EDL and diverse actions of estrogen in muscle metabolism."
+            },
+            {
+              "id": "PMC11166981:discussion:7563d267",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Mentions soleus size decline, EDL stability, and EDL's enrichment for growth pathways, along with estrogen receptor signaling activation as a compensatory mechanism in soleus."
+            },
+            {
+              "id": "PMC11166981:discussion:755c1dfe",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Discusses human blood and skin samples, noting insulin resistance-related gene changes, postflight upregulation of insulin signaling genes (AKT1, RARRES2), and enriched insulin secretion/PI3K/AKT signaling."
+            },
+            {
+              "id": "PMC11166981:discussion:ee11a0fc",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Covers human estrogen signaling findings: enrichment with insulin-related genes, ESR1 upregulation/downregulation postflight, CYP17A1 upregulation, and enriched ovarian steroidogenesis/steroid hormone synthesis."
+            },
+            {
+              "id": "PMC11166981:results:94ba4060",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "States the liver had the greatest number of differentially expressed genes (3670) in mice."
+            },
+            {
+              "id": "PMC11166981:results:b5af2caa",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Confirms liver as the most impacted organ with highest DEGs and inhibited insulin/estrogen receptor signaling (z-scores: -3.772 and -5.859)."
+            },
+            {
+              "id": "PMC11166981:results:385fa795",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Reinforces insulin resistance and hepatic steatosis development (z-scores: 2.481 and 3.737) and downregulation of mitochondrial complex I, II, and ATP synthase genes in the estrogen signaling network in the liver."
+            },
+            {
+              "id": "PMC11166981:results:ed54c302",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Lists specific genes (ACE, FN1, IGFBP5, MMP3, COL6A3, COL6A1, COL1A1, COL5A1, BGN, FASN, LOXL2) downregulated in male mouse skin related to tissue remodeling and collagen synthesis."
+            },
+            {
+              "id": "PMC11166981:results:bd536067",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Mentions INSR, IRS2, ESR1, ESRRG upregulation in male mouse dorsal skin."
+            },
+            {
+              "id": "PMC11166981:results:b1ded4a8",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Discusses disease enrichment analysis, identifying diabetes mellitus and fatty liver as top enriched diseases in mice, and obesity/hypertension in humans."
+            },
+            {
+              "id": "PMC11166981:results:5618c4aa",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Details specific upregulated insulin signaling genes (AVP, FFAR4, GLP1R, RIMS2, FGF6, NR1H4, PRLH, CPE, APOM) and enriched insulin secretion pathways in JAXA astronauts."
+            },
+            {
+              "id": "PMC11166981:results:ead49ef4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Describes insulin resistance-linked genes in humans, including AKT1 upregulation, AKT3 downregulation, CYP11B2 upregulation, and MT-ND1/MT-ND6 upregulation (mitochondrial complex I subunits)."
+            },
+            {
+              "id": "PMC11166981:results:12750d0b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Explains ESR1 regulation postflight, PER1 expression, CYP17A1 upregulation, and other estrogen-related upregulated genes (ZNF423, GAL, EGFR, FST, PAX2, SLC34A1, GREB1, F5, FGF23, AKT1, NOS1) in humans."
+            },
+            {
+              "id": "PMC11166981:results:8f59ac5b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Mentions LEPR downregulation and CYP17A1 upregulation in human data, and enriched viral infection pathways with both insulin and estrogen downregulated genes."
+            },
+            {
+              "id": "PMC11166981:results:a6b11da9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Summarizes human skin findings: increased insulin resistance genes, decreased estrogen/insulin signaling genes, and region-specific sex differences."
+            },
+            {
+              "id": "PMC11166981:results:ca86d2fa",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Provides specific detail on sex differences in human skin, e.g., insulin resistance genes more enriched in females in vascular compartment."
+            },
+            {
+              "id": "PMC11166981:discussion:690a3905",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+              "why_relevant": "Concludes that these changes impact metabolism and forebode comorbidities, highlighting insulin and estrogen signaling as potential targets for countermeasures and emphasizing the need for further study for interplanetary species success."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11166981:abstract:70b4b38d",
+            "PMC11166981:discussion:ac606285",
+            "PMC11166981:discussion:f9ce0e41",
+            "PMC11166981:discussion:9388d31a",
+            "PMC11166981:discussion:f2142710",
+            "PMC11166981:discussion:f0709b4d",
+            "PMC11166981:discussion:7563d267",
+            "PMC11166981:discussion:755c1dfe",
+            "PMC11166981:discussion:ee11a0fc",
+            "PMC11166981:discussion:6b5d3178",
+            "PMC11166981:discussion:64543b29",
+            "PMC11166981:discussion:690a3905",
+            "PMC11166981:results:94ba4060",
+            "PMC11166981:results:b5af2caa",
+            "PMC11166981:results:b1ded4a8",
+            "PMC11166981:results:fd0595fe",
+            "PMC11166981:results:39a2e9e2",
+            "PMC11166981:results:385fa795",
+            "PMC11166981:results:ed54c302",
+            "PMC11166981:results:bd536067",
+            "PMC11166981:results:5618c4aa",
+            "PMC11166981:results:c5b154a3",
+            "PMC11166981:results:ead49ef4",
+            "PMC11166981:results:b675433d",
+            "PMC11166981:results:12750d0b",
+            "PMC11166981:results:8f59ac5b",
+            "PMC11166981:results:adcb3cc8",
+            "PMC11166981:results:f9cc2ebc",
+            "PMC11166981:results:cbbfe457",
+            "PMC11166981:results:a6b11da9",
+            "PMC11166981:results:ca86d2fa"
+          ],
+          "key_facts": [
+            "Spaceflight alters insulin and estrogen signaling in both rodents and humans, impacting metabolism and leading to comorbidities.",
+            "In rodents, the liver is the most affected organ, showing inhibited insulin/estrogen signaling, hepatic insulin resistance, steatosis, and mitochondrial dysfunction (downregulation of INSR, AKT1, AKT2, PPARGC1A, mitochondrial complexes).",
+            "Rodent muscles show differential responses: soleus experiences atrophy and decreased protein synthesis (decreased IRS2), while EDL shows activated insulin signaling and growth pathway enrichment.",
+            "Rodent skin exhibits sex-dependent changes, with male mice showing downregulation of genes related to tissue remodeling, wound healing, and collagen synthesis (e.g., ACE, FN1, MMP3, COL1A1).",
+            "Human astronauts display dysregulated insulin signaling genes (e.g., upregulated AKT1, RARRES2, GLP1R) and enriched insulin secretion/PI3K/AKT signaling postflight.",
+            "Human estrogen signaling shows ESR1 upregulation/downregulation postflight and upregulation of steroidogenesis genes (CYP17A1), leading to enriched steroid hormone synthesis.",
+            "Both species show altered circadian rhythm genes and disease enrichment for metabolic conditions like diabetes, fatty liver, obesity, and hypertension.",
+            "Human skin data indicates increased insulin resistance genes and decreased estrogen/insulin signaling genes postflight, with sex and region-specific variations."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

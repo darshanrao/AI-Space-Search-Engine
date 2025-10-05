@@ -1,0 +1,380 @@
+{
+  "paper_id": "PMC6165321",
+  "paper_title": "Impact of Spaceflight and Artificial Gravity on the Mouse Retina: Biochemical and Proteomic Analysis",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+  "test_cases": [
+    {
+      "id": "PMC6165321_Q1",
+      "question": "What was the percentage increase in apoptotic cells in the retina of microgravity-exposed mice compared to habitat controls?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6165321:2--results:be95a60e"
+          ],
+          "should_retrieve": [
+            "PMC6165321:abstract:6fe162b9"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The density of apoptotic cells in the retina of microgravity (μg) mice was **64% greater** than that in the habitat control group [1], [2].",
+          "citations": [
+            {
+              "id": "PMC6165321:2--results:be95a60e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk directly states the quantitative assessment of apoptotic cells, indicating the 64% increase in the μg group compared to habitat controls."
+            },
+            {
+              "id": "PMC6165321:abstract:6fe162b9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "The abstract confirms the finding that the μg group induced significant apoptosis, which was 64% greater than in the HC group."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6165321:2--results:be95a60e",
+            "PMC6165321:abstract:6fe162b9"
+          ],
+          "key_facts": [
+            "64% increase",
+            "apoptotic cells",
+            "retina",
+            "microgravity group",
+            "habitat control group"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6165321_Q2",
+      "question": "How did the application of 1g artificial gravity (μg + 1g) during spaceflight affect retinal apoptosis and the number of significantly differentiating proteins compared to ambient microgravity (μg) conditions?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6165321:2--results:be95a60e",
+            "PMC6165321:2--results:29f8e6f1",
+            "PMC6165321:abstract:6fe162b9"
+          ],
+          "should_retrieve": [
+            "PMC6165321:3--discussion:f2baec69",
+            "PMC6165321:2--results:77fe9387"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The application of 1g artificial gravity (μg + 1g) during spaceflight significantly **reduced apoptosis** in retinal endothelial cells compared to ambient microgravity (μg) conditions [1], [4]. Specifically, the density of apoptotic cells was highest in the μg group, while the μg + 1g condition showed levels comparable to habitat and vivarium controls [1]. In terms of protein expression, after filtering for a fold change >2, there were **77 significant proteins** identified in the μg versus habitat control comparison, but only **23 significant proteins** in the μg + 1g versus habitat control comparison [2], [3]. This indicates that artificial gravity mitigated some of the detrimental effects of microgravity on the retina [4].",
+          "citations": [
+            {
+              "id": "PMC6165321:2--results:be95a60e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk details the apoptosis results, showing that the μg group had the highest density of apoptotic cells, and the μg + 1g condition was comparable to controls, indicating mitigation."
+            },
+            {
+              "id": "PMC6165321:2--results:29f8e6f1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk provides the specific numbers of significant proteins (77 for μg vs HC and 23 for μg + 1g vs HC) after applying the fold change >2 threshold, which is crucial for the comparison."
+            },
+            {
+              "id": "PMC6165321:abstract:6fe162b9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "The abstract summarizes that μg induced significant apoptosis and that AG provides some protection against these changes, and mentions more significant protein changes in μg vs μg+1g."
+            },
+            {
+              "id": "PMC6165321:3--discussion:f2baec69",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk explicitly states that adding 1g AG was effective in reducing endothelial cell damage and increasing cellular organization and function compared to the μg group, reinforcing the mitigation effect."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6165321:2--results:be95a60e",
+            "PMC6165321:2--results:29f8e6f1",
+            "PMC6165321:abstract:6fe162b9",
+            "PMC6165321:3--discussion:f2baec69"
+          ],
+          "key_facts": [
+            "reduced apoptosis in retinal endothelial cells",
+            "μg + 1g condition comparable to controls for apoptosis",
+            "77 significant proteins in μg vs HC",
+            "23 significant proteins in μg + 1g vs HC",
+            "AG mitigated detrimental effects"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6165321_Q3",
+      "question": "Based on the study's findings, what are the proposed cellular and molecular mechanisms by which spaceflight might lead to retinal damage and potential visual impairment in astronauts?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6165321:1--introduction:63ec2c28",
+            "PMC6165321:2--results:fd648277",
+            "PMC6165321:3--discussion:5084c482",
+            "PMC6165321:3--discussion:c44e6240",
+            "PMC6165321:3--discussion:f2baec69",
+            "PMC6165321:abstract:16ecec81"
+          ],
+          "should_retrieve": [
+            "PMC6165321:1--introduction:eb68750d",
+            "PMC6165321:abstract:6fe162b9"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Spaceflight is proposed to lead to retinal damage and visual impairment through several cellular and molecular mechanisms:\n\n1.  **Apoptosis**: The study directly demonstrates that spaceflight induces **significant apoptosis in retinal vascular endothelial cells** [1], [2]. This cellular response could impair the barrier function of the blood-retinal barrier (BRB) and compromise intraocular pressure regulation, potentially affecting visual acuity and increasing the risk of late retinal degeneration [3], [4].\n2.  **Oxidative Stress**: While a direct lipid peroxidation marker (4-HNE) was not significantly altered in this specific study's post-flight measurements, the paper notes that previous studies and proteomic analysis suggest spaceflight is associated with **elevations in oxidative stress** [5]. Several oxidative stress-related signaling pathways, including fatty acid β-oxidation I, fatty acid activation, and α-adrenergic pathways, were significantly altered in the microgravity group [2], [5].\n3.  **Altered Protein Expression and Pathways**: Proteomic analysis revealed significant alterations in key canonical pathways responsible for **cell death, cell repair, inflammation, carbohydrate metabolism, mitochondrial function, fatty acid metabolism, and oxidative phosphorylation** [2]. Specific protein changes include:\n    *   **MECP2** (Methyl-CpG-binding protein 2) showed the highest fold-change increase in microgravity mice [6]. This protein is involved in regulating chromatin structure and transcription, is primarily expressed in post-mitotic neurons, and has been linked to epigenetic regulation of senescent endothelial progenitor cells, apoptosis, and neurodegeneration [6], [7].\n    *   **CLIP2** (Cap-Gly domain containing linker protein 2), which plays a role in neuronal structure, function, and cytoskeleton regulation, was significantly down-regulated in both microgravity and artificial gravity groups [6].\n\nThese findings collectively indicate that spaceflight induces changes in neuronal structure, cellular organization, mitochondrial function, oxidative phosphorylation, and inflammation, which may ultimately lead to tissue injury and neurodegeneration [5].",
+          "citations": [
+            {
+              "id": "PMC6165321:abstract:6fe162b9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "The abstract states that μg induced significant apoptosis in retinal vascular endothelial cells and that proteomic analysis showed altered pathways for cell death, repair, inflammation, and metabolic stress."
+            },
+            {
+              "id": "PMC6165321:2--results:fd648277",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk details the specific canonical pathways identified by IPA as significantly affected in the μg group, including cell death, cell repair, inflammation, carbohydrate metabolism, mitochondrial function, fatty acid metabolism, and oxidative phosphorylation."
+            },
+            {
+              "id": "PMC6165321:abstract:16ecec81",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk connects retinal cellular responses to potential impacts on blood-retinal barrier (BRB) integrity, visual acuity, and the risk of late retinal degeneration."
+            },
+            {
+              "id": "PMC6165321:1--introduction:63ec2c28",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk mentions previous studies showing increased apoptosis in retinal cells of flight mice and highlights the unclear pathophysiological consequences and cellular mechanisms of spaceflight stress stimuli."
+            },
+            {
+              "id": "PMC6165321:3--discussion:5084c482",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk discusses that spaceflight induces apoptosis in retinal vascular endothelial cells and leads to changes in neuronal structure, cellular organization, mitochondrial function, oxidative phosphorylation, and inflammation, which may result in tissue injury and neurodegeneration. It also mentions altered oxidative stress-related pathways."
+            },
+            {
+              "id": "PMC6165321:3--discussion:c44e6240",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk identifies specific proteins like CLIP2 (down-regulated) and MECP2 (highest fold change), detailing their functions in neuronal structure, cell cytoskeleton, chromatin regulation, and transcription."
+            },
+            {
+              "id": "PMC6165321:3--discussion:f2baec69",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk further elaborates on MECP2's role in epigenetic regulation, apoptosis, and neurodegeneration, linking it to cell death and survival networks."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6165321:abstract:6fe162b9",
+            "PMC6165321:2--results:fd648277",
+            "PMC6165321:abstract:16ecec81",
+            "PMC6165321:1--introduction:63ec2c28",
+            "PMC6165321:3--discussion:5084c482",
+            "PMC6165321:3--discussion:c44e6240",
+            "PMC6165321:3--discussion:f2baec69"
+          ],
+          "key_facts": [
+            "apoptosis in retinal vascular endothelial cells",
+            "impaired blood-retinal barrier (BRB) function",
+            "oxidative stress-related signaling pathways altered",
+            "altered protein expression profiles",
+            "MECP2 upregulation (highest fold change)",
+            "CLIP2 downregulation",
+            "affected pathways: cell death, cell repair, inflammation, metabolism, mitochondrial function, oxidative phosphorylation",
+            "neuronal structure changes",
+            "tissue injury and neurodegeneration"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6165321_Q4",
+      "question": "Which protein showed the highest fold-change increase in the microgravity (μg) group compared to habitat controls, and what are its associated functions?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6165321:differentially-expressed-proteins-identified-by-ipa-in-the-mouse-retina-in-response-to-µg-vs--habitat-control--fold-change--2--fdr-corrected-p---0-05-----table-1:4a021652"
+          ],
+          "should_retrieve": [
+            "PMC6165321:3--discussion:c44e6240",
+            "PMC6165321:3--discussion:f2baec69"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The protein that showed the highest fold-change increase in the microgravity (μg) group compared to habitat controls was **MECP2** (Methyl-CpG-binding protein 2), with a fold-change of **5.85** [1]. Its associated functions listed in the table are **cell cycle** and **neurological disorder** [1]. Further discussion in the paper elaborates that MECP2 binds to methylated DNA, regulates chromatin structure and transcription, is predominantly expressed in post-mitotic neurons in the brain, and is implicated in epigenetic regulation of senescent endothelial progenitor cells, apoptosis, and neurodegeneration [2], [3].",
+          "citations": [
+            {
+              "id": "PMC6165321:differentially-expressed-proteins-identified-by-ipa-in-the-mouse-retina-in-response-to-µg-vs--habitat-control--fold-change--2--fdr-corrected-p---0-05-----table-1:4a021652",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This table directly lists MECP2 as having the highest fold-change (5.85) in the μg vs. habitat control comparison, along with its primary functions."
+            },
+            {
+              "id": "PMC6165321:3--discussion:c44e6240",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk discusses MECP2 having the highest fold change in flight mice, its binding to methylated DNA, regulation of chromatin structure and transcription, and its expression in post-mitotic neurons."
+            },
+            {
+              "id": "PMC6165321:3--discussion:f2baec69",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk provides additional details on MECP2's role in epigenetic regulation, promotion of apoptosis, and its association with neurodegeneration."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6165321:differentially-expressed-proteins-identified-by-ipa-in-the-mouse-retina-in-response-to-µg-vs--habitat-control--fold-change--2--fdr-corrected-p---0-05-----table-1:4a021652",
+            "PMC6165321:3--discussion:c44e6240",
+            "PMC6165321:3--discussion:f2baec69"
+          ],
+          "key_facts": [
+            "MECP2",
+            "5.85 fold-change increase",
+            "cell cycle",
+            "neurological disorder",
+            "binds to methylated DNA",
+            "regulates chromatin structure and transcription",
+            "expressed in post-mitotic neurons",
+            "linked to apoptosis and neurodegeneration"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC6165321_Q5",
+      "question": "Provide a comprehensive overview of this study, including its primary objective, experimental design, main findings regarding microgravity effects and artificial gravity mitigation, and the overall conclusions.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC6165321:abstract:123c2a26",
+            "PMC6165321:abstract:6fe162b9",
+            "PMC6165321:1--introduction:57e14a43",
+            "PMC6165321:1--introduction:eb68750d",
+            "PMC6165321:2--results:be95a60e",
+            "PMC6165321:2--results:fd648277",
+            "PMC6165321:3--discussion:5084c482",
+            "PMC6165321:3--discussion:f2baec69",
+            "PMC6165321:4--material-and-methods:3a46fb4b",
+            "PMC6165321:5--conclusions:d18c0773"
+          ],
+          "should_retrieve": [
+            "PMC6165321:1--introduction:63ec2c28",
+            "PMC6165321:1--introduction:03a5390b",
+            "PMC6165321:abstract:16ecec81",
+            "PMC6165321:2--results:29f8e6f1",
+            "PMC6165321:3--discussion:c44e6240"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "This study, titled \"Impact of Spaceflight and Artificial Gravity on the Mouse Retina: Biochemical and Proteomic Analysis,\" investigated the effects of spaceflight on mouse retinal health and the potential mitigating role of artificial gravity.\n\n**Primary Objective**: The main goal was to investigate the effects of spaceflight on oxidative stress and apoptosis in retinal endothelial cells, identify spaceflight-induced changes in protein expression profiles in mouse ocular tissue, and determine whether the application of 1g artificial gravity (AG) during spaceflight could mitigate these detrimental effects on the retina [1], [2], [3]. The researchers hypothesized that spaceflight would induce oxidative stress and apoptosis, alter ocular proteins, and that AG would counteract these changes [2].\n\n**Experimental Design**: Twelve 9-week-old male C57BL/6 mice were launched to the International Space Station (ISS) for a **35-day mission** [4], [5]. They were divided into two flight groups: one exposed to **ambient microgravity (μg)** and another to **continuous 1g artificial gravity (μg + 1g)** using a short-arm centrifuge within a specialized habitat cage unit (HCU) [4], [5]. Ground control groups included habitat controls (HC) and vivarium controls [5]. After the mission, retinal tissue was analyzed for apoptosis using TUNEL assay, oxidative damage using 4-HNE immunohistochemistry, and protein expression profiles were determined using high-resolution mass spectrometry and Ingenuity Pathway Analysis (IPA) [4], [6].\n\n**Main Findings**: \n*   **Apoptosis**: Spaceflight under microgravity conditions induced **significant apoptosis in retinal vascular endothelial cells**, with the density of apoptotic cells being **64% greater** than in habitat controls [6], [7]. Crucially, the application of 1g AG significantly **reduced this apoptosis**, with the μg + 1g group showing levels comparable to controls [6], [8].\n*   **Oxidative Stress**: While no significant difference in the lipid peroxidation marker 4-HNE was detected two days after splash-down in this study [6], proteomic analysis revealed significant alterations in **oxidative stress-related signaling pathways** in the μg group [8].\n*   **Protein Expression Profiles**: Proteomic analysis identified **77 significant proteins** differentially expressed in the μg group versus habitat controls, affecting pathways related to **cell death, cell repair, inflammation, carbohydrate metabolism, mitochondrial function, fatty acid metabolism, and oxidative phosphorylation** [9], [10]. In contrast, only **23 significant proteins** were found in the μg + 1g group versus habitat controls, demonstrating AG's protective effect [10]. Specific proteins like MECP2 (upregulated) and CLIP2 (downregulated) were significantly altered in microgravity, impacting cell survival, neurological function, and cellular organization [11], [12].\n\n**Overall Conclusions**: The study concludes that spaceflight induces **apoptosis in vascular endothelial cells of the retina** and causes **acute changes in retinal protein expression profiles**, suggesting broader impacts on eye structure and function [8], [13]. These alterations could impair the blood-retinal barrier (BRB) function, affect intraocular pressure regulation, and potentially contribute to visual acuity impairments and late retinal degeneration in astronauts [4], [14]. The application of **1g artificial gravity during spaceflight was effective in mitigating some of these detrimental effects**, including reducing endothelial cell damage and maintaining cellular organization and function [8], [12], [13]. Further studies are needed to fully elucidate the underlying mechanisms and long-term consequences [13].",
+          "citations": [
+            {
+              "id": "PMC6165321:1--introduction:57e14a43",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk clearly states the goal of the present study, outlining the investigation into spaceflight effects on oxidative stress, apoptosis, and protein expression, and the role of AG."
+            },
+            {
+              "id": "PMC6165321:1--introduction:eb68750d",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk details the specific hypotheses regarding spaceflight-induced changes (oxidative stress, apoptosis, altered proteins) and the mitigating effects of 1g AG."
+            },
+            {
+              "id": "PMC6165321:abstract:123c2a26",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk provides an overview of the experimental setup, including the number and type of mice, mission duration (35 days), launch details, housing conditions (μg and μg + 1g groups), and control groups."
+            },
+            {
+              "id": "PMC6165321:abstract:6fe162b9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk summarizes the key findings regarding significant apoptosis in the μg group (64% greater than HC), altered proteomic pathways, and the protective effect of AG."
+            },
+            {
+              "id": "PMC6165321:4--material-and-methods:3a46fb4b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk provides detailed information on the experimental design, including the number of mice, mission duration, subdivision into μg and μg + 1g groups, and how AG was achieved."
+            },
+            {
+              "id": "PMC6165321:2--results:be95a60e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk presents the direct results for apoptosis (64% greater in μg) and the lack of significant difference in 4-HNE, and mentions the focus on proteomic analysis."
+            },
+            {
+              "id": "PMC6165321:abstract:6fe162b9",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "The abstract confirms the 64% increase in apoptotic cells in the μg group and states that AG provides some protection against these changes."
+            },
+            {
+              "id": "PMC6165321:3--discussion:5084c482",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk discusses the overall findings, including spaceflight-induced apoptosis, changes in proteomic profiles, and altered oxidative stress-related signaling pathways, and the potential for tissue injury and neurodegeneration."
+            },
+            {
+              "id": "PMC6165321:2--results:fd648277",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk details the specific canonical pathways identified by IPA as significantly affected in the μg group, including cell death, cell repair, inflammation, and metabolic functions."
+            },
+            {
+              "id": "PMC6165321:2--results:29f8e6f1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk provides the specific numbers of significant proteins (77 for μg vs HC and 23 for μg + 1g vs HC) after applying the fold change >2 threshold, highlighting the difference due to AG."
+            },
+            {
+              "id": "PMC6165321:3--discussion:c44e6240",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk identifies specific proteins like CLIP2 (down-regulated) and MECP2 (highest fold change), detailing their functions in neuronal structure, cell cytoskeleton, chromatin regulation, and transcription."
+            },
+            {
+              "id": "PMC6165321:3--discussion:f2baec69",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk further elaborates on MECP2's role and explicitly states that 1g AG was effective in reducing endothelial cell damage and increasing cellular organization and function."
+            },
+            {
+              "id": "PMC6165321:5--conclusions:d18c0773",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk provides the overall conclusions of the study, reiterating the findings on apoptosis and protein expression, their implications for BRB and visual acuity, and the mitigating effect of centrifugation."
+            },
+            {
+              "id": "PMC6165321:abstract:16ecec81",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+              "why_relevant": "This chunk connects the retinal cellular responses to potential impacts on blood-retinal barrier (BRB) integrity, visual acuity, and the risk of late retinal degeneration."
+            }
+          ],
+          "used_context_ids": [
+            "PMC6165321:abstract:123c2a26",
+            "PMC6165321:abstract:6fe162b9",
+            "PMC6165321:abstract:16ecec81",
+            "PMC6165321:1--introduction:57e14a43",
+            "PMC6165321:1--introduction:eb68750d",
+            "PMC6165321:2--results:be95a60e",
+            "PMC6165321:2--results:29f8e6f1",
+            "PMC6165321:2--results:fd648277",
+            "PMC6165321:3--discussion:5084c482",
+            "PMC6165321:3--discussion:c44e6240",
+            "PMC6165321:3--discussion:f2baec69",
+            "PMC6165321:4--material-and-methods:3a46fb4b",
+            "PMC6165321:5--conclusions:d18c0773"
+          ],
+          "key_facts": [
+            "primary objective: investigate spaceflight effects on retina and AG mitigation",
+            "experimental design: 35-day ISS mission, male C57BL/6 mice",
+            "groups: microgravity (μg), 1g artificial gravity (μg + 1g), habitat controls (HC)",
+            "main finding: significant apoptosis in retinal vascular endothelial cells (64% greater in μg)",
+            "main finding: 1g AG reduced apoptosis",
+            "main finding: proteomic changes in pathways for cell death, repair, inflammation, metabolism",
+            "main finding: 77 significant proteins in μg vs HC, 23 in μg+1g vs HC",
+            "overall conclusion: spaceflight induces retinal apoptosis and protein changes impacting BRB, visual acuity",
+            "overall conclusion: artificial gravity is an effective countermeasure"
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}

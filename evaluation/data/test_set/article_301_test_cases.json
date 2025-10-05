@@ -1,0 +1,363 @@
+{
+  "paper_id": "PMC11222149",
+  "paper_title": "Longitudinal multi-omics analysis of host microbiome architecture and immune responses during short-term spaceflight",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+  "test_cases": [
+    {
+      "id": "PMC11222149_Q1",
+      "question": "What was the duration of the spaceflight mission and how many individuals participated in the longitudinal study?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11222149:abstract:b0f1db28",
+            "PMC11222149:main:d04e3a43"
+          ],
+          "should_retrieve": [
+            "PMC11222149:methods:920c8ef1"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The spaceflight mission lasted **three days** in orbit [1], [2]. The longitudinal study involved **four individuals**, who were the crew members of the SpaceX Inspiration4 mission [1], [2], [3].",
+          "citations": [
+            {
+              "id": "PMC11222149:abstract:b0f1db28",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "States the duration of the spaceflight (three days in orbit) and the number of individuals (four)."
+            },
+            {
+              "id": "PMC11222149:main:d04e3a43",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Confirms the three-day mission duration and identifies the participants as the crew of the SpaceX Inspiration4 mission."
+            },
+            {
+              "id": "PMC11222149:methods:920c8ef1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Reiterates that four crew members participated and that the mission lasted three days."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11222149:abstract:b0f1db28",
+            "PMC11222149:main:d04e3a43",
+            "PMC11222149:methods:920c8ef1"
+          ],
+          "key_facts": [
+            "Spaceflight mission duration: 3 days in orbit",
+            "Number of participants: 4 individuals",
+            "Mission: SpaceX Inspiration4"
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11222149_Q2",
+      "question": "How did the observed shifts in the oral microbiome differ from those in the skin microbiome regarding the concordance between metagenomic and metatranscriptomic changes?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11222149:results:1e2b310c",
+            "PMC11222149:results:4f04955b",
+            "PMC11222149:results:a9edf4b2",
+            "PMC11222149:results:c892c609"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Both the oral and skin microbiomes exhibited **little concordance** between metagenomic (relative abundance) and metatranscriptomic (gene expression) changes [1], [2], [3]. This means that an increase in gene expression did not necessarily imply a similar increase in the abundance of DNA for a given species [1].\n\nSpecifically, for the **oral microbiome**, there was **almost no overlap** between organisms that altered in terms of relative abundance and those that altered in terms of gene expression [1]. However, the oral microbiome displayed a restructuring in *both* relative abundance and bacterial gene expression [4].\n\nFor the **skin microbiome**, alterations were predominantly **metagenomic**, as opposed to metatranscriptomic [1], [2]. This was hypothesized to indicate the acquisition of new but non-transcriptionally active species from the surrounding environment and crew [2]. While 'typical' skin microbes (e.g., Corynebacterium) underwent metatranscriptomic activity changes, organisms not universally found on human skin (e.g., Mesorhizobium spp.) tended to experience metagenomic shifts [3].",
+          "citations": [
+            {
+              "id": "PMC11222149:results:1e2b310c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Directly states the discordance between metagenomic and metatranscriptomic changes for the oral microbiome, noting almost no overlap."
+            },
+            {
+              "id": "PMC11222149:results:a9edf4b2",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "States that there was little concordance between metagenomic and metatranscriptomic changes in the skin microbiome."
+            },
+            {
+              "id": "PMC11222149:results:4f04955b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Explains the nature of skin microbiome changes, distinguishing between metatranscriptomic changes in typical skin microbes and metagenomic shifts in non-typical ones, suggesting acquisition."
+            },
+            {
+              "id": "PMC11222149:results:c892c609",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Mentions that the oral microbiome displayed a restructuring in both relative abundance and bacterial gene expression."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11222149:results:1e2b310c",
+            "PMC11222149:results:4f04955b",
+            "PMC11222149:results:a9edf4b2",
+            "PMC11222149:results:c892c609"
+          ],
+          "key_facts": [
+            "Both oral and skin microbiomes showed little concordance between metagenomic and metatranscriptomic changes.",
+            "Oral microbiome: almost no overlap between abundance and gene expression changes, but restructuring in both.",
+            "Skin microbiome: alterations predominantly metagenomic, suggesting acquisition of non-transcriptionally active species."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11222149_Q3",
+      "question": "Beyond direct spaceflight effects, what potential confounding factors and alternative explanations were considered for the observed microbiome shifts and their relationship to host immune responses?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11222149:discussion:cc87108a",
+            "PMC11222149:discussion:1f209193",
+            "PMC11222149:discussion:19ab6b08",
+            "PMC11222149:results:c892c609",
+            "PMC11222149:results:a95bac70",
+            "PMC11222149:results:d86c31b0"
+          ],
+          "should_retrieve": [
+            "PMC11222149:methods:a21590f0",
+            "PMC11222149:methods:3a2d2000"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study considered several potential confounding factors and alternative explanations for the observed microbiome shifts and their relationship to host immune responses:\n\n1.  **Dietary Factors and Other Confounders:** The authors noted that a microbial shift could affect the host immune system, or vice versa, without the initial cause being 'space-specific' (e.g., due to microgravity or radiation). **Dietary factors or other confounders** could drive a portion of these effects [1], [2]. The analysis alone does not indicate the degree to which spaceflight itself, versus other confounding factors such as altered diet, affects the host microbiota [3]. Future studies should encourage more detailed reporting on diet [4].\n2.  **Cohabitation and Microbial Exchange:** The study acknowledged that putative convergence in microbiome signatures could be a function of humans residing in **close quarters** [5]. While strain-sharing events were detected, particularly between skin microbiome samples from the same individual and with the capsule [6], [7], the authors claim it is **unlikely that strain sharing due to close quarters, or even variable sanitation in-flight, could explain the entirety of the link between host immune response and the microbiome** [5]. Furthermore, they found limited evidence that strain-sharing due to cohabitation drove a strong altered immune state in humans, as acquired microbes seemed to have limited immediate impact on the host [8].\n3.  **Altered Hygiene Habits:** Persistent increases in the metagenomic content of various gut microbes on the skin (e.g., *Bacteroides*, *Parabacteroides*) were hypothesized to result from **altered hygiene habits** during spaceflight [9]. The use of wet wipes by some crew members for bathing was noted, although it was not a consistent protocol [10]. Future studies should encourage more detailed reporting on cleaning methods (e.g., wet wipes) to adjust for potential confounders [4].\n4.  **Observational Nature and Sample Size:** Acknowledging the study's **observational nature** and a relatively small crew size (n=4), the authors state that they cannot determine from these data alone if an outside effect on the immune system is altering microbial abundance or expression, or if microbiome ecology is driving these changes [11]. This limitation prevents drawing definitive causal conclusions.",
+          "citations": [
+            {
+              "id": "PMC11222149:discussion:cc87108a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Mentions that dietary factors or other confounders could drive a portion of the effects on the microbiome and immune system, not solely space-specific causes."
+            },
+            {
+              "id": "PMC11222149:results:a95bac70",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Hypothesizes that shifts in community composition and increased microbiome similarity could be a result of cohabitation, but also suggests oral microbiome changes might derive from other ecological or exposure changes like diet or immune alterations."
+            },
+            {
+              "id": "PMC11222149:results:c892c609",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Notes that the analysis alone does not indicate the degree to which spaceflight itself, versus other confounding factors such as altered diet, affects the host microbiota."
+            },
+            {
+              "id": "PMC11222149:methods:3a2d2000",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Suggests that future studies should encourage more detailed reporting on diet and cleaning methods to adjust for potential confounders."
+            },
+            {
+              "id": "PMC11222149:discussion:1f209193",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Discusses cohabitation as a potential factor for microbiome convergence but argues it's unlikely to explain the entire link between host immune response and microbiome, especially since environmentally acquired species weren't linked to immune changes."
+            },
+            {
+              "id": "PMC11222149:results:f69a9c7f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Describes observations of strain-sharing events between individuals and the capsule, particularly in exposed skin, indicating in-flight transfer."
+            },
+            {
+              "id": "PMC11222149:results:3da2f78b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Figure 4 caption describes strain-sharing events between crew and capsule, indicating microbial propagation."
+            },
+            {
+              "id": "PMC11222149:results:d86c31b0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "States that there was limited evidence that strain-sharing due to cohabitation drove a strong altered immune state in humans, as acquired microbes may have limited immediate impact."
+            },
+            {
+              "id": "PMC11222149:results:732d2140",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Hypothesizes that persistent increases in metagenomic content of gut microbes on the skin may result from altered hygiene habits during spaceflight."
+            },
+            {
+              "id": "PMC11222149:methods:a21590f0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Mentions that some crew members used wet wipes for bathing in-flight, but it was not a consistent protocol, indicating a potential variable in hygiene."
+            },
+            {
+              "id": "PMC11222149:discussion:19ab6b08",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Highlights the observational nature of the work and small crew size as limitations, preventing determination of whether outside effects or microbiome ecology drive changes."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11222149:discussion:cc87108a",
+            "PMC11222149:discussion:1f209193",
+            "PMC11222149:discussion:19ab6b08",
+            "PMC11222149:results:c892c609",
+            "PMC11222149:results:a95bac70",
+            "PMC11222149:results:d86c31b0",
+            "PMC11222149:methods:a21590f0",
+            "PMC11222149:methods:3a2d2000",
+            "PMC11222149:results:732d2140",
+            "PMC11222149:results:f69a9c7f",
+            "PMC11222149:results:3da2f78b"
+          ],
+          "key_facts": [
+            "Dietary factors and other confounders were considered as potential drivers of microbiome and immune shifts.",
+            "Cohabitation in close quarters was an alternative explanation for microbiome convergence, but not the sole cause of immune-microbiome links.",
+            "Altered hygiene habits (e.g., wet wipe use) were hypothesized to contribute to skin microbiome changes.",
+            "The observational nature and small sample size limited causal inference regarding external effects versus microbiome ecology."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11222149_Q4",
+      "question": "Which specific bacterial genera were identified as predominant in the oral and skin microbiomes, respectively, according to the taxonomic profiling approach?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11222149:methods:53001ae6"
+          ],
+          "should_retrieve": [],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "According to the taxonomic profiling approach, the predominant skin genera consistently identified included **Staphylococcus**, **Cutibacterium**, and **Corynebacterium** [1]. For the oral microbiome, the predominant genera included **Streptococcus**, **Rothia**, and **Fusobacterium** [1].",
+          "citations": [
+            {
+              "id": "PMC11222149:methods:53001ae6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Directly lists the predominant genera identified in the skin and oral microbiomes after taxonomic profiling."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11222149:methods:53001ae6"
+          ],
+          "key_facts": [
+            "Predominant skin genera: Staphylococcus, Cutibacterium, Corynebacterium.",
+            "Predominant oral genera: Streptococcus, Rothia, Fusobacterium."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC11222149_Q5",
+      "question": "Describe the overall experimental design, the types of data collected, and the main categories of microbial shifts observed in this study on short-term spaceflight.",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC11222149:abstract:b0f1db28",
+            "PMC11222149:abstract:4820628c",
+            "PMC11222149:main:d04e3a43",
+            "PMC11222149:methods:920c8ef1",
+            "PMC11222149:results:f4f67865",
+            "PMC11222149:results:2ff7ad8f",
+            "PMC11222149:results:87ee10af",
+            "PMC11222149:results:c892c609"
+          ],
+          "should_retrieve": [
+            "PMC11222149:methods:76e0135f",
+            "PMC11222149:methods:d45fd049",
+            "PMC11222149:methods:77f9607a",
+            "PMC11222149:results:c67786b0"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "This study conducted a **six-month longitudinal multi-omics analysis** to quantify the high-resolution human microbiome response to a **three-day spaceflight** mission [1], [2].\n\n**Experimental Design and Data Collection:**\n*   **Participants:** The study involved **four individuals**, who were the crew members of the first all-civilian commercial spaceflight, SpaceX Inspiration4 [1], [2], [3].\n*   **Sampling:** Samples were collected over a six-month window at **eight timepoints** (three pre-launch, two mid-flight, and three post-flight) [1], [3], [4], [5].\n*   **Sample Types:** A total of **750 human samples** were collected, comprising swabs from **ten body sites** representing the oral, nasal, and skin microbiomes [1], [3], [4]. Additionally, **20 environmental samples** were collected from the Dragon capsule, and **eight stool samples** were collected from two participants [3], [4], [6].\n*   **Omics Data:** The study utilized paired **metagenomics** (DNA sequencing) and **metatranscriptomics** (RNA sequencing) for microbial profiling [1], [3], [7], [8]. Furthermore, **single-nuclei immune cell profiling** was performed on peripheral blood mononuclear cells (PBMCs) collected before and after spaceflight to characterize host immune responses [1], [8].\n\n**Main Categories of Microbial Shifts Observed:**\n*   The study found a **predominantly transient restructuring** of the oral, nasal, and skin microbiomes as a function of spaceflight [9], [10].\n*   Out of over 821,337 statistically significant associations, **314,701 distinct microbial features** (792 viral, 767 bacterial, and microbial genes) were identified and categorized [10].\n*   The majority of these significant features (**73.5%**) were categorized as **transiently increased** in abundance during flight [10].\n*   Conversely, **24.6%** of features were **transiently depleted** during flight [10].\n*   Only a small fraction (**0.6%** and **1.1%**) showed **persistent increases or decreases**, respectively, following the crew's return to Earth across multiple timepoints [10].\n*   Overall, **transient shifts were more dramatic** than persistent ones, indicating that while microbial communities restructure in space, their relative abundance and gene expression generally **reset upon returning to Earth** [10], [11].\n*   Specific findings included increased **plaque-associated bacteria** (e.g., *Fusobacteriota*) in the oral microbiome and enrichment of microbial genes associated with **phage activity, toxin-antitoxin systems, and stress response** across multiple body sites [1], [12].",
+          "citations": [
+            {
+              "id": "PMC11222149:abstract:b0f1db28",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Provides an overview of the longitudinal multi-omics analysis, duration of spaceflight, number of individuals, types of profiling, sample count, body sites, timepoints, and general findings on transient shifts and oral microbiome changes."
+            },
+            {
+              "id": "PMC11222149:main:d04e3a43",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Details the specific mission (SpaceX Inspiration4), longitudinal sampling window, types of swabs (environmental, skin, nasal, oral), and the multi-omic approach (metagenomics, metatranscriptomics, single-cell immunome)."
+            },
+            {
+              "id": "PMC11222149:methods:920c8ef1",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Confirms the number of crew members (four), total samples (750), body sites (10), and collection points (8 timepoints: 3 pre-launch, 2 mid-flight, 3 post-flight)."
+            },
+            {
+              "id": "PMC11222149:results:f4f67865",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Reiterates the eight timepoints, number of metagenomic and metatranscriptomic swabs, ten body sites, and stool samples, providing a clear summary of the dataset."
+            },
+            {
+              "id": "PMC11222149:results:2ff7ad8f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Describes the linear mixed effect (LME) modeling approach and the four categories of FDR-significant microbial features: transiently increased/decreased, and persistently increased/decreased."
+            },
+            {
+              "id": "PMC11222149:results:c67786b0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Explains the timepoint nomenclature (L, FD, R) and confirms the MAS process for extracting taxonomic and functional features."
+            },
+            {
+              "id": "PMC11222149:methods:76e0135f",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Specifies the sequencing platforms and kits used for shotgun metagenomic and metatranscriptomic sequencing."
+            },
+            {
+              "id": "PMC11222149:methods:77f9607a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Mentions the single-cell sequencing approach for host immune genes and lasso regression for microbe-immune associations."
+            },
+            {
+              "id": "PMC11222149:results:87ee10af",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Quantifies the significant associations, distinct microbial features, and the percentages of transiently increased, transiently depleted, persistently increased, and persistently decreased features, highlighting the predominance of transient shifts."
+            },
+            {
+              "id": "PMC11222149:results:c892c609",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Emphasizes that transient shifts were more dramatic and that microbial communities generally reset upon returning to Earth, indicating limited persistence of changes."
+            },
+            {
+              "id": "PMC11222149:abstract:4820628c",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Mentions the enrichment of microbial genes associated with phage activity, toxin-antitoxin systems, and stress response across multiple body sites."
+            },
+            {
+              "id": "PMC11222149:methods:d45fd049",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+              "why_relevant": "Describes the method for fecal sample collection using OMNIgene-GUT kits."
+            }
+          ],
+          "used_context_ids": [
+            "PMC11222149:abstract:b0f1db28",
+            "PMC11222149:abstract:4820628c",
+            "PMC11222149:main:d04e3a43",
+            "PMC11222149:methods:920c8ef1",
+            "PMC11222149:methods:76e0135f",
+            "PMC11222149:methods:d45fd049",
+            "PMC11222149:methods:77f9607a",
+            "PMC11222149:results:f4f67865",
+            "PMC11222149:results:b3e6c3c4",
+            "PMC11222149:results:c67786b0",
+            "PMC11222149:results:2ff7ad8f",
+            "PMC11222149:results:87ee10af",
+            "PMC11222149:results:c892c609"
+          ],
+          "key_facts": [
+            "Experimental design: 6-month longitudinal study of 4 individuals during a 3-day spaceflight.",
+            "Data collected: 750 human samples (10 body sites), 20 environmental samples, 8 stool samples.",
+            "Omics types: Paired metagenomics, metatranscriptomics, and single-nuclei immune cell profiling.",
+            "Main microbial shifts: Predominantly transient restructuring of oral, nasal, and skin microbiomes.",
+            "Quantification of shifts: 73.5% transiently increased, 24.6% transiently depleted, 0.6% persistently increased, 1.1% persistently decreased.",
+            "Key findings: Transient shifts were more dramatic, and communities generally reset post-flight. Increased plaque-associated bacteria in oral microbiome, enrichment of phage activity, toxin-antitoxin, and stress response genes."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}
