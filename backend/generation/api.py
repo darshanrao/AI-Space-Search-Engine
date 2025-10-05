@@ -73,6 +73,26 @@ class RAGAPI:
                         answer_text = answer_text[:last_brace + 1]
                 
                 json_response = json.loads(answer_text)
+                
+                # Manual double-check: ensure citations are unique URLs only
+                if "citations" in json_response:
+                    citations = json_response["citations"]
+                    if isinstance(citations, list):
+                        # Remove duplicates while preserving order
+                        unique_citations = []
+                        seen_urls = set()
+                        for citation in citations:
+                            if isinstance(citation, str) and citation not in seen_urls:
+                                unique_citations.append(citation)
+                                seen_urls.add(citation)
+                            elif isinstance(citation, dict) and "url" in citation:
+                                # Handle old format as fallback
+                                url = citation["url"]
+                                if url not in seen_urls:
+                                    unique_citations.append(url)
+                                    seen_urls.add(url)
+                        json_response["citations"] = unique_citations
+                
                 return json_response
             except json.JSONDecodeError as e:
                 # Fallback if JSON parsing fails
