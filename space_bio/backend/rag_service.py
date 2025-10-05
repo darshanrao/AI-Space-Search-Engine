@@ -1,6 +1,6 @@
 """
 RAG Service - Interface to your RAG pipeline.
-This is where you'll connect your actual RAG implementation.
+This integrates with the actual RAG pipeline for retrieval and generation.
 """
 
 import uuid
@@ -11,6 +11,7 @@ from langchain.schema import BaseMessage, HumanMessage, AIMessage, SystemMessage
 
 from models import RAGResponse, Citation, ImageCitation
 from settings import settings
+from generation.api import query_rag_json
 
 
 class RAGService:
@@ -26,10 +27,7 @@ class RAGService:
     
     def generate_answer(self, question: str, context: Dict[str, Any], conversation_history: List[Tuple[str, str]] = None) -> RAGResponse:
         """
-        Generate RAG-powered answer.
-        
-        This is where you'll integrate with your actual RAG pipeline.
-        For now, it returns a mock response in your exact format.
+        Generate RAG-powered answer using the actual RAG pipeline.
         
         Args:
             question: User's question
@@ -40,25 +38,37 @@ class RAGService:
             RAGResponse with answer, citations, and context IDs
         """
         try:
-            # For now, use Gemini directly until you connect your RAG pipeline
-            # TODO: Replace this with your actual RAG pipeline call
-            # rag_result = your_rag_pipeline.generate_answer(question, context, conversation_history)
+            # Use the actual RAG pipeline
+            rag_result = query_rag_json(question)
             
-            # Use Gemini to generate a response
-            gemini_response = self._generate_fallback_response(question, context, conversation_history)
+            # Convert RAG pipeline response to our RAGResponse format
+            citations = []
+            for citation in rag_result.get("citations", []):
+                citations.append(Citation(
+                    id=citation.get("id", ""),
+                    url=citation.get("url", ""),
+                    why_relevant=citation.get("why_relevant", "")
+                ))
             
-            # Return Gemini response without mock citations
-            # TODO: Replace with your actual RAG pipeline citations when ready
+            image_citations = []
+            for img_citation in rag_result.get("image_citations", []):
+                image_citations.append(ImageCitation(
+                    id=img_citation.get("id", ""),
+                    url=img_citation.get("url", ""),
+                    why_relevant=img_citation.get("why_relevant", "")
+                ))
+            
             return RAGResponse(
-                answer_markdown=gemini_response.answer_markdown,
-                citations=[],  # No mock citations - will be populated by your RAG pipeline
-                image_citations=[],
-                used_context_ids=[],  # No mock context IDs - will be populated by your RAG pipeline
-                confident=True
+                answer_markdown=rag_result.get("answer_markdown", ""),
+                citations=citations,
+                image_citations=image_citations,
+                used_context_ids=rag_result.get("used_context_ids", []),
+                confident=rag_result.get("confident", False)
             )
             
         except Exception as e:
             # Fallback to basic Gemini response if RAG fails
+            print(f"RAG pipeline failed: {str(e)}")
             return self._generate_fallback_response(question, context, conversation_history)
     
     def _generate_fallback_response(self, question: str, context: Dict[str, Any], conversation_history: List[Tuple[str, str]] = None) -> RAGResponse:

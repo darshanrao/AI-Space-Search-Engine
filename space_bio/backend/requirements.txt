@@ -18,6 +18,24 @@ google-generativeai>=0.5.4
 # Environment and configuration
 python-dotenv==1.0.0
 
+# RAG Pipeline dependencies
+qdrant-client[fastembed]>=1.14.2
+sentence-transformers
+transformers
+torch
+scipy
+numpy
+tqdm
+ujson
+beautifulsoup4
+readability-lxml
+trafilatura
+unicodedata2
+ftfy
+click
+lxml
+requests
+
 # Development dependencies
 pytest==7.4.3
 httpx==0.25.2
