@@ -1,125 +1,142 @@
-# 🌌 AstroBio Explorer
+# 🧠🚀 AstroBio Explorer
 
-Welcome to **AstroBio Explorer**, our submission for the **2025 NASA Space Apps Challenge** (Build a Space Biology Knowledge Engine).
-Our project is designed to help scientists, researchers and space enthusiasts explore decades of NASA’s bioscience research through a smart, conversational interface.
+AstroBio Explorer is our AI-powered research assistant built for the **NASA Space Apps Challenge 2025**.
+It helps anyone explore NASA’s space biology research in a simple, conversational, and interactive way.
 
 ---
 
 ## 🌟 Inspiration
 
-Space biology research is full of valuable knowledge, but it’s scattered across hundreds of dense publications. Finding the right information or making sense of it quickly can be overwhelming.
+NASA has been studying how life behaves beyond Earth for decades. From how plants grow in space to how microgravity affects the human body, the knowledge is incredible.
+But it’s buried inside hundreds of research papers that are hard to search and connect.
 
-We wanted to build something that feels like **talking to a knowledgeable research assistant**. You ask a question and instead of giving you a vague summary, the assistant provides context-rich answers with proper citations, relevant images and links to papers.
-
-The goal was simple: make space bioscience literature **easier to explore, understand and build upon**.
-
----
-
-## 🧠 What It Does
-
-AstroBio Explorer is a **conversational research assistant** for space biology.
-
-* You ask scientific questions in natural language.
-* It finds relevant NASA bioscience papers, retrieves key information using a RAG pipeline and generates detailed, citation-backed answers.
-* Each answer includes inline citations with clickable links so you can jump straight to the source.
-* Related images are fetched dynamically and displayed in a sidebar.
-* You can open **multiple chat sessions**, save context, and explore follow-up questions just like you would with a human expert.
-* A special **Google Scholar mode** finds similar papers using SERP API, giving you an extra layer of relevant academic context.
-* All interactions are stored so the assistant can maintain context over longer sessions.
+We wanted to make that exploration feel natural, like having a conversation with a scientist who knows exactly where to look. That’s why we built AstroBio Explorer.
 
 ---
 
-## 🏗 How We Built It
+## 🧭 What It Does
 
-We designed a clear pipeline to keep things modular and efficient.
+AstroBio Explorer turns complex scientific literature into a friendly research companion. Here’s what you can do inside it:
 
-### ✨ Core Stack
+* 🧠 **Ask research questions** in plain language and get clear, well-grounded answers from NASA bioscience papers
+* 🔗 **See inline citations** with clickable links to original publications
+* 📄 **Explore related Google Scholar papers** using SerpAPI
+* 🖼 **View relevant images** tied to your question in a sidebar
+* 💬 **Keep multiple research threads open** using multi-session chat
 
-* **Frontend:** Next.js + Tailwind CSS + SCSS animations for a smooth and space-themed UI
-* **Backend:** FastAPI + LangChain + Gemini 2.5 Flash model for fast and contextual responses
-* **Vector Store:** Qdrant for chunk storage and semantic retrieval
-* **APIs:**
-
-  * SERP API for Google Scholar paper recommendations
-  * SERP Image API for relevant images
-* **Database:** Supabase Postgres for storing user sessions and chat context
-
-### 🧰 Pipeline
-
-1. **User Query** → comes from the frontend chat UI
-2. **RAG Pipeline** → query is embedded, searched in Qdrant, and relevant chunks are retrieved
-3. **LLM Response** → LangChain + Gemini model generate a passage-style answer with inline citations
-4. **Enrichment** → Google Scholar API fetches similar papers, SERP image API fetches relevant visuals
-5. **Frontend Display** → answer + citations inline, related images in a sidebar, scholar links in a separate tab
-
- <!-- Replace with actual image path -->
- <img width="520" height="422" alt="nasa" src="https://github.com/user-attachments/assets/599bf7a1-f250-438e-9bbf-e350a0f7e21b" />
-
+It doesn’t just give you a block of text. It brings together papers, citations, images, and related work so you can truly explore a topic.
 
 ---
 
-## ⚡ Challenges We Ran Into
+## 🛠 How We Built It
 
-One of the biggest challenges was **making the chatbot feel genuinely useful for researchers**. It wasn’t enough to just retrieve data. We had to get **citations right**, display images properly, maintain session context, and make sure the RAG pipeline produced meaningful long-form answers.
+We structured AstroBio Explorer into three main parts working together.
 
-Handling citation linking and ensuring images didn’t break the layout took careful planning on the frontend. We also faced issues with connection pooling (PgBouncer) when scaling the chatbot, which led us to rethink database connection management for production.
+### 🧠 Backend (RAG + AI)
+
+* Built with **FastAPI**, **LangChain**, and **Gemini 2.5 Flash**
+* Parsed and chunked **606 NASA bioscience articles** at the sentence level
+* Generated dense and sparse embeddings and stored them in **Qdrant** for fast retrieval
+* Used a small agent system to combine the RAG pipeline with **Google Scholar** and **image search**, merging multiple sources for each response
+
+### 🖥 Frontend (UI/UX)
+
+* Built with **Next.js** and **Tailwind CSS**
+* Clean chat interface with **SCSS and Haml animations** for a smooth space-themed feel
+* Citations appear inline inside chat bubbles
+* Images are shown in a sidebar for visual context
+* Includes a “Google Scholar” button to fetch related papers
+* Supports multiple chat sessions so users can explore different topics simultaneously
 
 ---
 
-## 🏆 Accomplishments We’re Proud Of
+## 🪄 Pipeline Overview
 
-* Built a fully working research chatbot with context storage and multi-session support
-* Achieved **83% answer quality** in our evaluation
-* Designed a UI that makes scientific exploration feel natural and interactive
-* Integrated SERP APIs to extend beyond just NASA papers
-* Added inline citations and image sidebars that make responses richer and more trustworthy
+<img width="520" height="422" alt="nasa" src="https://github.com/user-attachments/assets/054bfeea-19e5-4a84-9cf4-f53ab66b06fb" />
+
+---
+
+### 🧱 Data Layer
+
+* Vector DB: **Qdrant**, storing each chunk with metadata like paper ID, section, and URL for precise citation linking
+* Context + session storage: **Supabase Postgres**, for multi-turn conversations and persistent threads
+
+---
+
+## 🚧 Challenges We Ran Into
+
+* Finding the **right chunk size** to keep answers precise without slowing the system
+* Placing **inline citations** at exactly the right spots in the generated text
+* Coordinating **Gemini**, **Qdrant**, and **SerpAPI** in a single pipeline
+* Designing a **UI** that could handle citations, media, and multiple threads without feeling cluttered
+
+---
+
+## 🏆 Accomplishments We're Proud Of
+
+* Built a working research assistant that connects **NASA data**, **Google Scholar**, and **images** in one conversational interface
+* Added **inline citations** that link directly to real papers
+* Enabled **multi-session research chats** for parallel exploration
+* Designed a **modular backend** that can easily be extended with more tools later
 
 ---
 
 ## 📚 What We Learned
 
-We learned how to combine RAG pipelines with conversational UI in a way that feels natural to scientists. Storing session context in Supabase made it possible to build genuine back-and-forth conversations.
-
-We also realized the importance of **good retrieval**. Answer quality depends heavily on what documents you find, so tuning chunking and vector search parameters became a major focus.
+* How to combine different AI components into a smooth, useful experience
+* The importance of **chunking and retrieval** when working with real scientific literature
+* How to shape LLM outputs into structured answers that are actually useful for research
+* How to design frontend components that gracefully handle citations, references, and visual content
 
 ---
 
-## 🚀 What’s Next
+## 🚀 What’s Next for AstroBio Explorer
 
-* A **Research Mode** with deeper context windows, longer answers, and advanced scholar recommendations
-* Integration of **knowledge graphs** for better relationship exploration
-* Support for richer media like interactive figures or tables from papers
-* Improving retrieval quality using better chunking strategies and hybrid search
-* Deploying the system so anyone can try it during and after the hackathon
+* A **Research Mode** with longer, more detailed answers and expanded context
+* **Visual knowledge graphs** that show how concepts connect across studies
+* **Hypothesis generation** and **exportable research briefs**
+* Direct integration with NASA’s open data repositories for richer exploration
+
+---
+
+## 🧰 Built With
+
+* Next.js
+* Tailwind CSS
+* SCSS + Haml animations
+* FastAPI
+* LangChain
+* Gemini 2.5 Flash
+* Qdrant
+* Supabase
+* SerpAPI (Google Scholar + Images)
 
 ---
 
 ## 🧪 Evaluation Overview
 
-We tested AstroBio Explorer on **real scientific literature**, not just toy data.
+We tested AstroBio Explorer on **real NASA space biology literature** to measure how well it retrieves, cites, and answers scientific questions.
 
-* **181 questions** tested
-* Across **42 space biology research papers**
-* Evaluation covered **retrieval**, **answer quality**, and **citations**
+* **181 questions**
+* **42 research papers**
+* Evaluation measured **retrieval**, **answer quality**, and **citation accuracy**
 
 ### Results
 
 * **Overall Score:** 72%
   (Weighted across retrieval, answer quality, and citation accuracy)
 
-| Component         | Score | Notes                                              |
-| ----------------- | ----- | -------------------------------------------------- |
-| Answer Quality    | 83%   | Excellent factual alignment with expert answers    |
-| Citation Accuracy | 70%   | Sources are relevant and properly linked           |
-| Retrieval Quality | 59%   | Good, but has room to improve on broader questions |
+| Component         | Score | Notes                                           |
+| ----------------- | ----- | ----------------------------------------------- |
+| Answer Quality    | 83%   | Excellent factual alignment with expert answers |
+| Citation Accuracy | 70%   | Good relevance and proper linking               |
+| Retrieval Quality | 59%   | Good but room for broader document recall       |
 
 **Formula:**
 
 ```
 Overall = 35% × Retrieval + 45% × Answer Quality + 20% × Citations
 ```
-
----
 
 ### Performance by Question Type
 
@@ -131,9 +148,7 @@ Overall = 35% × Retrieval + 45% × Answer Quality + 20% × Citations
 | Complex reasoning    | 69%   |
 | Broad overviews      | 60%   |
 
-It performs best on targeted scientific questions, which is exactly where researchers need strong support.
-
----
+AstroBio Explorer excels at **targeted scientific questions**, which is where researchers benefit most.
 
 ### Top Performance Areas
 
@@ -141,20 +156,6 @@ It performs best on targeted scientific questions, which is exactly where resear
 * Space agriculture research – 86%
 * Plant imaging systems – 88%
 * FAIR data systems – 88%
-
----
-
-## 🧰 Built With
-
-* **Next.js**
-* **Tailwind CSS**
-* **SCSS animations**
-* **FastAPI**
-* **LangChain**
-* **Gemini 2.5 Flash Model**
-* **Qdrant**
-* **Supabase**
-* **SERP API (Google Scholar & Images)**
 
 ---
 
@@ -170,8 +171,6 @@ pip install -r requirements.txt
 python main.py
 ```
 
-This starts the FastAPI server at `http://localhost:8000`.
-
 ### Frontend
 
 ```bash
@@ -180,7 +179,8 @@ npm install
 npm run dev
 ```
 
-This starts the frontend on `http://localhost:3000`. Open this URL in your browser to chat with AstroBio Explorer.
+* Backend runs on `http://localhost:8000`
+* Frontend runs on `http://localhost:3000`
 
 ---
 
@@ -195,7 +195,9 @@ This starts the frontend on `http://localhost:3000`. Open this URL in your brows
 
 ---
 
-## 👩‍🚀 Meet AstroBio Explorer
 
-AstroBio Explorer is more than a chatbot. It’s a research companion built for space biology. Whether you’re a scientist, student, or just curious about life beyond Earth, you can ask real questions and get meaningful, well-cited answers.
+## 👨‍🚀 Meet AstroBio Explorer
+
+AstroBio Explorer is more than a chatbot. It’s a research companion designed to make space bioscience accessible and explorable. Whether you’re a scientist, a student, or just curious about how life thrives beyond Earth, AstroBio Explorer lets you **ask real questions and get meaningful, research-backed answers**.
+
 
