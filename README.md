@@ -57,7 +57,7 @@ We structured AstroBio Explorer into three main parts working together.
 ### 🧱 Data Layer
 
 * Vector DB: **Qdrant**, storing each chunk with metadata like paper ID, section, and URL for precise citation linking
-* Context + session storage: **Supabase Postgres**, for multi-turn conversations and persistent threads
+* Context + session storage: For multi-turn conversations and persistent threads
 
 ---
 
