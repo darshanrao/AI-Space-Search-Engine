@@ -4,9 +4,8 @@ import { useState, useRef, useEffect } from 'react';
 import SearchBar from '@/components/SearchBar';
 import ChatAnswer from '@/components/ChatAnswer';
 import ContextChips from '@/components/ContextChips';
-import SourcesDrawer from '@/components/SourcesDrawer';
-import { postJSON, getJSON } from '@/lib/api';
-import { SearchResponse, AnswerPayload, ThreadResponse } from '@/lib/types';
+import { postJSON } from '@/lib/api';
+import { AnswerPayload } from '@/lib/types';
 
 interface ChatMessage {
   id: string;
@@ -22,15 +21,20 @@ export default function Home() {
   const [context, setContext] = useState<{ organism?: string; conditions: string[] }>({
     conditions: []
   });
-  const [threadId, setThreadId] = useState<string | null>(() => {
-    // Restore threadId from localStorage on page load
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('space_bio_thread_id') || null;
-    }
-    return null;
-  });
+  const [threadId, setThreadId] = useState<string | null>(null);
+  const [isClient, setIsClient] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Initialize client-side state
+  useEffect(() => {
+    setIsClient(true);
+    // Restore threadId from localStorage on page load
+    const savedThreadId = localStorage.getItem('space_bio_thread_id');
+    if (savedThreadId) {
+      setThreadId(savedThreadId);
+    }
+  }, []);
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = () => {
@@ -51,30 +55,29 @@ export default function Home() {
   // Function to load messages from a session
   const loadThreadMessages = async (sessionId: string) => {
     try {
-      const response = await getJSON<{
-        session_id: string;
-        messages: Array<{
-          role: string;
-          content: string;
-          rag_response?: {
-            answer_markdown: string;
-            citations: Array<{
-              id: string;
-              url: string;
-              why_relevant: string;
-            }>;
-            image_citations: Array<any>;
-            used_context_ids: string[];
-            confident: boolean;
-          };
-          timestamp: string;
-        }>;
-        context: any;
-        created_at: string;
-      }>(`/api/session/${sessionId}`);
+      // Use fetch directly to handle 404 gracefully
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000'}/api/session/${sessionId}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.status === 404) {
+        // Session doesn't exist, clear it silently
+        localStorage.removeItem('space_bio_thread_id');
+        setThreadId(null);
+        return;
+      }
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
       
-      if (response.messages) {
-        const chatMessages: ChatMessage[] = response.messages.map((msg: any, index: number) => ({
+      if (data.messages) {
+        const chatMessages: ChatMessage[] = data.messages.map((msg: {role: string, content: string, rag_response?: {answer_markdown: string, citations: unknown[], image_citations: unknown[], image_urls: string[], used_context_ids: string[], confident: boolean, confidence_score?: number}, timestamp: string}, index: number) => ({
           id: `${sessionId}-${index}`,
           type: msg.role === 'user' ? 'user' : 'assistant',
           content: msg.content,
@@ -82,15 +85,17 @@ export default function Home() {
           answer: msg.role === 'assistant' && msg.rag_response ? {
             answer: msg.rag_response.answer_markdown,
             citations: msg.rag_response.citations,
+            image_citations: msg.rag_response.image_citations,
+            image_urls: msg.rag_response.image_urls,
             context_ids: msg.rag_response.used_context_ids,
-            confident: msg.rag_response.confident
+            confident: msg.rag_response.confident,
+            confidence_score: msg.rag_response.confidence_score
           } : undefined
         }));
         setMessages(chatMessages);
       }
     } catch (error) {
       console.error('Failed to load session messages:', error);
-      // If session doesn't exist, clear the sessionId
       localStorage.removeItem('space_bio_thread_id');
       setThreadId(null);
     }
@@ -133,11 +138,17 @@ export default function Home() {
             url: string;
             why_relevant: string;
           }>;
-          image_citations: Array<any>;
+          image_citations: Array<{
+            id: string;
+            url: string;
+            why_relevant: string;
+          }>;
+          image_urls: string[];
           used_context_ids: string[];
           confident: boolean;
+          confidence_score?: number;
         };
-        context: any;
+        context: unknown;
         timestamp: string;
       }>('/api/chat', chatPayload);
       
@@ -159,8 +170,11 @@ export default function Home() {
         answer: {
           answer: chatResponse.message,
           citations: chatResponse.rag_response?.citations || [],
+          image_citations: chatResponse.rag_response?.image_citations || [],
+          image_urls: chatResponse.rag_response?.image_urls || [],
           context_ids: chatResponse.rag_response?.used_context_ids || [],
-          confident: chatResponse.rag_response?.confident || false
+          confident: chatResponse.rag_response?.confident || false,
+          confidence_score: chatResponse.rag_response?.confidence_score
         }
       };
       setMessages(prev => [...prev, assistantMessage]);
@@ -197,29 +211,26 @@ export default function Home() {
     setError(null);
   };
 
-  // Get unique paper IDs for sources drawer from all messages
-  const allPaperIds = messages
-    .filter(msg => msg.answer?.citations)
-    .flatMap(msg => msg.answer!.citations.map(citation => citation.id));
-  const uniquePaperIds = [...new Set(allPaperIds)];
 
   return (
-    <div className="chat-container" style={{
+    <div style={{
       display: 'flex',
       flexDirection: 'column',
       height: '100vh',
       maxWidth: '1200px',
+      width: '100%',
       margin: '0 auto',
-      backgroundColor: 'var(--color-bg)',
-      color: 'var(--color-text-primary)'
+      color: 'var(--color-text-primary)',
+      position: 'relative',
+      padding: '0 16px',
+      paddingLeft: 'max(16px, env(safe-area-inset-left))',
+      paddingRight: 'max(16px, env(safe-area-inset-right))'
     }}>
       {/* Chat Header */}
-      <div className="chat-header" style={{
+      <div style={{
         flexShrink: 0,
-        padding: '16px',
-        borderBottom: '1px solid rgba(30, 33, 51, 0.2)',
-        backgroundColor: 'rgba(30, 33, 51, 0.3)',
-        backdropFilter: 'blur(10px)'
+        padding: '16px 0',
+        borderBottom: '1px solid rgba(30, 33, 51, 0.2)'
       }}>
             <div style={{
               display: 'flex',
@@ -292,7 +303,7 @@ export default function Home() {
             </div>
         
         {/* Thread ID Debug Info */}
-        {threadId && (
+        {isClient && threadId && (
           <div style={{
             marginTop: '8px',
             display: 'flex',
@@ -316,10 +327,16 @@ export default function Home() {
       <div className="chat-messages" style={{
         flex: 1,
         overflowY: 'auto',
-        padding: '16px',
+        padding: '16px 0',
+        paddingLeft: 'max(0px, env(safe-area-inset-left))',
+        paddingRight: 'max(0px, env(safe-area-inset-right))',
         display: 'flex',
         flexDirection: 'column',
-        gap: '16px'
+        gap: '16px',
+        maxWidth: '100%',
+        width: '100%',
+        scrollbarWidth: 'none', // Firefox
+        msOverflowStyle: 'none' // IE/Edge
       }}>
         {messages.length === 0 && (
           <div style={{
@@ -393,10 +410,9 @@ export default function Home() {
               }}>Welcome to Space Bio Assistant</h2>
               <p style={{
                 fontSize: '14px',
-                margin: 0,
+                margin: '0 auto',
                 color: 'var(--color-text-secondary)',
-                maxWidth: '320px',
-                margin: '0 auto'
+                maxWidth: '320px'
               }}>
                 Ask me anything about space biology research. I can help you find papers, 
                 analyze data, and explore scientific insights.
@@ -413,7 +429,7 @@ export default function Home() {
           }}>
             <div className="message-bubble" style={{
               position: 'relative',
-              maxWidth: '80%',
+              maxWidth: 'min(80%, 600px)',
               wordWrap: 'break-word'
             }}>
               <div style={{
@@ -642,12 +658,9 @@ export default function Home() {
       )}
 
       {/* Search Input */}
-      <div className="chat-input" style={{
+      <div style={{
         flexShrink: 0,
-        padding: '16px',
-        borderTop: '1px solid rgba(30, 33, 51, 0.2)',
-        backgroundColor: 'rgba(30, 33, 51, 0.3)',
-        backdropFilter: 'blur(10px)'
+        padding: '16px 0'
       }}>
         <SearchBar 
           onSubmit={handleSearch}
@@ -655,9 +668,6 @@ export default function Home() {
           placeholder="Ask about space biology research..."
         />
       </div>
-
-      {/* Sources Drawer */}
-      <SourcesDrawer paperIds={uniquePaperIds} />
     </div>
   );
 }

@@ -259,7 +259,12 @@ a {
   transition: transform 0.2s ease;
 }
 
-/* Enhanced scrollbar for space theme */
+/* Hide scrollbar for chat messages */
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* Enhanced scrollbar for other elements */
 ::-webkit-scrollbar {
   width: 8px;
 }

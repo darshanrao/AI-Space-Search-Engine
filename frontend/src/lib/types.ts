@@ -43,9 +43,17 @@ export interface EvidenceBadges {
   has_code: boolean;
 }
 
+export interface ImageCitation {
+  id: string;
+  url: string;
+  why_relevant: string;
+}
+
 export interface AnswerPayload {
   answer: string;
-  citations: Citation[];
+  citations: (Citation | string)[];
+  image_citations?: ImageCitation[];
+  image_urls?: string[];
   context_ids?: string[];
   confident?: boolean;
   blocks?: Block[];
