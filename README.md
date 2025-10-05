@@ -63,7 +63,8 @@ We structured AstroBio Explorer into three main parts working together.
 
 ## 🪄 Pipeline Overview
 
-<img width="520" height="422" alt="nasa" src="https://github.com/user-attachments/assets/054bfeea-19e5-4a84-9cf4-f53ab66b06fb" />
+![WhatsApp Image 2025-10-05 at 11 08 11_a014f417](https://github.com/user-attachments/assets/0b5c1985-77a9-4ac4-ac90-5e280285aaa5)
+
 
 ---
 
