@@ -28,6 +28,12 @@ It doesn’t just give you a block of text. It brings together papers, citations
 
 ---
 
+## 🎥 Demo
+
+👉 [Watch the Demo on YouTube](https://youtu.be/jPaoxSWFBcs)
+
+---
+
 ## 🛠 How We Built It
 
 We structured AstroBio Explorer into three main parts working together.
