@@ -1,18 +1,24 @@
-requests
-beautifulsoup4
-readability-lxml
-trafilatura
-unicodedata2
-ftfy
-click
-lxml
+# FastAPI and web framework dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
 
-# Web API deps
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
-pydantic>=2.0.0
+# Pydantic for data validation
+pydantic>=2.7.4
+pydantic-settings>=2.1.0
 
-# Ingestion deps
+# JSON handling
+orjson>=3.9.14
+
+# LangChain and LLM dependencies
+langchain>=0.2.16
+langchain-google-genai>=1.0.6
+google-generativeai>=0.5.4
+
+# Environment and configuration
+python-dotenv==1.0.0
+
+# RAG Pipeline dependencies
 qdrant-client[fastembed]>=1.14.2
 sentence-transformers
 transformers
@@ -21,5 +27,15 @@ scipy
 numpy
 tqdm
 ujson
-python-dotenv
-google-generativeai
+beautifulsoup4
+readability-lxml
+trafilatura
+unicodedata2
+ftfy
+click
+lxml
+requests
+
+# Development dependencies
+pytest==7.4.3
+httpx==0.25.2
