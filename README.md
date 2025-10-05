@@ -48,18 +48,16 @@ We structured AstroBio Explorer into three main parts working together.
 * Includes a “Google Scholar” button to fetch related papers
 * Supports multiple chat sessions so users can explore different topics simultaneously
 
+### 🧱 Data Layer
+
+* Vector DB: **Qdrant**, storing each chunk with metadata like paper ID, section, and URL for precise citation linking
+* Context + session storage: **Supabase Postgres**, for multi-turn conversations and persistent threads
+
 ---
 
 ## 🪄 Pipeline Overview
 
 <img width="520" height="422" alt="nasa" src="https://github.com/user-attachments/assets/054bfeea-19e5-4a84-9cf4-f53ab66b06fb" />
-
----
-
-### 🧱 Data Layer
-
-* Vector DB: **Qdrant**, storing each chunk with metadata like paper ID, section, and URL for precise citation linking
-* Context + session storage: **Supabase Postgres**, for multi-turn conversations and persistent threads
 
 ---
 
@@ -195,9 +193,8 @@ npm run dev
 
 ---
 
-
 ## 👨‍🚀 Meet AstroBio Explorer
 
-AstroBio Explorer is more than a chatbot. It’s a research companion designed to make space bioscience accessible and explorable. Whether you’re a scientist, a student, or just curious about how life thrives beyond Earth, AstroBio Explorer lets you **ask real questions and get meaningful, research-backed answers**.
-
+AstroBio Explorer is more than a chatbot. It’s a research companion designed to make space bioscience accessible and explorable.
+Whether you’re a scientist, a student, or just curious about how life thrives beyond Earth, AstroBio Explorer lets you **ask real questions and get meaningful, research-backed answers**.
 
