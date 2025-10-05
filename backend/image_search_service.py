@@ -18,7 +18,7 @@ class ImageSearchService:
         if not self.api_key:
             print("Warning: SERPAPI_API_KEY not found in settings. Image search will be disabled.")
     
-    def search_images(self, keywords: List[str], max_images: int = 5) -> List[str]:
+    def search_images(self, keywords: List[str], max_images: int = 2) -> List[str]:
         """
         Search for images using the provided keywords.
         
@@ -86,21 +86,21 @@ class ImageSearchService:
         # Search for each keyword (limit to first 2 keywords to avoid rate limits)
         for keyword in keywords[:2]:
             try:
-                image_urls = self.search_images([keyword], max_images=3)
+                image_urls = self.search_images([keyword], max_images=2)
                 for url in image_urls:
                     if url not in seen_urls:
                         all_image_urls.append(url)
                         seen_urls.add(url)
                         
                         # Stop if we have enough images
-                        if len(all_image_urls) >= 5:
+                        if len(all_image_urls) >= 2:
                             break
                             
             except Exception as e:
                 print(f"Error searching for keyword '{keyword}': {str(e)}")
                 continue
         
-        return all_image_urls[:5]  # Return max 5 images
+        return all_image_urls[:2]  # Return max 2 images
 
 
 # Global image search service instance
