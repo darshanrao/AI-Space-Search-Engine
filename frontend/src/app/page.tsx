@@ -4,8 +4,21 @@ import { useState, useRef, useEffect } from 'react';
 import SearchBar from '@/components/SearchBar';
 import ChatAnswer from '@/components/ChatAnswer';
 import ContextChips from '@/components/ContextChips';
+import SessionsSidebar from '@/components/SessionsSidebar';
 import { postJSON } from '@/lib/api';
 import { AnswerPayload } from '@/lib/types';
+
+// Extend window interface for sessions sidebar
+declare global {
+  interface Window {
+    sessionsSidebar?: {
+      addSession: (id: string, title: string, lastMessage?: string) => void;
+      updateSession: (id: string, title: string, lastMessage?: string) => void;
+      deleteSession: (id: string) => void;
+      generateTitle: (message: string) => string;
+    };
+  }
+}
 
 interface ChatMessage {
   id: string;
@@ -24,6 +37,7 @@ export default function Home() {
   const [threadId, setThreadId] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
 
@@ -210,6 +224,18 @@ export default function Home() {
         setThreadId(chatResponse.session_id);
         localStorage.setItem('space_bio_thread_id', chatResponse.session_id);
         console.log('New session created:', chatResponse.session_id);
+        
+        // Add new session to sidebar
+        if (window.sessionsSidebar) {
+          const title = window.sessionsSidebar.generateTitle(query);
+          window.sessionsSidebar.addSession(chatResponse.session_id, title, query);
+        }
+      } else {
+        // Update existing session with new message
+        if (window.sessionsSidebar) {
+          const title = window.sessionsSidebar.generateTitle(query);
+          window.sessionsSidebar.updateSession(threadId, title, query);
+        }
       }
 
       // Add assistant message with RAG response
@@ -260,6 +286,20 @@ export default function Home() {
     setMessages([]);
     setContext({ organism: undefined, conditions: [] });
     setError(null);
+    setIsSidebarOpen(false);
+  };
+
+  // Handle session selection
+  const handleSessionSelect = (sessionId: string) => {
+    setThreadId(sessionId);
+    localStorage.setItem('space_bio_thread_id', sessionId);
+    setIsSidebarOpen(false);
+    // Messages will be loaded by the useEffect that watches threadId
+  };
+
+  // Handle sidebar toggle
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
 
@@ -294,6 +334,29 @@ export default function Home() {
                 alignItems: 'center',
                 gap: '12px'
               }}>
+                {/* Sidebar Toggle Button */}
+                <button
+                  onClick={toggleSidebar}
+                  style={{
+                    padding: '8px',
+                    backgroundColor: 'rgba(30, 33, 51, 0.3)',
+                    border: '1px solid rgba(30, 33, 51, 0.2)',
+                    borderRadius: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    flexShrink: 0
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.5)'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(30, 33, 51, 0.3)'}
+                >
+                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+                
                 <div style={{
                   width: '32px',
                   height: '32px',
@@ -323,34 +386,6 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* New Chat Button */}
-              <button
-                onClick={handleNewChat}
-                style={{
-                  padding: '8px 12px',
-                  backgroundColor: 'rgba(62, 142, 222, 0.2)',
-                  color: 'var(--color-primary)',
-                  border: '1px solid rgba(62, 142, 222, 0.3)',
-                  borderRadius: '8px',
-                  fontSize: '12px',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(62, 142, 222, 0.3)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(62, 142, 222, 0.2)';
-                }}
-              >
-                <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-                New Chat
-              </button>
             </div>
         
         {/* Thread ID Debug Info */}
@@ -719,6 +754,15 @@ export default function Home() {
           placeholder="Ask about space biology research..."
         />
       </div>
+
+      {/* Sessions Sidebar */}
+      <SessionsSidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+        currentSessionId={threadId}
+        onSessionSelect={handleSessionSelect}
+        onNewSession={handleNewChat}
+      />
     </div>
   );
 }
