@@ -26,6 +26,57 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+
+  const renderAnswerWithCitations = (text: string, citations: (string | {url: string})[] = []) => {
+    // Regular expression to match citation patterns like [1], [2], [1, 2], [1-3], etc.
+    const citationRegex = /\[(\d+(?:[-,]\d+)*)\]/g;
+    
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = citationRegex.exec(text)) !== null) {
+      // Add text before the citation
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index));
+      }
+
+      // Add the clickable citation
+      const citationNumbers = match[1].split(',').map(num => num.trim());
+      const firstNumber = parseInt(citationNumbers[0]);
+      
+      // Get the URL for the first citation number
+      const citationIndex = firstNumber - 1; // Convert to 0-based index
+      const citationUrl = citations[citationIndex];
+      const url = typeof citationUrl === 'string' ? citationUrl : citationUrl?.url;
+      
+      parts.push(
+        <button
+          key={match.index}
+          onClick={() => {
+            if (url) {
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }
+          }}
+          className="inline-block mx-1 px-1 py-0.5 bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 hover:text-blue-300 rounded text-xs font-medium transition-colors cursor-pointer"
+          title={url ? `Open source ${match[1]}` : `Source ${match[1]} not available`}
+          disabled={!url}
+        >
+          [{match[1]}]
+        </button>
+      );
+
+      lastIndex = match.index + match[0].length;
+    }
+
+    // Add remaining text
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : text;
+  };
+
   // Initialize client-side state
   useEffect(() => {
     setIsClient(true);
@@ -465,11 +516,11 @@ export default function Home() {
                   })
                 }}></div>
                 
-                <p style={{
-                  fontSize: '14px',
-                  lineHeight: '1.5',
-                  margin: 0
-                }}>{message.content}</p>
+                       <p style={{
+                         fontSize: '14px',
+                         lineHeight: '1.5',
+                         margin: 0
+                       }}>{renderAnswerWithCitations(message.content, message.answer?.citations || [])}</p>
                 
                 {/* Show answer details for assistant messages */}
                 {message.type === 'assistant' && message.answer && (

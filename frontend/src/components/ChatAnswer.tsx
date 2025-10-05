@@ -1,6 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import { AnswerPayload } from '@/lib/types';
+import ImageSidebar from './ImageSidebar';
 
 interface ChatAnswerProps {
   answer: AnswerPayload;
@@ -11,6 +13,21 @@ interface ChatAnswerProps {
  * Shows blocks, citations, and evidence badges in a compact format
  */
 export default function ChatAnswer({ answer }: ChatAnswerProps) {
+  const [sidebarImage, setSidebarImage] = useState<{
+    url: string;
+    title?: string;
+    source?: string;
+  } | null>(null);
+
+  const openImageSidebar = (url: string, title?: string, source?: string) => {
+    setSidebarImage({ url, title, source });
+  };
+
+  const closeImageSidebar = () => {
+    setSidebarImage(null);
+  };
+
+
   // Render spans within text blocks
   const renderSpans = (text: string, spans?: Array<{start: number, end: number, type?: string}>) => {
     if (!spans || spans.length === 0) {
@@ -168,11 +185,18 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
             {/* Display image_citations (from RAG pipeline) */}
             {answer.image_citations?.map((image, index) => (
               <div key={`citation-${index}`} className="relative group">
-                <div className="relative overflow-hidden rounded-lg border border-gray-800/20 bg-gray-800/10">
+                <div 
+                  className="relative overflow-hidden rounded-lg border border-gray-800/20 bg-gray-800/10 cursor-pointer"
+                  onClick={() => openImageSidebar(image.url)}
+                >
                   <img
                     src={image.url}
                     alt={`Image ${index + 1}`}
-                    className="w-full h-auto max-h-64 object-cover transition-transform duration-200 group-hover:scale-105"
+                    className="w-full h-auto max-h-64 object-cover transition-transform duration-200 group-hover:scale-105 cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openImageSidebar(image.url);
+                    }}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -186,28 +210,34 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
                   >
                     <span>Image failed to load</span>
                   </div>
-                  {image.why_relevant && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs p-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      {image.why_relevant}
+                  {/* Click indicator */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-200 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/70 text-white px-3 py-2 rounded-lg flex items-center gap-2">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                      <span className="text-sm font-medium">Click to enlarge</span>
                     </div>
-                  )}
+                  </div>
                 </div>
-                {image.why_relevant && (
-                  <p className="text-xs text-gray-400 mt-1 truncate">
-                    {image.why_relevant}
-                  </p>
-                )}
               </div>
             ))}
             
             {/* Display image_urls (from SERP API) */}
             {answer.image_urls?.map((imageUrl, index) => (
               <div key={`serp-${index}`} className="relative group">
-                <div className="relative overflow-hidden rounded-lg border border-gray-800/20 bg-gray-800/10">
+                <div 
+                  className="relative overflow-hidden rounded-lg border border-gray-800/20 bg-gray-800/10 cursor-pointer"
+                  onClick={() => openImageSidebar(imageUrl)}
+                >
                   <img
                     src={imageUrl}
                     alt={`SERP Image ${index + 1}`}
-                    className="w-full h-auto max-h-64 object-cover transition-transform duration-200 group-hover:scale-105"
+                    className="w-full h-auto max-h-64 object-cover transition-transform duration-200 group-hover:scale-105 cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openImageSidebar(imageUrl);
+                    }}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -221,10 +251,16 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
                   >
                     <span>Image failed to load</span>
                   </div>
+                  {/* Click indicator */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-200 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/70 text-white px-3 py-2 rounded-lg flex items-center gap-2">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                      <span className="text-sm font-medium">Click to enlarge</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-xs text-gray-400 mt-1 truncate">
-                  Related image from search
-                </p>
               </div>
             ))}
           </div>
@@ -241,9 +277,6 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
             {answer.citations.map((citation, index) => {
               // Handle both string URLs and citation objects
               const citationUrl = typeof citation === 'string' ? citation : citation.url;
-              // const citationId = typeof citation === 'string' ? 
-              //   citation.split('/').pop() || `Source ${index + 1}` : 
-              //   citation.id;
               
               return (
                 <div key={index} className="flex items-center gap-2">
@@ -321,6 +354,17 @@ export default function ChatAnswer({ answer }: ChatAnswerProps) {
       </div>
 
       {/* Mini Graph Panel - Removed since context is not in AnswerPayload */}
+      
+      {/* Image Sidebar */}
+      {sidebarImage && (
+        <ImageSidebar
+          isOpen={!!sidebarImage}
+          onClose={closeImageSidebar}
+          imageUrl={sidebarImage.url}
+          imageTitle={sidebarImage.title}
+          imageSource={sidebarImage.source}
+        />
+      )}
     </div>
   );
 }
