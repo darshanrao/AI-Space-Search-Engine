@@ -223,17 +223,11 @@ export default function Home() {
       });
 
       if (response.status === 404) {
-<<<<<<< Updated upstream
         // Session doesn't exist on backend (probably server was restarted)
         console.log(`Session ${sessionId} not found on backend, clearing from localStorage`);
         if (typeof window !== 'undefined') {
           localStorage.removeItem('space_bio_thread_id');
         }
-=======
-        // Session doesn't exist, clear it silently and show user-friendly message
-        console.log(`Session ${sessionId} not found on server, clearing from localStorage`);
-        localStorage.removeItem('space_bio_thread_id');
->>>>>>> Stashed changes
         setThreadId(null);
         
         // Show a brief notification to the user
