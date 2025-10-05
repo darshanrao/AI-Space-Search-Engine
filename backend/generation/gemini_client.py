@@ -94,7 +94,7 @@ QUESTION: {query}
 
 Rules:
 1) Cite every non-trivial claim with inline numeric citations like [1], [2], [3].
-2) Each citation number must correspond to the ORDER in the "citations" array (first citation = [1], second = [2], etc.).
+2) Each citation number must correspond to the ORDER in the "citations" URL array (first URL = [1], second URL = [2], etc.).
 3) Use separate brackets for each citation: [1], [2], [3] NOT [1,2,3].
 4) If you used any chunks of kind "caption" (e.g., charts, screenshots, figures) to support the answer,
    mention them inline as [img 1], [img 2] AND include their JPG URLs in "image_citations".
@@ -102,8 +102,8 @@ Rules:
 6) For regular citations, NEVER invent sources or URLs. Use ONLY the URLs from the "URL" field in the context.
 7) DO NOT extract URLs from the content text for regular citations (like DOIs, PubMed links, etc.).
 8) If a chunk has no "URL" field, use "N/A" as the URL value.
-9) Use ONLY the "Citation ID" field for the citation ID, NOT the Document ID.
-10) DO NOT include titles in citations - only use the "why_relevant" field.
+9) Collect ALL unique URLs from the context chunks you used and list them in order in "citations".
+10) Only include URLs that were actually used to support your answer.
 11) Prefer concise, direct answers; add a brief "Why this is correct" note if helpful.
 12) No hidden reasoning or chain-of-thought in the output. Produce ONLY the required fields.
 13) Provide a confidence score from 0-100 based on how confident you are in the answer quality.
@@ -112,7 +112,8 @@ Rules:
  {{
    "answer_markdown": "string with inline [1], [2], and [img 1] citations",
    "citations": [
-     {{"id":"citation-id", "url":"https://...", "why_relevant":"one short phrase"}}
+     "https://example.com/paper1",
+     "https://example.com/paper2"
    ],
    "image_citations": [
      {{"id":"ctx-id", "url":"https://...", "caption_or_alt":"short description"}}
@@ -121,9 +122,10 @@ Rules:
  }}
 
 Validation:
-- Every [n] in answer_markdown must have a matching entry in "citations" (order should align).
+- Every [n] in answer_markdown must have a matching URL in "citations" array at position n-1.
 - Every [img n] must have a matching entry in "image_citations" (order should align).
 - URLs must come from CONTEXT exactly (no rewriting).
+- Citations array should contain only unique URLs in the order they first appear in your answer.
 - Output MUST be valid JSON only - no additional text outside the JSON structure.
 - Do not include any text after the JSON closing brace."""
         

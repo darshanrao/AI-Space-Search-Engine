@@ -30,13 +30,13 @@ class RAGAPI:
             result = self.pipeline.query(question)
             
             if not result["success"]:
-                 return {
-                     "answer_markdown": result["answer"],
-                     "citations": [],
-                     "image_citations": [],
-                     "confidence_score": 0,
-                     "error": result.get("error", "Unknown error")
-                 }
+                return {
+                    "answer_markdown": result["answer"],
+                    "citations": [],
+                    "image_citations": [],
+                    "confidence_score": 0,
+                    "error": result.get("error", "Unknown error")
+                }
             
             # Parse the JSON response from Gemini
             try:

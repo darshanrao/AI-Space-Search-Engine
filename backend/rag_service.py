@@ -9,7 +9,7 @@ from typing import Dict, Any, List, Tuple
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import BaseMessage, HumanMessage, AIMessage, SystemMessage
 
-from models import RAGResponse, Citation, ImageCitation
+from models import RAGResponse, ImageCitation
 from settings import settings
 from generation.api import query_rag_json
 
@@ -42,13 +42,7 @@ class RAGService:
             rag_result = query_rag_json(question)
             
             # Convert RAG pipeline response to our RAGResponse format
-            citations = []
-            for citation in rag_result.get("citations", []):
-                citations.append(Citation(
-                    id=citation.get("id", ""),
-                    url=citation.get("url", ""),
-                    why_relevant=citation.get("why_relevant", "")
-                ))
+            citations = rag_result.get("citations", [])  # Now just a list of URLs
             
             image_citations = []
             for img_citation in rag_result.get("image_citations", []):
@@ -62,8 +56,7 @@ class RAGService:
                 answer_markdown=rag_result.get("answer_markdown", ""),
                 citations=citations,
                 image_citations=image_citations,
-                used_context_ids=rag_result.get("used_context_ids", []),
-                confident=rag_result.get("confident", False)
+                confidence_score=rag_result.get("confidence_score", 0)
             )
             
         except Exception as e:
@@ -100,8 +93,7 @@ class RAGService:
                 answer_markdown=answer_text,
                 citations=[],
                 image_citations=[],
-                used_context_ids=[],
-                confident=False
+                confidence_score=0
             )
             
         except Exception as e:
@@ -110,8 +102,7 @@ class RAGService:
                 answer_markdown=f"I apologize, but I'm having trouble generating a response right now. Please try again later. Error: {str(e)}",
                 citations=[],
                 image_citations=[],
-                used_context_ids=[],
-                confident=False
+                confidence_score=0
             )
 
 

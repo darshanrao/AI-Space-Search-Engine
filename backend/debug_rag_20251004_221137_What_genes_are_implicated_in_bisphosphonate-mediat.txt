@@ -1,0 +1,215 @@
+🤖 DEBUG OUTPUT - RAG Generation
+Timestamp: 2025-10-04T22:11:58.413807
+Question: 'What genes are implicated in bisphosphonate-mediated muscle improvements in C. elegans?'
+====================================================================================================
+
+📚 RETRIEVED DOCUMENTS (15 total):
+====================================================================================================
+
+[CHUNK 1]
+Citation ID: PMC10344948:omics-investigations-ofc--elegansin-microgravity:f13d4701
+Document ID: 1622c026-a56b-5b8a-b53f-2128a256e9d6
+Score: 0.5000
+Section: Omics investigations ofC. elegansin microgravity
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10344948/
+Content:
+elegans. Higashibata et al. 16 ICE-FIRST Microarray - Myosin heavy chain isoforms in the body wall muscles (isoforms A & B) and the pharyngeal muscles (isoforms C & D) decreased in expression in C. elegans developed in space, relative to ground controls - Expression of transcription factors controlling the expression of the myosin heavy chain isoforms was also decreased - Genes encoding troponins and tropomyosins were also decreased C. elegans muscle development is altered in spaceflight, which may contribute to spaceflight-induced muscle atrophy CERISE, C. elegans RNAi Space Experiment; EDL, extensor digitorum longus; EPIENETICS, The effect of microgravity on the epigenetic modification in C. elegans ; ICE-FIRST, FIRST International C. elegans Experiment in space; IGF-1, Insulin-like growth factor 1; ISS, International Space Station; MME, Molecular Muscle Experiment; SZ-8, Shenzhou-8; TGF-β, transforming growth factor-beta. Table 2 Proteomic investigations of C. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 2]
+Citation ID: PMC10751425:zoledronic-acid-mediated-healthspan-extension-acts-through-multiple-mechanisms---figure-5:6df91c72
+Document ID: 46564411-9383-550e-9ab4-7ee4f3fc45e2
+Score: 0.5000
+Section: Zoledronic acid‐mediated healthspan extension acts through multiple mechanisms > Figure 5
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/
+Content:
+Genes either dispensable, or that associate with ZA's healthspan effects. Knockdown of igdb‐1 (FNDC5) significantly increased survival and healthspan, where ZA co‐treatment (1 μM) was not synergistic, but displayed similar improvements in lifespan (top) and healthspan (bottom) suggesting igdb‐1 might exhibit ZA‐induced downregulation (A), or act independently to increase healthspan. Conversely, let‐756 (FGF21, B) is dispensable for both lifespan and healthspan extension with ZA. The mitochondrial sirtuins displayed opposing effects; sir‐2.2 (SIRT‐4, C) is dispensable for ZA's healthspan effects, whereas sir‐2.3 (SIRT‐4) knockdown increased survival and movement (D), as did ZA co‐treatment, suggesting sir‐2.3 downregulation might mediate ZA's healthspan effects. Asterisks denote significance to empty vector controls. * P < 0.05, ** P < 0.01, **** P < 0.0001. ‘#’ denote significance between ZA co‐treatments and gene inhibition alone. # P < 0.05, ## P < 0.01.
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 3]
+Citation ID: PMC10751425:results:5ea1665a
+Document ID: de02726d-03f3-546a-a771-c3cc347c55c5
+Score: 0.3333
+Section: Results
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/
+Content:
+elegans mitochondrial sirtuins, sir‐2.2 and sir‐2.3 , 32 for their role in ZA‐mediated lifespan and healthspan extension. Reinforcing a mitochondrial role of sir‐2.2 and sir‐2.3 , RNAi KD of each gene caused increased mitochondrial fragmentation at day 0 post‐adulthood ( Figure S3 ). While sir‐2.2 KD did not alter animal survival or healthspan, loss of sir‐2.2 blocked ZA's life extending properties but ZA‐induced healthspan extension remained ( Figure 5C ). Additionally, and in line with previous reports in C. elegans , 33 we find that knockdown of sir‐2.3 extends lifespan ( Figure 5D ) and healthspan ( Figure 5H ), which remains with combined ZA treatment but is not synergistically beneficial.
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 4]
+Citation ID: PMC10344948:omics-investigations-ofc--elegansin-microgravity:75310e7e
+Document ID: 52826b59-b9ff-561b-9084-b14cb98f0f9a
+Score: 0.3333
+Section: Omics investigations ofC. elegansin microgravity
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10344948/
+Content:
+elegans undergo a metabolic shift, which may be underlaid by insulin and/or TGF-β signaling Spaceflown C. elegans undergo a metabolic shift, which may be underlaid by insulin and/or TGF-β signaling - Microgravity upregulated genes related to early embryogenesis Microgravity upregulated genes related to early embryogenesis - Microgravity downregulated genes related to locomotion Microgravity downregulated genes related to locomotion - Myosin heavy chain isoforms in the body wall muscles (isoforms A & B) and the pharyngeal muscles (isoforms C & D) decreased in expression in C. elegans developed in space, relative to ground controls Myosin heavy chain isoforms in the body wall muscles (isoforms A & B) and the pharyngeal muscles (isoforms C & D) decreased in expression in C. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 5]
+Citation ID: PMC10751425:discussion:eed28ba6
+Document ID: 915caa76-1df8-5477-990e-23ad7ed6b7f9
+Score: 0.2500
+Section: Discussion
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/
+Content:
+Recent rodent work showed that bisphosphonates attenuate denervation atrophy by down‐regulating sirtuin‐3 (SIRT3), 19 a mitochondrially localized NAD+‐dependent deacetylase with important roles in regulating skeletal muscle metabolism. We observed that knocking‐down a C. elegans mitochondrial sirtuin, sir‐2.3 , improved life‐ and healthspan, whereas mitochondrial sir‐2.2 KD had no effect, as reported by others. 33 Because sir‐2.3 KD with combined ZA was neither inhibitory nor synergistically beneficial to lifespan or healthspan, this supports the model of bisphosphonate‐mediated mitochondrial sirtuin inhibition as a regulator of mammalian muscle health 19 and now sarcopenia. Loss of sir‐2.2 was, however, dispensable for the positive effects of ZA. Along with improved mitochondrial structure observed herein, growing evidence thus suggests that bisphosphonates act at least partially through mitochondrial mechanisms to lessen the effects of sarcopenia. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 6]
+Citation ID: PMC7996555:3--results-and-discussion:5c9f9dc3
+Document ID: affd244f-07b0-55ea-b9d6-da1f01009891
+Score: 0.2500
+Section: 3. Results and Discussion
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7996555/
+Content:
+We performed a GSEA analysis comparing hub genes for the WS wild ecotype and Col-0 ecotype. The hub genes for the WS ecotype are associated with biological processes such as the catabolic process, response to abiotic stimulus, localization, multicellular organismal process, developmental process, and anatomical structure development. The hub genes for the Col-0 ecotype perform similar functions to WS ecotype such as the catabolic process, regulation of metabolic process, positive regulation of biological process, cellular response to stimulus, signaling, multicellular organismal process, developmental process, and anatomical structure development. The shared hub genes between the Col-0 ecotype and Col-0 mutant phyD perform functions such as regulation of metabolic process, multicellular organismal process, developmental process, positive regulation of biological process, anatomical structure development, and catabolic process. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 7]
+Citation ID: PMC10751425:discussion:7b0f4426
+Document ID: 925cb1d1-e4ee-54a3-ab19-1a0e09abdd9f
+Score: 0.2000
+Section: Discussion
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/
+Content:
+Bisphosphonates thus represent a promising strategy for maintaining muscle, and whole animal health into older age. In fruit flies, bisphosphonates increase lifespan through inhibition of the mevalonate metabolic pathway and downstream FOXO activation. 21 We extend this by implicating the mevalonate‐FOXO system as necessary for bisphosphonate‐mediated health improvements across the life course. The sterol and non‐sterol isoprenoids synthesized via mevalonate localize to plasma membranes and influence several vital cellular processes, the dysfunction of which associate with wide ranging pathologies including cardiovascular disease, autoimmune disease, cancer and Alzheimer's disease. 36 Our data suggest that sarcopenia can be added to this list, whereby knockdown of a key enzyme in mevalonate metabolism, farnesyl diphosphate synthetase ( fdps‐1 ), allows normal larval development to adulthood and young adult (day 1) movement rates, corroborating earlier reports of normal L4 larvae muscle architecture upon fdps‐1 RNAi. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 8]
+Citation ID: PMC8953707:2--materials-and-methods:0007c042
+Document ID: 66385488-e285-5526-a79b-e8da5ff47633
+Score: 0.2000
+Section: 2. Materials and Methods
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8953707/
+Content:
+The stages of the pipeline are numbered from 1 to 4 and each stage is explained below. Graph-based Gene Regulatory Network (GRN) inferencing methods of Pearson correlation and Markov Blanket (MB) are utilized to identify the most regulated genes in the seven GeneLab datasets . The gene expression values of pairs of genes are used to compute the Pearson correlation value. The p-values are used to extract the most correlated pairs of genes by selecting all values below 5 × 10 −7 , which will extract the same pairs of genes as a correlation threshold of 0.9 and above. For identifying causal relational gene pairs, the Markov Blanket (MB) method is used. Joint conditional probabilities are computed from the gene expression values which are used to construct a Bayesian Network (BN). The incremental association Markov blanket of any node (gene) in a BN is the set of parents, children, and spouses (the other parents of their common children) of the gene. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 9]
+Citation ID: PMC8183356:results:ab206513
+Document ID: 064c5214-3e8b-5848-9b7d-2cc2704c382d
+Score: 0.1667
+Section: RESULTS
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8183356/
+Content:
+Altogether, these data unequivocally demonstrate a proliferation-independent mechanism of NF-κB to drive MuSC-specific telomere shortening. Telomeres are not naked DNA but are instead associated with six proteins, called shelterins (TIN2, TPP1, POT1, RAP1, TRF1, and TRF2) ( de Lange, 2005 ; Hsu et al., 1999 ), together with the DNA-binding proteins Kus ( de Lange, 2005 ; Hsu et al., 1999 ) ( Figure S4A ). To delineate alternative mechanisms to rationalize the observed telomere shortening in IKK2CA MuSC MuSCs experiencing chronic injuries, we carried out in-silico analysis on promoters of genes, whose proteins are known to reside at telomeres. Given that Kus bind to telomeres, aid the localization of other shelterins, and regulate telomere length, we included them in our in-silico analysis ( de Lange, 2005 ; Hsu et al., 1999 ). NF-κB functions by binding to promoter and enhancer regions containing kB sites to regulate gene expression ( Dong et al., 2008 ; Hayden and Ghosh, 2004 ). 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 10]
+Citation ID: PMC10751425:results:22b20d3e
+Document ID: ba05cf55-71c9-58d7-963c-8bdfd513b478
+Score: 0.1667
+Section: Results
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/
+Content:
+FDPS, FOXO and BAIBA orthologues are required for the healthspan effects of zoledronic acid. Knockdown of FDPS‐1 (FDPS) with ZA co‐treatment (1 μM) prevents ZA mediated lifespan (top) and healthspan (bottom) extension (A). Similarly, knockdown of daf‐16 (FOXO) decreases survival and movement, with no improvement with ZA co‐treatment (B). The conserved bone‐muscle ortholog agxt‐2 (BAIBA) is required for ZA mediated improvement in survival and movement (C). Data are mean + SD of two repeats, with ~140–160 animals per condition/time point. Asterisks denote significance to empty vector. ** P < 0.01, **** P < 0.0001. The FOXO pathway is a global stress response system, inducible by a wide array of stimuli and a generic transcription factor regulating cellular responses across multiple drug families 28 that integrates multiple upstream signals to influence worm ageing. 29 Alternative, muscle‐centric mechanisms thus also likely contribute to the healthspan benefits of ZA. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 11]
+Citation ID: PMC10751425:results:5f487ad3
+Document ID: 1015e12b-69dd-5152-8a4a-f5b7b30c07e4
+Score: 0.1429
+Section: Results
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/
+Content:
+523 ± 10.0 for controls, P < 0.01), with similar life/healthspan extension observed upon co‐treatment with ZA ( Figure 5A ). Additionally, let‐756 appears dispensable for ZA‐induced healthspan effects: KD alone caused no significant alterations in survival or movement, whereas increased lifespan and healthspan was retained with combined let‐756 KD and ZA treatment ( Figure 5B ). Genes either dispensable, or that associate with ZA's healthspan effects. Knockdown of igdb‐1 (FNDC5) significantly increased survival and healthspan, where ZA co‐treatment (1 μM) was not synergistic, but displayed similar improvements in lifespan (top) and healthspan (bottom) suggesting igdb‐1 might exhibit ZA‐induced downregulation (A), or act independently to increase healthspan. Conversely, let‐756 (FGF21, B) is dispensable for both lifespan and healthspan extension with ZA. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 12]
+Citation ID: PMC5052530:results:fe03ade0
+Document ID: 8c179fef-5d1a-51a0-845b-ef0bd2848d3f
+Score: 0.1429
+Section: Results
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5052530/
+Content:
+On Day 14, horizontal 100 Hz-0.15 g LIV produced transcriptional levels that were 41% greater than the average of the other three experimental groups. CD44 44 , BMP-4 45 , and ATF-4 46 have all been associated with osteoblastogenesis and their up-regulation, particularly in the horizontal 100 Hz-0.15 g group at Day 14, highlight the propensity of this specific LIV signal to induce differentiation in hBMSC. Both the upregulation of Rho GTPase CDC42 (consistent with previous data 16 ) and SUN-2, the anchoring element of Nesprin-2 47 , may point towards LIV enhancing cellular structure. LIV also elicited between 2-2.5-fold upregulation in 28 other genes known to play a role in matrix maturation, osteogenesis and cytoskeletal organization ( Table 3 ). Among the 28 genes that were upregulated, h-LIV produced, on average, 16% greater transcriptional levels than v-LIV at Day 14. Across genes, the transcriptional increase in horizontal 100 Hz-0.15 g was 26% greater than the average of the three other groups. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 13]
+Citation ID: PMC10751425:introduction:3476f305
+Document ID: 2715b718-07e5-51c3-8144-c4e537e5682b
+Score: 0.1250
+Section: Introduction
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/
+Content:
+20 In the ageing context, ZA‐treated fruit flies displayed increased survival and improved climbing ability across the life course, suggesting improved neuromuscular ageing. 21 However, the direct anti‐sarcopenic efficacy of ZA has not been established. The nematode Caenorhabditis elegans is an established model of ageing, displaying ordered, progressive age‐related deterioration of multiple tissues, including muscle. 22 C. elegans muscle is also highly morphologically and metabolically similar to human muscle and has high genetic orthology (60–85%) of sub‐muscular systems with people. 23 As with fruit flies, C. elegans are invertebrates that do not possess clear orthologues of mammalian bone secretory factors (‘osteokines’). 24 C. elegans are, therefore, an excellent system for understanding muscle‐specific mechanisms of bisphosphonates, independently of bone‐derived confounders. We thus employed C. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 14]
+Citation ID: PMC7996555:4--conclusions:f840cd00
+Document ID: 2a2d333b-dd24-5374-a66a-dba23a6abe0e
+Score: 0.1250
+Section: 4. Conclusions
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7996555/
+Content:
+The GRN for the WS ecotype in spaceflight has the highest spectral gap, indicating that it has the highest transcriptional cost in spaceflight. GRN analysis showed that there are 38 genes with higher transcriptions in spaceflight microgravity and are involved in vital molecular and biological functions for the survival and growth of the plant in spaceflight. While previous research has identified altered spaceflight transcriptions for cell wall remodeling, we have identified hub genes with higher transcriptional activity and that are involved in the cell wall response process only in spaceflight GRN; these hub genes are essentially metabolic phenotypes. The network analysis has detected xyloglucan endo-trans glycosylase/hydrolases ( XTHs ) that are cell wall modifying enzymes mediating vital elongation growth of Arabidopsis in spaceflight. The XTHs act on the cell wall, making it more extensible, resulting in cellular expansion and the skewing phenomenon of the roots in spaceflight microgravity. 
+----------------------------------------------------------------------------------------------------
+
+[CHUNK 15]
+Citation ID: PMC10751425:zoledronic-acid-mediated-healthspan-extension-acts-through-multiple-mechanisms---figure-4:3e85bff3
+Document ID: 7272902b-1a07-5cdc-95b2-fd3ea8e408ca
+Score: 0.1111
+Section: Zoledronic acid‐mediated healthspan extension acts through multiple mechanisms > Figure 4
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/
+Content:
+FDPS, FOXO and BAIBA orthologues are required for the healthspan effects of zoledronic acid. Knockdown of FDPS‐1 (FDPS) with ZA co‐treatment (1 μM) prevents ZA mediated lifespan (top) and healthspan (bottom) extension (A). Similarly, knockdown of daf‐16 (FOXO) decreases survival and movement, with no improvement with ZA co‐treatment (B). The conserved bone‐muscle ortholog agxt‐2 (BAIBA) is required for ZA mediated improvement in survival and movement (C). Data are mean + SD of two repeats, with ~140–160 animals per condition/time point. Asterisks denote significance to empty vector. ** P < 0.01, **** P < 0.0001.
+----------------------------------------------------------------------------------------------------
+
+
+✅ GENERATED ANSWER:
+====================================================================================================
+
+The following genes are implicated in bisphosphonate-mediated muscle improvements in *C. elegans*:
+*   **sir-2.3 (SIRT-4)**: Knockdown of this mitochondrial sirtuin increased survival and movement, and zoledronic acid (ZA) co-treatment produced similar results, suggesting that `sir-2.3` downregulation may mediate ZA's healthspan effects [1]. Loss of `sir-2.3` also extended lifespan and healthspan, which persisted with combined ZA treatment [2], and its knockdown improved life- and healthspan, supporting a model of bisphosphonate-mediated mitochondrial sirtuin inhibition [3].
+*   **igdb-1 (FNDC5)**: Knockdown significantly increased survival and healthspan. ZA co-treatment displayed similar improvements, suggesting `igdb-1` might be downregulated by ZA or act independently to increase healthspan [1], [6].
+*   **fdps-1 (FDPS)**: Knockdown of `fdps-1` with ZA co-treatment prevents ZA-mediated lifespan and healthspan extension, indicating its requirement for these effects [5], [img 1]. The mevalonate-FOXO system, which involves farnesyl diphosphate synthetase (`fdps-1`), is also implicated as necessary for bisphosphonate-mediated health improvements [4].
+*   **daf-16 (FOXO)**: Knockdown of `daf-16` decreased survival and movement, and no improvement was observed with ZA co-treatment, indicating it is required for ZA's effects [5], [img 1].
+*   **agxt-2 (BAIBA)**: This conserved bone-muscle ortholog is required for ZA-mediated improvement in survival and movement [5], [img 1].
+
+Conversely, `sir-2.2` (SIRT-4) is dispensable for ZA's healthspan effects [1], [3], and `let-756` (FGF21) is dispensable for both lifespan and healthspan extension with ZA [1], [6].
+
+{
+  "answer_markdown": "The following genes are implicated in bisphosphonate-mediated muscle improvements in *C. elegans*:\n*   **sir-2.3 (SIRT-4)**: Knockdown of this mitochondrial sirtuin increased survival and movement, and zoledronic acid (ZA) co-treatment produced similar results, suggesting that `sir-2.3` downregulation may mediate ZA's healthspan effects [1]. Loss of `sir-2.3` also extended lifespan and healthspan, which persisted with combined ZA treatment [2], and its knockdown improved life- and healthspan, supporting a model of bisphosphonate-mediated mitochondrial sirtuin inhibition [3].\n*   **igdb-1 (FNDC5)**: Knockdown significantly increased survival and healthspan. ZA co-treatment displayed similar improvements, suggesting `igdb-1` might be downregulated by ZA or act independently to increase healthspan [1], [6].\n*   **fdps-1 (FDPS)**: Knockdown of `fdps-1` with ZA co-treatment prevents ZA-mediated lifespan and healthspan extension, indicating its requirement for these effects [5], [img 1]. The mevalonate-FOXO system, which involves farnesyl diphosphate synthetase (`fdps-1`), is also implicated as necessary for bisphosphonate-mediated health improvements [4].\n*   **daf-16 (FOXO)**: Knockdown of `daf-16` decreased survival and movement, and no improvement was observed with ZA co-treatment, indicating it is required for ZA's effects [5], [img 1].\n*   **agxt-2 (BAIBA)**: This conserved bone-muscle ortholog is required for ZA-mediated improvement in survival and movement [5], [img 1].\n\nConversely, `sir-2.2` (SIRT-4) is dispensable for ZA's healthspan effects [1], [3], and `let-756` (FGF21) is dispensable for both lifespan and healthspan extension with ZA [1], [6].",
+  "citations": [
+    {
+      "id": "PMC10751425:zoledronic-acid-mediated-healthspan-extension-acts-through-multiple-mechanisms---figure-5:6df91c72",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+      "why_relevant": "Mentions igdb-1 and sir-2.3 knockdown effects, and their relation to ZA's healthspan effects."
+    },
+    {
+      "id": "PMC10751425:results:5ea1665a",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+      "why_relevant": "Describes the effects of sir-2.2 and sir-2.3 knockdown on lifespan and healthspan with ZA treatment."
+    },
+    {
+      "id": "PMC10751425:discussion:eed28ba6",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+      "why_relevant": "Discusses the role of sir-2.3 knockdown in improving life- and healthspan and supporting bisphosphonate-mediated mitochondrial sirtuin inhibition."
+    },
+    {
+      "id": "PMC10751425:discussion:7b0f4426",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+      "why_relevant": "Suggests the mevalonate-FOXO system, including fdps-1, is necessary for bisphosphonate-mediated health improvements."
+    },
+    {
+      "id": "PMC10751425:results:22b20d3e",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+      "why_relevant": "States FDPS-1, daf-16 (FOXO), and agxt-2 (BAIBA) are required for zoledronic acid's healthspan effects."
+    },
+    {
+      "id": "PMC10751425:results:5f487ad3",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+      "why_relevant": "Describes igdb-1 knockdown effects and states let-756 is dispensable for ZA-induced healthspan effects."
+    }
+  ],
+  "image_citations": [
+    {
+      "id": "PMC10751425:zoledronic-acid-mediated-healthspan-extension-acts-through-multiple-mechanisms---figure-4:3e85bff3",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+      "caption_or_alt": "Figure 4 caption stating FDPS, FOXO and BAIBA orthologues are required for zoledronic acid's healthspan effects."
+    }
+  ],
+  "confidence_score": 98
+}
+====================================================================================================

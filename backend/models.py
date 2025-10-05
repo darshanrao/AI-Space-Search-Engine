@@ -7,11 +7,7 @@ from typing import List, Optional, Dict, Any
 from pydantic import BaseModel
 
 
-class Citation(BaseModel):
-    """Citation model matching your RAG pipeline format."""
-    id: str
-    url: str
-    why_relevant: str
+# Citation is now just a string (URL)
 
 
 class ImageCitation(BaseModel):
@@ -24,10 +20,9 @@ class ImageCitation(BaseModel):
 class RAGResponse(BaseModel):
     """RAG response model matching your pipeline output exactly."""
     answer_markdown: str
-    citations: List[Citation]
+    citations: List[str]  # Now just a list of URLs
     image_citations: List[ImageCitation]
-    used_context_ids: List[str]
-    confident: bool
+    confidence_score: int
 
 
 class ChatMessage(BaseModel):
