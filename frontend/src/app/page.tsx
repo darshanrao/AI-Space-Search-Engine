@@ -31,6 +31,7 @@ interface ChatMessage {
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [isScholarLoading, setIsScholarLoading] = useState(false);
+  const [isScholarDisabled, setIsScholarDisabled] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [context, setContext] = useState<{ organism?: string; conditions: string[] }>({
     conditions: []
@@ -42,6 +43,48 @@ export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+
+  const renderScholarResults = (text: string) => {
+    // Split the text into lines and process each line
+    const lines = text.split('\n');
+    const result = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check if this line contains a link
+      if (line.includes('🔗 Link: ')) {
+        const linkUrl = line.replace('🔗 Link: ', '');
+        if (linkUrl.startsWith('http')) {
+          // Create clickable link
+          result.push(
+            <div key={i} style={{ marginBottom: '8px' }}>
+              <a 
+                href={linkUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  color: 'var(--color-primary)',
+                  textDecoration: 'underline',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+              >
+                {linkUrl}
+              </a>
+            </div>
+          );
+        } else {
+          result.push(<div key={i}>{line}</div>);
+        }
+      } else {
+        result.push(<div key={i}>{line}</div>);
+      }
+    }
+    
+    return result;
+  };
 
   const renderAnswerWithCitations = (text: string, citations: (string | {url: string})[] = []) => {
     // Regular expression to match citation patterns like [1], [2], [1, 2], [1-3], etc.
@@ -278,6 +321,7 @@ export default function Home() {
   const handleSearch = async (query: string) => {
     setIsLoading(true);
     setError(null);
+    setIsScholarDisabled(false); // Re-enable scholar button after search
 
     // Add user message
     const userMessage: ChatMessage = {
@@ -386,6 +430,7 @@ export default function Home() {
   // Handle Google Scholar search
   const handleScholarSearch = async (query: string) => {
     setIsScholarLoading(true);
+    setIsScholarDisabled(true); // Disable scholar button
     setError(null);
 
     // Extract context from recent conversation
@@ -415,20 +460,20 @@ export default function Home() {
     const contextText = extractContextFromMessages();
     const searchQuery = query.trim() || contextText || 'space biology research';
 
-    // Add user message for scholar search
-    const userMessage: ChatMessage = {
-      id: Date.now().toString(),
-      type: 'user',
-      content: `🔍 Scholar Search: ${searchQuery}`,
-      timestamp: new Date()
-    };
-    setMessages(prev => [...prev, userMessage]);
-
     try {
       const scholarResponse = await searchGoogleScholar({
         context: searchQuery,
         num_results: 5
       });
+
+      // Add user message showing the actual generated query
+      const userMessage: ChatMessage = {
+        id: Date.now().toString(),
+        type: 'user',
+        content: `🔍 Scholar Search: ${scholarResponse.query}`,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, userMessage]);
 
       // Add scholar results message
       const scholarMessage: ChatMessage = {
@@ -771,11 +816,16 @@ export default function Home() {
                   })
                 }}></div>
                 
-                       <p style={{
+                       <div style={{
                          fontSize: '14px',
                          lineHeight: '1.5',
                          margin: 0
-                       }}>{renderAnswerWithCitations(message.content, message.answer?.citations || [])}</p>
+                       }}>
+                         {message.type === 'scholar' 
+                           ? renderScholarResults(message.content)
+                           : renderAnswerWithCitations(message.content, message.answer?.citations || [])
+                         }
+                       </div>
                 
                 {/* Show answer details for assistant messages */}
                 {message.type === 'assistant' && message.answer && (
@@ -973,6 +1023,7 @@ export default function Home() {
           onScholarSearch={handleScholarSearch}
           isLoading={isLoading}
           isScholarLoading={isScholarLoading}
+          isScholarDisabled={isScholarDisabled}
           placeholder="Ask about space biology experiments and research..."
         />
       </div>

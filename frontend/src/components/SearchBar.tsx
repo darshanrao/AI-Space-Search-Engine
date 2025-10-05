@@ -7,6 +7,7 @@ interface SearchBarProps {
   onScholarSearch?: (query: string) => void;
   isLoading?: boolean;
   isScholarLoading?: boolean;
+  isScholarDisabled?: boolean;
   placeholder?: string;
 }
 
@@ -19,6 +20,7 @@ export default function SearchBar({
   onScholarSearch,
   isLoading = false, 
   isScholarLoading = false,
+  isScholarDisabled = false,
   placeholder = "Ask about space biology experiments and research..." 
 }: SearchBarProps) {
   const [query, setQuery] = useState('');
@@ -39,7 +41,7 @@ export default function SearchBar({
   };
 
   const handleScholarSearch = () => {
-    if (!isScholarLoading && onScholarSearch) {
+    if (!isScholarLoading && !isScholarDisabled && onScholarSearch) {
       onScholarSearch(query.trim() || ''); // Allow empty query for context-based search
     }
   };
@@ -107,9 +109,9 @@ export default function SearchBar({
           <button
             type="button"
             onClick={handleScholarSearch}
-            disabled={isScholarLoading}
+            disabled={isScholarLoading || isScholarDisabled}
             style={{
-              padding: '0 16px',
+              padding: '0 20px',
               backgroundColor: 'var(--color-surface)',
               color: 'var(--color-text-primary)',
               border: '1px solid rgba(30, 33, 51, 0.2)',
@@ -120,8 +122,8 @@ export default function SearchBar({
               gap: '6px',
               fontSize: '14px',
               fontWeight: '500',
-              cursor: isScholarLoading ? 'not-allowed' : 'pointer',
-              opacity: isScholarLoading ? 0.5 : 1,
+              cursor: (isScholarLoading || isScholarDisabled) ? 'not-allowed' : 'pointer',
+              opacity: (isScholarLoading || isScholarDisabled) ? 0.5 : 1,
               transition: 'all 0.2s ease',
               height: '44px',
               whiteSpace: 'nowrap',
@@ -129,14 +131,14 @@ export default function SearchBar({
               flexShrink: 0
             }}
             onMouseEnter={(e) => {
-              if (!isScholarLoading) {
+              if (!isScholarLoading && !isScholarDisabled) {
                 e.currentTarget.style.backgroundColor = 'rgba(62, 142, 222, 0.1)';
                 e.currentTarget.style.borderColor = 'var(--color-primary)';
                 e.currentTarget.style.transform = 'translateY(-1px)';
               }
             }}
             onMouseLeave={(e) => {
-              if (!isScholarLoading) {
+              if (!isScholarLoading && !isScholarDisabled) {
                 e.currentTarget.style.backgroundColor = 'var(--color-surface)';
                 e.currentTarget.style.borderColor = 'rgba(30, 33, 51, 0.2)';
                 e.currentTarget.style.transform = 'translateY(0)';

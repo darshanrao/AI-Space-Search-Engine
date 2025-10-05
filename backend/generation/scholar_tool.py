@@ -93,44 +93,17 @@ class ScholarSearchTool(BaseTool):
         
         formatted_results = []
         formatted_results.append(f"🔍 Google Scholar Results for: '{query}'")
-        formatted_results.append("=" * 80)
         formatted_results.append("")
         
         for i, result in enumerate(results["organic_results"], 1):
             # Extract basic information
             title = result.get("title", "No title")
             link = result.get("link", "")
-            snippet = result.get("snippet", "No abstract available")
             
-            # Extract publication information
-            publication_info = result.get("publication_info", {})
-            authors = publication_info.get("summary", "Authors not specified")
-            
-            # Extract citation information
-            inline_links = result.get("inline_links", {})
-            cited_by = inline_links.get("cited_by", {})
-            citation_count = cited_by.get("total", 0) if cited_by else 0
-            
-            # Format the result with cleaner structure
+            # Format the result with only title and clickable link
             formatted_results.append(f"📄 Paper #{i}")
-            formatted_results.append("─" * 60)
-            formatted_results.append(f"📌 Title: {title}")
-            formatted_results.append("")
-            formatted_results.append(f"👥 Authors: {authors}")
-            if citation_count > 0:
-                formatted_results.append(f"📊 Citations: {citation_count}")
+            formatted_results.append(f"Title: {title}")
             formatted_results.append(f"🔗 Link: {link}")
-            formatted_results.append("")
-            formatted_results.append(f"📝 Abstract: {snippet[:300]}{'...' if len(snippet) > 300 else ''}")
-            formatted_results.append("")
-            formatted_results.append("")  # Extra spacing between papers
-        
-        # Add related searches if available
-        if "related_searches" in results and results["related_searches"]:
-            formatted_results.append("🔍 Related Search Suggestions:")
-            formatted_results.append("─" * 60)
-            for related in results["related_searches"][:3]:  # Show top 3 related searches
-                formatted_results.append(f"• {related.get('query', '')}")
             formatted_results.append("")
         
         return "\n".join(formatted_results)
