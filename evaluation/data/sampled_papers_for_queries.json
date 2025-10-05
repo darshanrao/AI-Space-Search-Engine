@@ -1,0 +1,425 @@
+{
+  "metadata": {
+    "total_sampled": 48,
+    "original_total": 607,
+    "sampling_method": "stratified_random",
+    "random_seed": 42,
+    "target_samples": 48,
+    "sampling_date": "2025-10-04T17:50:35.018793Z",
+    "subfield_distribution": {
+      "space_medicine_physiology": {
+        "sampled": 7,
+        "total": 92,
+        "percentage_of_sample": 14.58
+      },
+      "bone_skeletal": {
+        "sampled": 5,
+        "total": 68,
+        "percentage_of_sample": 10.42
+      },
+      "cellular_molecular": {
+        "sampled": 2,
+        "total": 119,
+        "percentage_of_sample": 4.17
+      },
+      "cardiovascular": {
+        "sampled": 2,
+        "total": 15,
+        "percentage_of_sample": 4.17
+      },
+      "development_reproduction": {
+        "sampled": 2,
+        "total": 6,
+        "percentage_of_sample": 4.17
+      },
+      "plant_biology": {
+        "sampled": 8,
+        "total": 99,
+        "percentage_of_sample": 16.67
+      },
+      "metabolism_endocrine": {
+        "sampled": 2,
+        "total": 10,
+        "percentage_of_sample": 4.17
+      },
+      "bioengineering_methods": {
+        "sampled": 2,
+        "total": 20,
+        "percentage_of_sample": 4.17
+      },
+      "radiation_biology": {
+        "sampled": 2,
+        "total": 20,
+        "percentage_of_sample": 4.17
+      },
+      "microbiome_microbiology": {
+        "sampled": 4,
+        "total": 45,
+        "percentage_of_sample": 8.33
+      },
+      "muscle": {
+        "sampled": 2,
+        "total": 15,
+        "percentage_of_sample": 4.17
+      },
+      "immune_inflammation": {
+        "sampled": 2,
+        "total": 22,
+        "percentage_of_sample": 4.17
+      },
+      "genetics_genomics": {
+        "sampled": 4,
+        "total": 49,
+        "percentage_of_sample": 8.33
+      },
+      "behavior_psychology": {
+        "sampled": 2,
+        "total": 7,
+        "percentage_of_sample": 4.17
+      },
+      "neuro_nervous": {
+        "sampled": 2,
+        "total": 20,
+        "percentage_of_sample": 4.17
+      }
+    }
+  },
+  "papers": [
+    {
+      "article_number": 572,
+      "title": "Mitigation and use of biofilms in space for the benefit of human space exploration",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10284894/",
+      "subfield": "space_medicine_physiology",
+      "subfield_name": "Space Medicine & Physiology"
+    },
+    {
+      "article_number": 121,
+      "title": "Effects of spaceflight and ground recovery on mesenteric artery and vein constrictor properties in mice.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4050424/",
+      "subfield": "space_medicine_physiology",
+      "subfield_name": "Space Medicine & Physiology"
+    },
+    {
+      "article_number": 26,
+      "title": "Extraterrestrial Gynecology: Could Spaceflight Increase the Risk of Developing Cancer in Female Astronauts? An Updated Review",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9267413/",
+      "subfield": "space_medicine_physiology",
+      "subfield_name": "Space Medicine & Physiology"
+    },
+    {
+      "article_number": 275,
+      "title": "CAMDLES: CFD-DEM Simulation of Microbial Communities in Spaceflight and Artificial Microgravity",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9144607/",
+      "subfield": "space_medicine_physiology",
+      "subfield_name": "Space Medicine & Physiology"
+    },
+    {
+      "article_number": 208,
+      "title": "Yeast in Space",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12040010/",
+      "subfield": "space_medicine_physiology",
+      "subfield_name": "Space Medicine & Physiology"
+    },
+    {
+      "article_number": 199,
+      "title": "Spaceflight and simulated microgravity conditions increase virulence of Serratia marcescens in the Drosophila melanogaster infection model.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7000411/",
+      "subfield": "space_medicine_physiology",
+      "subfield_name": "Space Medicine & Physiology"
+    },
+    {
+      "article_number": 129,
+      "title": "Impact of Spaceflight and Artificial Gravity on the Mouse Retina: Biochemical and Proteomic Analysis.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165321/",
+      "subfield": "space_medicine_physiology",
+      "subfield_name": "Space Medicine & Physiology"
+    },
+    {
+      "article_number": 118,
+      "title": "Aging and estrogen status: A possible endothelium-dependent vascular coupling mechanism in bone remodeling.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3502426/",
+      "subfield": "bone_skeletal",
+      "subfield_name": "Bone & Skeletal System"
+    },
+    {
+      "article_number": 98,
+      "title": "Effects of skeletal unloading on the antibody repertoire of tetanus toxoid and/or CpG treated C57BL/6J mice.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11929063/",
+      "subfield": "bone_skeletal",
+      "subfield_name": "Bone & Skeletal System"
+    },
+    {
+      "article_number": 474,
+      "title": "Leptin stimulates bone formation in ob/ob mice at doses having minimal impact on energy metabolism.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5288125/",
+      "subfield": "bone_skeletal",
+      "subfield_name": "Bone & Skeletal System"
+    },
+    {
+      "article_number": 11,
+      "title": "Absence of gamma-sarcoglycan alters the response of p70S6 kinase to mechanical perturbation in murine skeletal muscle",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+      "subfield": "bone_skeletal",
+      "subfield_name": "Bone & Skeletal System"
+    },
+    {
+      "article_number": 10,
+      "title": "Effects of ex vivo ionizing radiation on collagen structure and whole-bone mechanical properties of mouse vertebrae.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6813909/",
+      "subfield": "bone_skeletal",
+      "subfield_name": "Bone & Skeletal System"
+    },
+    {
+      "article_number": 51,
+      "title": "Tardigrades Use Intrinsically Disordered Proteins to Survive Desiccation.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11127935/",
+      "subfield": "cellular_molecular",
+      "subfield_name": "Cellular & Molecular Biology"
+    },
+    {
+      "article_number": 113,
+      "title": "NASA GeneLab derived microarray studies of Mus musculus and Homo sapiens organisms in altered gravitational conditions.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11053165/",
+      "subfield": "cellular_molecular",
+      "subfield_name": "Cellular & Molecular Biology"
+    },
+    {
+      "article_number": 84,
+      "title": "Cardiovascular progenitor cells cultured aboard the International Space Station exhibit altered developmental and functional properties",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6062551/",
+      "subfield": "cardiovascular",
+      "subfield_name": "Cardiovascular"
+    },
+    {
+      "article_number": 285,
+      "title": "Effects of low-dose rate \u0152\u2265-irradiation combined with simulated microgravity on markers of oxidative stress, DNA methylation potential, and remodeling in the mouse heart",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5498037/",
+      "subfield": "cardiovascular",
+      "subfield_name": "Cardiovascular"
+    },
+    {
+      "article_number": 460,
+      "title": "A Tissue Retrieval and Postharvest Processing Regimen for Rodent Reproductive Tissues Compatible with Long-Term Storage on the International Space Station and Postflight Biospecimen Sharing Program",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309301/",
+      "subfield": "development_reproduction",
+      "subfield_name": "Development & Reproduction"
+    },
+    {
+      "article_number": 12,
+      "title": "AtRabD2b and AtRabD2c have overlapping functions in pollen development and pollen tube growth.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040128/",
+      "subfield": "development_reproduction",
+      "subfield_name": "Development & Reproduction"
+    },
+    {
+      "article_number": 376,
+      "title": "The 14-3-3 proteins of Arabidopsis regulate root growth and chloroplast development as components of the photosensory system.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3350920/",
+      "subfield": "plant_biology",
+      "subfield_name": "Plant Biology"
+    },
+    {
+      "article_number": 149,
+      "title": "Utilization of single\u201a\u00c4\u00eaimage normalized difference vegetation index (SI\u201a\u00c4\u00eaNDVI) for early plant stress detection",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201722/",
+      "subfield": "plant_biology",
+      "subfield_name": "Plant Biology"
+    },
+    {
+      "article_number": 427,
+      "title": "ANN1 and ANN2 Function in Post-Phloem Sugar Transport in Root Tips to Affect Primary Root Growth",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6130020/",
+      "subfield": "plant_biology",
+      "subfield_name": "Plant Biology"
+    },
+    {
+      "article_number": 404,
+      "title": "Uncovering transcriptional responses to fractional gravity in Arabidopsis roots",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8539686/",
+      "subfield": "plant_biology",
+      "subfield_name": "Plant Biology"
+    },
+    {
+      "article_number": 425,
+      "title": "Proteomic study of microsomal proteins reveals a key role for Arabidopsis Annexin 1 in mediating heat stress-induced increase in intracellular calcium levels.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4349987/",
+      "subfield": "plant_biology",
+      "subfield_name": "Plant Biology"
+    },
+    {
+      "article_number": 338,
+      "title": "A conditional mutation in SCD1 reveals linkage between PIN protein trafficking, auxin transport, gravitropism, and lateral root initiation.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7358545/",
+      "subfield": "plant_biology",
+      "subfield_name": "Plant Biology"
+    },
+    {
+      "article_number": 262,
+      "title": "Comparative transcriptomics indicate changes in cell wall organization and stress response in seedlings during spaceflight",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5821596/",
+      "subfield": "plant_biology",
+      "subfield_name": "Plant Biology"
+    },
+    {
+      "article_number": 152,
+      "title": "The Plant Health Monitoring System of the EDEN ISS Space Greenhouse in Antarctica during the 2018 experiment phase",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7264257/",
+      "subfield": "plant_biology",
+      "subfield_name": "Plant Biology"
+    },
+    {
+      "article_number": 311,
+      "title": "Spaceflight induces changes in gene expression profiles linked to insulin and estrogen",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11166981/",
+      "subfield": "metabolism_endocrine",
+      "subfield_name": "Metabolism & Endocrine"
+    },
+    {
+      "article_number": 209,
+      "title": "Endocrine Effects of Space Flight",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11833055/",
+      "subfield": "metabolism_endocrine",
+      "subfield_name": "Metabolism & Endocrine"
+    },
+    {
+      "article_number": 22,
+      "title": "FAIRness and usability for open-access omics data systems.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371294/",
+      "subfield": "bioengineering_methods",
+      "subfield_name": "Bioengineering & Methods"
+    },
+    {
+      "article_number": 107,
+      "title": "A New Era for Space Life Science: International Standards for Space Omics Processing",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7733874/",
+      "subfield": "bioengineering_methods",
+      "subfield_name": "Bioengineering & Methods"
+    },
+    {
+      "article_number": 408,
+      "title": "Simulated microgravity impairs human NK [natural killer] cell cytotoxic activity against space radiation-relevant leukemic cells",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11324864/",
+      "subfield": "radiation_biology",
+      "subfield_name": "Radiation Biology"
+    },
+    {
+      "article_number": 328,
+      "title": "Reactivation of Latent Epstein-Barr Virus: A Comparison after Exposure to Gamma, Proton, Carbon, and Iron Radiation",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6213004/",
+      "subfield": "radiation_biology",
+      "subfield_name": "Radiation Biology"
+    },
+    {
+      "article_number": 353,
+      "title": "Induction of attachment-independent biofilm formation and repression of Hfq expression by low-fluid-shear culture of Staphylococcus aureus",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187170/",
+      "subfield": "microbiome_microbiology",
+      "subfield_name": "Microbiome & Microbiology"
+    },
+    {
+      "article_number": 196,
+      "title": "Novel Organelles with Elements of Bacterial and Eukaryotic Secretion Systems Weaponize Parasites of Drosophila",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5659752/",
+      "subfield": "microbiome_microbiology",
+      "subfield_name": "Microbiome & Microbiology"
+    },
+    {
+      "article_number": 329,
+      "title": "The influence of spaceflight on the astronaut salivary microbiome and the search for a microbiome biomarker for viral reactivation",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7171750/",
+      "subfield": "microbiome_microbiology",
+      "subfield_name": "Microbiome & Microbiology"
+    },
+    {
+      "article_number": 360,
+      "title": "Mimicking the host and its microenvironment in vitro for studying mucosal infections by Pseudomonas aeruginosa.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4096993/",
+      "subfield": "microbiome_microbiology",
+      "subfield_name": "Microbiome & Microbiology"
+    },
+    {
+      "article_number": 57,
+      "title": "Spaceflight and hind limb unloading induce similar changes in electrical impedance characteristics of mouse gastrocnemius muscle",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4653813/",
+      "subfield": "muscle",
+      "subfield_name": "Muscle"
+    },
+    {
+      "article_number": 500,
+      "title": "Bisphosphonates attenuate age-related muscle decline in Caenorhabditis elegans.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10751425/",
+      "subfield": "muscle",
+      "subfield_name": "Muscle"
+    },
+    {
+      "article_number": 302,
+      "title": "Longitudinal multi-omics analysis of host microbiome architecture and immune responses during short-term spaceflight",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11222149/",
+      "subfield": "immune_inflammation",
+      "subfield_name": "Immunity & Inflammation"
+    },
+    {
+      "article_number": 91,
+      "title": "Understanding macrophage differentiation during space flight: The importance of ground-based experiments before space flight",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3890248/",
+      "subfield": "immune_inflammation",
+      "subfield_name": "Immunity & Inflammation"
+    },
+    {
+      "article_number": 437,
+      "title": "Transcriptomic Signature of the Simulated Microgravity Response in Caenorhabditis elegans and Comparison to Spaceflight Experiments.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9856674/",
+      "subfield": "genetics_genomics",
+      "subfield_name": "Genetics & Genomics"
+    },
+    {
+      "article_number": 537,
+      "title": "Draft Genome Sequences of Klebsiella Species Isolated from the International Space Station",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7561690/",
+      "subfield": "genetics_genomics",
+      "subfield_name": "Genetics & Genomics"
+    },
+    {
+      "article_number": 342,
+      "title": "Complete Genome Sequence of Carnobacterium gilichinskyi Strain WN1359T (DSM 27470T)",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3869332/",
+      "subfield": "genetics_genomics",
+      "subfield_name": "Genetics & Genomics"
+    },
+    {
+      "article_number": 86,
+      "title": "Genomic and functional characterization of Enterococcus faecalis isolates recovered from the International Space Station and their potential for pathogenicity",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7829349/",
+      "subfield": "genetics_genomics",
+      "subfield_name": "Genetics & Genomics"
+    },
+    {
+      "article_number": 420,
+      "title": "Hypergravity disruption of homeorhetic adaptations to lactation in rat dams include changes in circadian clocks",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509447/",
+      "subfield": "behavior_psychology",
+      "subfield_name": "Behavior & Psychology"
+    },
+    {
+      "article_number": 288,
+      "title": "Spaceflight influences gene expression, photoreceptor integrity, and oxidative stress-related damage in the murine retina.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6746706/",
+      "subfield": "behavior_psychology",
+      "subfield_name": "Behavior & Psychology"
+    },
+    {
+      "article_number": 491,
+      "title": "Swim exercise in Caenorhabditis elegans extends neuromuscular and gut healthspan, enhances learning ability, and protects against neurodegeneration",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6876156/",
+      "subfield": "neuro_nervous",
+      "subfield_name": "Neuroscience & Nervous System"
+    },
+    {
+      "article_number": 141,
+      "title": "Metabolomic profiling of the secretome from human neural stem cells flown into space.",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813126/",
+      "subfield": "neuro_nervous",
+      "subfield_name": "Neuroscience & Nervous System"
+    }
+  ]
+}

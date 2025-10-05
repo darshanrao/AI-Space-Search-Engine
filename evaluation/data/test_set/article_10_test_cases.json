@@ -1,0 +1,268 @@
+{
+  "paper_id": "PMC4095884",
+  "paper_title": "Absence of γ-sarcoglycan alters the response of p70S6 kinase to mechanical perturbation in murine skeletal muscle",
+  "paper_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+  
+  "test_cases": [
+    {
+      "id": "PMC4095884_Q1",
+      "question": "What effect does passive stretch have on p70S6K phosphorylation in C2C12 myotubes?",
+      "question_type": "factual",
+      "difficulty": "easy",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4095884:results:16058cd0"
+          ],
+          "should_retrieve": [
+            "PMC4095884:statistics---figure-1:4103201e"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "Passive stretching of **C2C12 myotubes** caused an **increase in p70S6K phosphorylation at T389**, indicating activation of the kinase, while **ERK1, Akt, and FAK** did not show increased phosphorylation [1], [2].",
+          "citations": [
+            {
+              "id": "PMC4095884:results:16058cd0",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Reports the observed increase in p70S6K phosphorylation at T389 after passive stretching of C2C12 myotubes."
+            },
+            {
+              "id": "PMC4095884:statistics---figure-1:4103201e",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Provides supporting quantitative immunoblot data confirming p70S6K activation in stretched C2C12 cells."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4095884:results:16058cd0",
+            "PMC4095884:statistics---figure-1:4103201e"
+          ],
+          "key_facts": [
+            "Passive stretch increased phosphorylation of p70S6K at T389.",
+            "No increase in ERK1, Akt, or FAK phosphorylation.",
+            "Indicates activation of p70S6K through an Akt-independent pathway."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC4095884_Q2",
+      "question": "How does p70S6K activation differ between wild-type (C57) and γ-sarcoglycan-null (γ-SG -/-) muscles after passive stretch?",
+      "question_type": "comparative",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4095884:results:a7fd1a09",
+            "PMC4095884:results:2b6a2854"
+          ],
+          "should_retrieve": [
+            "PMC4095884:discussion:1708cbe4"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "After **30 minutes of stretch**, both C57 and γ-SG -/- muscles showed increased p70S6K phosphorylation, but after **90 minutes**, phosphorylation **decreased in C57** and **remained elevated or further increased in γ-SG -/- muscles**, indicating a **failure of inactivation** in the knockout mice [1], [2], [3].",
+          "citations": [
+            {
+              "id": "PMC4095884:results:a7fd1a09",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Describes the time-dependent phosphorylation differences between C57 and γ-SG -/- muscles during passive stretch."
+            },
+            {
+              "id": "PMC4095884:results:2b6a2854",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Quantifies the prolonged p70S6K activation and its statistical significance in γ-SG -/- muscles."
+            },
+            {
+              "id": "PMC4095884:discussion:1708cbe4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Provides interpretation that γ-SG is important for inactivation of p70S6K after stretch."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4095884:results:a7fd1a09",
+            "PMC4095884:results:2b6a2854",
+            "PMC4095884:discussion:1708cbe4"
+          ],
+          "key_facts": [
+            "C57 muscles show transient p70S6K activation.",
+            "γ-SG -/- muscles maintain prolonged activation after 90 minutes of stretch.",
+            "Loss of γ-SG disrupts the normal inactivation of p70S6K."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC4095884_Q3",
+      "question": "What mechanisms explain the calcium independence of p70S6K activation in γ-SG -/- muscles?",
+      "question_type": "complex",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4095884:results:9d982e7b",
+            "PMC4095884:results:ec9d22a6",
+            "PMC4095884:discussion:5300f309"
+          ],
+          "should_retrieve": [
+            "PMC4095884:background:7f49998a"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "p70S6K phosphorylation in γ-SG -/- muscles remained **unaltered by removal of extracellular Ca²⁺** or **blockade of sarcoplasmic reticulum Ca²⁺ release** with tetracaine, indicating calcium independence [1], [2]. The discussion explains that while **ERK1/2 activation depends on calcium misregulation**, **p70S6K changes appear to result directly from the absence of the sarcoglycan complex**, possibly via altered mechanosensing and deactivation pathways [3], [4].",
+          "citations": [
+            {
+              "id": "PMC4095884:results:9d982e7b",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Reports that extracellular calcium removal does not affect p70S6K phosphorylation differences between wild-type and knockout muscles."
+            },
+            {
+              "id": "PMC4095884:results:ec9d22a6",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Confirms that blocking intracellular Ca²⁺ release does not change p70S6K levels."
+            },
+            {
+              "id": "PMC4095884:discussion:5300f309",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Provides mechanistic interpretation linking γ-SG loss to calcium-independent p70S6K activation."
+            },
+            {
+              "id": "PMC4095884:background:7f49998a",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Gives background on how calcium dysregulation contributes to other dystrophic signaling pathways."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4095884:results:9d982e7b",
+            "PMC4095884:results:ec9d22a6",
+            "PMC4095884:discussion:5300f309",
+            "PMC4095884:background:7f49998a"
+          ],
+          "key_facts": [
+            "p70S6K activation is unchanged in calcium-free or tetracaine-treated conditions.",
+            "ERK1/2 activation is calcium-dependent but p70S6K is not.",
+            "Loss of γ-SG causes direct mechanosensory dysregulation of p70S6K rather than calcium-mediated effects."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC4095884_Q4",
+      "question": "Which phosphorylation sites on p70S6K were analyzed to assess kinase activation and what are their roles?",
+      "question_type": "specific",
+      "difficulty": "medium",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4095884:background:0a2f0554"
+          ],
+          "should_retrieve": [
+            "PMC4095884:results:a7fd1a09",
+            "PMC4095884:discussion:15f867c4"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "The study measured phosphorylation at **T389** (mTOR-dependent site correlated with kinase activity) and **T421/S424** (autoinhibitory domain sites required for full activation). T389 phosphorylation reflects **overall activation state**, while T421/S424 phosphorylation represents **regulatory priming by proline-directed kinases**, possibly including ERK1/2 [1], [2], [3].",
+          "citations": [
+            {
+              "id": "PMC4095884:background:0a2f0554",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Explains the biochemical sequence and role of T389 and T421/S424 phosphorylation in activating p70S6K."
+            },
+            {
+              "id": "PMC4095884:results:a7fd1a09",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Reports experimental measurements of T389 and T421/S424 phosphorylation under stretch conditions."
+            },
+            {
+              "id": "PMC4095884:discussion:15f867c4",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Discusses how correlation of T421/S424 and T389 phosphorylation implies hierarchical regulation of activation."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4095884:background:0a2f0554",
+            "PMC4095884:results:a7fd1a09",
+            "PMC4095884:discussion:15f867c4"
+          ],
+          "key_facts": [
+            "T389 phosphorylation reflects mTOR-dependent activation.",
+            "T421/S424 phosphorylation occurs in the autoinhibitory domain.",
+            "ERK1/2 may phosphorylate T421/S424, contributing to p70S6K regulation."
+          ],
+          "confident": true
+        }
+      }
+    },
+    {
+      "id": "PMC4095884_Q5",
+      "question": "What are the key signaling pathways and molecular mechanisms through which γ-sarcoglycan influences mechanotransduction in skeletal muscle?",
+      "question_type": "broad",
+      "difficulty": "hard",
+      "ground_truth": {
+        "retrieval": {
+          "must_retrieve": [
+            "PMC4095884:discussion:4defa605",
+            "PMC4095884:discussion:25feddc7",
+            "PMC4095884:conclusions:0981ed06"
+          ],
+          "should_retrieve": [
+            "PMC4095884:background:908ea9a3",
+            "PMC4095884:discussion:f14e1aae"
+          ],
+          "may_retrieve": []
+        },
+        "answer": {
+          "answer_markdown": "γ-Sarcoglycan functions as a **mechanosensor** that modulates multiple signaling pathways including **ERK1/2, mTOR/p70S6K, and phosphatase-mediated deactivation (PP2A, SHP-2)**. Its loss causes **uncoupling of p70S6K response to stretch**, **sustained kinase activation**, and **altered calcium signaling**, collectively contributing to **muscle pathology** [1], [2], [3], [4], [5].",
+          "citations": [
+            {
+              "id": "PMC4095884:discussion:4defa605",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Positions γ-sarcoglycan as a central mechanosensor regulating ERK1/2 and p70S6K activation during stretch."
+            },
+            {
+              "id": "PMC4095884:discussion:25feddc7",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Describes γ-SG’s role in load sensing and implications for muscular dystrophy pathology."
+            },
+            {
+              "id": "PMC4095884:conclusions:0981ed06",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Summarizes the finding that γ-SG is required for proper inactivation of p70S6K after mechanical stimulation."
+            },
+            {
+              "id": "PMC4095884:background:908ea9a3",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Outlines the experimental framework investigating ERK1/2, Akt, FAK, and p70S6K responses to stretch."
+            },
+            {
+              "id": "PMC4095884:discussion:f14e1aae",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4095884/",
+              "why_relevant": "Links mechanotransduction dysregulation to therapeutic implications in muscular dystrophies."
+            }
+          ],
+          "used_context_ids": [
+            "PMC4095884:discussion:4defa605",
+            "PMC4095884:discussion:25feddc7",
+            "PMC4095884:conclusions:0981ed06",
+            "PMC4095884:background:908ea9a3",
+            "PMC4095884:discussion:f14e1aae"
+          ],
+          "key_facts": [
+            "γ-SG modulates ERK1/2 and p70S6K activation through mechanosensitive pathways.",
+            "Loss of γ-SG results in sustained p70S6K activation and impaired dephosphorylation.",
+            "Involves mTOR, PP2A, SHP-2, and ERK-dependent regulation of muscle mechanotransduction.",
+            "Altered signaling contributes to muscular dystrophy pathology through abnormal load sensing."
+          ],
+          "confident": true
+        }
+      }
+    }
+  ]
+}
