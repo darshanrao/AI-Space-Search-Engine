@@ -417,8 +417,32 @@ export default function Home() {
     <div style={{
       height: '100vh',
       color: 'var(--color-text-primary)',
-      position: 'relative'
+      position: 'relative',
+      overflow: 'hidden'
     }}>
+      {/* Solar System Animation Background */}
+      <div className="solar-syst" style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: 0,
+        opacity: 0.5
+      }}>
+        <div className="sun"></div>
+        <div className="mercury"></div>
+        <div className="venus"></div>
+        <div className="earth"></div>
+        <div className="mars"></div>
+        <div className="jupiter"></div>
+        <div className="saturn"></div>
+        <div className="uranus"></div>
+        <div className="neptune"></div>
+        <div className="pluto"></div>
+        <div className="asteroids-belt"></div>
+      </div>
       {/* Sessions Sidebar */}
       {isMounted && (
         <SessionsSidebar
@@ -441,7 +465,9 @@ export default function Home() {
         paddingLeft: 'max(16px, env(safe-area-inset-left))',
         paddingRight: 'max(16px, env(safe-area-inset-right))',
         transition: 'width 0.3s ease, margin-left 0.3s ease',
-        minWidth: 0
+        minWidth: 0,
+        position: 'relative',
+        zIndex: 1
       }}>
       {/* Chat Header */}
       <div style={{
