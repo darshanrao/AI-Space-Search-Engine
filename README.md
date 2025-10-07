@@ -41,7 +41,7 @@ We structured AstroBio Explorer into three main parts working together.
 ### 🧠 Backend (RAG + AI)
 
 * Built with **FastAPI**, **LangChain**, and **Gemini 2.5 Flash**
-* Parsed and chunked **606 NASA bioscience articles** at the sentence level
+* Parsed and chunked **608 NASA bioscience articles** at the sentence level
 * Generated dense and sparse embeddings and stored them in **Qdrant** for fast retrieval
 * Used a small agent system to combine the RAG pipeline with **Google Scholar** and **image search**, merging multiple sources for each response
 
