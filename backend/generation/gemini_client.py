@@ -55,6 +55,20 @@ class GeminiClient:
                 generation_config=generation_config
             )
             
+            # Check for blocking or filtering
+            if response.candidates and response.candidates[0].finish_reason == 2:
+                raise RuntimeError(f"Gemini API blocked content (finish_reason=2). This may be due to safety filters or content policy violations.")
+            elif response.candidates and response.candidates[0].finish_reason == 3:
+                raise RuntimeError(f"Gemini API stopped generation early (finish_reason=3). This may be due to safety concerns.")
+            elif response.candidates and response.candidates[0].finish_reason == 4:
+                raise RuntimeError(f"Gemini API stopped generation due to recitation (finish_reason=4).")
+            elif response.candidates and response.candidates[0].finish_reason == 5:
+                raise RuntimeError(f"Gemini API stopped generation due to other reasons (finish_reason=5).")
+            
+            # Check if response has valid content
+            if not response.candidates or not response.candidates[0].content:
+                raise RuntimeError(f"Gemini API returned empty response. Candidates: {response.candidates}")
+            
             return response.text
             
         except Exception as e:
@@ -146,6 +160,20 @@ Validation:
         """
         try:
             response = self.model.generate_content(prompt)
+            
+            # Check for blocking or filtering
+            if response.candidates and response.candidates[0].finish_reason == 2:
+                print(f"Gemini API blocked query generation (finish_reason=2). Using fallback.")
+                return ""
+            elif response.candidates and response.candidates[0].finish_reason == 3:
+                print(f"Gemini API stopped query generation early (finish_reason=3). Using fallback.")
+                return ""
+            
+            # Check if response has valid content
+            if not response.candidates or not response.candidates[0].content:
+                print(f"Gemini API returned empty response for query generation. Using fallback.")
+                return ""
+            
             return response.text.strip()
         except Exception as e:
             print(f"Error generating query: {e}")

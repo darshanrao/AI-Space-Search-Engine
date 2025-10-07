@@ -19,10 +19,12 @@ class RAGSearchTool(BaseTool):
     
     name: str = "search_space_biology_corpus"
     description: str = (
-        "Search a curated database of 608 Space Biology publications from PubMed Central (2010-present). "
-        "ONLY use this tool when you need specific research findings, experimental data, or citations from published space biology studies. "
-        "This database contains peer-reviewed research papers on space biology topics like microgravity effects, space radiation, "
-        "biological experiments in space, and related scientific studies. Do NOT use for general scientific concepts or basic definitions."
+       "Search the space biology research corpus for scientific information. "
+        "Use this tool when you need specific scientific facts, research findings, "
+        "or detailed information about space biology topics that you don't already know. "
+        "This tool searches through a curated collection of NASA and space biology research papers. "
+        "Only use this tool when you cannot answer from your existing knowledge or when "
+        "you need to provide specific citations and sources."
     )
     args_schema: Type[BaseModel] = RAGSearchInput
     
