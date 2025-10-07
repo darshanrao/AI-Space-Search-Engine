@@ -1,0 +1,21 @@
+{
+  "article_number": 106,
+  "test_case_id": "PMC7733874_Q5",
+  "question": "Outline the main categories of challenges faced by space biologists when conducting omics experiments and describe how the ISSOP consortium aims to overcome these through its mission and deliverables.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.2857,
+    "soft_recall_at_k": 0.1739
+  },
+  "answer": {
+    "semantic_similarity": 0.6687,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.5714,
+    "recall": 0.1818,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5727
+}

@@ -1,0 +1,21 @@
+{
+  "article_number": 426,
+  "test_case_id": "PMC6130020_Q1",
+  "question": "What is the percentage identity in the primary structure between Arabidopsis annexins ANN1 and ANN2?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9611,
+    "key_facts_coverage": 0.3333
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8412
+}

@@ -1,0 +1,21 @@
+{
+  "article_number": 536,
+  "test_case_id": "PMC7561690_Q4",
+  "question": "What specific Illumina protocol and flow cell were used for library preparation and paired-end sequencing of the *Klebsiella* genomes, and which software tools were employed for quality assessment, adapter trimming, and assembly?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.3333
+  },
+  "answer": {
+    "semantic_similarity": 0.8455,
+    "key_facts_coverage": 0.8333
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.3333,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6791
+}

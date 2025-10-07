@@ -1,0 +1,21 @@
+{
+  "article_number": 56,
+  "test_case_id": "PMC4653813_Q2",
+  "question": "How did spaceflight and hind limb unloading (HLU) affect hind limb areal bone mineral density (aBMD) in mice, and what were the specific values observed?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.7897,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.25,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8277
+}

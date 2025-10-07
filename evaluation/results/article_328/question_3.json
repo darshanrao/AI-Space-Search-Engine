@@ -1,0 +1,21 @@
+{
+  "article_number": 328,
+  "test_case_id": "PMC7171750_Q3",
+  "question": "Based on the study's findings and discussions, what are the proposed mechanisms by which specific salivary bacterial genera might either promote or protect against Epstein-Barr virus (EBV) reactivation?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.3333,
+    "soft_recall_at_k": 0.25
+  },
+  "answer": {
+    "semantic_similarity": 0.8239,
+    "key_facts_coverage": 0.8333
+  },
+  "citations": {
+    "precision": 0.4,
+    "recall": 0.25,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.585
+}

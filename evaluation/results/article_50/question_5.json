@@ -1,0 +1,21 @@
+{
+  "article_number": 50,
+  "test_case_id": "PMC11127935_Q5",
+  "question": "Summarize the main findings regarding the protective capabilities and structural characteristics of tardigrade SAHS proteins, and elaborate on their proposed mechanism of action and potential practical applications.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.2727,
+    "soft_recall_at_k": 0.25
+  },
+  "answer": {
+    "semantic_similarity": 0.8249,
+    "key_facts_coverage": 0.3333
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 0.2,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.4543
+}

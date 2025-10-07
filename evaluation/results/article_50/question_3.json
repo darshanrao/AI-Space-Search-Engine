@@ -1,0 +1,21 @@
+{
+  "article_number": 50,
+  "test_case_id": "PMC11127935_Q3",
+  "question": "Based on the experimental and computational evidence presented, describe the proposed multi-step mechanism by which SAHS proteins protect biological structures during desiccation.",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.2,
+    "soft_recall_at_k": 0.2
+  },
+  "answer": {
+    "semantic_similarity": 0.8802,
+    "key_facts_coverage": 0.25
+  },
+  "citations": {
+    "precision": 0.1429,
+    "recall": 0.125,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.4088
+}

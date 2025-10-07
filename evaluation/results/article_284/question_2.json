@@ -1,0 +1,21 @@
+{
+  "article_number": 284,
+  "test_case_id": "PMC5498037_Q2",
+  "question": "How did the combined exposure to hindlimb unloading (HU) and low-dose rate \u03b3-irradiation affect GSH:GSSG ratios compared to either treatment alone at the 7-day time point?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.3333
+  },
+  "answer": {
+    "semantic_similarity": 0.8561,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.3333,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6982
+}

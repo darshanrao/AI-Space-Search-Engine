@@ -1,0 +1,21 @@
+{
+  "article_number": 151,
+  "test_case_id": "PMC7264257_Q1",
+  "question": "What was the total edible biomass produced by the EDEN ISS greenhouse in 2018?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9609,
+    "key_facts_coverage": 0.5
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8453
+}

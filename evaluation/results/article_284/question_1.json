@@ -1,0 +1,21 @@
+{
+  "article_number": 284,
+  "test_case_id": "PMC5498037_Q1",
+  "question": "What analytical technique was primarily used to determine GSH:GSSG ratios in the mouse heart samples?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 0.0,
+    "soft_recall_at_k": 0.3333
+  },
+  "answer": {
+    "semantic_similarity": 0.6891,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.4967
+}

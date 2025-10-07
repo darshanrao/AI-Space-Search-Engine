@@ -1,0 +1,21 @@
+{
+  "article_number": 426,
+  "test_case_id": "PMC6130020_Q3",
+  "question": "Explain the proposed mechanism by which impaired post-phloem sugar transport in ANN1/ANN2 knockout mutants leads to the observed up-regulation of photosynthetic genes in cotyledons.",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.4286,
+    "soft_recall_at_k": 0.2727
+  },
+  "answer": {
+    "semantic_similarity": 0.7872,
+    "key_facts_coverage": 0.625
+  },
+  "citations": {
+    "precision": 0.4,
+    "recall": 0.1818,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5459
+}

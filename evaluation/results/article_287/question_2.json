@@ -1,0 +1,21 @@
+{
+  "article_number": 287,
+  "test_case_id": "PMC6746706_Q2",
+  "question": "How many genes were upregulated versus downregulated in the spaceflight group compared to the ground control group, according to the RNA sequencing analysis?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.75
+  },
+  "answer": {
+    "semantic_similarity": 0.824,
+    "key_facts_coverage": 0.75
+  },
+  "citations": {
+    "precision": 0.375,
+    "recall": 0.75,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8021
+}

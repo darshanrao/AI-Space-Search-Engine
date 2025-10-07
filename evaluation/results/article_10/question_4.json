@@ -1,0 +1,21 @@
+{
+  "article_number": 10,
+  "test_case_id": "PMC4095884_Q4",
+  "question": "Which specific phosphorylation sites of p70S6K were measured in this study, and which site is considered to correlate most closely with its in vivo activity?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.3333
+  },
+  "answer": {
+    "semantic_similarity": 0.8742,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.25,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6842
+}

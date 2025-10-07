@@ -1,0 +1,21 @@
+{
+  "article_number": 207,
+  "test_case_id": "PMC12040010_Q2",
+  "question": "How did the patient's brain MRI findings change from before surgery/treatment to after treatment for *Cryptococcus albidus* meningitis?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.8,
+    "soft_recall_at_k": 0.8
+  },
+  "answer": {
+    "semantic_similarity": 0.815,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.875
+}

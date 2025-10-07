@@ -10,7 +10,6 @@ __pycache__/
 # Evaluation - keep test_set, ignore everything else
 evaluation/data/*
 !evaluation/data/test_set/
-evaluation/results/
 evaluation/.env
 evaluation/venv/
 evaluation/.claude/

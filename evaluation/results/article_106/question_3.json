@@ -1,0 +1,21 @@
+{
+  "article_number": 106,
+  "test_case_id": "PMC7733874_Q3",
+  "question": "How do the identified technical and biological challenges in space omics experiments, such as hardware design and sample preservation, underscore the necessity for the International Standards for Space Omics Processing (ISSOP) consortium?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.1429,
+    "soft_recall_at_k": 0.1667
+  },
+  "answer": {
+    "semantic_similarity": 0.6354,
+    "key_facts_coverage": 0.4
+  },
+  "citations": {
+    "precision": 0.4,
+    "recall": 0.1538,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.3907
+}

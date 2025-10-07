@@ -1,0 +1,21 @@
+{
+  "article_number": 151,
+  "test_case_id": "PMC7264257_Q3",
+  "question": "Describe the target environmental conditions within the EDEN ISS Future Exploration Greenhouse (FEG) and the specific challenges encountered in maintaining these conditions during the 2018 experiment phase.",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.6667,
+    "soft_recall_at_k": 0.5
+  },
+  "answer": {
+    "semantic_similarity": 0.9658,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7798
+}

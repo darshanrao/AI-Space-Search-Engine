@@ -1,0 +1,21 @@
+{
+  "article_number": 359,
+  "test_case_id": "PMC4096993_Q4",
+  "question": "What are the specific physical and chemical host factors in the cystic fibrosis (CF) lung environment that contribute to a \"CF-like\" *P. aeruginosa* phenotype, and what are the resulting bacterial characteristics?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.4286
+  },
+  "answer": {
+    "semantic_similarity": 0.8976,
+    "key_facts_coverage": 0.7143
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 0.75,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7515
+}

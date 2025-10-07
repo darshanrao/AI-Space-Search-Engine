@@ -1,0 +1,21 @@
+{
+  "article_number": 274,
+  "test_case_id": "PMC9144607_Q3",
+  "question": "What are the primary limitations of the CAMDLES simulation approach, and how do these limitations affect the ability to draw comprehensive conclusions about long-term microbial community dynamics and the full range of microgravity effects?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.75,
+    "soft_recall_at_k": 0.7143
+  },
+  "answer": {
+    "semantic_similarity": 0.8426,
+    "key_facts_coverage": 0.8
+  },
+  "citations": {
+    "precision": 0.6667,
+    "recall": 0.5714,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.775
+}

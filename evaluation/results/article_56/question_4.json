@@ -1,0 +1,21 @@
+{
+  "article_number": 56,
+  "test_case_id": "PMC4653813_Q4",
+  "question": "What specific frequency range was used to calculate the phase-slope parameter in the electrical impedance myography (EIM) data analysis, and how was the phase calculated?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.718,
+    "key_facts_coverage": 0.75
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8803
+}

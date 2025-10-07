@@ -1,0 +1,21 @@
+{
+  "article_number": 536,
+  "test_case_id": "PMC7561690_Q2",
+  "question": "How many strains of each *Klebsiella* species (*K. aerogenes*, *K. pneumoniae*, and *K. quasipneumoniae*) were isolated from the ISS, and what was the highest Average Nucleotide Identity (ANI) percentage recorded for each species compared to its type strain?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.5,
+    "soft_recall_at_k": 0.6
+  },
+  "answer": {
+    "semantic_similarity": 0.7522,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.25,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7034
+}

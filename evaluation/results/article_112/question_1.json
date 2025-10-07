@@ -1,0 +1,21 @@
+{
+  "article_number": 112,
+  "test_case_id": "PMC11053165_Q1",
+  "question": "What specific genes were found to be significantly upregulated in two different human vastus lateralis experiments (OSD-195 and OSD-370) due to altered gravity conditions?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.6863,
+    "key_facts_coverage": 0.75
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8398
+}

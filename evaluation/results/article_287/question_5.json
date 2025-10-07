@@ -1,0 +1,21 @@
+{
+  "article_number": 287,
+  "test_case_id": "PMC6746706_Q5",
+  "question": "Provide a comprehensive overview of the key findings regarding the effects of spaceflight on the murine retina, encompassing changes in gene expression, structural integrity, and oxidative stress.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.3636,
+    "soft_recall_at_k": 0.2963
+  },
+  "answer": {
+    "semantic_similarity": 0.8635,
+    "key_facts_coverage": 0.4545
+  },
+  "citations": {
+    "precision": 0.3636,
+    "recall": 0.25,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5196
+}

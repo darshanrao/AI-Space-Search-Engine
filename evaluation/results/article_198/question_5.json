@@ -1,0 +1,21 @@
+{
+  "article_number": 198,
+  "test_case_id": "PMC7000411_Q5",
+  "question": "Describe the overall experimental design used to investigate the effects of spaceflight and simulated microgravity on Serratia marcescens virulence, including the host model, bacterial treatments, and key measurements taken.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.2,
+    "soft_recall_at_k": 0.25
+  },
+  "answer": {
+    "semantic_similarity": 0.878,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.2857,
+    "recall": 0.1818,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5241
+}

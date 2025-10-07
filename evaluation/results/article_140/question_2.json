@@ -1,0 +1,21 @@
+{
+  "article_number": 140,
+  "test_case_id": "PMC10813126_Q2",
+  "question": "How do the levels of nitrogen waste metabolites like creatine and urea in space-flown neural stem cells compare between short-term (3 days) and longer-term (39 days) exposure to microgravity?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.7333,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.9067
+}

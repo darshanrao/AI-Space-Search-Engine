@@ -1,0 +1,21 @@
+{
+  "article_number": 407,
+  "test_case_id": "PMC11324864_Q2",
+  "question": "How does the impact of simulated microgravity on primary human NK cell cytotoxicity differ when assessed using a traditional assay protocol versus a continuous microgravity assay protocol?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.3333,
+    "soft_recall_at_k": 0.3333
+  },
+  "answer": {
+    "semantic_similarity": 0.9225,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.125,
+    "recall": 0.1667,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6354
+}

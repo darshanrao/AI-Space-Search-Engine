@@ -1,0 +1,21 @@
+{
+  "article_number": 403,
+  "test_case_id": "PMC8539686_Q5",
+  "question": "Summarize the main categories of genes identified as responsive to fractional gravity in Arabidopsis roots, describing their general expression patterns and biological significance in the context of spaceflight.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.25,
+    "soft_recall_at_k": 0.1818
+  },
+  "answer": {
+    "semantic_similarity": 0.85,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.2222,
+    "recall": 0.1667,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5844
+}

@@ -1,0 +1,21 @@
+{
+  "article_number": 151,
+  "test_case_id": "PMC7264257_Q5",
+  "question": "Provide an overview of the EDEN ISS Mobile Test Facility, including its purpose, location, physical structure, and the main subsystems that enable plant cultivation.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.5556,
+    "soft_recall_at_k": 0.5833
+  },
+  "answer": {
+    "semantic_similarity": 0.9493,
+    "key_facts_coverage": 0.75
+  },
+  "citations": {
+    "precision": 0.7143,
+    "recall": 0.4167,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7237
+}

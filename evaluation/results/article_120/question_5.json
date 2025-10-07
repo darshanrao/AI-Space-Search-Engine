@@ -1,0 +1,21 @@
+{
+  "article_number": 120,
+  "test_case_id": "PMC4050424_Q5",
+  "question": "Provide a comprehensive overview of the main findings of this study regarding the effects of spaceflight on mesenteric artery and vein constrictor properties, including the proposed mechanisms and functional implications for astronauts.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.4545,
+    "soft_recall_at_k": 0.3333
+  },
+  "answer": {
+    "semantic_similarity": 0.8971,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.4444,
+    "recall": 0.3636,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6852
+}

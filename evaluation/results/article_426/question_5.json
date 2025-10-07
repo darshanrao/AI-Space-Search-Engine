@@ -1,0 +1,21 @@
+{
+  "article_number": 426,
+  "test_case_id": "PMC6130020_Q5",
+  "question": "Summarize the main findings regarding the function of ANN1 and ANN2 in Arabidopsis, particularly concerning their role in sugar transport, root growth, and the resulting physiological effects in knockout mutants.",
+  "question_type": "broad",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.1,
+    "soft_recall_at_k": 0.1111
+  },
+  "answer": {
+    "semantic_similarity": 0.9377,
+    "key_facts_coverage": 0.8333
+  },
+  "citations": {
+    "precision": 0.6,
+    "recall": 0.1429,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5516
+}

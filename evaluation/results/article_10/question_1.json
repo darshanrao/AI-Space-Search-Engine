@@ -1,0 +1,21 @@
+{
+  "article_number": 10,
+  "test_case_id": "PMC4095884_Q1",
+  "question": "What is the primary structural function of the dystrophin glycoprotein complex (DGC) at the sarcolemma of muscle cells?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.924,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.25,
+    "recall": 1.0,
+    "accuracy": "FAIL"
+  },
+  "overall_score": 0.8662
+}

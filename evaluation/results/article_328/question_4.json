@@ -1,0 +1,21 @@
+{
+  "article_number": 328,
+  "test_case_id": "PMC7171750_Q4",
+  "question": "Which specific bacterial genera were found to be absent in more than half of pre-flight saliva samples but then detected during spaceflight, with increased relative abundances in those subjects who already had them?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.75
+  },
+  "answer": {
+    "semantic_similarity": 0.9803,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.6667,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8546
+}

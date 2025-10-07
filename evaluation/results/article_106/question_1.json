@@ -1,0 +1,21 @@
+{
+  "article_number": 106,
+  "test_case_id": "PMC7733874_Q1",
+  "question": "What was the estimated value of an hour of astronaut time in 2019, according to the paper?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9296,
+    "key_facts_coverage": 0.5
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8717
+}

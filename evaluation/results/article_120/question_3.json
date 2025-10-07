@@ -1,0 +1,21 @@
+{
+  "article_number": 120,
+  "test_case_id": "PMC4050424_Q3",
+  "question": "What is the proposed primary cellular mechanism underlying the diminished arterial vasoconstriction observed after spaceflight, and how do the study's findings support this mechanism?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.4,
+    "soft_recall_at_k": 0.2857
+  },
+  "answer": {
+    "semantic_similarity": 0.9516,
+    "key_facts_coverage": 0.6
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 0.3333,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.6247
+}

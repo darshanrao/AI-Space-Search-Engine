@@ -1,0 +1,21 @@
+{
+  "article_number": 112,
+  "test_case_id": "PMC11053165_Q4",
+  "question": "Which specific genes were identified as significantly upregulated in four or more mouse musculoskeletal tissues across different microgravity experiments, and what biological processes are consistently associated with their upregulation?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.6667
+  },
+  "answer": {
+    "semantic_similarity": 0.9364,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.9273
+}

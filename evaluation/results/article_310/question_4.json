@@ -1,0 +1,21 @@
+{
+  "article_number": 310,
+  "test_case_id": "PMC11166981_Q4",
+  "question": "Which specific genes related to tissue remodeling, extracellular matrix, wound healing, and collagen synthesis were downregulated in the dorsal skin of male mice during spaceflight?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.8575,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8485
+}

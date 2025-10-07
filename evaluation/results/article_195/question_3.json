@@ -1,0 +1,21 @@
+{
+  "article_number": 195,
+  "test_case_id": "PMC5659752_Q3",
+  "question": "Based on the proteomic and structural analyses, what is the proposed new classification for Leptopilina heterotoma VLPs, and what evidence supports their \"mixed strategy\" of both eukaryotic microvesicular and bacterial secretion system properties?",
+  "question_type": "complex",
+  "difficulty": "hard",
+  "retrieval": {
+    "strict_recall_at_k": 0.2,
+    "soft_recall_at_k": 0.0909
+  },
+  "answer": {
+    "semantic_similarity": 0.8274,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.6667,
+    "recall": 0.1818,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.5853
+}

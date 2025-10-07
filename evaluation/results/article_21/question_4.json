@@ -1,0 +1,21 @@
+{
+  "article_number": 21,
+  "test_case_id": "PMC6371294_Q4",
+  "question": "What solution does the paper propose for organizations developing open-access systems to address challenges in user credentialing and authentication, particularly for diverse user groups like those targeted by GeneLab?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.8333
+  },
+  "answer": {
+    "semantic_similarity": 0.88,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 0.75,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.8188
+}

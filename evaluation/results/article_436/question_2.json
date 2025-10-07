@@ -1,0 +1,21 @@
+{
+  "article_number": 436,
+  "test_case_id": "PMC9856674_Q2",
+  "question": "How do the gene expression patterns in *C. elegans* differ during exposure to simulated microgravity compared to 12 days after returning to ground conditions?",
+  "question_type": "comparative",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 1.0
+  },
+  "answer": {
+    "semantic_similarity": 0.9502,
+    "key_facts_coverage": 1.0
+  },
+  "citations": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.9555
+}

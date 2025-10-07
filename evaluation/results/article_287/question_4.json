@@ -1,0 +1,21 @@
+{
+  "article_number": 287,
+  "test_case_id": "PMC6746706_Q4",
+  "question": "Which specific genes, identified as differentially expressed during spaceflight, are part of the GO Biological Process category for 'negative regulation of oxidative stress-induced cell death'?",
+  "question_type": "specific",
+  "difficulty": "medium",
+  "retrieval": {
+    "strict_recall_at_k": 0.0,
+    "soft_recall_at_k": 0.0
+  },
+  "answer": {
+    "semantic_similarity": 0.8119,
+    "key_facts_coverage": 0.25
+  },
+  "citations": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.3056
+}

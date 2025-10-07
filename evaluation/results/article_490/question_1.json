@@ -1,0 +1,21 @@
+{
+  "article_number": 490,
+  "test_case_id": "PMC6876156_Q1",
+  "question": "Which long-term swim exercise regimen induced the most consistent transcriptional upregulation of muscle structural genes in *C. elegans*?",
+  "question_type": "factual",
+  "difficulty": "easy",
+  "retrieval": {
+    "strict_recall_at_k": 1.0,
+    "soft_recall_at_k": 0.6667
+  },
+  "answer": {
+    "semantic_similarity": 0.9193,
+    "key_facts_coverage": 0.6667
+  },
+  "citations": {
+    "precision": 0.3333,
+    "recall": 0.3333,
+    "accuracy": "PASS"
+  },
+  "overall_score": 0.7596
+}
