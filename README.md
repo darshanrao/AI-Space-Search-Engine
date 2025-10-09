@@ -62,8 +62,10 @@ We structured AstroBio Explorer into three main parts working together.
 ---
 
 ## 🪄 Pipeline Overview
+<!-- <img width="2849" height="3840" alt="Untitled diagram _ Mermaid Chart-2025-10-07-033800" src="https://github.com/user-attachments/assets/0df968be-887e-4618-8a75-25f10fb3b114" />
+<img width="2612" height="3840" alt="Untitled diagram _ Mermaid Chart-2025-10-07-033830" src="https://github.com/user-attachments/assets/503bd23a-ce69-453e-a39f-133a056b7b32" /> -->
 
-![WhatsApp Image 2025-10-05 at 11 08 11_a014f417](https://github.com/user-attachments/assets/0b5c1985-77a9-4ac4-ac90-5e280285aaa5)
+<img width="3840" height="1881" alt="Untitled diagram _ Mermaid Chart-2025-10-07-033701" src="https://github.com/user-attachments/assets/3c85e795-9a59-424f-b17a-17bebc35bb86" />
 
 
 ---
