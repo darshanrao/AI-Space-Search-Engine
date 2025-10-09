@@ -1,4 +1,4 @@
-# 🧠🚀 AstroBio Explorer
+# AstroBio Explorer
 
 AstroBio Explorer is our AI-powered research assistant built for the **NASA Space Apps Challenge 2025(Build a Space Biology Knowledge Engine)**.
 It helps anyone explore NASA’s space biology research in a simple, conversational and interactive way.
